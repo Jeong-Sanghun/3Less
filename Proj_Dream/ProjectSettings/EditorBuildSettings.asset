@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Before/0_Lobby 0.unity
+    guid: eab7b13a30dcc6549840e62fda1e9b0d
+  - enabled: 0
+    path: Assets/Scenes/Before/0_Lobby 1.unity
+    guid: 17b6877c8ca230249989046697c4d61d
+  - enabled: 0
+    path: Assets/Scenes/Before/0_Title.unity
+    guid: 8709592c712b9d3408a4f39bb17e65a4
+  - enabled: 0
+    path: Assets/Scenes/Before/1_Dream.unity
+    guid: e49698b3dcdc32b4aa37d8698700c629
+  - enabled: 0
+    path: Assets/Scenes/Before/2_Game1.unity
+    guid: 327e3a58e448be84d8980fdabd764302
+  - enabled: 0
+    path: Assets/Scenes/Before/3_Real.unity
+    guid: 0d9b857d1d97775468f43aaadd26ec04
+  - enabled: 1
+    path: Assets/Scenes/0_Title.unity
+    guid: 5603a8cd4749f01458b7667ff3d77c47
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+    guid: 4c8fc085788b9c144aa24f739db8848b
+  - enabled: 1
+    path: Assets/Scenes/Level_2.unity
+    guid: b8f6e8a3860efb94fb3a25663dcce793
+  - enabled: 1
+    path: Assets/Scenes/Level_3.unity
+    guid: f0834aaf9eb4fd94e92368e769e370d6
+  m_configObjects: {}

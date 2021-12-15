@@ -1,0 +1,69 @@
+
+mom.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+mom-body
+  rotate: false
+  xy: 869, 99
+  size: 108, 135
+  orig: 108, 135
+  offset: 0, 0
+  index: -1
+mom-bozi
+  rotate: false
+  xy: 499, 2
+  size: 52, 52
+  orig: 52, 52
+  offset: 0, 0
+  index: -1
+mom-erduo
+  rotate: false
+  xy: 979, 210
+  size: 14, 24
+  orig: 14, 24
+  offset: 0, 0
+  index: -1
+mom-lian
+  rotate: false
+  xy: 609, 67
+  size: 64, 94
+  orig: 64, 94
+  offset: 0, 0
+  index: -1
+mom-qunzi
+  rotate: true
+  xy: 2, 3
+  size: 231, 365
+  orig: 231, 365
+  offset: 0, 0
+  index: -1
+mom-shou
+  rotate: true
+  xy: 369, 163
+  size: 71, 339
+  orig: 71, 339
+  offset: 0, 0
+  index: -1
+mom-toufa1
+  rotate: true
+  xy: 710, 97
+  size: 137, 157
+  orig: 137, 157
+  offset: 0, 0
+  index: -1
+mom-toufa2
+  rotate: true
+  xy: 369, 15
+  size: 39, 128
+  orig: 39, 128
+  offset: 0, 0
+  index: -1
+mom-tui
+  rotate: true
+  xy: 369, 56
+  size: 105, 238
+  orig: 105, 238
+  offset: 0, 0
+  index: -1
