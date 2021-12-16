@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public GameObject target;
+    [SerializeField]
+    GameObject target;
+    [SerializeField]
+    float speed;
+    [SerializeField]
+    float distance;
+    [SerializeField]
+    Vector3 cameraPosDefault;
+    [SerializeField]
+    Vector3 cameraPosZoom;
+    [SerializeField]
+    float pozSpeed;
 
-    public float speed;
-
-    public float distance;
-
-    public Vector3 cameraPosDefault;
-    public Vector3 cameraPosZoom;
-    public float pozSpeed;
 
     public bool isZoomEnd;
+    [SerializeField]
+    Camera myCam;
+    [SerializeField]
+    float zoomMin;
+    [SerializeField]
+    float zoomMax;
+    [SerializeField]
+    float zoomSpeed;
 
-    public Camera myCam;
-
-    public float zoomMin;
-    public float zoomMax;
-    public float zoomSpeed;
-
-    public bool isFollowing;
-
-    public bool isScene1;
-
-    public float maxPoz;
+    [SerializeField]
+    bool isFollowing;
+    [SerializeField]
+    bool isScene1;
+    [SerializeField]
+    float maxPoz;
          
 
     // Start is called before the first frame update
@@ -41,7 +48,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isScene1 && isZoomEnd)
         {

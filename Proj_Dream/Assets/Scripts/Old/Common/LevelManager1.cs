@@ -446,7 +446,8 @@ public class LevelManager1 : MonoBehaviour
                 HideFrameUI();
                
                 playController.isPlayPossible = true;
-                cameraFollow.isFollowing = true;
+                //상훈수정
+                //cameraFollow.isFollowing = true;
                 playController.ButtonDownRight();
                 isOnProcessLevel1 = false;
                 playController.ButtonUpRight();
