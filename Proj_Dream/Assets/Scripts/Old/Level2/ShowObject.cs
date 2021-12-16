@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShowObject : MonoBehaviour
 {
-    public LevelManager1 levelManager1;
+    public LevelManager2 levelManager1;
     public GameObject goCutter;
 
     public float delayTime;
@@ -26,7 +26,6 @@ public class ShowObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void ShowObj()

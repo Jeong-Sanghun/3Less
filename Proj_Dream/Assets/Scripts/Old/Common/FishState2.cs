@@ -27,7 +27,7 @@ public class FishState2 : MonoBehaviour
     public MoveState moveState;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         skeletonAnimation.AnimationName = idleAnimation;

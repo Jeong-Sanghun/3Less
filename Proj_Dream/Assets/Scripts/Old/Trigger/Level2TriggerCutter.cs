@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level2TriggerCutter : MonoBehaviour
 {
-    public LevelManager1 levelManager;
+    public LevelManager2 levelManager;
     public Rigidbody2D rigid;
 
     public GameObject goCutter;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class LevelManager1 : MonoBehaviour
+public class LevelManager2 : MonoBehaviour
 {
     public GameObject goFadeIn;
 
@@ -40,14 +40,6 @@ public class LevelManager1 : MonoBehaviour
 
     public GameObject goFadeOut;
 
-    public enum StageType
-    {
-        Scene1,
-        Scene2,
-    }
-
-    public StageType stageType;
-
     public int currentTextIndex = 0;
 
     public GameObject[] colliderArray;
@@ -80,38 +72,29 @@ public class LevelManager1 : MonoBehaviour
 
         Init();
 
-        switch(stageType)
-        {
-            case StageType.Scene1:
-                StartCoroutine(StartMain());
-                break;
+        imgFlashArray[0].gameObject.SetActive(false);
+        imgFlashArray[1].gameObject.SetActive(false);
 
-            case StageType.Scene2:
-                imgFlashArray[0].gameObject.SetActive(false);
-                imgFlashArray[1].gameObject.SetActive(false);
+        goCutter.SetActive(false);
 
-                goCutter.SetActive(false);
-
-                StartCoroutine(StartMain2());
-                break;
-        }
+        StartCoroutine(StartMain2());
     }
 
 
     void Init()
     {
-        Debug.Log("Start Init currentTextIndex  : "  + currentTextIndex);
+        Debug.Log("Start Init currentTextIndex  : " + currentTextIndex);
 
         currentTextIndex = 0;
 
         goBalloonPlayer.SetActive(false);
         goBalloonFish.SetActive(false);
 
-        if(goBallonMush != null)
+        if (goBallonMush != null)
         {
             goBallonMush.SetActive(false);
         }
-        
+
 
         goFadeIn.SetActive(true);
         goFadeIn.GetComponent<Image>().material.color = new Color(0f, 0f, 0f, 1f);
@@ -125,7 +108,7 @@ public class LevelManager1 : MonoBehaviour
         goFadeIn.GetComponent<Image>().material.DOColor(new Color(0f, 0f, 0f, 0f), 3f);
         playController.isPlayPossible = false;
 
-      //  yield return new WaitForSeconds(1f);
+        //  yield return new WaitForSeconds(1f);
 
         fishState2.GotoNextTarget();
 
@@ -133,7 +116,7 @@ public class LevelManager1 : MonoBehaviour
 
         ShowFrameUI();
 
-        
+
         yield return StartCoroutine(ShowTextInteract(scenarioManager.GetScenarioIndex(currentTextIndex), scenarioManager.GetScenarioIndexType(currentTextIndex)));
         currentTextIndex++;
         isTouchPossible = false;
@@ -146,7 +129,7 @@ public class LevelManager1 : MonoBehaviour
 
     public void TalkState1()
     {
-        if(isMush1)
+        if (isMush1)
         {
             isMush1 = false;
             isTouchPossible = true;
@@ -155,6 +138,7 @@ public class LevelManager1 : MonoBehaviour
         }
     }
 
+    //레벨2에서 쓰는거.
     public void GotoNextText()
     {
         if (isTouchPossible == true)
@@ -170,11 +154,11 @@ public class LevelManager1 : MonoBehaviour
 
             }
 
-           
+
 
             currentTextIndex++;
 
-            if(currentTextIndex == 1)
+            if (currentTextIndex == 1)
             {
                 btnInputText.SetActive(false);
                 playController.isPlayPossible = false;
@@ -193,7 +177,7 @@ public class LevelManager1 : MonoBehaviour
                 if (currentTextIndex == 2)
                 {
                     isMush1 = true;
-                
+
                 }
 
                 if (currentTextIndex == 14)
@@ -202,7 +186,7 @@ public class LevelManager1 : MonoBehaviour
 
                     btnNextStep.gameObject.SetActive(false);
                     isTouchPossible = false;
-        
+
                 }
 
 
@@ -218,12 +202,12 @@ public class LevelManager1 : MonoBehaviour
                     btnInputText.SetActive(false);
                 }
 
-                if(currentTextIndex == 15)
+                if (currentTextIndex == 15)
                 {
                     btnInputText.SetActive(false);
                 }
 
-              
+
 
                 if (currentTextIndex == 16)
                 {
@@ -237,14 +221,14 @@ public class LevelManager1 : MonoBehaviour
                 {
                     colliderArray[2].SetActive(false);
 
-                 
+
 
                 }
 
 
-                if(currentTextIndex == scenarioManager.scenarioList2.Count)
+                if (currentTextIndex == scenarioManager.scenarioList2.Count)
                 {
-              
+
                 }
             }
 
@@ -258,7 +242,7 @@ public class LevelManager1 : MonoBehaviour
                 goCutterAnim.SetActive(false);
             }
 
-            if(currentTextIndex == 13)
+            if (currentTextIndex == 13)
             {
                 isFlashOn = true;
             }
@@ -266,7 +250,7 @@ public class LevelManager1 : MonoBehaviour
 
             if (currentTextIndex == 15)
             {
-               // isFlashOn = true;
+                // isFlashOn = true;
                 btnInputText.SetActive(false);
             }
 
@@ -299,7 +283,7 @@ public class LevelManager1 : MonoBehaviour
                 isFlashOn = true;
             }
 
-            if(currentTextIndex == 26)
+            if (currentTextIndex == 26)
             {
                 btnNextStep.gameObject.SetActive(false);
                 ShowFlashImageText();
@@ -308,7 +292,7 @@ public class LevelManager1 : MonoBehaviour
             if (currentTextIndex == 58)
             {
                 goCutter.GetComponent<MouseDragBehaviour>().isUseDrage = true;
-                
+
                 Debug.Log("DDDDDDDDDDDD Done !!");
                 isTouchPossible = false;
                 Invoke("HideFrameUI", 1f);
@@ -343,270 +327,8 @@ public class LevelManager1 : MonoBehaviour
         colliderArray[0].SetActive(false);
     }
 
-    public void ProcessLevel1()
-    {
-        if (isOnProcessLevel1)
-        {
-            isOnProcessLevel1 = false;
-            currentTextIndex++;
-            StartCoroutine(ProcessLevelStart());
-        }
-    }
 
-    IEnumerator ProcessLevelStart()
-    {
-        Debug.Log("step : " + currentTextIndex);
 
-        switch (currentTextIndex)
-        {
-            case 1:
-                delayTimeTalk = 0.2f;
-
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(1), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 2:
-                
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(2), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                yield return new WaitForSeconds(2f);
-
-                HideFrameUI();
-
-                yield return new WaitForSeconds(2f);
-
-                goFadeIn.GetComponent<Image>().material.DOColor(new Color(0f, 0f, 0f, 0f), 3f);
-
-                yield return new WaitForSeconds(2f);
-
-                cameraFollow.isZoomEnd = true;
-
-                yield return new WaitForSeconds(2f);
-
-                ShowFrameUI();
-                yield return new WaitForSeconds(0.7f);
-
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(3), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-               
-
-
-                break;
-
-            case 3:
-             
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(4), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 4:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(5), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 5:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(6), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 6:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(7), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 7:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(8), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 8:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(9), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 9:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(10), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 10:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(11), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 11:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(12), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 12:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(13), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 13:
-               
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(14), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 14:
-                btnInputText.SetActive(false);
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(15), delayTimeTalk, ScenarioManager.TalkState.SYSTEM));
-                yield return new WaitForSeconds(2f);
-                HideFrameUI();
-               
-                playController.isPlayPossible = true;
-                cameraFollow.isFollowing = true;
-                playController.ButtonDownRight();
-                isOnProcessLevel1 = false;
-                playController.ButtonUpRight();
-                break;
-
-            case 15:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(17), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 16:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(18), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 17:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(19), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 18:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(20), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 19:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(21), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 20:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(22), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 21:
-                isOnProcessLevel1 = false;
-                playController.isPlayPossible = false;
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(24), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                yield return new WaitForSeconds(delayTimeTalk);
-
-                HideFrameUI();
-
-                yield return new WaitForSeconds(0.2f);
-                fishState1.GotoTarget1();
-
-                yield return new WaitForSeconds(3f);
-
-                ShowFrameUI();
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(25), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                yield return new WaitForSeconds(1f);
-                isOnProcessLevel1 = true;
-                break;
-
-            case 22:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(26), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 23:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(27), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 24:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(28), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 25:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(29), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 26:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(30), delayTimeTalk, ScenarioManager.TalkState.NAR));
-                break;
-
-            case 27:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(31), delayTimeTalk, ScenarioManager.TalkState.FISH));
-                break;
-
-            case 28:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(32), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 29:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(33), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 30:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(34), delayTimeTalk, ScenarioManager.TalkState.FISH));
-                break;
-
-            case 31:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(35), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 32:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(36), delayTimeTalk, ScenarioManager.TalkState.FISH));
-                break;
-
-            case 33:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(37), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                break;
-
-            case 34:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(38), delayTimeTalk, ScenarioManager.TalkState.FISH));
-                break;
-
-            case 35:
-                isOnProcessLevel1 = false;
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(39), delayTimeTalk, ScenarioManager.TalkState.FISH));
-
-                yield return new WaitForSeconds(1f);
-                HideFrameUI();
-                fishState1.GotoTarget2();
-                yield return new WaitForSeconds(2f);
-
-                ShowFrameUI();
-                yield return new WaitForSeconds(1f);
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(40), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-                break;
-
-            case 36:
-                isOnProcessLevel1 = false;
-
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(41), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-                yield return new WaitForSeconds(1f);
-
-                HideFrameUI();
-                btnInputText.SetActive(false);
-                playController.isPlayPossible = true;
-                break;
-
-            case 37:
-                yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(43), delayTimeTalk, ScenarioManager.TalkState.FISH));
-
-                break;
-
-            case 38:
-                break;
-
-        }
-
-        if (currentTextIndex == 14 && currentTextIndex == 36)
-        {
-            isOnProcessLevel1 = false;
-        }
-        else
-        {
-            isOnProcessLevel1 = true;
-        }
-
-        yield return null;
-    }
-         
-
-    IEnumerator StartMain()
-    {
-        ShowFrameUI();
-        playController.isPlayPossible = false;
-        isOnProcessLevel1 = false; 
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(0), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-        yield return new WaitForSeconds(0.5f);
-        isOnProcessLevel1 = true;
-
-    }
 
     void ShowFrameUI()
     {
@@ -619,7 +341,7 @@ public class LevelManager1 : MonoBehaviour
         goBalloonPlayer.SetActive(false);
         goBalloonFish.SetActive(false);
 
-        if(goBallonMush != null)
+        if (goBallonMush != null)
         {
             goBallonMush.SetActive(false);
         }
@@ -633,21 +355,6 @@ public class LevelManager1 : MonoBehaviour
         {
             goTextSystemFrame.SetActive(false);
         }
-    }
-
-    public void StartTrigger1()
-    {
-        StartCoroutine(Trigger1());
-    }
-
-    public void StartTrigger2()
-    {
-        StartCoroutine(Trigger2());
-    }
-
-    public void StartTrigger3()
-    {
-        StartCoroutine(Trigger3());
     }
 
 
@@ -667,101 +374,10 @@ public class LevelManager1 : MonoBehaviour
     }
 
 
-    IEnumerator Trigger1()
-    {
-        playController.isPlayPossible = false;
-        playController.SetAnim(PlayController.AnimState.Idle);
-        btnInputText.SetActive(true);
-        isOnProcessLevel1 = true;
-
-        ShowFrameUI();
-        
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(16), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-    }
-
-    IEnumerator Trigger2()
-    {
-    
-        playController.isPlayPossible = false;
-        playController.SetAnim(PlayController.AnimState.Idle);
-
-        ShowFrameUI();
-
-        delayTimeTalk = 2f;
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(42), delayTimeTalk, ScenarioManager.TalkState.FISH));
-
-        //yield return new WaitForSeconds(1f);
-        goBalloonFish.transform.localPosition = new Vector3(goBalloonFish.transform.localPosition.x * -1f,
-            goBalloonFish.transform.localPosition.y,
-            goBalloonFish.transform.localPosition.z);
-
-        goBalloonFish.transform.localScale = new Vector3(goBalloonFish.transform.localScale.x * -1f,
-            goBalloonFish.transform.localScale.y,
-            goBalloonFish.transform.localScale.z);
-
-        playController.moveSpeed = 1.1f;
-        fishState1.speed = 1.1f;
-        playController.isPlayPossible = false;
-        playController.SetMoveTypeAuto();
-        fishState1.GotoTarget3();
-
-        //btnInputText.SetActive(true);
-        //isOnProcessLevel1 = true;
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(43), delayTimeTalk, ScenarioManager.TalkState.FISH));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(44), delayTimeTalk, ScenarioManager.TalkState.FISH));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(45), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(46), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(47), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(48), delayTimeTalk, ScenarioManager.TalkState.FISH));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(49), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(50), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(51), delayTimeTalk, ScenarioManager.TalkState.PLAYER));
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(52), delayTimeTalk, ScenarioManager.TalkState.SYSTEM));
-
-
-    }
-
-    IEnumerator Trigger3()
-    {
-        playController.isPlayPossible = false;
-        playController.SetAnim(PlayController.AnimState.Idle);
-
-        ShowFrameUI();
-
-
-        yield return StartCoroutine(ShowText(scenarioManager.GetScenarioText(42), delayTimeTalk, ScenarioManager.TalkState.FISH));
-
-      
-
-        fishState1.GotoTarget2();
-
-        yield return new WaitForSeconds(delayTimeTalk);
-
-        HideFrameUI();
-        playController.isPlayPossible = true;
-    }
-
-    void OnApplicationQuit()
-    {
-        Init();
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IEnumerator ShowText(string _text, float _delayTime, ScenarioManager.TalkState _talkState)
@@ -775,7 +391,7 @@ public class LevelManager1 : MonoBehaviour
         }
 
 
-      
+
         goTextFrame.SetActive(false);
 
         goBalloonPlayer.SetActive(false);
@@ -844,11 +460,11 @@ public class LevelManager1 : MonoBehaviour
         goBalloonPlayer.SetActive(false);
         goBalloonFish.SetActive(false);
 
-        if(goBallonMush != null)
+        if (goBallonMush != null)
         {
             goBallonMush.SetActive(false);
         }
-       
+
 
         switch (_talkState)
         {
@@ -893,11 +509,11 @@ public class LevelManager1 : MonoBehaviour
                 break;
 
             case ScenarioManager.TalkState.Mushroom:
-                if(goBallonMush != null)
+                if (goBallonMush != null)
                 {
                     goBallonMush.SetActive(true);
                 }
-              
+
                 goTextFrame.SetActive(true);
                 textMain.enabled = true;
                 textMain.font = fontTalk;
@@ -955,7 +571,7 @@ public class LevelManager1 : MonoBehaviour
 
                     break;
 
-            
+
 
                 case 2:
                     imgFlashArray[1].gameObject.SetActive(true);
@@ -1017,7 +633,7 @@ public class LevelManager1 : MonoBehaviour
         isTouchPossible = true;
         btnNextStep.gameObject.SetActive(false);
 
-       
+
 
         Invoke("GotoNextText", 1f);
     }
@@ -1047,7 +663,7 @@ public class LevelManager1 : MonoBehaviour
         HideFrameUI();
 
         btnNextStep.gameObject.SetActive(true);
-   
+
 
         isTouchPossible = true;
         Invoke("GotoNextText", 1f);
