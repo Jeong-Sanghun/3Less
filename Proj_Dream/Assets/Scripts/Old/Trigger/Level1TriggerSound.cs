@@ -15,7 +15,6 @@ public class Level1TriggerSound : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.transform.gameObject.name);
 
         if (collision.transform.tag == "Player" && isTriggerOn == false)
         {

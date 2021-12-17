@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-public class FirstSceneManager : MonoBehaviour
+public class FirstSceneManager : SceneManagerParent
 {
     // Start is called before the first frame update
     JsonManager jsonManager;
@@ -30,6 +30,9 @@ public class FirstSceneManager : MonoBehaviour
     GameObject fishBalloon;
 
     [SerializeField]
+    FishState1 fish;
+
+    [SerializeField]
     Camera cam;
     Vector3 camStartPos;
     Vector3 camZoomPos;
@@ -44,7 +47,7 @@ public class FirstSceneManager : MonoBehaviour
     bool textFrameTransparent;
     bool isStarted;
     bool dialogEnd;
-
+    Character nowCharacter;
 
 
     void Start()
@@ -62,8 +65,8 @@ public class FirstSceneManager : MonoBehaviour
         playerBalloon.SetActive(false);
         fishBalloon.SetActive(false);
         dialogEnd = false;
-        camStartPos = cam.transform.localPosition;
-        camZoomPos = new Vector3(17.64627f, 16.42367f, -10);
+        camStartPos = cam.transform.position;
+        camZoomPos = new Vector3(2.43f, -0.02f, -10);
         isStopActionable = true;
 
         StartCoroutine(moduleManager.AfterRunCoroutine(1,moduleManager.FadeModule_Image(textFrameImage, 0, 1, 0.5f)));
@@ -87,13 +90,16 @@ public class FirstSceneManager : MonoBehaviour
             {
                 NextDialog();
             }
-            else if(isStopActionable && !moduleManager.nowTexting)
+            else if(isStopActionable == true)
             {
                 OnStopPoint();
             }
+        }
 
-
-            
+        if (isTrigger)
+        {
+            isTrigger = false;
+            TriggerEnter();
         }
 
         
@@ -108,19 +114,21 @@ public class FirstSceneManager : MonoBehaviour
         bool lastTextFrameTransparent = textFrameTransparent;
         if(lastDialog == null)
         {
+            nowCharacter = nowDialog.characterEnum;
             isNewCharacter = true;
         }
-        else if(nowDialog.characterEnum != lastDialog.characterEnum)
+        else if(nowDialog.characterEnum != nowCharacter)
         {
+            nowCharacter = nowDialog.characterEnum;
             isNewCharacter = true;
         }
 
         if (isNewCharacter)
         {
-            switch (nowDialog.characterEnum)
+            switch (nowCharacter)
             {
                 case Character.Player:
-                        TextFrameToggle(true);
+                    TextFrameToggle(true);
                     playerBalloon.SetActive(true);
                     fishBalloon.SetActive(false);
                     break;
@@ -139,7 +147,11 @@ public class FirstSceneManager : MonoBehaviour
                     systemText.gameObject.SetActive(true);
                     playerBalloon.SetActive(false);
                     fishBalloon.SetActive(false);
-                    nowText = systemText;
+                    systemText.text = nowDialog.dialog;
+                    systemText.color = new Color(systemText.color.r, systemText.color.g, systemText.color.b, 0);
+                    StartCoroutine(moduleManager.FadeModule_Text(systemText, 0, 1, 1));
+
+                    StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.FadeModule_Text(systemText, 1, 0, 1)));
                     break;
                 case Character.NotAllocated:
                     //이거도 위랑 연속적인거여서 아무것도 안해도됨.
@@ -154,23 +166,28 @@ public class FirstSceneManager : MonoBehaviour
         {
             if(lastTextFrameTransparent != textFrameTransparent)
             {
+                moduleManager.nowTexting = true;
                 StartCoroutine(moduleManager.
-              AfterRunCoroutine(0.8f, moduleManager.LoadTextOneByOne(nowDialog.dialog, nowText)));
+              AfterRunCoroutine(0.8f, moduleManager.LoadTextOneByOne(nowDialog.dialog, dialogText)));
 
             }
             else
             {
-                StartCoroutine(moduleManager.LoadTextOneByOne(nowDialog.dialog, nowText));
+                StartCoroutine(moduleManager.LoadTextOneByOne(nowDialog.dialog, dialogText));
 
             }
         }
-
+        isDialogStopping = false;
         if (nowDialog.stopPoint == 1)
         {
             isDialogStopping = true;
-            isStopActionable = true;
+            isStopActionable = false;
+            StartCoroutine(InvokerCoroutine(0.5f, SetStopActionableTrue));
             nowDialogStopPoint++;
             nowStopActionIndex = 0;
+            playerBalloon.SetActive(false);
+            fishBalloon.SetActive(false);
+
         }
 
         
@@ -190,28 +207,49 @@ public class FirstSceneManager : MonoBehaviour
 
     void OnStopPoint()
     {
+        Debug.Log("스탑포인트");
         switch (nowDialogStopPoint)
         {
             case 0:
+                
                 isStopActionable = false;
                 StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
                 TextFrameToggle(false);
                 StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
                 break;
             case 1:
+                isStopActionable = false;
+                TextFrameToggle(false);
                 StartCoroutine(CameraZoomCoroutine());
                 nowStopActionIndex++;
                 break;
             case 2:
-                systemText.text = "";
-                systemText.gameObject.SetActive(false);
+                isStopActionable = false;
+                player.isPlayPossible = true;
                 break;
             case 3:
+                isStopActionable = false;
+                TextFrameToggle(false);
+                player.isPlayPossible = false;
+                FishFirstComingStopPoint();
                 break;
             case 4:
+                isStopActionable = false;
+                TextFrameToggle(false);
+                player.isPlayPossible = false;
+                FishSecondComingStopPoint();
+                break;
+            case 5:
+                isStopActionable = false;
+                TextFrameToggle(false);
+                player.isPlayPossible = true;
+                break;
+            case 6:
+                player.isPlayPossible = true;
+                fish.GotoTarget3();
+                TextFrameToggle(false);
                 break;
             default:
-                isDialogStopping = false;
                 break;
         }
     }
@@ -244,9 +282,16 @@ public class FirstSceneManager : MonoBehaviour
 
     IEnumerator InvokerCoroutine(float time, Action method)
     {
+        Debug.Log("인보크" + method.Method.Name);
         yield return new WaitForSeconds(time);
         isStarted = true;
         method();
+    }
+
+    void SetSystemTextFalse()
+    {
+        systemText.text = "";
+        systemText.gameObject.SetActive(false);
     }
 
     void SetStopActionableTrue()
@@ -259,23 +304,81 @@ public class FirstSceneManager : MonoBehaviour
         isDialogStopping = false;
     }
 
+    void FishFirstComingStopPoint()
+    {
+        player.SetAnim(PlayController.AnimState.Idle);
+        fish.GotoTarget1();
+        
+        StartCoroutine(InvokerCoroutine(2, NextDialog));
+    }
+
+    void FishSecondComingStopPoint()
+    {
+        player.SetAnim(PlayController.AnimState.Idle);
+        fish.GotoTarget2();
+        StartCoroutine(InvokerCoroutine(2, NextDialog));
+
+    }
+
     IEnumerator CameraZoomCoroutine()
     {
         float timer = 0;
         float startOrtho = cam.orthographicSize;
         float endOrtho = 5.4f;
-        isStopActionable = false;
 
         while (timer < 1)
         {
-            timer += Time.deltaTime / 3f;
+            timer += Time.deltaTime;
             yield return null;
-            cam.transform.localPosition = Vector3.Lerp(camStartPos, camZoomPos, timer);
+            cam.transform.position = Vector3.Lerp(camStartPos, camZoomPos, timer);
             cam.orthographicSize = Mathf.Lerp(startOrtho, endOrtho, timer);
         }
+
+        
         cam.transform.localPosition = camZoomPos;
+        StartCoroutine(CameraFollowCoroutine());
         cam.orthographicSize = endOrtho;
         isDialogStopping = false;
+        TextFrameToggle(true);
+        NextDialog();
+
+    }
+
+    void TriggerEnter()
+    {
+        if (triggerName.Contains("Trigger1") && nowDialogStopPoint == 2)
+        {
+            isDialogStopping = false;
+            player.SetAnim(PlayController.AnimState.Idle);
+            NextDialog();
+            player.isPlayPossible = false;
+        }
+        else if (triggerName.Contains("Trigger2") && nowDialogStopPoint == 5)
+        {
+            isDialogStopping = false;
+            player.SetAnim(PlayController.AnimState.Idle);
+            NextDialog();
+            player.isPlayPossible = false;
+        }
+        else if (triggerName.Contains("Trigger5") && nowDialogStopPoint == 6)
+        {
+            NextDialog();
+            isDialogStopping = true;
+        }
+    }
+
+    IEnumerator CameraFollowCoroutine()
+    {
+        Transform playerTransform = player.transform;
+        Vector3 delta =cam.transform.position - playerTransform.position;
+        float originY = cam.transform.position.y;
+        while (true)
+        {
+            yield return new WaitForFixedUpdate();
+            Vector3 pos = new Vector3((playerTransform.position + delta).x, originY, -10);
+            cam.transform.position = pos;
+
+        }
 
     }
 }

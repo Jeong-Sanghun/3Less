@@ -21,6 +21,13 @@ public class PlayController : MonoBehaviour
     public float minPosX;
     public float maxPosX;
 
+    float camYWorldPos;
+    [SerializeField]
+    Transform camTransform;
+
+    [SerializeField]
+    SceneManagerParent sceneManager;
+
 
     public enum MoveType
     {
@@ -42,7 +49,7 @@ public class PlayController : MonoBehaviour
 
     public SceneType sceneType;
 
-
+    //각 레벨매니저에서 봐줌
     public bool isPlayPossible;
 
 
@@ -59,7 +66,7 @@ public class PlayController : MonoBehaviour
     void Start()
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
-
+        camYWorldPos = -1;
         switch (sceneType)
         {
             case SceneType.Type1:
@@ -130,13 +137,17 @@ public class PlayController : MonoBehaviour
         moveType = MoveType.RightMoveAuto;
     }
 
-
+    public void SetCamYWorldPos(float y)
+    {
+        camYWorldPos = y;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (isPlayPossible)
         {
+            
             switch (moveType)
             {
                 case MoveType.Left:
@@ -162,71 +173,41 @@ public class PlayController : MonoBehaviour
                     break;
             }
 
-
-
-            switch (sceneType)
+            if (gameObject.transform.position.x < minPosX)
             {
-                case SceneType.Type1:
-                    if (gameObject.transform.position.x < minPosX)
-                    {
-                        gameObject.transform.position =
-                            new Vector3(minPosX, gameObject.transform.position.y,
-                            gameObject.transform.position.z);
-                    }
-
-                    if (gameObject.transform.position.x > maxPosX)
-                    {
-                        gameObject.transform.position =
-                            new Vector3(maxPosX, gameObject.transform.position.y,
-                            gameObject.transform.position.z);
-                    }
-                    break;
-
-                case SceneType.Type2:
-                    if (gameObject.transform.position.x < minPosX)
-                    {
-                        gameObject.transform.position =
-                            new Vector3(minPosX, gameObject.transform.position.y,
-                            gameObject.transform.position.z);
-                    }
-
-                    if (gameObject.transform.position.x > maxPosX)
-                    {
-                        gameObject.transform.position =
-                            new Vector3(maxPosX, gameObject.transform.position.y,
-                            gameObject.transform.position.z);
-                    }
-                    break;
+                gameObject.transform.position =
+                    new Vector3(minPosX, gameObject.transform.position.y,
+                    gameObject.transform.position.z);
             }
 
-
-            if (Input.GetMouseButtonDown(0))
+            if (gameObject.transform.position.x > maxPosX)
             {
-                RaycastHit hit = new RaycastHit();
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray.origin, ray.direction, out hit))
-                {
-                    if (hit.transform.tag == "play")
-                    {
-                        Debug.Log("zzzzzzzzzzzzzzzz");
-                        //stageManager1.StartFadeOut();
-
-                    }
-                }
+                gameObject.transform.position =
+                    new Vector3(maxPosX, gameObject.transform.position.y,
+                    gameObject.transform.position.z);
             }
+
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    RaycastHit hit = new RaycastHit();
+            //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            //    if (Physics.Raycast(ray.origin, ray.direction, out hit))
+            //    {
+            //        if (hit.transform.tag == "play")
+            //        {
+            //            Debug.Log("zzzzzzzzzzzzzzzz");
+            //            //stageManager1.StartFadeOut();
+
+            //        }
+            //    }
+            //}
         }
     }
 
 
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("00000000000000");
-
-        if (col.tag == "door")
-        {
-            Debug.Log("1111111111");
-            //stageManager1.ShowArrow();
-        }
+        sceneManager.IsTriggered(col.gameObject.name);
     }
 }

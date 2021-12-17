@@ -57,7 +57,6 @@ public class Dialog
         {
             characterEnum = Character.Mushroom;
         }
-        Debug.Log(characterEnum);
     }
 
 }
