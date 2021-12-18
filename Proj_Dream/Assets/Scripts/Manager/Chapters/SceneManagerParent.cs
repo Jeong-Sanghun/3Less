@@ -166,8 +166,7 @@ public class SceneManagerParent : MonoBehaviour
         isDialogStopping = false;
         if (nowDialog.actionKeyword != null)
         {
-            isDialogStopping = true;
-            isStopActionable = true;
+            StartCoroutine(CheckStopPointTextEnd());
             nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
         }
 
@@ -265,6 +264,16 @@ public class SceneManagerParent : MonoBehaviour
         isDialogStopping = false;
     }
 
+    IEnumerator CheckStopPointTextEnd()
+    {
+        while (moduleManager.nowTexting)
+        {
+            yield return null;
+        }
+        isDialogStopping = true;
+        isStopActionable = true;
+    }
+
 
     protected IEnumerator CameraFollowCoroutine()
     {
@@ -275,10 +284,13 @@ public class SceneManagerParent : MonoBehaviour
         {
             yield return new WaitForFixedUpdate();
             Vector3 pos = new Vector3((playerTransform.position + delta).x, originY, -10);
-            cam.transform.position = pos;
+            if (pos.x >= 0.71)
+            {
+                cam.transform.position = pos;
+            }
+                
 
         }
-
     }
 
     public virtual void TriggerEnter(string triggerName)

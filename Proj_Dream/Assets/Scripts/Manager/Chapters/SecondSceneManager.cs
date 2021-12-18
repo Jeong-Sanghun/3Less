@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class SecondSceneManager : SceneManagerParent
 {
@@ -19,6 +20,21 @@ public class SecondSceneManager : SceneManagerParent
     [SerializeField]
     GameObject roadBlockObject;
 
+    [SerializeField]
+    GameObject[] bubbleObjectArray;
+    [SerializeField]
+    GameObject bubbleObjectParent;
+
+    [SerializeField]
+    PostProcessVolume postProcessVolume;
+
+    [SerializeField]
+    SpriteRenderer[] flashBackSpriteArray;
+
+    bool isScissorClicked = false;
+    bool isBubbleClicked = false;
+    SpriteRenderer nowSprite;
+
 
     // Start is called before the first frame update
     protected override void Start()
@@ -30,8 +46,9 @@ public class SecondSceneManager : SceneManagerParent
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
         StartCoroutine(InvokerCoroutine(1, NextDialog));
         StartCoroutine(ScissorAnimCoroutine());
-
+        StartCoroutine(BubbleAnimCoroutine());
     }
+
     protected override void OverrideAction(List<ActionKeyword> keywordList, List<float> parameterList)
     {
         base.OverrideAction(keywordList, parameterList);
@@ -53,6 +70,21 @@ public class SecondSceneManager : SceneManagerParent
         {
             int index = keywordList.IndexOf(ActionKeyword.StopSeconds);
             StartCoroutine(InvokerCoroutine(parameterList[index], NextDialog));
+        }
+        if (keywordList.Contains(ActionKeyword.ImgFlashback))
+        {
+            if (keywordList.Contains(ActionKeyword.First))
+            {
+                StartCoroutine(ImageFlashBackCoroutine(0));
+            }
+            if (keywordList.Contains(ActionKeyword.Second))
+            {
+                StartCoroutine(ImageFlashBackCoroutine(1));
+            }
+        }
+        if (keywordList.Contains(ActionKeyword.ImgFalse))
+        {
+            StartCoroutine(ImageFalseCoroutine());
         }
         if (keywordList.Contains(ActionKeyword.FishMove))
         {
@@ -124,8 +156,30 @@ public class SecondSceneManager : SceneManagerParent
         }
     }
 
+    public void BubbleTouch()
+    {
+        
+        if (isDialogStopping == false || nowActionList == null || isBubbleClicked == true)
+        {
+            return;
+        }
+        for (int i = 0; i < nowActionList.Count; i++)
+        {
+            List<ActionKeyword> keywordList = nowActionList[i].actionList;
+            if (keywordList.Contains(ActionKeyword.Bubble) && keywordList.Contains(ActionKeyword.Touch))
+            {
+                bubbleObjectParent.SetActive(false);
+                player.SetAnim(PlayController.AnimState.Idle);
+                player.isPlayPossible = false;
+                NextDialog();
+                isBubbleClicked = true;
+                break;
+            }
+        }
+    }
 
-    bool isScissorClicked = false;
+
+
     IEnumerator ScissorAnimCoroutine()
     {
         Vector3 angle = scissorRect.localEulerAngles;
@@ -171,7 +225,7 @@ public class SecondSceneManager : SceneManagerParent
 
             yield return null;
         }
-
+        player.SetAnim(PlayController.AnimState.Idle);
         blurImage.SetActive(true);
         float timer = 0;
         Vector3 originPos = scissorRect.transform.position;
@@ -183,6 +237,7 @@ public class SecondSceneManager : SceneManagerParent
             scissorRect.transform.position = Vector3.Lerp(originPos, scissorMiddlePos.transform.position, timer);
             scissorRect.transform.localScale = Vector3.Lerp(originScale, scissorMiddlePos.transform.localScale,timer);
             scissorRect.transform.localEulerAngles = Vector3.Lerp(originRot, scissorMiddlePos.transform.localEulerAngles,timer);
+            player.isPlayPossible = false;
             yield return null;
         }
         yield return new WaitForSeconds(1f);
@@ -191,17 +246,17 @@ public class SecondSceneManager : SceneManagerParent
         originPos = scissorRect.transform.position;
         originScale = scissorRect.transform.localScale;
         originRot = scissorRect.transform.localEulerAngles;
-        if (originRot.x > 180)
+        //if (originRot.x < 180)
+        //{
+        //    originRot.x += 360;
+        //}
+        //if (originRot.y < 180)
+        //{
+        //    originRot.y += 360;
+        //}
+        if (originRot.z < 180)
         {
-            originRot.x -= 360;
-        }
-        if (originRot.y > 180)
-        {
-            originRot.y -= 360;
-        }
-        if (originRot.z > 180)
-        {
-            originRot.z -= 360;
+            originRot.z += 360;
         }
         while (timer < 1)
         {
@@ -250,5 +305,126 @@ public class SecondSceneManager : SceneManagerParent
 
 
         StartCoroutine(CameraFollowCoroutine());
+    }
+
+
+    IEnumerator BubbleAnimCoroutine()
+    {
+        float timer = 0;
+        Vector3[] endPosArr = new Vector3[3];
+        Vector3[] originPosArr = new Vector3[3];
+        Vector3[] startPosArr = new Vector3[3];
+        float ranX = 0;
+        for(int i = 0; i < 3; i++)
+        {
+            int one;
+            startPosArr[i] = bubbleObjectArray[i].transform.position;
+            originPosArr[i] = bubbleObjectArray[i].transform.position;
+            ranX = originPosArr[i].x + Random.Range(-0.2f, 0.2f);
+            if (Random.Range(0, 1) == 0)
+            {
+                one = 1;
+            }
+            else
+            {
+                one = -1;
+            }
+            endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - originPosArr[i].x) * (ranX - originPosArr[i].x)) + originPosArr[i].y, 0);
+        }
+        while(true)
+        {
+            timer += Time.deltaTime;
+            if (timer > 1)
+            {
+                timer = 0;
+                for (int i = 0; i < 3; i++)
+                {
+                    int one;
+                    originPosArr[i] = bubbleObjectArray[i].transform.position;
+                    ranX = startPosArr[i].x + Random.Range(-0.2f, 0.2f);
+                   
+                    if (Random.Range(0, 1) == 0)
+                    {
+                        one = 1;
+                    }
+                    else
+                    {
+                        one = -1;
+                    }
+                    endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - startPosArr[i].x) * (ranX - startPosArr[i].x)) + startPosArr[i].y, 0);
+                }
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                bubbleObjectArray[i].transform.position = Vector3.Lerp(originPosArr[i], endPosArr[i], timer);
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (isBubbleClicked == false)
+                {
+                    GameObject touchedObject;               //터치한 오브젝트
+                    RaycastHit2D hit;                         //터치를 위한 raycastHit
+                    Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+                    if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
+                    {
+                        touchedObject = hit.collider.gameObject;
+
+                        //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
+                        if (touchedObject.name.Contains("bubble"))
+                        {
+                            Debug.Log(touchedObject.name);
+                            BubbleTouch();
+                        }
+                    }
+                }
+
+            }
+            yield return null;
+
+        }
+    }
+
+    IEnumerator ImageFlashBackCoroutine(int seq)
+    {
+        float postProcessTimer = 0;
+
+        nowSprite = flashBackSpriteArray[seq];
+        nowSprite.gameObject.SetActive(true);
+        nowSprite.color = new Color(1, 1, 1, 0);
+        Color col = new Color(1, 1, 1, 0);
+        while (postProcessTimer<1)
+        {
+            postProcessTimer += Time.deltaTime;
+            postProcessVolume.weight = postProcessTimer;
+            col.a = postProcessTimer;
+            nowSprite.color = col;
+            yield return null;
+        }
+        nowSprite.color = new Color(1, 1, 1, 1);
+        while (postProcessTimer > 0)
+        {
+            postProcessTimer -= Time.deltaTime;
+            postProcessVolume.weight = postProcessTimer;
+            yield return null;
+        }
+
+        NextDialog();
+    }
+
+    IEnumerator ImageFalseCoroutine()
+    {
+        float timer = 0;
+
+        nowSprite.color = new Color(1, 1, 1, 1);
+        Color col = new Color(1, 1, 1, 1);
+        while (timer < 1)
+        {
+            timer += Time.deltaTime;
+            col.a -= Time.deltaTime;
+            nowSprite.color = col;
+            yield return null;
+        }
+        nowSprite.gameObject.SetActive(true);
+        NextDialog();
     }
 }

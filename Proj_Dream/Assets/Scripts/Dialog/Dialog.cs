@@ -158,6 +158,16 @@ public class Dialog
                 act.parameterList.Add(-1);
             }
 
+            if (keywordArray[i].Contains("imgFlashback") || keywordArray[i].Contains("ImgFlashback"))
+            {
+                act.actionList.Add(ActionKeyword.ImgFlashback);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("imgFalse") || keywordArray[i].Contains("ImgFalse"))
+            {
+                act.actionList.Add(ActionKeyword.ImgFalse);
+                act.parameterList.Add(-1);
+            }
 
 
             if (keywordArray[i].Contains("first") || keywordArray[i].Contains("First"))

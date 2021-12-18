@@ -35,7 +35,7 @@
         },
         {
             "character": "주인공(A)",
-            "actionKeyword": "playerMoveSecond,scissorsTouch",
+            "actionKeyword": "playerMoveSecond,scissorsTouch,bubbleTouch",
             "dialog": "갑자기 너도 좀 무서워지는 것 같아..."
         },
         {
@@ -46,7 +46,7 @@
             "dialog": "...이건 그냥 비눗방울이잖아."
         },
         {
-            "actionKeyword": "bubbleTouch,imgFlashbackFirst",
+            "actionKeyword": "imgFlashbackFirst",
             "dialog": "잠깐, 안에서 뭐가 보이는 것 같은데..."
         },
         {
