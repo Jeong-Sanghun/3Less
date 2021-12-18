@@ -2,7 +2,7 @@
     "dialogList": [
         {
             "character": "주인공(A)",
-            "stopPoint": "1",
+            "actionKeyword": "playerMoveFirst",
             "dialog": "아이고, 여긴 또 어디... 웬 숲...?"
         },
         {
@@ -35,7 +35,7 @@
         },
         {
             "character": "주인공(A)",
-            "stopPoint": "1",
+            "actionKeyword": "playerMoveSecond,scissorsTouch",
             "dialog": "갑자기 너도 좀 무서워지는 것 같아..."
         },
         {
@@ -46,19 +46,16 @@
             "dialog": "...이건 그냥 비눗방울이잖아."
         },
         {
-            "stopPoint": "1",
+            "actionKeyword": "bubbleTouch,imgFlashbackFirst",
             "dialog": "잠깐, 안에서 뭐가 보이는 것 같은데..."
         },
         {
             "character": "NAR.",
-            "dialog": "\"우리 애가 전국 대회에서 금메달을 땄다니까!\""
+            "dialog": "오래된 신문 스크랩"
         },
         {
-            "dialog": "아버지의 커다란 웃음소리가 벽을 넘어왔다. 주변 지인들에게 전화를 돌리는 모양이었다. "
-        },
-        {
-            "stopPoint": "1",
-            "dialog": "아버지가 그렇게 기뻐하는 모습을 보는 건 정말 오랜만이었다."
+            "actionKeyword": "imgFalse",
+            "dialog": "손바닥 만한 작은 기사. 무대에 선 젊은 남자의 사진과 함께 어떤 공연을 홍보하고 있다."
         },
         {
             "character": "금붕어",
@@ -92,17 +89,24 @@
             "dialog": "혹시 주변을 더 뒤져보면 다른 게 나올까?"
         },
         {
-            "stopPoint": "1",
+            "actionKeyword": "playerMoveThird,medalTouch",
             "dialog": "일단 단서를 더 모아보자. 목표는 여기서 빠져나가는 것."
         },
         {
             "character": "주인공(A)",
-            "stopPoint": "1",
+            "actionKeyword": "imageFlashbackSecond",
             "dialog": "이건... 메달?"
         },
         {
-            "character": "NAR.",
-            "dialog": "커다랗고 빛나는 금메달. 어째선지 기분이 좋지 않다."
+            "character": "NAR",
+            "dialog": "\"우리 애가 전국 대회에서 금메달을 땄다니까!\""
+        },
+        {
+            "dialog": "아버지의 커다란 웃음소리가 벽을 넘어왔다. 주변 지인들에게 전화를 돌리는 모양이었다. "
+        },
+        {
+            "actionKeyword": "imgFalse",
+            "dialog": "아버지가 그렇게 기뻐하는 모습을 보는 건 정말 오랜만이었다."
         },
         {
             "character": "주인공(A)",
@@ -112,7 +116,6 @@
             "dialog": "내 인생의 1등... 한창 공부 열심히 했을 때 반 1등 정도였나?"
         },
         {
-            "stopPoint": "1",
             "dialog": "어쨌든 이 사람... 대단한 사람인가 봐."
         },
         {
@@ -219,8 +222,11 @@
             "dialog": "아니, 아니! 우리 같이 찾아보자고. 뭐가 그리 억울하고 마음이 아픈지!"
         },
         {
-            "stopPoint": "1",
+            "actionKeyword": "scissorDrag",
             "dialog": "자, 이쪽으로 가면 되나?"
+        },
+        {
+            "dialog": "(이동할 때)"
         },
         {
             "character": "금붕어",

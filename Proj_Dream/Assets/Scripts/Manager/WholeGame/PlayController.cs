@@ -208,6 +208,6 @@ public class PlayController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        sceneManager.IsTriggered(col.gameObject.name);
+        sceneManager.TriggerEnter(col.gameObject.name);
     }
 }

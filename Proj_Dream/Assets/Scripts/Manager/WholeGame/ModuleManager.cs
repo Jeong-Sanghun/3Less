@@ -48,6 +48,7 @@ public class ModuleManager : MonoBehaviour
     {
         i_Object.SetActive(true);
         SpriteRenderer i_image = i_Object.GetComponent<SpriteRenderer>();
+
         float miniTimer = 0f;
         float newAlpha = i_Alpha_Initial;
         while (miniTimer < i_Time)

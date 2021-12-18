@@ -501,11 +501,11 @@ MonoBehaviour:
   dialogText: {fileID: 279057146}
   systemText: {fileID: 963230668}
   player: {fileID: 892265440}
-  fishState: {fileID: 551923385}
-  playerBalloon: {fileID: 1777174387}
-  fishBalloon: {fileID: 1485940700}
-  fish: {fileID: 551923385}
   cam: {fileID: 187293384}
+  ballonList:
+  - {fileID: 1777174387}
+  - {fileID: 1485940700}
+  fish: {fileID: 551923385}
 --- !u!1 &245859766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,22 +1839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 5
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 892265440}
-          m_TargetAssemblyTypeName: PlayController, Assembly-CSharp
-          m_MethodName: ButtonDownLeft
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 2
     callback:
       m_PersistentCalls:
@@ -2739,22 +2723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 5
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 892265440}
-          m_TargetAssemblyTypeName: PlayController, Assembly-CSharp
-          m_MethodName: ButtonDownRight
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 2
     callback:
       m_PersistentCalls:
