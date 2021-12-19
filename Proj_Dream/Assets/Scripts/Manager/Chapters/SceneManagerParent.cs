@@ -51,7 +51,6 @@ public class SceneManagerParent : MonoBehaviour
     protected virtual void Start()
     {
         gameManager = GameManager.singleTon;
-        Debug.Log("???");
         jsonManager = new JsonManager();
         lastDialog = null;
         fadeInImage.gameObject.SetActive(true);
@@ -113,39 +112,19 @@ public class SceneManagerParent : MonoBehaviour
             nowCharacter = nowDialog.characterEnum;
             isNewCharacter = true;
         }
-        else if (nowDialog.characterEnum != nowCharacter)
+        else if (nowDialog.characterEnum != nowCharacter && nowDialog.characterEnum != Character.NotAllocated)
         {
             nowCharacter = nowDialog.characterEnum;
             isNewCharacter = true;
         }
-        for (int i = 0; i < ballonList.Count; i++)
-        {
-            ballonList[i].SetActive(false);
-        }
-        switch (nowCharacter)
-        {
-            case Character.Player:
-                ballonList[0].SetActive(true);
-                break;
-            case Character.Fish:
-                ballonList[1].SetActive(true);
-                break;
-            case Character.Narator:
-                break;
-            case Character.Mushroom:
-                ballonList[2].SetActive(true);
-                break;
-            case Character.System:
-                break;
-            case Character.NotAllocated:
-                //이거도 위랑 연속적인거여서 아무것도 안해도됨.
-                break;
-            default:
-                //일단 암것도 하지말아봐.
-                break;
-        }
+
+ 
         if (isNewCharacter)
         {
+            for (int i = 0; i < ballonList.Count; i++)
+            {
+                ballonList[i].SetActive(false);
+            }
             switch (nowCharacter)
             {
                 case Character.Player:
@@ -168,10 +147,6 @@ public class SceneManagerParent : MonoBehaviour
                 case Character.System:
                     TextFrameToggle(false);
                     systemText.gameObject.SetActive(true);
-                    for (int i = 0; i < ballonList.Count; i++)
-                    {
-                        ballonList[i].SetActive(false);
-                    }
                     systemText.text = nowDialog.dialog;
                     systemText.color = new Color(systemText.color.r, systemText.color.g, systemText.color.b, 0);
                     StartCoroutine(moduleManager.FadeModule_Text(systemText, 0, 1, 1));
