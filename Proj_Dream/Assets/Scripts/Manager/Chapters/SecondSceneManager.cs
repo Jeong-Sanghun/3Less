@@ -27,6 +27,8 @@ public class SecondSceneManager : SceneManagerParent
 
     [SerializeField]
     PostProcessVolume postProcessVolume;
+    [SerializeField]
+    PostProcessVolume grainVolume;
 
     [SerializeField]
     SpriteRenderer[] flashBackSpriteArray;
@@ -36,9 +38,17 @@ public class SecondSceneManager : SceneManagerParent
     [SerializeField]
     GameObject medalObject;
 
+    [SerializeField]
+    GameObject scissorItemObject;
+    
+    Vector3 scissorItemOriginPos;
+    [SerializeField]
+    Animator flowerCutAnimator;
+
     bool isScissorClicked = false;
     bool isBubbleClicked = false;
     bool isMedalClicked = false;
+    bool isDraggingScissor = false;
     SpriteRenderer nowSprite;
 
 
@@ -56,6 +66,7 @@ public class SecondSceneManager : SceneManagerParent
         StartCoroutine(BubbleAnimCoroutine());
         StartCoroutine(MedalAnimCoroutine());
         fishState.SetStartLookingRight(false);
+        scissorItemOriginPos = scissorItemObject.transform.position;
     }
 
     protected override void OverrideAction(List<ActionKeyword> keywordList, List<float> parameterList)
@@ -103,16 +114,16 @@ public class SecondSceneManager : SceneManagerParent
             }
             if (keywordList.Contains(ActionKeyword.Second))
             {
-                Debug.Log("왜안돼");
-                Debug.Log("왜안돼");
-                Debug.Log("왜안돼");
-                Debug.Log("왜안돼");
                 fishState.GotoNextTarget(1, true, false);
             }
             if (keywordList.Contains(ActionKeyword.Third))
             {
-
+                fishState.GotoNextTarget(2, true, false);
             }
+        }
+        if(keywordList.Contains(ActionKeyword.Scissors) && keywordList.Contains(ActionKeyword.Drag))
+        {
+            StartCoroutine(ScissorsDragCoroutine());
         }
 
     }
@@ -333,6 +344,8 @@ public class SecondSceneManager : SceneManagerParent
             yield return null;
         }
         roadSprite.color = originColor;
+        scissorRect.gameObject.SetActive(false);
+        scissorItemObject.SetActive(true);
 
         player.isPlayPossible = true;
 
@@ -374,7 +387,7 @@ public class SecondSceneManager : SceneManagerParent
             }
             endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - originPosArr[i].x) * (ranX - originPosArr[i].x)) + originPosArr[i].y, 0);
         }
-        while(isBubbleClicked == false)
+        while(bubbleObjectParent.activeSelf)
         {
             timer += Time.deltaTime;
             if (timer > 1)
@@ -559,4 +572,66 @@ public class SecondSceneManager : SceneManagerParent
         }
         bgmSource.volume = 1;
     }
+
+    IEnumerator ScissorsDragCoroutine()
+    {
+        bool dragAndDrop = false;
+        while (!dragAndDrop)
+        {
+            
+            if (Input.GetMouseButtonUp(0)&&isDraggingScissor && 
+                Vector3.Distance(flowerCutAnimator.transform.position,player.transform.position) < 10)
+            {
+                GameObject touchedObject;               //터치한 오브젝트
+                RaycastHit2D hit;                         //터치를 위한 raycastHit
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+                if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
+                {
+                    touchedObject = hit.collider.gameObject;
+                    Debug.Log(touchedObject.name);
+                    //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
+                    if (touchedObject.name.Contains("Flower"))
+                    {
+                        dragAndDrop = true;
+                        scissorItemObject.SetActive(false);
+                        flowerCutAnimator.SetBool("IsCut", true);
+                        
+                    }
+                }
+            }
+            yield return null;
+        }
+        yield return new WaitForSeconds(1f);
+        float timer = 0;
+        fadeInImage.gameObject.SetActive(true);
+        StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 0, 1, 1));
+        while (timer < 1)
+        {
+            timer += Time.deltaTime;
+            grainVolume.weight = timer;
+            
+            yield return null;
+        }
+
+        gameManager.LoadScene(SceneName.Memory);
+        
+    }
+
+    public void ScissorDrag()
+    {
+        isDraggingScissor = true;
+        scissorItemObject.transform.position = Input.mousePosition;
+    }
+
+    public void ScissorPointerUp()
+    {
+        StartCoroutine(InvokerCoroutine(0.05f, DraggingScissorFalse));
+        scissorItemObject.transform.position = scissorItemOriginPos;
+    }
+
+    void DraggingScissorFalse()
+    {
+        isDraggingScissor = false;
+    }
+
 }

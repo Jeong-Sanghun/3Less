@@ -51,6 +51,7 @@ public class SceneManagerParent : MonoBehaviour
     protected virtual void Start()
     {
         gameManager = GameManager.singleTon;
+        Debug.Log("???");
         jsonManager = new JsonManager();
         lastDialog = null;
         fadeInImage.gameObject.SetActive(true);
@@ -77,18 +78,23 @@ public class SceneManagerParent : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (isStarted == false || moduleManager.nowTexting)
-            {
-                return;
-            }
-            if (isDialogStopping == false)
-            {
-                NextDialog();
-            }
-            else if (isStopActionable == true)
-            {
-                OnActionKeyword();
-            }
+
+        }
+    }
+
+    public void ScreenTouchEvent()
+    {
+        if (isStarted == false || moduleManager.nowTexting)
+        {
+            return;
+        }
+        if (isDialogStopping == false)
+        {
+            NextDialog();
+        }
+        else if (isStopActionable == true)
+        {
+            OnActionKeyword();
         }
     }
 
@@ -115,6 +121,28 @@ public class SceneManagerParent : MonoBehaviour
         for (int i = 0; i < ballonList.Count; i++)
         {
             ballonList[i].SetActive(false);
+        }
+        switch (nowCharacter)
+        {
+            case Character.Player:
+                ballonList[0].SetActive(true);
+                break;
+            case Character.Fish:
+                ballonList[1].SetActive(true);
+                break;
+            case Character.Narator:
+                break;
+            case Character.Mushroom:
+                ballonList[2].SetActive(true);
+                break;
+            case Character.System:
+                break;
+            case Character.NotAllocated:
+                //이거도 위랑 연속적인거여서 아무것도 안해도됨.
+                break;
+            default:
+                //일단 암것도 하지말아봐.
+                break;
         }
         if (isNewCharacter)
         {
@@ -216,6 +244,7 @@ public class SceneManagerParent : MonoBehaviour
         {
             player.isPlayPossible = isPlaying;
             isDialogStopping = false;
+            NextDialog();
             return;
         }
         isStopActionable = false;
