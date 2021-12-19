@@ -35,7 +35,7 @@
         },
         {
             "character": "주인공(A)",
-            "actionKeyword": "playerMoveSecond,scissorsTouch,bubbleTouch",
+            "actionKeyword": "playerMoveSecond,scissorsTouch,bubbleTouch,fishMoveFirst",
             "dialog": "갑자기 너도 좀 무서워지는 것 같아..."
         },
         {
@@ -62,6 +62,7 @@
             "dialog": "저거 봐. 저렇게 좋을까?"
         },
         {
+		  "actionKeyword": "fishMoveSecond,immediateDialog",
             "dialog": "이젠 나도 없으니 끝내주게 행복하겠지?"
         },
         {
@@ -94,7 +95,7 @@
         },
         {
             "character": "주인공(A)",
-            "actionKeyword": "imageFlashbackSecond",
+            "actionKeyword": "imgFlashbackSecond",
             "dialog": "이건... 메달?"
         },
         {

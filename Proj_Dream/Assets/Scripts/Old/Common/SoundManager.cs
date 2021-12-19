@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
 public class SoundManager : MonoBehaviour
 {
@@ -17,10 +16,7 @@ public class SoundManager : MonoBehaviour
 
     public void ChangeVolume()
     {
-        DOTween.To(() => audioArrayBGM[0].volume, x => audioArrayBGM[0].volume = x, 0f, 2f);
 
-        audioArrayBGM[1].Play();
-        DOTween.To(() => audioArrayBGM[1].volume, x => audioArrayBGM[1].volume = x, 1f, 2f);
     }
 
     // Update is called once per frame

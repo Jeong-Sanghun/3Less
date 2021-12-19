@@ -6,6 +6,7 @@ using System;
 
 public class SceneManagerParent : MonoBehaviour
 {
+    protected GameManager gameManager;
     protected JsonManager jsonManager;
     protected DialogBundle dialogBundle;
     [SerializeField]
@@ -21,6 +22,8 @@ public class SceneManagerParent : MonoBehaviour
 
     [SerializeField]
     protected PlayController player;
+    [SerializeField]
+    protected FishState fishState;
 
 
     [SerializeField]
@@ -42,9 +45,12 @@ public class SceneManagerParent : MonoBehaviour
 
     protected string triggerName;
     protected bool isTrigger;
+    protected bool cameraFollowing;
+    protected float cameraRightBound;
 
     protected virtual void Start()
     {
+        gameManager = GameManager.singleTon;
         jsonManager = new JsonManager();
         lastDialog = null;
         fadeInImage.gameObject.SetActive(true);
@@ -88,6 +94,10 @@ public class SceneManagerParent : MonoBehaviour
 
     protected void NextDialog()
     {
+        if(dialogEnd == true)
+        {
+            return;
+        }
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
         bool isNewCharacter = false;
         Text nowText = dialogText;
@@ -188,21 +198,33 @@ public class SceneManagerParent : MonoBehaviour
     {
         Debug.Log("스탑포인트");
         List<ActionClass> actionClassList = nowActionList;
-
-        isStopActionable = false;
-        for(int i =0;i < ballonList.Count; i++)
-        {
-            ballonList[i].SetActive(false);
-        }
+        bool immediateStart = false;
+        bool isPlaying = player.isPlayPossible;
         player.isPlayPossible = false;
-        TextFrameToggle(false);
         for (int i = 0; i < actionClassList.Count; i++)
         {
             ActionClass nowAction = actionClassList[i];
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
+            if (keywordList.Contains(ActionKeyword.ImmediateDialog))
+            {
+                immediateStart = true;
+            }
             OverrideAction(keywordList, parameterList);
         }
+        if (immediateStart)
+        {
+            player.isPlayPossible = isPlaying;
+            isDialogStopping = false;
+            return;
+        }
+        isStopActionable = false;
+        for (int i = 0; i < ballonList.Count; i++)
+        {
+            ballonList[i].SetActive(false);
+        }
+
+        TextFrameToggle(false);
     }
 
     protected virtual void OverrideAction(List<ActionKeyword> keywordList,List<float> parameterList)
@@ -280,11 +302,12 @@ public class SceneManagerParent : MonoBehaviour
         Transform playerTransform = player.transform;
         Vector3 delta = cam.transform.position - playerTransform.position;
         float originY = cam.transform.position.y;
-        while (true)
+        cameraFollowing = true;
+        while (cameraFollowing == true)
         {
             yield return new WaitForFixedUpdate();
             Vector3 pos = new Vector3((playerTransform.position + delta).x, originY, -10);
-            if (pos.x >= 0.71)
+            if (pos.x >= 0.71 && pos.x<=cameraRightBound)
             {
                 cam.transform.position = pos;
             }

@@ -115,6 +115,12 @@ public class Dialog
                 }
             }
 
+            if (keywordArray[i].Contains("sceneEnd") || keywordArray[i].Contains("SceneEnd"))
+            {
+                act.actionList.Add(ActionKeyword.SceneEnd);
+                act.parameterList.Add(-1);
+            }
+
             if (keywordArray[i].Contains("zoomOut") || keywordArray[i].Contains("ZoomOut"))
             {
                 act.actionList.Add(ActionKeyword.ZoomOut);
@@ -155,6 +161,11 @@ public class Dialog
             if (keywordArray[i].Contains("drag") || keywordArray[i].Contains("Drag"))
             {
                 act.actionList.Add(ActionKeyword.Drag);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("immediateDialog") || keywordArray[i].Contains("ImmediateDialog"))
+            {
+                act.actionList.Add(ActionKeyword.ImmediateDialog);
                 act.parameterList.Add(-1);
             }
 

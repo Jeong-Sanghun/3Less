@@ -9,7 +9,9 @@ public enum ActionKeyword
     First, Second, Third,Fourth,
     StopSeconds, FishMove, PlayerMove,FadeOut,FadeIn, ZoomOut, ImgFlashback,ImgFalse,
     Bubble, Scissors,Medal,
-    Touch, Drag
+    ImmediateDialog,
+    Touch, Drag,
+    SceneEnd
 }
 
 

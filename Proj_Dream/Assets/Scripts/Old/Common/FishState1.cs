@@ -97,7 +97,7 @@ public class FishState1 : MonoBehaviour
 
                 if (Vector3.Distance(gameObject.transform.position, goTarget3.transform.position) < 1f)
                 {
-                    skeletonAnimation.skeleton.ScaleX = 1f;
+                    //skeletonAnimation.skeleton.ScaleX = 1f;
                     moveState = MoveState.Idle;
                 }
                 break;

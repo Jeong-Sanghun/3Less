@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Rendering.PostProcessing;
 public class FirstSceneManager : SceneManagerParent
 {
     // Start is called before the first frame update
@@ -14,6 +15,17 @@ public class FirstSceneManager : SceneManagerParent
     Vector3 camStartPos;
     Vector3 camZoomPos;
 
+    [SerializeField]
+    SpriteRenderer blackBoxSprite;
+    [SerializeField]
+    SpriteMask spriteMask;
+    [SerializeField]
+    Sprite[] maskSpriteArray;
+    [SerializeField]
+    PostProcessVolume postProcessVolume;
+    [SerializeField]
+    AudioSource bgmSource;
+    
 
 
 
@@ -27,7 +39,8 @@ public class FirstSceneManager : SceneManagerParent
         camZoomPos = new Vector3(2.43f, -0.02f, -10);
 
         StartCoroutine(InvokerCoroutine(1, NextDialog));
-
+        maskSpriteArray = Resources.LoadAll<Sprite>("curtain/");
+        cameraRightBound = 67.8f;
         
     }
 
@@ -90,6 +103,7 @@ public class FirstSceneManager : SceneManagerParent
     {
         player.SetAnim(PlayController.AnimState.Idle);
         fish.GotoTarget2();
+        StartCoroutine(InvokerCoroutine(0.5f, NextDialog));
 
     }
 
@@ -141,8 +155,72 @@ public class FirstSceneManager : SceneManagerParent
                 NextDialog();
                 isDialogStopping = true;
             }
+            else if(triggerName.Contains("Trigger6") && keywordList.Contains(ActionKeyword.SceneEnd))
+            {
+                StartCoroutine(SceneEndCoroutine());
+            }
+        }
+    }
+
+    IEnumerator SceneEndCoroutine()
+    {
+        float timer = 0;
+        player.SetAnim(PlayController.AnimState.Idle);
+        player.isPlayPossible = false;
+        cameraFollowing = false;
+        
+
+
+        blackBoxSprite.gameObject.SetActive(true);
+        blackBoxSprite.color = new Color(0, 0, 0, 0);
+
+        Color col = new Color(0, 0, 0, 0);
+        while (timer < 0.3f)
+        {
+            timer += Time.deltaTime*1.5f;
+            
+            col.a = timer;
+            blackBoxSprite.color = col;
+            yield return null;
+        }
+        spriteMask.gameObject.SetActive(true);
+        int spriteIndex = 0;
+        while (spriteIndex < maskSpriteArray.Length)
+        {
+            spriteMask.sprite = maskSpriteArray[spriteIndex];
+            spriteIndex++;
+            yield return new WaitForFixedUpdate();
         }
 
+        timer = 0;
+        float startOrtho = cam.orthographicSize;
+        float endOrtho = 0.1f;
+        Vector3 camEndPos = new Vector3(70, 0, -10);
+        Vector3 camOriginPos = cam.transform.position;
+        float accel = 0.6f;
+
+        while (timer < 1)
+        {
+            accel += Time.deltaTime/2f;
+            timer += accel *Time.deltaTime;
+            bgmSource.volume = 1- timer;
+            cam.transform.position = Vector3.Lerp(camOriginPos, camEndPos, timer);
+            cam.orthographicSize = Mathf.Lerp(startOrtho, endOrtho, timer);
+            postProcessVolume.weight = timer;
+            blackBoxSprite.color = new Color(timer, timer, timer, 0.5f);
+            yield return null;
+        }
+        blackBoxSprite.color = new Color(0, 0, 0, 1);
+        blackBoxSprite.maskInteraction = SpriteMaskInteraction.None;
+
+        gameManager.LoadScene(SceneName.Dark);
+
+
+
+
     }
+
+
+
 
 }

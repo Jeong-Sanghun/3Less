@@ -30,9 +30,15 @@ public class SecondSceneManager : SceneManagerParent
 
     [SerializeField]
     SpriteRenderer[] flashBackSpriteArray;
+    [SerializeField]
+    AudioSource bgmSource;
+
+    [SerializeField]
+    GameObject medalObject;
 
     bool isScissorClicked = false;
     bool isBubbleClicked = false;
+    bool isMedalClicked = false;
     SpriteRenderer nowSprite;
 
 
@@ -42,11 +48,14 @@ public class SecondSceneManager : SceneManagerParent
         base.Start();
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("FirstChapter2");
         dialogBundle.SetCharacterEnum();
-
+        cameraRightBound = 19.8f;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
+        StartCoroutine(VolumeUpCoroutine());
         StartCoroutine(InvokerCoroutine(1, NextDialog));
         StartCoroutine(ScissorAnimCoroutine());
         StartCoroutine(BubbleAnimCoroutine());
+        StartCoroutine(MedalAnimCoroutine());
+        fishState.SetStartLookingRight(false);
     }
 
     protected override void OverrideAction(List<ActionKeyword> keywordList, List<float> parameterList)
@@ -90,11 +99,15 @@ public class SecondSceneManager : SceneManagerParent
         {
             if (keywordList.Contains(ActionKeyword.First))
             {
-
+                fishState.GotoNextTarget(0, true, false);
             }
             if (keywordList.Contains(ActionKeyword.Second))
             {
-
+                Debug.Log("왜안돼");
+                Debug.Log("왜안돼");
+                Debug.Log("왜안돼");
+                Debug.Log("왜안돼");
+                fishState.GotoNextTarget(1, true, false);
             }
             if (keywordList.Contains(ActionKeyword.Third))
             {
@@ -156,10 +169,15 @@ public class SecondSceneManager : SceneManagerParent
         }
     }
 
-    public void BubbleTouch()
+    void BubbleTouch()
     {
         
         if (isDialogStopping == false || nowActionList == null || isBubbleClicked == true)
+        {
+            return;
+        }
+        Debug.Log(Vector3.SqrMagnitude(bubbleObjectParent.transform.position - player.transform.position));
+        if (Vector3.SqrMagnitude(bubbleObjectParent.transform.position - player.transform.position) > 250)
         {
             return;
         }
@@ -168,11 +186,36 @@ public class SecondSceneManager : SceneManagerParent
             List<ActionKeyword> keywordList = nowActionList[i].actionList;
             if (keywordList.Contains(ActionKeyword.Bubble) && keywordList.Contains(ActionKeyword.Touch))
             {
-                bubbleObjectParent.SetActive(false);
+
                 player.SetAnim(PlayController.AnimState.Idle);
                 player.isPlayPossible = false;
                 NextDialog();
                 isBubbleClicked = true;
+                break;
+            }
+        }
+    }
+
+    void MedalTouch()
+    {
+        if (isDialogStopping == false || nowActionList == null || isMedalClicked == true)
+        {
+            return;
+        }
+        Debug.Log(Vector3.SqrMagnitude(medalObject.transform.position - player.transform.position));
+        if (Vector3.SqrMagnitude(medalObject.transform.position - player.transform.position) > 40)
+        {
+            return;
+        }
+        for (int i = 0; i < nowActionList.Count; i++)
+        {
+            List<ActionKeyword> keywordList = nowActionList[i].actionList;
+            if (keywordList.Contains(ActionKeyword.Medal) && keywordList.Contains(ActionKeyword.Touch))
+            {
+                player.SetAnim(PlayController.AnimState.Idle);
+                player.isPlayPossible = false;
+                NextDialog();
+                isMedalClicked = true;
                 break;
             }
         }
@@ -331,7 +374,7 @@ public class SecondSceneManager : SceneManagerParent
             }
             endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - originPosArr[i].x) * (ranX - originPosArr[i].x)) + originPosArr[i].y, 0);
         }
-        while(true)
+        while(isBubbleClicked == false)
         {
             timer += Time.deltaTime;
             if (timer > 1)
@@ -360,24 +403,93 @@ public class SecondSceneManager : SceneManagerParent
             }
             if (Input.GetMouseButtonDown(0))
             {
-                if (isBubbleClicked == false)
+                GameObject touchedObject;               //터치한 오브젝트
+                RaycastHit2D hit;                         //터치를 위한 raycastHit
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+                if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
                 {
-                    GameObject touchedObject;               //터치한 오브젝트
-                    RaycastHit2D hit;                         //터치를 위한 raycastHit
-                    Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
-                    if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
-                    {
-                        touchedObject = hit.collider.gameObject;
+                    touchedObject = hit.collider.gameObject;
 
-                        //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
-                        if (touchedObject.name.Contains("bubble"))
-                        {
-                            Debug.Log(touchedObject.name);
-                            BubbleTouch();
-                        }
+                    //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
+                    if (touchedObject.name.Contains("bubble"))
+                    {
+                        Debug.Log(touchedObject.name);
+                        BubbleTouch();
                     }
                 }
+            }
+            yield return null;
 
+        }
+    }
+
+
+    IEnumerator MedalAnimCoroutine()
+    {
+        //float timer = 0;
+        //Vector3[] endPosArr = new Vector3[3];
+        //Vector3[] originPosArr = new Vector3[3];
+        //Vector3[] startPosArr = new Vector3[3];
+        //float ranX = 0;
+        //for (int i = 0; i < 3; i++)
+        //{
+        //    int one;
+        //    startPosArr[i] = bubbleObjectArray[i].transform.position;
+        //    originPosArr[i] = bubbleObjectArray[i].transform.position;
+        //    ranX = originPosArr[i].x + Random.Range(-0.2f, 0.2f);
+        //    if (Random.Range(0, 1) == 0)
+        //    {
+        //        one = 1;
+        //    }
+        //    else
+        //    {
+        //        one = -1;
+        //    }
+        //    endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - originPosArr[i].x) * (ranX - originPosArr[i].x)) + originPosArr[i].y, 0);
+        //}
+        while (isMedalClicked == false)
+        {
+            //timer += Time.deltaTime;
+            //if (timer > 1)
+            //{
+            //    timer = 0;
+            //    for (int i = 0; i < 3; i++)
+            //    {
+            //        int one;
+            //        originPosArr[i] = bubbleObjectArray[i].transform.position;
+            //        ranX = startPosArr[i].x + Random.Range(-0.2f, 0.2f);
+
+            //        if (Random.Range(0, 1) == 0)
+            //        {
+            //            one = 1;
+            //        }
+            //        else
+            //        {
+            //            one = -1;
+            //        }
+            //        endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - startPosArr[i].x) * (ranX - startPosArr[i].x)) + startPosArr[i].y, 0);
+            //    }
+            //}
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    bubbleObjectArray[i].transform.position = Vector3.Lerp(originPosArr[i], endPosArr[i], timer);
+            //}
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject touchedObject;               //터치한 오브젝트
+                RaycastHit2D hit;                         //터치를 위한 raycastHit
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+                if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
+                {
+                    touchedObject = hit.collider.gameObject;
+                    Debug.Log(touchedObject.name);
+                    //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
+                    if (touchedObject.name.Contains("Medal"))
+                    {
+                        
+                        MedalTouch();
+                    }
+                }
             }
             yield return null;
 
@@ -407,6 +519,14 @@ public class SecondSceneManager : SceneManagerParent
             postProcessVolume.weight = postProcessTimer;
             yield return null;
         }
+        if(seq == 0)
+        {
+            bubbleObjectParent.SetActive(false);
+        }
+        if(seq == 1)
+        {
+            medalObject.SetActive(false);
+        }
 
         NextDialog();
     }
@@ -426,5 +546,17 @@ public class SecondSceneManager : SceneManagerParent
         }
         nowSprite.gameObject.SetActive(true);
         NextDialog();
+    }
+
+    IEnumerator VolumeUpCoroutine()
+    {
+        float timer = 0;
+        while (timer < 1)
+        {
+            timer += Time.deltaTime/3f;
+            bgmSource.volume = timer;
+            yield return null;
+        }
+        bgmSource.volume = 1;
     }
 }
