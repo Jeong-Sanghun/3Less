@@ -2412,7 +2412,7 @@ GameObject:
   - component: {fileID: 1382381434}
   - component: {fileID: 1382381433}
   m_Layer: 0
-  m_Name: "\uB0AE\uC758_\uB9F5_\uCC28\uC6D0\uC774\uB3D9"
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

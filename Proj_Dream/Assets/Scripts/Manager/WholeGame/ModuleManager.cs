@@ -123,27 +123,28 @@ public class ModuleManager : MonoBehaviour
             moveModuleInterrupt = true;
         }
         moveModuleLinearRunning = true;
+        Vector3 origin = i_Object.transform.position;
         Vector3 newVector = new Vector3(0f, 0f, 0f);
         linearMovingObj = i_Object;
         float newX = 0f, newY = 0f, newZ = 0f;
-        while (miniTimer < i_Time)
+        while (miniTimer < 1)
         {
-            newX = Mathf.Lerp(i_Object.transform.localPosition.x, i_Vector.x, miniTimer / i_Time);
-            newY = Mathf.Lerp(i_Object.transform.localPosition.y, i_Vector.y, miniTimer / i_Time);
-            newZ = Mathf.Lerp(i_Object.transform.localPosition.z, i_Vector.z, miniTimer / i_Time);
+            newX = Mathf.Lerp(origin.x, i_Vector.x, miniTimer);
+            newY = Mathf.Lerp(origin.y, i_Vector.y, miniTimer);
+            newZ = Mathf.Lerp(origin.z, i_Vector.z, miniTimer);
             newVector = new Vector3(newX, newY, newZ);
-            i_Object.transform.localPosition = newVector;
+            i_Object.transform.position = newVector;
             yield return null;
             if (moveModuleInterrupt)
             {
                 moveModuleInterrupt = false;
                 break;
             }
-            miniTimer += Time.deltaTime;
+            miniTimer += Time.deltaTime/i_Time;
         }
         if (linearMovingObj == i_Object)
         {
-            i_Object.transform.localPosition = i_Vector;
+            i_Object.transform.position = i_Vector;
         }
 
         yield return null;

@@ -223,17 +223,12 @@
             "dialog": "아니, 아니! 우리 같이 찾아보자고. 뭐가 그리 억울하고 마음이 아픈지!"
         },
         {
-            "actionKeyword": "fishMoveThird,scissorDrag,playerMove",
             "dialog": "자, 이쪽으로 가면 되나?"
         },
         {
             "character": "금붕어",
-            "actionKeyword": "fishMoveFourth,immediateDialog",
+            "actionKeyword": "fishMoveThird,scissorDrag,playerMove",
             "dialog": "나는 갈 거야. 멀리 갈 거야."
-        },
-        {
-            "character": "NAR.(SYS)",
-            "dialog": "금붕어를 타고 다음 맵으로 이동합니다."
         }
     ]
 }
