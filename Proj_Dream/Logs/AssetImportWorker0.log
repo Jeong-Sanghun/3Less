@@ -15,11 +15,11 @@ C:/GithubDesktop/3Less/3Less/Proj_Dream
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62129
+57522
 Successfully changed project path to: C:/GithubDesktop/3Less/3Less/Proj_Dream
 C:/GithubDesktop/3Less/3Less/Proj_Dream
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 275.50 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 123.67 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/UnityEditor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -35,367 +35,1148 @@ Initialize mono
 Mono path[0] = 'C:/UnityEditor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/UnityEditor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/UnityEditor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56604
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/UnityEditor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004859 seconds.
+Registered in 0.005758 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 95.30 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 74.36 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.320 seconds
+- Completed reload, in  2.937 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010559 seconds.
+Registered in 0.008885 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.489 seconds
+- Completed reload, in  1.296 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 1.55 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2030 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 103.0 MB.
 System memory in use after: 101.9 MB.
 
 Unloading 88 unused Assets to reduce memory usage. Loaded Objects now: 2409.
-Total: 3.589300 ms (FindLiveObjects: 0.296800 ms CreateObjectMapping: 0.122500 ms MarkObjects: 2.051000 ms  DeleteObjects: 1.117500 ms)
+Total: 3.223700 ms (FindLiveObjects: 0.352800 ms CreateObjectMapping: 0.249200 ms MarkObjects: 1.643800 ms  DeleteObjects: 0.976700 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Level_4.unity
-  artifactKey: Guid(1fcc1dd92e2c20941815e762fef73a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level_4.unity using Guid(1fcc1dd92e2c20941815e762fef73a6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f602d1a4c224fd9be50072c172b1aa17') in 0.017716 seconds
-  Import took 0.021492 seconds .
+  path: Assets/Scenes/Level_3.unity
+  artifactKey: Guid(f0834aaf9eb4fd94e92368e769e370d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level_3.unity using Guid(f0834aaf9eb4fd94e92368e769e370d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '783e4be0f5202667b771cdda6637ce36') in 0.021948 seconds
+  Import took 0.026912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000636 seconds.
+  path: Assets/Scenes/Level_2.unity
+  artifactKey: Guid(b8f6e8a3860efb94fb3a25663dcce793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level_2.unity using Guid(b8f6e8a3860efb94fb3a25663dcce793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25636386d2fc1814004eaca1153f5ad9') in 0.005497 seconds
+  Import took 0.009560 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 71.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 78 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.1 MB.
+System memory in use after: 59.0 MB.
+
+Unloading 78 unused Assets to reduce memory usage. Loaded Objects now: 2409.
+Total: 7.151700 ms (FindLiveObjects: 0.418200 ms CreateObjectMapping: 0.292800 ms MarkObjects: 3.622800 ms  DeleteObjects: 2.815800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 105.827102 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩
+  artifactKey: Guid(2f897ea1ba47df848ab7e3268087a261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩 using Guid(2f897ea1ba47df848ab7e3268087a261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee9d5365898208710d3f8abc315a62fe') in 0.014448 seconds
+  Import took 0.021265 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.009119 seconds.
+Registered in 0.013398 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.174 seconds
+- Completed reload, in  1.413 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.65 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 95.5 MB.
 System memory in use after: 94.4 MB.
 
 Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2412.
-Total: 3.697200 ms (FindLiveObjects: 0.287600 ms CreateObjectMapping: 0.137400 ms MarkObjects: 2.141800 ms  DeleteObjects: 1.128900 ms)
+Total: 23.218200 ms (FindLiveObjects: 0.320300 ms CreateObjectMapping: 0.118900 ms MarkObjects: 3.782800 ms  DeleteObjects: 18.994800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011150 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.253 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.5 MB.
-System memory in use after: 94.4 MB.
+Received Import Request.
+  Time since last request: 28.549123 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00000.png
+  artifactKey: Guid(f2f27e8f079b3de468b77538c78dfa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00000.png using Guid(f2f27e8f079b3de468b77538c78dfa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10851339dbf678c8b94237cef2df936b') in 0.230693 seconds
+  Import took 0.238383 seconds .
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2415.
-Total: 5.480100 ms (FindLiveObjects: 0.398400 ms CreateObjectMapping: 0.177200 ms MarkObjects: 2.765700 ms  DeleteObjects: 2.136300 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 105.976675 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00054.png
+  artifactKey: Guid(6007728c05cbc4c4685a0458b25e4cff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00054.png using Guid(6007728c05cbc4c4685a0458b25e4cff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e03ca522e90495e12ab110dd52e582b6') in 0.029216 seconds
+  Import took 0.035073 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 0.000455 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00056.png
+  artifactKey: Guid(6904f74c64376e6439d469e283af1570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00056.png using Guid(6904f74c64376e6439d469e283af1570) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a1f19ae42ac6f13a26f3cbe838164eb') in 0.030213 seconds
+  Import took 0.035521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000578 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00000.png
+  artifactKey: Guid(f2f27e8f079b3de468b77538c78dfa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00000.png using Guid(f2f27e8f079b3de468b77538c78dfa5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d02ddbe39f68df68f2f63df2fa7c411') in 0.029144 seconds
+  Import took 0.034482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00058.png
+  artifactKey: Guid(015b5b2d49a219a4cbdec9918e8789b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00058.png using Guid(015b5b2d49a219a4cbdec9918e8789b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74a61ccf5a52a2b9ec7e8ba07ae872d1') in 0.029798 seconds
+  Import took 0.033910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00057.png
+  artifactKey: Guid(8a706dbac57e15d4d936878a89428877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00057.png using Guid(8a706dbac57e15d4d936878a89428877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c3d1790cd0f5da1bf777b15d71ec17b') in 0.029295 seconds
+  Import took 0.033820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000375 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00060.png
+  artifactKey: Guid(3a36fc7ceb7e09c478028846bd55fda1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00060.png using Guid(3a36fc7ceb7e09c478028846bd55fda1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b8c26c935370d1e617cec8c848fe6b') in 0.028090 seconds
+  Import took 0.033258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00064.png
+  artifactKey: Guid(77f794b8138e4ad4c9ac2d7bd851b4c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00064.png using Guid(77f794b8138e4ad4c9ac2d7bd851b4c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86418f839b39663550ed3cd4fc0bf821') in 0.027372 seconds
+  Import took 0.033061 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00055.png
+  artifactKey: Guid(6199affb27d31cc4385c06e249bb1b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00055.png using Guid(6199affb27d31cc4385c06e249bb1b56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eeafcd8abbc5f23bbd25dc7ce0eb2a7') in 0.030155 seconds
+  Import took 0.033792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00059.png
+  artifactKey: Guid(1f1d2c746f9680949a7590a0cd401bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00059.png using Guid(1f1d2c746f9680949a7590a0cd401bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '181d51568b3f2e64936946e54d8a0b36') in 0.028312 seconds
+  Import took 0.032289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00062.png
+  artifactKey: Guid(31ee62a7054a790449a93871e9a3a139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00062.png using Guid(31ee62a7054a790449a93871e9a3a139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '006b6e79369ab00aafdb532c47f1e2f2') in 0.030714 seconds
+  Import took 0.035923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00061.png
+  artifactKey: Guid(3d4ff9623b8680a45aa0cb841dbd280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00061.png using Guid(3d4ff9623b8680a45aa0cb841dbd280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd2523d9de9030ec2729c644cd5333d6') in 0.028147 seconds
+  Import took 0.033524 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000506 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00063.png
+  artifactKey: Guid(75c4a42b78d480745869f7e639e8ff16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00063.png using Guid(75c4a42b78d480745869f7e639e8ff16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ef6e0ee932d55586aa005005ca918e') in 0.028970 seconds
+  Import took 0.035717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.408659 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00046.png
+  artifactKey: Guid(7e5ee42d56ba80b4790087117071d8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00046.png using Guid(7e5ee42d56ba80b4790087117071d8b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4953ad0cb19fda388d126521429f2883') in 0.026585 seconds
+  Import took 0.030575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00043.png
+  artifactKey: Guid(7dc28bd331df1a441a96bc6120ffbba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00043.png using Guid(7dc28bd331df1a441a96bc6120ffbba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c0cfb110701628a46ffac6db3c5fce') in 0.029701 seconds
+  Import took 0.034322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000469 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00035.png
+  artifactKey: Guid(234c3d36ece7685468df684ba93d9d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00035.png using Guid(234c3d36ece7685468df684ba93d9d41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b27afa1c04873674785d44c4930142') in 0.031901 seconds
+  Import took 0.037339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000400 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00031.png
+  artifactKey: Guid(306dd190994c896439dc7af1da5e634e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00031.png using Guid(306dd190994c896439dc7af1da5e634e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279f21e8067f5d276c833e1c72a164fd') in 0.028426 seconds
+  Import took 0.035685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000424 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00026.png
+  artifactKey: Guid(8eb950f3fddf10f43af679faa760722e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00026.png using Guid(8eb950f3fddf10f43af679faa760722e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a1f11857db107b6d7212807068fff3') in 0.028375 seconds
+  Import took 0.033955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000601 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00028.png
+  artifactKey: Guid(55a2c5a3c08b69046afc666a287601db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00028.png using Guid(55a2c5a3c08b69046afc666a287601db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f22b1b26d298194930fe5a902c9a7a4') in 0.028512 seconds
+  Import took 0.033091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00048.png
+  artifactKey: Guid(2573cb93d65b820408b43e59847afe78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00048.png using Guid(2573cb93d65b820408b43e59847afe78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9962e9080dde091a3bf823c5bae995b') in 0.028932 seconds
+  Import took 0.033275 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00040.png
+  artifactKey: Guid(4ec0ebdfeff620c47be09fe40782bb0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00040.png using Guid(4ec0ebdfeff620c47be09fe40782bb0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce8ffedcc486fb85b83b9e3aba400679') in 0.029126 seconds
+  Import took 0.033780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00045.png
+  artifactKey: Guid(0fc0d2ecf590dd54d98e78e9b4308b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00045.png using Guid(0fc0d2ecf590dd54d98e78e9b4308b34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba97ff71e91003b985955a3a370a5524') in 0.029892 seconds
+  Import took 0.034217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00042.png
+  artifactKey: Guid(c77742681223961458400efc5ce540bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00042.png using Guid(c77742681223961458400efc5ce540bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e31d4f1e03e1075640f8c1246a44b95') in 0.029206 seconds
+  Import took 0.033491 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000344 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00008.png
+  artifactKey: Guid(8b40264d9eedb2343b6436177f8c8c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00008.png using Guid(8b40264d9eedb2343b6436177f8c8c22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e37ae01d43418f0e62fb0a43d1d61c') in 0.028940 seconds
+  Import took 0.032614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00017.png
+  artifactKey: Guid(76b65aaadb21eaf4186a545b0cde280c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00017.png using Guid(76b65aaadb21eaf4186a545b0cde280c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a5ec8ad65af66f34521320af019eec5') in 0.034438 seconds
+  Import took 0.038690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00010.png
+  artifactKey: Guid(a1bf73dd4e269d049b8909f8f9632018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00010.png using Guid(a1bf73dd4e269d049b8909f8f9632018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5991285e5e28d94bdf6b2c6bfb2f2c33') in 0.031500 seconds
+  Import took 0.037444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000483 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00001.png
+  artifactKey: Guid(e2c459bbdf8701b44bee055129c54416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00001.png using Guid(e2c459bbdf8701b44bee055129c54416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0fb5c0a70cda0762977d00ad8c8e591') in 0.028640 seconds
+  Import took 0.033806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000356 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00021.png
+  artifactKey: Guid(37afd1621d40b8941b01ee84c128c8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00021.png using Guid(37afd1621d40b8941b01ee84c128c8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906878aa7f1418706427b9abccea571c') in 0.029708 seconds
+  Import took 0.033852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00006.png
+  artifactKey: Guid(4c514521b01104e44b985b05199a69f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00006.png using Guid(4c514521b01104e44b985b05199a69f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '364523206a23229ee34dbb5ffdc760fe') in 0.028801 seconds
+  Import took 0.033344 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000361 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00033.png
+  artifactKey: Guid(e351b132e9cc4ae40ba99b7283824a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00033.png using Guid(e351b132e9cc4ae40ba99b7283824a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73be1b231d7bbbafd730fb91b5c84f41') in 0.029690 seconds
+  Import took 0.034714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00005.png
+  artifactKey: Guid(5eea605b5334f69479f800831f54a379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00005.png using Guid(5eea605b5334f69479f800831f54a379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9866774725ea8217dd168974b20166df') in 0.032032 seconds
+  Import took 0.036432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00016.png
+  artifactKey: Guid(d5d3df6515b158c48b6ce53c537ea3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00016.png using Guid(d5d3df6515b158c48b6ce53c537ea3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a643303a2d96cb2a75d8dd0cff0e4f6f') in 0.029749 seconds
+  Import took 0.033774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00027.png
+  artifactKey: Guid(e62aab84453e8784d971bae5c1117113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00027.png using Guid(e62aab84453e8784d971bae5c1117113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41ca81db98d9059683273ae2675f87a5') in 0.031315 seconds
+  Import took 0.036256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000457 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00050.png
+  artifactKey: Guid(3c44313028dc076469ac61c919267bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00050.png using Guid(3c44313028dc076469ac61c919267bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '461e03948761b4efca93f87ac9e81df2') in 0.030155 seconds
+  Import took 0.036139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00051.png
+  artifactKey: Guid(7f61550c1ac1e694fab563d0885acb7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00051.png using Guid(7f61550c1ac1e694fab563d0885acb7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edd5c37560ba97191623e8b7b78ddd56') in 0.031878 seconds
+  Import took 0.036559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00020.png
+  artifactKey: Guid(78d5843fceeeddb4797ded10dee96513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00020.png using Guid(78d5843fceeeddb4797ded10dee96513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f4581c38721da4f77e5e4b674179610') in 0.028084 seconds
+  Import took 0.032067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000374 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00030.png
+  artifactKey: Guid(91243192208a43349b9f3f1c0c152a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00030.png using Guid(91243192208a43349b9f3f1c0c152a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '036a10821e4f3121861d7d76919408dd') in 0.028466 seconds
+  Import took 0.032365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000381 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00009.png
+  artifactKey: Guid(0d0306153e0369c4cad8e96bf4b52db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00009.png using Guid(0d0306153e0369c4cad8e96bf4b52db1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c925e06f71be23974892d71d00c8306') in 0.026845 seconds
+  Import took 0.031186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000399 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00037.png
+  artifactKey: Guid(28eb77635f56e1c49960c0d37abd2ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00037.png using Guid(28eb77635f56e1c49960c0d37abd2ed8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3e5aec416e1b97f57565261c5fd811') in 0.030792 seconds
+  Import took 0.040343 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00011.png
+  artifactKey: Guid(889940da8f850be408ced62baa977d66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00011.png using Guid(889940da8f850be408ced62baa977d66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e532284cb6f9176b2099ea4765cfc365') in 0.030986 seconds
+  Import took 0.035747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000395 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00047.png
+  artifactKey: Guid(863e685c257379c4d983ab926b1a1d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00047.png using Guid(863e685c257379c4d983ab926b1a1d67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cf49ba3e49b2f2d4b5f418c931b8999') in 0.030396 seconds
+  Import took 0.036810 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000446 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00012.png
+  artifactKey: Guid(dcd6d3245d1663f4f9cc3a7903955e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00012.png using Guid(dcd6d3245d1663f4f9cc3a7903955e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357c2b01236b0356f8f2f99156856185') in 0.030687 seconds
+  Import took 0.035183 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000450 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00036.png
+  artifactKey: Guid(a85f1fd8c35c5ae4a963b7c50e4d065c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00036.png using Guid(a85f1fd8c35c5ae4a963b7c50e4d065c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f3ca88540a7818b288ec1696d7bc01c') in 0.028346 seconds
+  Import took 0.032930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00019.png
+  artifactKey: Guid(e334dc8d0247030499791f6fa66860e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00019.png using Guid(e334dc8d0247030499791f6fa66860e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f64f97971434aaef2e7f14163cbf8a5') in 0.030188 seconds
+  Import took 0.034211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00025.png
+  artifactKey: Guid(35d98b3d4cbe4fa44b011f14739c7d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00025.png using Guid(35d98b3d4cbe4fa44b011f14739c7d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c124cba156238eb013375f6f2f916f56') in 0.027878 seconds
+  Import took 0.032034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000437 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00023.png
+  artifactKey: Guid(b704110b544edfb4c85085513124552f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00023.png using Guid(b704110b544edfb4c85085513124552f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c49d64960a4369f0168ed70c78cc13f') in 0.030385 seconds
+  Import took 0.035429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00052.png
+  artifactKey: Guid(b35019d018dd9924badcb3b8ff3380d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00052.png using Guid(b35019d018dd9924badcb3b8ff3380d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '360e6a2d6c034a4bc081b2a76acbf34c') in 0.027872 seconds
+  Import took 0.032663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00041.png
+  artifactKey: Guid(c6b4fe38efc28264fa20242633d6b14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00041.png using Guid(c6b4fe38efc28264fa20242633d6b14d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e22566d5bde927fd2ce8ece8ba70f869') in 0.029075 seconds
+  Import took 0.033011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000388 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00039.png
+  artifactKey: Guid(8b280977081275442bc54b98f1cd3308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00039.png using Guid(8b280977081275442bc54b98f1cd3308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cd2368231e1b57d587bbf2042b47882') in 0.028431 seconds
+  Import took 0.033197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00034.png
+  artifactKey: Guid(26e15cce5bf53f04f98d385a7c922151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00034.png using Guid(26e15cce5bf53f04f98d385a7c922151) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0711b61703b838cc9a97f62535e5b1ec') in 0.030109 seconds
+  Import took 0.035619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00013.png
+  artifactKey: Guid(e5595ec915e5a71449a7b1452b780cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00013.png using Guid(e5595ec915e5a71449a7b1452b780cfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa84bc1d43a3cc5abcf06e838d955381') in 0.028539 seconds
+  Import took 0.033529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000439 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00044.png
+  artifactKey: Guid(332284d622a0fee4d96a09377b0bf242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00044.png using Guid(332284d622a0fee4d96a09377b0bf242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9aa53ba2e8eddf25acaaa44cc0ef1d1') in 0.032770 seconds
+  Import took 0.039576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00003.png
+  artifactKey: Guid(5ee2d40b248a71e458b1e63f84777a7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00003.png using Guid(5ee2d40b248a71e458b1e63f84777a7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26bb2a2e701ab92373428ab17e405ca5') in 0.029021 seconds
+  Import took 0.035361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00032.png
+  artifactKey: Guid(9f0088bbb59bf51479d8d983ac2c0b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00032.png using Guid(9f0088bbb59bf51479d8d983ac2c0b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb49b69a6d5c11d5d6b8fe5311e6f8e8') in 0.029627 seconds
+  Import took 0.033773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00049.png
+  artifactKey: Guid(f8f82b1378ee6364ebd5a85e3c272f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00049.png using Guid(f8f82b1378ee6364ebd5a85e3c272f44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32ec7a1e86fe1cc447f9623f44371135') in 0.028645 seconds
+  Import took 0.033485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00004.png
+  artifactKey: Guid(30a9e14d14a32a6499df39b0bdc17f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00004.png using Guid(30a9e14d14a32a6499df39b0bdc17f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33ae7b03601b3b44e44902aa52cfc6c5') in 0.025996 seconds
+  Import took 0.031137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000436 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00014.png
+  artifactKey: Guid(3142ece265b142f438bd37d2c1d1c226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00014.png using Guid(3142ece265b142f438bd37d2c1d1c226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54645250a467fc85d7ea75f401828e25') in 0.032285 seconds
+  Import took 0.037694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00015.png
+  artifactKey: Guid(1a110ab47422bf145ac953e1afbebe9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00015.png using Guid(1a110ab47422bf145ac953e1afbebe9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2fd2cde9a7c2c6190c4ad89220f35de') in 0.029440 seconds
+  Import took 0.035427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000429 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00022.png
+  artifactKey: Guid(89af7b4ab30a0504f9cfdcfc702075b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00022.png using Guid(89af7b4ab30a0504f9cfdcfc702075b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '301bbf615a3d7959f6fda6b6d86cade5') in 0.030251 seconds
+  Import took 0.034660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000487 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00002.png
+  artifactKey: Guid(cb1980b7c5f36cc46954e8e0580bf65d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00002.png using Guid(cb1980b7c5f36cc46954e8e0580bf65d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54fcf571bcd7dff44b8a1e0399f92eb8') in 0.029171 seconds
+  Import took 0.035931 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000486 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00018.png
+  artifactKey: Guid(47d4d4c9249888f4387dc25f2ec9e297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00018.png using Guid(47d4d4c9249888f4387dc25f2ec9e297) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deb8223cef53522350a01f5c3d89e433') in 0.031060 seconds
+  Import took 0.035630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00029.png
+  artifactKey: Guid(bfcc126e150195449b91e00667394713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00029.png using Guid(bfcc126e150195449b91e00667394713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bfc3f9a451211d248c1ed7e01aa6768') in 0.028595 seconds
+  Import took 0.032922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000349 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00024.png
+  artifactKey: Guid(ca3d1dba0a2f29f408f89ab1f587be2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00024.png using Guid(ca3d1dba0a2f29f408f89ab1f587be2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e48dac023d13912f4eb54eeab495d8') in 0.029236 seconds
+  Import took 0.034629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00053.png
+  artifactKey: Guid(be70099f6bc96c549bf9c90f1dab1af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00053.png using Guid(be70099f6bc96c549bf9c90f1dab1af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7af2b26905db43d5dc7dc13e6c21bac') in 0.030764 seconds
+  Import took 0.035336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00038.png
+  artifactKey: Guid(48b2c8a1b2e9ce6459622e0dfc328f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00038.png using Guid(48b2c8a1b2e9ce6459622e0dfc328f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf12df7f7d769c74b6438be24325a923') in 0.032865 seconds
+  Import took 0.039875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00007.png
+  artifactKey: Guid(2073cf6e6c4f8f54ebaa5b5bc8cefb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_무명_가방있/현실_무명_가방있_00007.png using Guid(2073cf6e6c4f8f54ebaa5b5bc8cefb8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a85eb7098c5a4f9a61a1f0ebc35657a9') in 0.032808 seconds
+  Import took 0.037905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.089897 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_블라우스
+  artifactKey: Guid(54813c988720978468173aaf758a96a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_블라우스 using Guid(54813c988720978468173aaf758a96a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df1cc08a39c616745365662d5b2d6d43') in 0.010355 seconds
+  Import took 0.015101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001209 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_블라우스
+  artifactKey: Guid(54813c988720978468173aaf758a96a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_블라우스 using Guid(54813c988720978468173aaf758a96a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df1cc08a39c616745365662d5b2d6d43') in 0.005758 seconds
+  Import took 0.011942 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.623926 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트
+  artifactKey: Guid(593405d5ee7a14d459689490ca0f386a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트 using Guid(593405d5ee7a14d459689490ca0f386a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0769c220aef182d63889f13e76bc579c') in 0.010592 seconds
+  Import took 0.016566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.591683 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00032.png
+  artifactKey: Guid(9b6ec9ad5f4824e46aff7cc91653717c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00032.png using Guid(9b6ec9ad5f4824e46aff7cc91653717c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '691c887a48dfd72af2cfd274bff6f2fc') in 0.064628 seconds
+  Import took 0.070333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00038.png
+  artifactKey: Guid(940c1df8b495c974da26652af08a3aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00038.png using Guid(940c1df8b495c974da26652af08a3aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a64dc7c721f2a917903fbe132ed17f90') in 0.063600 seconds
+  Import took 0.067811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000377 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00045.png
+  artifactKey: Guid(f3dfe15e9eb42cc4684f537fde8693de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00045.png using Guid(f3dfe15e9eb42cc4684f537fde8693de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77ab1940101d1335b73b3421bcc130c9') in 0.057947 seconds
+  Import took 0.062060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000531 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00035.png
+  artifactKey: Guid(ff1d05a3997fefe43a2417fa6ef20608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00035.png using Guid(ff1d05a3997fefe43a2417fa6ef20608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f4ef715e9b6de914dd1a8248c09895d') in 0.061145 seconds
+  Import took 0.065839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00054.png
+  artifactKey: Guid(d09c0f2e0985a484fb76e1d142e79aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00054.png using Guid(d09c0f2e0985a484fb76e1d142e79aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93087e6fb0ab2cc5c98afeb522871ef') in 0.059659 seconds
+  Import took 0.063401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000377 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00057.png
+  artifactKey: Guid(30eb869b816aad64d93a03a359d6c6f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00057.png using Guid(30eb869b816aad64d93a03a359d6c6f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb8298cbdb69b4aaa3750e97696c671f') in 0.059575 seconds
+  Import took 0.063329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00056.png
+  artifactKey: Guid(9a0e22f77ca377f4db858b3cc9381813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00056.png using Guid(9a0e22f77ca377f4db858b3cc9381813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c29f2118bc69ca761123b712e5953c20') in 0.056487 seconds
+  Import took 0.061355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000401 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00055.png
+  artifactKey: Guid(6c0f70e8383e4024387d722f38bd6c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00055.png using Guid(6c0f70e8383e4024387d722f38bd6c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ce6a243ae0f6f7b6c48ef410b4f2010') in 0.059885 seconds
+  Import took 0.064142 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00054.png
+  artifactKey: Guid(d09c0f2e0985a484fb76e1d142e79aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00054.png using Guid(d09c0f2e0985a484fb76e1d142e79aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93087e6fb0ab2cc5c98afeb522871ef') in 0.056360 seconds
+  Import took 0.060696 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000362 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00053.png
+  artifactKey: Guid(8087cead95fabe54d8e4399f29b30c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00053.png using Guid(8087cead95fabe54d8e4399f29b30c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d9186b7e5408f26f05c25559f6f492a') in 0.062835 seconds
+  Import took 0.067959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00050.png
+  artifactKey: Guid(bd59d8b7f40362a4a9b994f1038f9dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00050.png using Guid(bd59d8b7f40362a4a9b994f1038f9dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4584aeffec39bdeeac82a4d1423b3fa9') in 0.059200 seconds
+  Import took 0.063856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00041.png
+  artifactKey: Guid(41222c090ab5df04baffa4115c64b77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00041.png using Guid(41222c090ab5df04baffa4115c64b77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf0289553727e113c809c32e871fc7c0') in 0.062655 seconds
+  Import took 0.066490 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00049.png
+  artifactKey: Guid(d884680980fc6144f8dc4193a2e2e0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00049.png using Guid(d884680980fc6144f8dc4193a2e2e0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aba328008565c43a019001673de74fd8') in 0.061235 seconds
+  Import took 0.065171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00043.png
+  artifactKey: Guid(0cda67fe44318fb47ae2b67d5c9e6e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00043.png using Guid(0cda67fe44318fb47ae2b67d5c9e6e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5107985bdafcf9224707e981a25f1009') in 0.057032 seconds
+  Import took 0.060833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00048.png
+  artifactKey: Guid(f9357f1bc9b7fb84c8277252fd464e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00048.png using Guid(f9357f1bc9b7fb84c8277252fd464e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6687726cde2d6e5b1389e40b36e4f850') in 0.061779 seconds
+  Import took 0.066955 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00066.png
+  artifactKey: Guid(b64e5605b04decd4094ed52a934534be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00066.png using Guid(b64e5605b04decd4094ed52a934534be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1187677b60d72d3623c40a3acef8ec56') in 0.057682 seconds
+  Import took 0.062147 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00060.png
+  artifactKey: Guid(f23e6e2d89409d04694f02b8c7d9eae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00060.png using Guid(f23e6e2d89409d04694f02b8c7d9eae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc827b725204b623f66cb9608d8a33f') in 0.062522 seconds
+  Import took 0.067028 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00063.png
+  artifactKey: Guid(78b825bd51a0fb24b996226695f249b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00063.png using Guid(78b825bd51a0fb24b996226695f249b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d061b1b3b57f80c58a9f875da297b1d') in 0.059718 seconds
+  Import took 0.064262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000398 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00060.png
+  artifactKey: Guid(f23e6e2d89409d04694f02b8c7d9eae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00060.png using Guid(f23e6e2d89409d04694f02b8c7d9eae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc827b725204b623f66cb9608d8a33f') in 0.055804 seconds
+  Import took 0.059837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000495 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00067.png
+  artifactKey: Guid(00535177ad2bc0048b5edfb612606bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00067.png using Guid(00535177ad2bc0048b5edfb612606bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2bfef63fad4b21211152592b963577c') in 0.063036 seconds
+  Import took 0.067532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00044.png
+  artifactKey: Guid(5566284388591004f93193e7f74c6b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00044.png using Guid(5566284388591004f93193e7f74c6b2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb19f96335a55c096d35a6338199ed7c') in 0.074726 seconds
+  Import took 0.078777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00051.png
+  artifactKey: Guid(5646eb5d99092734cbf2f0eb20e2dd9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00051.png using Guid(5646eb5d99092734cbf2f0eb20e2dd9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4debc53a3ce4b946bf0df4f29694782a') in 0.061913 seconds
+  Import took 0.065967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00061.png
+  artifactKey: Guid(e3b1a4fd1fa47a4419fb63cff8ae5c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00061.png using Guid(e3b1a4fd1fa47a4419fb63cff8ae5c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '073443ac05b6c42d570c2c5dc5983da6') in 0.061504 seconds
+  Import took 0.065429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00033.png
+  artifactKey: Guid(df143f4a135b1cc41ab2c05a3128fa79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00033.png using Guid(df143f4a135b1cc41ab2c05a3128fa79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc6abcadc1f770bfcdf08a9bb3116b5') in 0.078580 seconds
+  Import took 0.084063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00046.png
+  artifactKey: Guid(65ecc527c5edea841aa665303a4cb1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00046.png using Guid(65ecc527c5edea841aa665303a4cb1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b66fa306be0cfa8ef104a0be48d5cad4') in 0.074286 seconds
+  Import took 0.078768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00040.png
+  artifactKey: Guid(6e6829c5a0f5d4943bd9d4917c9b11bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00040.png using Guid(6e6829c5a0f5d4943bd9d4917c9b11bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88d5080d10e0dea9fdd234220aa16781') in 0.070609 seconds
+  Import took 0.074710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00059.png
+  artifactKey: Guid(23c74a5dadc2cb54dae99fe0fd0c9057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00059.png using Guid(23c74a5dadc2cb54dae99fe0fd0c9057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c0fba8bc6116c9e752155663c0702f3') in 0.064159 seconds
+  Import took 0.069342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000422 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00047.png
+  artifactKey: Guid(5916034f82d55b748b073410d60d8253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00047.png using Guid(5916034f82d55b748b073410d60d8253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0ebe1f24ddfed67b9a7cdfd4f3be8c0') in 0.062545 seconds
+  Import took 0.066762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00036.png
+  artifactKey: Guid(dcf35d3a19387d946b8c8862d4f79ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00036.png using Guid(dcf35d3a19387d946b8c8862d4f79ff0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554b3139372e90444beae42c4caea9dd') in 0.065695 seconds
+  Import took 0.069699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00062.png
+  artifactKey: Guid(190f96e1a641a8146be0880458f2655d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00062.png using Guid(190f96e1a641a8146be0880458f2655d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f964ba2fc6bb72e9870876bdeaec247') in 0.061174 seconds
+  Import took 0.065322 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000367 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00065.png
+  artifactKey: Guid(1e9aa9eecc9f7594b965051b56adc5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00065.png using Guid(1e9aa9eecc9f7594b965051b56adc5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56a3c805d10d8b9fcd3212c8ba5ef348') in 0.067226 seconds
+  Import took 0.071790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000360 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00052.png
+  artifactKey: Guid(f38e9bc3ad991b0438906d0d5aa02248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00052.png using Guid(f38e9bc3ad991b0438906d0d5aa02248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '817539d26acc8e073cf161911fcd548d') in 0.074045 seconds
+  Import took 0.078579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000355 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00039.png
+  artifactKey: Guid(3307e51b59f62d8458a58f20450ab050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00039.png using Guid(3307e51b59f62d8458a58f20450ab050) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27445150d9b220cc8b88e84e574b1c5') in 0.055603 seconds
+  Import took 0.059533 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00042.png
+  artifactKey: Guid(ee54aa612ee88f540b52a68d6f2d70f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00042.png using Guid(ee54aa612ee88f540b52a68d6f2d70f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abde0f46deeaa7fb3fe84a18b2e908ed') in 0.063440 seconds
+  Import took 0.068815 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000410 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00064.png
+  artifactKey: Guid(3bb30aeeaa0943f4a994e5445a031e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00064.png using Guid(3bb30aeeaa0943f4a994e5445a031e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1afe1d7feecab22c3030611bc326e265') in 0.058529 seconds
+  Import took 0.062484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00037.png
+  artifactKey: Guid(ca2e37f80c3f8174ab53614696a9adc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00037.png using Guid(ca2e37f80c3f8174ab53614696a9adc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf0718a0b6b3f174d3f21e4d5722e95') in 0.076311 seconds
+  Import took 0.081374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00034.png
+  artifactKey: Guid(7654b0e0cbaaf4442a9e0f5757d66ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00034.png using Guid(7654b0e0cbaaf4442a9e0f5757d66ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c295e320b1552de0efa6ecfa4dc47104') in 0.065837 seconds
+  Import took 0.072433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00058.png
+  artifactKey: Guid(4b2b2a13242159e43a1af096cbc5f4c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00058.png using Guid(4b2b2a13242159e43a1af096cbc5f4c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfbfd13e0ad93eb5be19ef09b314564c') in 0.065363 seconds
+  Import took 0.070247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.577792 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00054.png
+  artifactKey: Guid(d09c0f2e0985a484fb76e1d142e79aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00054.png using Guid(d09c0f2e0985a484fb76e1d142e79aa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6213ab200a15a3d8f713b1f22d70fe15') in 0.031840 seconds
+  Import took 0.035738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000416 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00057.png
+  artifactKey: Guid(30eb869b816aad64d93a03a359d6c6f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00057.png using Guid(30eb869b816aad64d93a03a359d6c6f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac91da4b1b69935159cc1d3c453fdaab') in 0.024921 seconds
+  Import took 0.029789 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000378 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00056.png
+  artifactKey: Guid(9a0e22f77ca377f4db858b3cc9381813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00056.png using Guid(9a0e22f77ca377f4db858b3cc9381813) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed02802d73f3465f2052b4166465e6ae') in 0.032749 seconds
+  Import took 0.037166 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000504 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00055.png
+  artifactKey: Guid(6c0f70e8383e4024387d722f38bd6c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00055.png using Guid(6c0f70e8383e4024387d722f38bd6c9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c403c4573eff08e9c5237ab4edd34126') in 0.031272 seconds
+  Import took 0.036760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000376 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00066.png
+  artifactKey: Guid(b64e5605b04decd4094ed52a934534be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00066.png using Guid(b64e5605b04decd4094ed52a934534be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73781f9d7ca8983850d55b4c3e51ff34') in 0.036276 seconds
+  Import took 0.041605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000379 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00060.png
+  artifactKey: Guid(f23e6e2d89409d04694f02b8c7d9eae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00060.png using Guid(f23e6e2d89409d04694f02b8c7d9eae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e05cbfc7221bf7e25b40203a028a6976') in 0.031782 seconds
+  Import took 0.036761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00063.png
+  artifactKey: Guid(78b825bd51a0fb24b996226695f249b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00063.png using Guid(78b825bd51a0fb24b996226695f249b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efcd76b328d2fb4ff7df5f624bb66d7e') in 0.033220 seconds
+  Import took 0.040885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00067.png
+  artifactKey: Guid(00535177ad2bc0048b5edfb612606bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00067.png using Guid(00535177ad2bc0048b5edfb612606bb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6afa9f0ab0a3d2e426e016549b289cd') in 0.031061 seconds
+  Import took 0.035365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000346 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00061.png
+  artifactKey: Guid(e3b1a4fd1fa47a4419fb63cff8ae5c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00061.png using Guid(e3b1a4fd1fa47a4419fb63cff8ae5c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3e4097739612f318c7365460d7f25c8') in 0.030843 seconds
+  Import took 0.034954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000357 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00000.png
+  artifactKey: Guid(3dc433a1feae0444b884a14f9bffef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00000.png using Guid(3dc433a1feae0444b884a14f9bffef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef02db8084669b28bf6d1e3df4ca7833') in 0.032989 seconds
+  Import took 0.037877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000415 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00059.png
+  artifactKey: Guid(23c74a5dadc2cb54dae99fe0fd0c9057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00059.png using Guid(23c74a5dadc2cb54dae99fe0fd0c9057) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ab8bba6ab6a8a2a25ca0f2d1ff0c885') in 0.029066 seconds
+  Import took 0.034576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001482 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00062.png
+  artifactKey: Guid(190f96e1a641a8146be0880458f2655d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00062.png using Guid(190f96e1a641a8146be0880458f2655d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94ce3634f8c435ab52cc5ed452adf698') in 0.031468 seconds
+  Import took 0.038332 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00065.png
+  artifactKey: Guid(1e9aa9eecc9f7594b965051b56adc5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00065.png using Guid(1e9aa9eecc9f7594b965051b56adc5dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '416bdf93bd01b07df0c1f1f1fcf1aac7') in 0.032027 seconds
+  Import took 0.036535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00064.png
+  artifactKey: Guid(3bb30aeeaa0943f4a994e5445a031e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00064.png using Guid(3bb30aeeaa0943f4a994e5445a031e26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74175a2e5e5a8fda857ce7461c3347d9') in 0.026697 seconds
+  Import took 0.030709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000333 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00058.png
+  artifactKey: Guid(4b2b2a13242159e43a1af096cbc5f4c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00058.png using Guid(4b2b2a13242159e43a1af096cbc5f4c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '228e03545461b0f9ec62d3d27994c35c') in 0.030521 seconds
+  Import took 0.034663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.604605 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00046.png
+  artifactKey: Guid(65ecc527c5edea841aa665303a4cb1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00046.png using Guid(65ecc527c5edea841aa665303a4cb1ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d36d0b45444ab7d44994cf95f33eba1') in 0.024821 seconds
+  Import took 0.028798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000433 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00053.png
+  artifactKey: Guid(8087cead95fabe54d8e4399f29b30c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00053.png using Guid(8087cead95fabe54d8e4399f29b30c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b8d1c30241a98e4f26bae2896f3fba8') in 0.029607 seconds
+  Import took 0.033051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00050.png
+  artifactKey: Guid(bd59d8b7f40362a4a9b994f1038f9dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00050.png using Guid(bd59d8b7f40362a4a9b994f1038f9dec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6359358a970f1835c04a73a80d396569') in 0.027569 seconds
+  Import took 0.031492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000493 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00049.png
+  artifactKey: Guid(d884680980fc6144f8dc4193a2e2e0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00049.png using Guid(d884680980fc6144f8dc4193a2e2e0d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf4b206119f036397c310542262f9ac') in 0.026205 seconds
+  Import took 0.031455 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000375 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00048.png
+  artifactKey: Guid(f9357f1bc9b7fb84c8277252fd464e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00048.png using Guid(f9357f1bc9b7fb84c8277252fd464e0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e55d6b5b0de7d9fe3a762b06ca8475') in 0.029182 seconds
+  Import took 0.033415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000354 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00051.png
+  artifactKey: Guid(5646eb5d99092734cbf2f0eb20e2dd9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00051.png using Guid(5646eb5d99092734cbf2f0eb20e2dd9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68798f71cde1c546265f2c50393e7aea') in 0.029217 seconds
+  Import took 0.033062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000369 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00047.png
+  artifactKey: Guid(5916034f82d55b748b073410d60d8253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00047.png using Guid(5916034f82d55b748b073410d60d8253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18ed28d9a5565cefe895afc772a3d612') in 0.027531 seconds
+  Import took 0.031686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00052.png
+  artifactKey: Guid(f38e9bc3ad991b0438906d0d5aa02248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/기억세계 캐릭터 홀딩/현실_엄마_코트/현살_엄마_코트_00052.png using Guid(f38e9bc3ad991b0438906d0d5aa02248) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d23ea2a2ebfaf7fb5ffcd84b197d371') in 0.027626 seconds
+  Import took 0.031668 seconds .
+
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008866 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.220 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 94.5 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2418.
-Total: 3.531000 ms (FindLiveObjects: 0.316900 ms CreateObjectMapping: 0.112000 ms MarkObjects: 1.730000 ms  DeleteObjects: 1.370400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010782 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.32 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.203 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 94.5 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2421.
-Total: 4.948500 ms (FindLiveObjects: 0.386600 ms CreateObjectMapping: 0.137300 ms MarkObjects: 2.744700 ms  DeleteObjects: 1.677500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011437 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.753 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.13 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.5 MB.
-System memory in use after: 94.5 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2424.
-Total: 3.435700 ms (FindLiveObjects: 0.492600 ms CreateObjectMapping: 0.147800 ms MarkObjects: 1.709300 ms  DeleteObjects: 1.084600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.037282 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.39 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.839 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 3.19 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 94.5 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2427.
-Total: 8.338900 ms (FindLiveObjects: 0.886700 ms CreateObjectMapping: 1.015500 ms MarkObjects: 4.693600 ms  DeleteObjects: 1.737500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012741 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.349 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.5 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2430.
-Total: 3.533200 ms (FindLiveObjects: 0.411500 ms CreateObjectMapping: 0.162500 ms MarkObjects: 1.641400 ms  DeleteObjects: 1.316500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009833 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.15 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.414 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 94.5 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2433.
-Total: 3.711400 ms (FindLiveObjects: 0.415900 ms CreateObjectMapping: 0.283000 ms MarkObjects: 1.753100 ms  DeleteObjects: 1.257600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014028 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.45 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.874 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2436.
-Total: 3.297600 ms (FindLiveObjects: 0.242900 ms CreateObjectMapping: 0.129300 ms MarkObjects: 1.734500 ms  DeleteObjects: 1.189000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012455 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.477 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.57 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2439.
-Total: 3.331500 ms (FindLiveObjects: 0.322700 ms CreateObjectMapping: 0.121600 ms MarkObjects: 1.672500 ms  DeleteObjects: 1.213400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.021490 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 4.27 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.421 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 2.24 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2442.
-Total: 10.914000 ms (FindLiveObjects: 2.922200 ms CreateObjectMapping: 0.516100 ms MarkObjects: 4.840900 ms  DeleteObjects: 2.626900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012255 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.508 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.64 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2445.
-Total: 3.362700 ms (FindLiveObjects: 0.369900 ms CreateObjectMapping: 0.124600 ms MarkObjects: 1.706300 ms  DeleteObjects: 1.159900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009609 seconds.
+Registered in 0.008947 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
@@ -404,408 +1185,346 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.658 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.13 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.6 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2448.
-Total: 4.988700 ms (FindLiveObjects: 0.418000 ms CreateObjectMapping: 0.158200 ms MarkObjects: 1.954200 ms  DeleteObjects: 2.456600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.017479 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.82 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.253 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.54 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2451.
-Total: 4.472300 ms (FindLiveObjects: 0.665000 ms CreateObjectMapping: 0.158800 ms MarkObjects: 2.287600 ms  DeleteObjects: 1.358700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009553 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.479 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2454.
-Total: 3.400100 ms (FindLiveObjects: 0.297000 ms CreateObjectMapping: 0.099700 ms MarkObjects: 1.771100 ms  DeleteObjects: 1.230300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009606 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.512 seconds
+- Completed reload, in  1.279 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
 Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
+System memory in use before: 98.7 MB.
+System memory in use after: 97.6 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2457.
-Total: 3.562800 ms (FindLiveObjects: 0.480900 ms CreateObjectMapping: 0.106400 ms MarkObjects: 1.795300 ms  DeleteObjects: 1.178700 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2421.
+Total: 3.316200 ms (FindLiveObjects: 0.436000 ms CreateObjectMapping: 0.085800 ms MarkObjects: 1.702200 ms  DeleteObjects: 1.091200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010227 seconds.
+Registered in 0.012513 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.612 seconds
+- Completed reload, in  1.560 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.77 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
+System memory in use before: 98.7 MB.
+System memory in use after: 97.6 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2460.
-Total: 3.656300 ms (FindLiveObjects: 0.521000 ms CreateObjectMapping: 0.112200 ms MarkObjects: 1.904000 ms  DeleteObjects: 1.116700 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2424.
+Total: 4.619800 ms (FindLiveObjects: 0.744400 ms CreateObjectMapping: 0.358100 ms MarkObjects: 2.132100 ms  DeleteObjects: 1.383400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.014415 seconds.
+Registered in 0.011911 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.333 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.97 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.7 MB.
+System memory in use after: 97.6 MB.
+
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2427.
+Total: 3.294400 ms (FindLiveObjects: 0.296700 ms CreateObjectMapping: 0.114200 ms MarkObjects: 1.674500 ms  DeleteObjects: 1.207500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008992 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.252 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.7 MB.
+System memory in use after: 97.7 MB.
+
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2430.
+Total: 3.639400 ms (FindLiveObjects: 0.474500 ms CreateObjectMapping: 0.188800 ms MarkObjects: 1.767900 ms  DeleteObjects: 1.206500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009959 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.308 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
+
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2433.
+Total: 3.828300 ms (FindLiveObjects: 0.374400 ms CreateObjectMapping: 0.158700 ms MarkObjects: 2.024000 ms  DeleteObjects: 1.269500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010557 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.267 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
 Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.823 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.52 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2463.
-Total: 3.450100 ms (FindLiveObjects: 0.300200 ms CreateObjectMapping: 0.116600 ms MarkObjects: 1.784400 ms  DeleteObjects: 1.247300 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2436.
+Total: 3.455300 ms (FindLiveObjects: 0.377100 ms CreateObjectMapping: 0.111600 ms MarkObjects: 1.633700 ms  DeleteObjects: 1.331000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.017699 seconds.
+Registered in 0.009749 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.793 seconds
+- Completed reload, in  1.242 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.15 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.07 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2466.
-Total: 3.534900 ms (FindLiveObjects: 0.239700 ms CreateObjectMapping: 0.091200 ms MarkObjects: 1.858700 ms  DeleteObjects: 1.343700 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2439.
+Total: 3.286300 ms (FindLiveObjects: 0.256600 ms CreateObjectMapping: 0.078300 ms MarkObjects: 1.779700 ms  DeleteObjects: 1.170400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011952 seconds.
+Registered in 0.011253 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.629 seconds
+- Completed reload, in  1.301 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.09 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2469.
-Total: 4.450700 ms (FindLiveObjects: 0.561500 ms CreateObjectMapping: 0.299900 ms MarkObjects: 2.190800 ms  DeleteObjects: 1.397100 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2442.
+Total: 7.273800 ms (FindLiveObjects: 0.678000 ms CreateObjectMapping: 0.251300 ms MarkObjects: 4.324300 ms  DeleteObjects: 2.017600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010924 seconds.
+Registered in 0.010320 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.645 seconds
+- Completed reload, in  1.351 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.02 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2472.
-Total: 3.300600 ms (FindLiveObjects: 0.316600 ms CreateObjectMapping: 0.105900 ms MarkObjects: 1.662500 ms  DeleteObjects: 1.214300 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2445.
+Total: 4.097700 ms (FindLiveObjects: 0.387600 ms CreateObjectMapping: 0.153800 ms MarkObjects: 2.093600 ms  DeleteObjects: 1.461200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011420 seconds.
+Registered in 0.010428 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.08 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.761 seconds
+- Completed reload, in  1.321 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
+
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2448.
+Total: 3.469000 ms (FindLiveObjects: 0.371500 ms CreateObjectMapping: 0.107900 ms MarkObjects: 1.715600 ms  DeleteObjects: 1.271000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010848 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.377 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
 Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2475.
-Total: 3.769900 ms (FindLiveObjects: 0.435600 ms CreateObjectMapping: 0.140700 ms MarkObjects: 1.722400 ms  DeleteObjects: 1.469300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011340 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.70 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.060 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.38 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2478.
-Total: 4.175600 ms (FindLiveObjects: 0.404400 ms CreateObjectMapping: 0.116700 ms MarkObjects: 2.302400 ms  DeleteObjects: 1.349700 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2451.
+Total: 3.401900 ms (FindLiveObjects: 0.339800 ms CreateObjectMapping: 0.094200 ms MarkObjects: 1.702600 ms  DeleteObjects: 1.263500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.012085 seconds.
+Registered in 0.009207 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.07 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.736 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.31 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.8 MB.
-System memory in use after: 94.6 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2481.
-Total: 5.675500 ms (FindLiveObjects: 0.302500 ms CreateObjectMapping: 0.153200 ms MarkObjects: 3.847100 ms  DeleteObjects: 1.370700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015143 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.821 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.8 MB.
-System memory in use after: 94.7 MB.
-
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2484.
-Total: 4.156600 ms (FindLiveObjects: 0.787300 ms CreateObjectMapping: 0.178400 ms MarkObjects: 1.962200 ms  DeleteObjects: 1.225700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013786 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.624 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
 Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.456 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.8 MB.
-System memory in use after: 94.7 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2487.
-Total: 3.881900 ms (FindLiveObjects: 0.713300 ms CreateObjectMapping: 0.104600 ms MarkObjects: 1.733800 ms  DeleteObjects: 1.328500 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2454.
+Total: 3.414100 ms (FindLiveObjects: 0.382000 ms CreateObjectMapping: 0.114600 ms MarkObjects: 1.749000 ms  DeleteObjects: 1.167100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.028846 seconds.
+Registered in 0.009811 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.61 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.76 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.972 seconds
+- Completed reload, in  1.350 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.03 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.97 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.7 MB.
-System memory in use after: 94.7 MB.
+System memory in use before: 98.8 MB.
+System memory in use after: 97.7 MB.
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2490.
-Total: 3.679900 ms (FindLiveObjects: 0.545600 ms CreateObjectMapping: 0.216900 ms MarkObjects: 1.723700 ms  DeleteObjects: 1.192700 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2457.
+Total: 4.183600 ms (FindLiveObjects: 0.567300 ms CreateObjectMapping: 0.117400 ms MarkObjects: 2.287500 ms  DeleteObjects: 1.209000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010109 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 3.40 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.604 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1958 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.8 MB.
-System memory in use after: 94.7 MB.
+Received Import Request.
+  Time since last request: 1083.028169 seconds.
+  path: Assets/Sprite/기억세계/가이드/기억세계UI가이드_3ui치수.png
+  artifactKey: Guid(b24b40c1e58494040b68ef40d5976c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/가이드/기억세계UI가이드_3ui치수.png using Guid(b24b40c1e58494040b68ef40d5976c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38e72b0c8c878bf8a60b63485d013416') in 0.115725 seconds
+  Import took 0.154508 seconds .
 
-Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 2493.
-Total: 6.565600 ms (FindLiveObjects: 0.426800 ms CreateObjectMapping: 0.224800 ms MarkObjects: 3.082400 ms  DeleteObjects: 2.828500 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 1761.952116 seconds.
+  path: Assets/Sprite/기억세계/가이드/기억세계UI가이드_3ui치수.png
+  artifactKey: Guid(b24b40c1e58494040b68ef40d5976c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/가이드/기억세계UI가이드_3ui치수.png using Guid(b24b40c1e58494040b68ef40d5976c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b132eb2623ea071d47dbb2a86ee7582b') in 0.062106 seconds
+  Import took 0.067819 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -90,6 +90,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
         if (isDialogStopping == false)
         {
+            Debug.Log("넥스트다이얼ㄹ");
             NextDialog();
         }
         else if (isStopActionable == true)
@@ -111,7 +112,6 @@ public class MemorySceneManagerParent : MonoBehaviour
 
         if (nowChoosedRoute != ActionKeyword.Null)
         {
-            bool isEnd = false;
             if (nowDialog.actionKeyword != null)
             {
                 List<ActionClass> actionClassList = dialogBundle.dialogList[nowDialogIndex].actionList;
@@ -133,7 +133,6 @@ public class MemorySceneManagerParent : MonoBehaviour
                         {
                             for (int k = nowDialogIndex; k < dialogBundle.dialogList.Count; k++)
                             {
-                                bool found = false;
                                 Dialog dialog = dialogBundle.dialogList[k];
                                 List<ActionClass> traceActionList = dialog.actionList;
                                 if(traceActionList == null)
@@ -146,12 +145,10 @@ public class MemorySceneManagerParent : MonoBehaviour
                                     if (action.actionList.Contains(ActionKeyword.Route) 
                                         && action.actionList.Contains(ActionKeyword.End))
                                     {
-                                        found = true;
                                         nowChoosedRoute = ActionKeyword.Null;
                                         nowDialogIndex = k+1;
                                         if(nowDialogIndex >= dialogBundle.dialogList.Count)
                                         {
-                                            isEnd = true;
                                             isStartOfWrapper = true;
                                             
                                             StartCoroutine(CheckStopPointTextEnd());
@@ -286,7 +283,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             ActionClass nowAction = actionClassList[i];
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
-            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || keywordList.Contains(ActionKeyword.Route));
+            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || keywordList.Contains(ActionKeyword.Route))
             {
                 immediateStart = true;
             }
@@ -372,6 +369,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             yield return null;
         }
+        Debug.Log("스타핑 트루");
         isDialogStopping = true;
         isStopActionable = true;
     }

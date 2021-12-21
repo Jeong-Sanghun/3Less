@@ -43,12 +43,15 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
-            StartCoroutine(SceneEndCoroutine(SceneName.Bright));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryRestaurant));
         }
     }
 
     IEnumerator PlayerMoveCoroutine()
     {
+        isDialogStopping = true;
+        TextFrameToggle(false);
+        isStopActionable = false;
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right/2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 1, 0, 1));
         yield return new WaitForSeconds(1.05f);
