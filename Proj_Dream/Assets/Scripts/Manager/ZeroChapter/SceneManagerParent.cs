@@ -72,14 +72,6 @@ public class SceneManagerParent : MonoBehaviour
 
 
     // Update is called once per frame
-    protected virtual void Update()
-    {
-
-        if (Input.GetMouseButtonDown(0))
-        {
-
-        }
-    }
 
     public void ScreenTouchEvent()
     {

@@ -6,12 +6,12 @@ using UnityEngine;
 
 public enum ActionKeyword
 {
-    First, Second, Third,Fourth,
+    Null,First, Second, Third,Fourth,Fifth,End,
     StopSeconds, FishMove, PlayerMove,FadeOut,FadeIn, ZoomOut, ImgFlashback,ImgFalse,
     Bubble, Scissors,Medal,
-    ImmediateDialog,
+    ImmediateDialog, Route,
     Touch, Drag,
-    SceneEnd
+    Scene
 }
 
 

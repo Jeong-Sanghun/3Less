@@ -155,7 +155,7 @@ public class FirstSceneManager : SceneManagerParent
                 NextDialog();
                 isDialogStopping = true;
             }
-            else if(triggerName.Contains("Trigger6") && keywordList.Contains(ActionKeyword.SceneEnd))
+            else if(triggerName.Contains("Trigger6") && keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
             {
                 StartCoroutine(SceneEndCoroutine());
             }

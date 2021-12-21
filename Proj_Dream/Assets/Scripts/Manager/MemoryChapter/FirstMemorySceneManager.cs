@@ -41,7 +41,7 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
                 StartCoroutine(PlayerMoveCoroutine());
             }
         }
-        if (keywordList.Contains(ActionKeyword.SceneEnd))
+        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
             StartCoroutine(SceneEndCoroutine(SceneName.Bright));
         }

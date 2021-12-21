@@ -19,6 +19,11 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected Text dialogText;
     [SerializeField]
     protected Text systemText;
+    [SerializeField]
+    GameObject[] routeButtonParentArray;
+    GameObject nowRouteButtonParent;
+    [SerializeField]
+    GameObject routeBlurObject;
 
     [SerializeField]
     protected GameObject playerObject;
@@ -29,10 +34,15 @@ public class MemorySceneManagerParent : MonoBehaviour
     [SerializeField]
     protected List<GameObject> ballonList;
 
+    
+
     int nowDialogIndex;
     protected bool isDialogStopping;
     bool isStartOfWrapper;
     protected bool isStopActionable;
+    bool isRouteButtonAble;
+    Dialog routeDialog;
+    ActionKeyword nowChoosedRoute;
 
     bool textFrameTransparent;
     bool isStarted;
@@ -60,24 +70,17 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             ballonList[i].SetActive(false);
         }
-
+        nowChoosedRoute = ActionKeyword.Null;
         dialogEnd = false;
         isStopActionable = false;
         isDialogStopping = true;
         isStarted = false;
+        isRouteButtonAble = false;
+        routeDialog = null;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 0.5f));
     }
 
 
-    // Update is called once per frame
-    protected virtual void Update()
-    {
-
-        if (Input.GetMouseButtonDown(0))
-        {
-
-        }
-    }
 
     public void ScreenTouchEvent()
     {
@@ -101,7 +104,72 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             return;
         }
+
+
+
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
+
+        if (nowChoosedRoute != ActionKeyword.Null)
+        {
+            bool isEnd = false;
+            if (nowDialog.actionKeyword != null)
+            {
+                List<ActionClass> actionClassList = dialogBundle.dialogList[nowDialogIndex].actionList;
+                for(int i = 0; i < actionClassList.Count; i++)
+                {
+                    List<ActionKeyword> actionList = actionClassList[i].actionList;
+                    if (actionList.Contains(ActionKeyword.Route))
+                    {
+                        if (actionList.Contains(nowChoosedRoute))
+                        {
+                            break;
+                        }
+                        else if (actionList.Contains(ActionKeyword.End))
+                        {
+                            nowChoosedRoute = ActionKeyword.Null;
+                            break;
+                        }
+                        else
+                        {
+                            for (int k = nowDialogIndex; k < dialogBundle.dialogList.Count; k++)
+                            {
+                                bool found = false;
+                                Dialog dialog = dialogBundle.dialogList[k];
+                                List<ActionClass> traceActionList = dialog.actionList;
+                                if(traceActionList == null)
+                                {
+                                    continue;
+                                }
+                                for (int m = 0; m < traceActionList.Count; m++)
+                                {
+                                    ActionClass action = traceActionList[m];
+                                    if (action.actionList.Contains(ActionKeyword.Route) 
+                                        && action.actionList.Contains(ActionKeyword.End))
+                                    {
+                                        found = true;
+                                        nowChoosedRoute = ActionKeyword.Null;
+                                        nowDialogIndex = k+1;
+                                        if(nowDialogIndex >= dialogBundle.dialogList.Count)
+                                        {
+                                            isEnd = true;
+                                            isStartOfWrapper = true;
+                                            
+                                            StartCoroutine(CheckStopPointTextEnd());
+                                            nowActionList = dialogBundle.dialogList[nowDialogIndex-1].actionList;
+                                        }
+                                        NextDialog();
+                                        return;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+
         bool isNewCharacter = false;
         Text nowText = dialogText;
         bool lastTextFrameTransparent = textFrameTransparent;
@@ -128,8 +196,19 @@ public class MemorySceneManagerParent : MonoBehaviour
             {
                 case Character.Player:
                     TextFrameToggle(true);
-
                     ballonList[0].SetActive(true);
+                    break;
+                case Character.Mother:
+                    TextFrameToggle(true);
+                    ballonList[1].SetActive(true);
+                    break;
+                case Character.Father:
+                    TextFrameToggle(true);
+                    ballonList[2].SetActive(true);
+                    break;
+                case Character.Brother:
+                    TextFrameToggle(true);
+                    ballonList[3].SetActive(true);
                     break;
                 case Character.Narator:
                     TextFrameToggle(true);
@@ -173,6 +252,15 @@ public class MemorySceneManagerParent : MonoBehaviour
             StartCoroutine(CheckStopPointTextEnd());
             nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
         }
+        
+        if(nowDialog.routeList != null)
+        {
+            Debug.Log("여긴되냐");
+            isStartOfWrapper = true;
+            routeDialog = nowDialog;
+            StartCoroutine(CheckRoutePointTextEnd());
+            
+        }
 
 
         if (nowDialogIndex == dialogBundle.dialogList.Count)
@@ -198,7 +286,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             ActionClass nowAction = actionClassList[i];
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
-            if (keywordList.Contains(ActionKeyword.ImmediateDialog))
+            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || keywordList.Contains(ActionKeyword.Route));
             {
                 immediateStart = true;
             }
@@ -288,6 +376,29 @@ public class MemorySceneManagerParent : MonoBehaviour
         isStopActionable = true;
     }
 
+    IEnumerator CheckRoutePointTextEnd()
+    {
+        isDialogStopping = true;
+        while (moduleManager.nowTexting)
+        {
+            yield return null;
+        }
+        yield return null;
+        while (true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                break;
+            }
+            yield return null;
+        }
+
+        TextFrameToggle(false);
+        yield return new WaitForSeconds(0.8f);
+        RouteButtonActive();
+
+    }
+
 
     protected IEnumerator CameraFollowCoroutine()
     {
@@ -320,5 +431,138 @@ public class MemorySceneManagerParent : MonoBehaviour
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 0, 1, 1));
         yield return new WaitForSeconds(1f);
         gameManager.LoadScene(scene);
+    }
+
+    void RouteButtonActive()
+    {
+        List<string> routeList = routeDialog.routeList;
+        nowRouteButtonParent = routeButtonParentArray[routeList.Count - 2];
+        routeButtonParentArray[routeList.Count - 2].SetActive(true);
+        routeBlurObject.SetActive(true);
+        List<Text> routeTextList = new List<Text>();
+        isRouteButtonAble = false;
+
+        for(int i = 0; i < routeList.Count; i++)
+        {
+            GameObject txtObj = nowRouteButtonParent.transform.GetChild(i).GetChild(0).gameObject;
+            GameObject imgObj = nowRouteButtonParent.transform.GetChild(i).gameObject;
+            Text txt = txtObj.GetComponent<Text>();
+            Image img = imgObj.GetComponent<Image>();
+            img.color = new Color(1, 1, 1, 0);
+            txt.color = new Color(1, 1, 1, 0);
+            txt.text = routeList[i];
+            StartCoroutine(moduleManager.FadeModule_Image(img, 0, 1, 1));
+            StartCoroutine(moduleManager.FadeModule_Text(txt, 0, 1, 1));
+        }
+        StartCoroutine(InvokerCoroutine(1,RouteButtonAbleTrue));
+
+
+    }
+
+
+    public void OnRouteButton(int index)
+    {
+        if(isRouteButtonAble == true)
+        {
+            StartCoroutine(ButtonAnimCoroutine(index));
+        }
+        isRouteButtonAble = false;
+
+
+    }
+
+    IEnumerator ButtonAnimCoroutine(int index)
+    {
+        Transform[] childArray = new Transform[nowRouteButtonParent.transform.childCount];
+        for(int i = 0; i < childArray.Length; i++)
+        {
+            childArray[i] = nowRouteButtonParent.transform.GetChild(i);
+            Text txt = childArray[i].GetChild(0).GetComponent<Text>();
+            if (i != index)
+            {
+                StartCoroutine(moduleManager.FadeModule_Image(childArray[i].GetComponent<Image>(), 1, 0, 1));
+                StartCoroutine(moduleManager.FadeModule_Text(txt, 1, 0, 1));
+            }
+        }
+
+        Vector3 targetSize = new Vector3(1.1f, 1.1f, 1);
+        Vector3 originSize = Vector3.one;
+        float timer = 0;
+        while (timer < 1)
+        {
+            timer += Time.deltaTime*3;
+            childArray[index].localScale = Vector3.Lerp(originSize, targetSize, timer);
+            yield return null;
+        }
+        timer = 0;
+        while (timer < 1)
+        {
+            timer += Time.deltaTime*3;
+            childArray[index].localScale = Vector3.Lerp( targetSize, originSize, timer);
+            yield return null;
+        }
+        childArray[index].localScale = originSize;
+        yield return new WaitForSeconds(0.1f);
+
+
+
+        isDialogStopping = false;
+        nowRouteButtonParent.SetActive(false);
+        nowRouteButtonParent = null;
+        routeBlurObject.SetActive(false);
+        ActionKeyword nowSeqence = ActionKeyword.First;
+        switch (index)
+        {
+            case 0:
+                nowSeqence = ActionKeyword.First;
+                break;
+            case 1:
+                nowSeqence = ActionKeyword.Second;
+                break;
+            case 2:
+                nowSeqence = ActionKeyword.Third;
+                break;
+            case 3:
+                nowSeqence = ActionKeyword.Fourth;
+                break;
+            case 4:
+                nowSeqence = ActionKeyword.Fifth;
+                break;
+            default:
+                break;
+        }
+        nowChoosedRoute = nowSeqence;
+        for (int i = nowDialogIndex; i < dialogBundle.dialogList.Count; i++)
+        {
+            bool found = false;
+            Dialog dialog = dialogBundle.dialogList[i];
+            if (dialog.actionList == null)
+            {
+                continue;
+            }
+            List<ActionClass> actionClassList = dialog.actionList;
+            for (int j = 0; j < actionClassList.Count; j++)
+            {
+                ActionClass action = actionClassList[j];
+                if (action.actionList.Contains(ActionKeyword.Route) && action.actionList.Contains(nowSeqence))
+                {
+                    found = true;
+                    nowDialogIndex = i;
+                    break;
+                }
+            }
+            if (found == true)
+            {
+                break;
+            }
+
+        }
+
+        NextDialog();
+    }
+
+    void RouteButtonAbleTrue()
+    {
+        isRouteButtonAble = true;
     }
 }

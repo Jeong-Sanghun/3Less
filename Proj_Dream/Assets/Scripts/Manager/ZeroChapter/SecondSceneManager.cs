@@ -129,7 +129,7 @@ public class SecondSceneManager : SceneManagerParent
         {
             StartCoroutine(ScissorsDragCoroutine());
         }
-        if (keywordList.Contains(ActionKeyword.SceneEnd))
+        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
             StartCoroutine(SceneEndCoroutine());
         }
@@ -633,7 +633,7 @@ public class SecondSceneManager : SceneManagerParent
         fadeInImage.gameObject.SetActive(true);
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 0, 1, 1));
         yield return new WaitForSeconds(1f);
-        gameManager.LoadScene(SceneName.Memory);
+        gameManager.LoadScene(SceneName.MemoryHome1);
     }
 
     

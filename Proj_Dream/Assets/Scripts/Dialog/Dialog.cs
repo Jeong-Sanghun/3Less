@@ -8,6 +8,9 @@ public enum Character
     System,
     Fish,
     Mushroom,
+    Mother,
+    Father,
+    Brother,
     NotAllocated
 }
 
@@ -19,6 +22,14 @@ public class Dialog
     public string dialog;
     public string actionKeyword;
     public string character;
+    public string routeFirst;
+    public string routeSecond;
+    public string routeThird;
+    public string routeFourth;
+    public string routeFifth;
+
+    [System.NonSerialized]
+    public List<string> routeList;
 
 
     [System.NonSerialized]
@@ -30,7 +41,13 @@ public class Dialog
     public Dialog()
     {
         dialog = null;
-        character= null;
+        character = null;
+        routeFirst = null;
+        routeSecond = null;
+        routeThird = null;
+        routeFourth = null;
+        routeFifth = null;
+        routeList = null;
         characterEnum = Character.NotAllocated;
     }
 
@@ -60,6 +77,44 @@ public class Dialog
         else if (character.Contains("버섯"))
         {
             characterEnum = Character.Mushroom;
+        }
+        else if (character.Contains("어머니"))
+        {
+            characterEnum = Character.Mother;
+        }
+        else if (character.Contains("아버지"))
+        {
+            characterEnum = Character.Father;
+        }
+        else if (character.Contains("동생"))
+        {
+            characterEnum = Character.Brother;
+        }
+
+        if (routeFirst != null)
+        {
+            routeList = new List<string>();
+            routeList.Add(routeFirst);
+        }
+        if (routeSecond != null)
+        {
+            routeList.Add(routeSecond);
+
+        }
+        if (routeThird != null)
+        {
+            routeList.Add(routeThird);
+
+        }
+        if (routeFourth != null)
+        {
+            routeList.Add(routeFourth);
+
+        }
+        if (routeFifth != null)
+        {
+            routeList.Add(routeFifth);
+
         }
 
 
@@ -115,9 +170,9 @@ public class Dialog
                 }
             }
 
-            if (keywordArray[i].Contains("sceneEnd") || keywordArray[i].Contains("SceneEnd"))
+            if (keywordArray[i].Contains("scene") || keywordArray[i].Contains("Scene"))
             {
-                act.actionList.Add(ActionKeyword.SceneEnd);
+                act.actionList.Add(ActionKeyword.Scene);
                 act.parameterList.Add(-1);
             }
 
@@ -180,6 +235,18 @@ public class Dialog
                 act.parameterList.Add(-1);
             }
 
+            if(keywordArray[i].Contains("route") || keywordArray[i].Contains("Route"))
+            {
+                act.actionList.Add(ActionKeyword.Route);
+                act.parameterList.Add(-1);
+            }
+
+            if (keywordArray[i].Contains("end") || keywordArray[i].Contains("End"))
+            {
+                act.actionList.Add(ActionKeyword.End);
+                act.parameterList.Add(-1);
+            }
+
 
             if (keywordArray[i].Contains("first") || keywordArray[i].Contains("First"))
             {
@@ -202,8 +269,6 @@ public class Dialog
                 act.actionList.Add(ActionKeyword.Fourth);
                 act.parameterList.Add(-1);
             }
-
-
         }
 
 
