@@ -10,6 +10,7 @@ public enum ActionKeyword
     StopSeconds, FishMove, PlayerMove,FadeOut,FadeIn, ZoomOut, ImgFlashback,ImgFalse,
     Bubble, Scissors,Medal,
     ImmediateDialog, Route,
+    HealthGauge,MoneyGauge,
     Touch, Drag,
     Scene
 }

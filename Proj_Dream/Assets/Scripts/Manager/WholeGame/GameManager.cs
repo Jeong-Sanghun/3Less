@@ -6,17 +6,21 @@ using UnityEngine.SceneManagement;
 
 public enum SceneName
 {
-    MainMenu,Bright,Dark,MemoryHome1,MemoryRestaurant
+    MainMenu,Bright,Dark,MemoryHome1,MemoryRestaurant,MemoryStreet1
 }
 
 public class GameManager : MonoBehaviour
 {
 
     public static GameManager singleTon;
+    [HideInInspector]
     public SaveDataClass saveData;
+
     JsonManager jsonManager;
     
     SceneName nowScene;
+    [HideInInspector]
+    public bool isNewGame;
     // Start is called before the first frame update
     void Awake()
     {
@@ -32,11 +36,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+
     private void Start()
     {
         nowScene = SceneName.MainMenu;
         jsonManager = new JsonManager();
+        isNewGame = true;
         LoadSaveData();
+
     }
 
     public void LoadScene(SceneName scene)
@@ -67,10 +75,17 @@ public class GameManager : MonoBehaviour
         jsonManager.SaveJson(saveData);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void StartLoadedGame()
     {
-        
+        isNewGame = false;
+        LoadScene(saveData.savedScene);
     }
+
+    public void GameOver()
+    {
+
+        StartLoadedGame();
+
+    }
+
 }

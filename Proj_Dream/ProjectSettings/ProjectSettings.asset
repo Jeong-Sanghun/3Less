@@ -146,7 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.threeless.play
+    Android: com.DefaultCompany.3LESS
   buildNumber:
     Standalone: 0
     iPhone: 0

@@ -170,6 +170,22 @@ public class Dialog
                 }
             }
 
+            if (keywordArray[i].Contains("healthGauge") || keywordArray[i].Contains("HealthGauge"))
+            {
+                act.actionList.Add(ActionKeyword.HealthGauge);
+                string bufferKeyword = keywordArray[i];
+                bufferKeyword = bufferKeyword.Remove(0, "healthGauge".Length);
+                act.parameterList.Add(float.Parse(bufferKeyword));
+            }
+
+            if (keywordArray[i].Contains("moneyGauge") || keywordArray[i].Contains("moneyGauge"))
+            {
+                act.actionList.Add(ActionKeyword.MoneyGauge);
+                string bufferKeyword = keywordArray[i];
+                bufferKeyword = bufferKeyword.Remove(0, "moneyGauge".Length);
+                act.parameterList.Add(float.Parse(bufferKeyword));
+            }
+
             if (keywordArray[i].Contains("scene") || keywordArray[i].Contains("Scene"))
             {
                 act.actionList.Add(ActionKeyword.Scene);

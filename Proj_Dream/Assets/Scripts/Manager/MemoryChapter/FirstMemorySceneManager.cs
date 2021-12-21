@@ -23,6 +23,7 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position+Vector3.right/2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
+        nowScene = SceneName.MemoryHome1;
 
     }
 

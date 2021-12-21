@@ -37,7 +37,7 @@
         },
         {
             "character": "아버지",
-            "actionKeyword": "emotionGauge-2",
+            "actionKeyword": "healthGauge-10",
             "dialog": "또, 또 말대꾸!"
         },
         {
@@ -74,7 +74,7 @@
         },
         {
             "character": "NAR.",
-            "actionKeyword": "emotionGauge-2,healthGauge-1",
+            "actionKeyword": "healthGauge-2",
             "dialog": "윽, 체한 것 같다."
         },
         {
@@ -147,7 +147,7 @@
         },
         {
             "character": "어머니",
-            "actionKeyword": "emotionGauge-2",
+            "actionKeyword": "healthGauge-2",
             "dialog": "봐라, 집안 꼴 잘 돌아가네."
         },
         {

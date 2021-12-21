@@ -9,6 +9,9 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected GameManager gameManager;
     protected JsonManager jsonManager;
     protected DialogBundle dialogBundle;
+    protected SaveDataClass saveData;
+    [SerializeField]
+    protected GaugeManager gaugeManager;
     [SerializeField]
     protected ModuleManager moduleManager;
     [SerializeField]
@@ -34,9 +37,9 @@ public class MemorySceneManagerParent : MonoBehaviour
     [SerializeField]
     protected List<GameObject> ballonList;
 
-    
+    protected SceneName nowScene;
 
-    int nowDialogIndex;
+    protected int nowDialogIndex;
     protected bool isDialogStopping;
     bool isStartOfWrapper;
     protected bool isStopActionable;
@@ -77,7 +80,23 @@ public class MemorySceneManagerParent : MonoBehaviour
         isStarted = false;
         isRouteButtonAble = false;
         routeDialog = null;
+        saveData = gameManager.saveData;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 0.5f));
+
+        if(gameManager.isNewGame == false)
+        {
+            nowDialogIndex = saveData.dialogIndex;
+            gameManager.isNewGame = true;
+        }
+        gaugeManager.SetGauge(saveData.moneyGauge, saveData.healthGauge);
+
+
+
+    }
+
+    protected virtual void Update()
+    {
+
     }
 
 
@@ -90,7 +109,6 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
         if (isDialogStopping == false)
         {
-            Debug.Log("넥스트다이얼ㄹ");
             NextDialog();
         }
         else if (isStopActionable == true)
@@ -149,10 +167,12 @@ public class MemorySceneManagerParent : MonoBehaviour
                                         nowDialogIndex = k+1;
                                         if(nowDialogIndex >= dialogBundle.dialogList.Count)
                                         {
+                                            nowDialogIndex = dialogBundle.dialogList.Count;
                                             isStartOfWrapper = true;
-                                            
+                                            dialogEnd = true;
                                             StartCoroutine(CheckStopPointTextEnd());
                                             nowActionList = dialogBundle.dialogList[nowDialogIndex-1].actionList;
+                                            return;
                                         }
                                         NextDialog();
                                         return;
@@ -283,7 +303,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             ActionClass nowAction = actionClassList[i];
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
-            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || keywordList.Contains(ActionKeyword.Route))
+            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || (keywordList.Contains(ActionKeyword.Route)&& !keywordList.Contains(ActionKeyword.End)))
             {
                 immediateStart = true;
             }
@@ -310,6 +330,17 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             ballonList[i].SetActive(false);
         }
+        if (keywordList.Contains(ActionKeyword.HealthGauge))
+        {
+            gaugeManager.ChangeHealthGauge((int)parameterList[0]);
+            StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
+        }
+        if (keywordList.Contains(ActionKeyword.MoneyGauge))
+        {
+            gaugeManager.ChangeMoneyGauge((int)parameterList[0]);
+            StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
+        }
+
 
     }
 
@@ -426,6 +457,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected IEnumerator SceneEndCoroutine(SceneName scene)
     {
         fadeInImage.gameObject.SetActive(true);
+        SaveUserData();
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 0, 1, 1));
         yield return new WaitForSeconds(1f);
         gameManager.LoadScene(scene);
@@ -439,6 +471,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         routeBlurObject.SetActive(true);
         List<Text> routeTextList = new List<Text>();
         isRouteButtonAble = false;
+        SaveUserData();
 
         for(int i = 0; i < routeList.Count; i++)
         {
@@ -562,5 +595,15 @@ public class MemorySceneManagerParent : MonoBehaviour
     void RouteButtonAbleTrue()
     {
         isRouteButtonAble = true;
+    }
+
+    void SaveUserData()
+    {
+        saveData.savedScene = nowScene;
+        saveData.dialogIndex = nowDialogIndex - 1;
+        saveData.healthGauge = gaugeManager.nowHealthGauge;
+        saveData.moneyGauge = gaugeManager.nowMoneyGauge;
+        gameManager.SaveSaveData();
+
     }
 }
