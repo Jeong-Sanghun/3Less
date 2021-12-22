@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Text;
+using UnityEngine.Rendering.PostProcessing;
 public class ModuleManager : MonoBehaviour
 {
     // // Module // //
     public bool nowTexting;
     GameObject linearMovingObj;
+    
+
+    
 
     public IEnumerator LoadTextOneByOne(string inputTextString, Text inputTextUI, float eachTime = 0.05f, bool canClickSkip = true)
     {
@@ -62,6 +66,34 @@ public class ModuleManager : MonoBehaviour
         yield return null;
     }
 
+    public IEnumerator VolumeModule(PostProcessVolume volume, bool finalOne, float time)
+    {
+        float timer = 0;
+        int one;
+        if (finalOne)
+        {
+            timer = 0;
+            while (timer < 1)
+            {
+                volume.weight = timer;
+                timer += Time.deltaTime / time;
+                yield return null;
+            }
+            volume.weight = 1;
+        }
+        else
+        {
+            timer = 1;
+            while (timer > 0)
+            {
+                volume.weight = timer;
+                timer -= Time.deltaTime / time;
+                yield return null;
+            }
+            volume.weight = 0;
+        }
+        
+    }
 
     public IEnumerator FadeModule_Image(Image i_image, float i_Alpha_Initial, float i_Alpha_Final, float i_Time)
     {

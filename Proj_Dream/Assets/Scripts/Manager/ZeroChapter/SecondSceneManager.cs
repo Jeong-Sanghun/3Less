@@ -14,8 +14,6 @@ public class SecondSceneManager : SceneManagerParent
     [SerializeField]
     Transform scissorEndPos;
     [SerializeField]
-    GameObject blurImage;
-    [SerializeField]
     GameObject roadObject;
     [SerializeField]
     GameObject roadBlockObject;
@@ -29,6 +27,8 @@ public class SecondSceneManager : SceneManagerParent
     PostProcessVolume postProcessVolume;
     [SerializeField]
     PostProcessVolume grainVolume;
+    [SerializeField]
+    PostProcessVolume blurVolume;
 
     [SerializeField]
     SpriteRenderer[] flashBackSpriteArray;
@@ -288,7 +288,7 @@ public class SecondSceneManager : SceneManagerParent
             yield return null;
         }
         player.SetAnim(PlayController.AnimState.Idle);
-        blurImage.SetActive(true);
+        StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
         float timer = 0;
         Vector3 originPos = scissorRect.transform.position;
         Vector3 originScale = scissorRect.transform.localScale;
@@ -320,6 +320,7 @@ public class SecondSceneManager : SceneManagerParent
         {
             originRot.z += 360;
         }
+        StartCoroutine(moduleManager.VolumeModule(blurVolume, false, 1));
         while (timer < 1)
         {
             timer += Time.deltaTime;
@@ -334,7 +335,7 @@ public class SecondSceneManager : SceneManagerParent
         scissorRect.transform.localScale = scissorEndPos.transform.localScale;
         scissorRect.transform.localEulerAngles = scissorEndPos.transform.localEulerAngles;
         scissorRect.gameObject.SetActive(false);
-        blurImage.SetActive(false);
+      
         yield return new WaitForSeconds(1f);
 
         roadObject.SetActive(true);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Rendering.PostProcessing;
 
 public class MemorySceneManagerParent : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     GameObject[] routeButtonParentArray;
     GameObject nowRouteButtonParent;
     [SerializeField]
-    GameObject routeBlurObject;
+    PostProcessVolume blurVolume;
 
     [SerializeField]
     protected GameObject playerObject;
@@ -497,11 +498,11 @@ public class MemorySceneManagerParent : MonoBehaviour
         List<string> routeList = routeDialog.routeList;
         nowRouteButtonParent = routeButtonParentArray[routeList.Count - 2];
         routeButtonParentArray[routeList.Count - 2].SetActive(true);
-        routeBlurObject.SetActive(true);
+      
         List<Text> routeTextList = new List<Text>();
         isRouteButtonAble = false;
         SaveUserData();
-
+        StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
         for(int i = 0; i < routeList.Count; i++)
         {
             GameObject txtObj = nowRouteButtonParent.transform.GetChild(i).GetChild(0).gameObject;
@@ -522,6 +523,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     public void OnRouteButton(int index)
     {
+
         if(isRouteButtonAble == true)
         {
             StartCoroutine(ButtonAnimCoroutine(index));
@@ -569,7 +571,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         isDialogStopping = false;
         nowRouteButtonParent.SetActive(false);
         nowRouteButtonParent = null;
-        routeBlurObject.SetActive(false);
+        StartCoroutine(moduleManager.VolumeModule(blurVolume, false, 1));
         ActionKeyword nowSeqence = ActionKeyword.First;
         switch (index)
         {
