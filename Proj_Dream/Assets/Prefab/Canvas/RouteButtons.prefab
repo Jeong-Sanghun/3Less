@@ -466,7 +466,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &1541578143295180480
@@ -546,7 +546,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &2252895621422752501
@@ -626,7 +626,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &2539256739977067118
@@ -972,7 +972,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -982,7 +982,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &3773511926825175824
@@ -1223,7 +1223,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1233,7 +1233,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &4406418359662431590
@@ -1382,7 +1382,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1392,7 +1392,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &5226124941236309946
@@ -1462,7 +1462,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1472,7 +1472,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &5529530859048640439
@@ -1581,7 +1581,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &6233821514257005117
@@ -1794,7 +1794,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -1804,7 +1804,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &6352078283165700271
@@ -2007,7 +2007,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -2017,7 +2017,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &6775489293430258926
@@ -2656,7 +2656,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -2666,7 +2666,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &8452575648647237820
@@ -3002,7 +3002,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3012,7 +3012,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &9122311464989478783
@@ -3082,7 +3082,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3092,7 +3092,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."
 --- !u!1 &9125819877493403867
@@ -3162,7 +3162,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3172,6 +3172,6 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.63
+    m_LineSpacing: 1.35
   m_Text: "\uB098 \uC544\uAE4C \uC74C\uC2DD\uC810\uC5D0 \uD578\uB4DC\uD3F0\uC744
     \uB450\uACE0 \uC654\uB098\uBD10.\n\uBA3C\uC800 \uAC00."

@@ -518,6 +518,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1840572920}
     m_Modifications:
+    - target: {fileID: 465609144828929544, guid: 7cfb0f8bf8cacfa40890cb01f131b32a,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 465609144828929544, guid: 7cfb0f8bf8cacfa40890cb01f131b32a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 42
+      objectReference: {fileID: 0}
     - target: {fileID: 465609144828929550, guid: 7cfb0f8bf8cacfa40890cb01f131b32a,
         type: 3}
       propertyPath: m_Name
@@ -1332,6 +1342,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveData:
     savedScene: 0
+    dialogIndex: 0
+    healthGauge: 9
+    moneyGauge: 0
+  isNewGame: 0
 --- !u!4 &755194471
 Transform:
   m_ObjectHideFlags: 0
@@ -2466,6 +2480,7 @@ MonoBehaviour:
   nowMoneyGauge: 0
   moneyImage: {fileID: 2085555087}
   healthImage: {fileID: 1175095445}
+  isGameOver: 0
 --- !u!1001 &2107184188
 PrefabInstance:
   m_ObjectHideFlags: 0

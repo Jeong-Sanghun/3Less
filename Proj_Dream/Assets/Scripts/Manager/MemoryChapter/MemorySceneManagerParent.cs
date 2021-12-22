@@ -41,6 +41,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected int nowDialogIndex;
     protected bool isDialogStopping;
+    bool isTalkingSystem;
     bool isStartOfWrapper;
     protected bool isStopActionable;
     bool isRouteButtonAble;
@@ -113,6 +114,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
         else if (isStopActionable == true)
         {
+            Debug.Log("액션이 왜 실행되냐고");
             OnActionKeyword();
         }
     }
@@ -123,8 +125,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             return;
         }
-
-
+ 
 
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
 
@@ -184,7 +185,10 @@ public class MemorySceneManagerParent : MonoBehaviour
                 }
             }
         }
-        
+        if (isTalkingSystem == true)
+        {
+            return;
+        }
 
 
         bool isNewCharacter = false;
@@ -201,7 +205,11 @@ public class MemorySceneManagerParent : MonoBehaviour
             nowCharacter = nowDialog.characterEnum;
             isNewCharacter = true;
         }
-
+        else if(nowCharacter == Character.System)
+        {
+            isNewCharacter = true;
+        }
+        isDialogStopping = false;
 
         if (isNewCharacter)
         {
@@ -215,6 +223,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                     TextFrameToggle(true);
                     ballonList[0].SetActive(true);
                     break;
+                case Character.FriendGirl:
                 case Character.Mother:
                     TextFrameToggle(true);
                     ballonList[1].SetActive(true);
@@ -236,7 +245,16 @@ public class MemorySceneManagerParent : MonoBehaviour
                     systemText.text = nowDialog.dialog;
                     systemText.color = new Color(systemText.color.r, systemText.color.g, systemText.color.b, 0);
                     StartCoroutine(moduleManager.FadeModule_Text(systemText, 0, 1, 1));
-                    StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.FadeModule_Text(systemText, 1, 0, 1)));
+                    StartCoroutine(moduleManager.AfterRunCoroutine(2, moduleManager.FadeModule_Text(systemText, 1, 0, 1)));
+                    isTalkingSystem = true;
+                    StartCoroutine(InvokerCoroutine(3, SetTalkingSystemFalse));
+                    if (nowDialog.actionKeyword != null)
+                    {
+                        isStartOfWrapper = true;
+                        isDialogStopping = true;
+                        StartCoroutine(InvokerCoroutine(3f, SetStopActionableTrue));
+                        nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
+                    }
                     break;
                 case Character.NotAllocated:
                     //이거도 위랑 연속적인거여서 아무것도 안해도됨.
@@ -247,7 +265,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             }
         }
 
-        if (nowDialog.dialog != null)
+        if (nowDialog.dialog != null && textFrameTransparent == false)
         {
             if (lastTextFrameTransparent != textFrameTransparent)
             {
@@ -262,15 +280,15 @@ public class MemorySceneManagerParent : MonoBehaviour
 
             }
         }
-        isDialogStopping = false;
-        if (nowDialog.actionKeyword != null)
+
+        if (nowDialog.actionKeyword != null && nowCharacter != Character.System)
         {
             isStartOfWrapper = true;
             StartCoroutine(CheckStopPointTextEnd());
             nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
         }
-        
-        if(nowDialog.routeList != null)
+
+            if (nowDialog.routeList != null)
         {
             Debug.Log("여긴되냐");
             isStartOfWrapper = true;
@@ -372,8 +390,10 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected IEnumerator InvokerCoroutine(float time, Action method)
     {
-        Debug.Log("인보크" + method.Method.Name);
         yield return new WaitForSeconds(time);
+
+        if (time == 3)
+            Debug.Log("시스템 끝");
         isStarted = true;
         method();
     }
@@ -394,20 +414,29 @@ public class MemorySceneManagerParent : MonoBehaviour
         isDialogStopping = false;
     }
 
+    protected void SetTalkingSystemFalse()
+    {
+        isTalkingSystem = false;
+
+    }
+
+
     IEnumerator CheckStopPointTextEnd()
     {
         while (moduleManager.nowTexting)
         {
             yield return null;
         }
-        Debug.Log("스타핑 트루");
+        Debug.Log("너냐");
         isDialogStopping = true;
         isStopActionable = true;
     }
 
+
     IEnumerator CheckRoutePointTextEnd()
     {
         isDialogStopping = true;
+        isStopActionable = false;
         while (moduleManager.nowTexting)
         {
             yield return null;

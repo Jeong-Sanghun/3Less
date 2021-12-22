@@ -52,31 +52,43 @@ public class GaugeManager : MonoBehaviour
         Sprite[] nowSpriteArray;
         int lastGaugeNumber;
         int afterGaugeNumber;
+        int changingNumber = number;
         if (isMoney)
         {
             nowImage = moneyImage;
             lastGaugeNumber = nowMoneyGauge;
-            nowMoneyGauge += number;
-            afterGaugeNumber = nowMoneyGauge;
+            afterGaugeNumber = nowMoneyGauge + number;
             nowSpriteArray = moneySpriteArray;
+            if (afterGaugeNumber < 0)
+            {
+                changingNumber = -lastGaugeNumber;
+            }
+            else if (afterGaugeNumber >= nowSpriteArray.Length - 1)
+            {
+                changingNumber = nowSpriteArray.Length - 1 - lastGaugeNumber;
+            }
+            nowMoneyGauge += changingNumber;
+            Debug.Log("체인지 넘버" + changingNumber);
         }
         else
         {
             nowImage = healthImage;
             lastGaugeNumber = nowHealthGauge;
-            nowHealthGauge += number;
-            afterGaugeNumber = nowHealthGauge;
+            afterGaugeNumber = nowHealthGauge + number;
             nowSpriteArray = healthSpriteArray;
+            if (afterGaugeNumber < 0)
+            {
+                changingNumber = -lastGaugeNumber;
+            }
+            else if (afterGaugeNumber >= nowSpriteArray.Length - 1)
+            {
+                changingNumber = nowSpriteArray.Length - 1 - lastGaugeNumber;
+            }
+            nowHealthGauge += changingNumber;
+
         }
-        int changingNumber = number;
-        if (afterGaugeNumber <0)
-        {
-            changingNumber = -lastGaugeNumber;
-        }
-        else if(afterGaugeNumber >= nowSpriteArray.Length)
-        {
-            changingNumber = nowSpriteArray.Length - lastGaugeNumber;
-        }
+
+
 
         if(changingNumber != 0)
         {

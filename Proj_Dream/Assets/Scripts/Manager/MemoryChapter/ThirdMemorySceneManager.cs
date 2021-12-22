@@ -65,7 +65,7 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet1));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryRooftop1));
         }
     }
 

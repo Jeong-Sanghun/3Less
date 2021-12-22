@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public enum SceneName
 {
-    MainMenu,Bright,Dark,MemoryHome1,MemoryRestaurant,MemoryStreet1
+    MainMenu,Bright,Dark,MemoryHome1,MemoryRestaurant,MemoryStreet1,MemoryRooftop1,MemorySchool1,MemoryHome2
 }
 
 public class GameManager : MonoBehaviour

@@ -12,10 +12,10 @@ public class SaveDataClass
 
     public SaveDataClass()
     {
-        savedScene = SceneName.MainMenu;
+        savedScene = SceneName.Bright;
         dialogIndex = 0;
         healthGauge = 9;
-        moneyGauge = 9;
+        moneyGauge = 0;
     }
 
 }

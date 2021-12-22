@@ -6,11 +6,13 @@ public enum Character
     Player,
     Narator,
     System,
+    Message,
     Fish,
     Mushroom,
     Mother,
     Father,
     Brother,
+    FriendGirl,
     NotAllocated
 }
 
@@ -62,7 +64,7 @@ public class Dialog
         {
             characterEnum = Character.Player;
         }
-        else if (character.Contains("SYS"))
+        else if (character.Contains("SYS")|| character.Contains("MES"))
         {
             characterEnum = Character.System;
         }
@@ -90,6 +92,11 @@ public class Dialog
         {
             characterEnum = Character.Brother;
         }
+        else if (character.Contains("B") || character.Contains("ÇÐ»ý"))
+        {
+            characterEnum = Character.FriendGirl;
+        }
+
 
         if (routeFirst != null)
         {
@@ -198,13 +205,19 @@ public class Dialog
                 act.parameterList.Add(-1);
             }
 
-            if (keywordArray[i].Contains("fadeOut") || keywordArray[i].Contains("fadeOut"))
+            if (keywordArray[i].Contains("fadeOut") || keywordArray[i].Contains("FadeOut"))
             {
                 act.actionList.Add(ActionKeyword.FadeOut);
                 act.parameterList.Add(-1);
             }
 
-            if(keywordArray[i].Contains("scissor") || keywordArray[i].Contains("Scissor"))
+            if (keywordArray[i].Contains("fadeIn") || keywordArray[i].Contains("FadeIn"))
+            {
+                act.actionList.Add(ActionKeyword.FadeIn);
+                act.parameterList.Add(-1);
+            }
+
+            if (keywordArray[i].Contains("scissor") || keywordArray[i].Contains("Scissor"))
             {
                 act.actionList.Add(ActionKeyword.Scissors);
                 act.parameterList.Add(-1);
