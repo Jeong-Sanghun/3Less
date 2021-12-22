@@ -191,7 +191,15 @@ public class FirstSceneManager : SceneManagerParent
             spriteIndex++;
             yield return new WaitForFixedUpdate();
         }
-
+        while (true)
+        {
+            yield return null;
+            if (Input.GetMouseButtonDown(0))
+            {
+                break;
+                
+            }
+        }
         timer = 0;
         float startOrtho = cam.orthographicSize;
         float endOrtho = 0.1f;

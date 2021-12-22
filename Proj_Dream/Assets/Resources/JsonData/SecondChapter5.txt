@@ -2,7 +2,7 @@
     "dialogList": [
         {
             "character": "NAR.(SYS)",
-            "actionKeyword": "moneyGauge10",
+            "actionKeyword": "moneyGauge10,fadeOut",
             "dialog": "부모님으로부터 용돈을 받았습니다. "
         },
         {

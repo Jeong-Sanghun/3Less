@@ -7,6 +7,8 @@ public class FifthMemorySceneManager : MemorySceneManagerParent
 {
     [SerializeField]
     GameObject friendGirlObject;
+    [SerializeField]
+    Image fifthFadeImage;
 
 
     protected override void Start()
@@ -14,7 +16,7 @@ public class FifthMemorySceneManager : MemorySceneManagerParent
         base.Start();
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("SecondChapter5");
         dialogBundle.SetCharacterEnum();
-
+        fifthFadeImage.gameObject.SetActive(true);
 
 
         playerObject.SetActive(true);
@@ -45,6 +47,10 @@ public class FifthMemorySceneManager : MemorySceneManagerParent
         if (gaugeManager.isGameOver == true)
         {
             return;
+        }
+        if (keywordList.Contains(ActionKeyword.FadeOut))
+        {
+            StartCoroutine(moduleManager.FadeModule_Image(fifthFadeImage, 1, 0, 1));
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
