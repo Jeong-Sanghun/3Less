@@ -335,7 +335,7 @@ public class SecondSceneManager : SceneManagerParent
         scissorRect.transform.localScale = scissorEndPos.transform.localScale;
         scissorRect.transform.localEulerAngles = scissorEndPos.transform.localEulerAngles;
         scissorRect.gameObject.SetActive(false);
-      
+        scissorItemObject.SetActive(true);
         yield return new WaitForSeconds(1f);
 
         roadObject.SetActive(true);
@@ -354,7 +354,7 @@ public class SecondSceneManager : SceneManagerParent
         }
         roadSprite.color = originColor;
         scissorRect.gameObject.SetActive(false);
-        scissorItemObject.SetActive(true);
+
 
         player.isPlayPossible = true;
 
@@ -375,54 +375,8 @@ public class SecondSceneManager : SceneManagerParent
 
     IEnumerator BubbleAnimCoroutine()
     {
-        float timer = 0;
-        Vector3[] endPosArr = new Vector3[3];
-        Vector3[] originPosArr = new Vector3[3];
-        Vector3[] startPosArr = new Vector3[3];
-        float ranX = 0;
-        for(int i = 0; i < 3; i++)
+        while(!isBubbleClicked)
         {
-            int one;
-            startPosArr[i] = bubbleObjectArray[i].transform.position;
-            originPosArr[i] = bubbleObjectArray[i].transform.position;
-            ranX = originPosArr[i].x + Random.Range(-0.2f, 0.2f);
-            if (Random.Range(0, 1) == 0)
-            {
-                one = 1;
-            }
-            else
-            {
-                one = -1;
-            }
-            endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - originPosArr[i].x) * (ranX - originPosArr[i].x)) + originPosArr[i].y, 0);
-        }
-        while(bubbleObjectParent.activeSelf)
-        {
-            timer += Time.deltaTime;
-            if (timer > 1)
-            {
-                timer = 0;
-                for (int i = 0; i < 3; i++)
-                {
-                    int one;
-                    originPosArr[i] = bubbleObjectArray[i].transform.position;
-                    ranX = startPosArr[i].x + Random.Range(-0.2f, 0.2f);
-                   
-                    if (Random.Range(0, 1) == 0)
-                    {
-                        one = 1;
-                    }
-                    else
-                    {
-                        one = -1;
-                    }
-                    endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - startPosArr[i].x) * (ranX - startPosArr[i].x)) + startPosArr[i].y, 0);
-                }
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                bubbleObjectArray[i].transform.position = Vector3.Lerp(originPosArr[i], endPosArr[i], timer);
-            }
             if (Input.GetMouseButtonDown(0))
             {
                 GameObject touchedObject;               //터치한 오브젝트
@@ -448,54 +402,8 @@ public class SecondSceneManager : SceneManagerParent
 
     IEnumerator MedalAnimCoroutine()
     {
-        //float timer = 0;
-        //Vector3[] endPosArr = new Vector3[3];
-        //Vector3[] originPosArr = new Vector3[3];
-        //Vector3[] startPosArr = new Vector3[3];
-        //float ranX = 0;
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    int one;
-        //    startPosArr[i] = bubbleObjectArray[i].transform.position;
-        //    originPosArr[i] = bubbleObjectArray[i].transform.position;
-        //    ranX = originPosArr[i].x + Random.Range(-0.2f, 0.2f);
-        //    if (Random.Range(0, 1) == 0)
-        //    {
-        //        one = 1;
-        //    }
-        //    else
-        //    {
-        //        one = -1;
-        //    }
-        //    endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - originPosArr[i].x) * (ranX - originPosArr[i].x)) + originPosArr[i].y, 0);
-        //}
         while (isMedalClicked == false)
         {
-            //timer += Time.deltaTime;
-            //if (timer > 1)
-            //{
-            //    timer = 0;
-            //    for (int i = 0; i < 3; i++)
-            //    {
-            //        int one;
-            //        originPosArr[i] = bubbleObjectArray[i].transform.position;
-            //        ranX = startPosArr[i].x + Random.Range(-0.2f, 0.2f);
-
-            //        if (Random.Range(0, 1) == 0)
-            //        {
-            //            one = 1;
-            //        }
-            //        else
-            //        {
-            //            one = -1;
-            //        }
-            //        endPosArr[i] = new Vector3(ranX, one * Mathf.Sqrt(0.2f - (ranX - startPosArr[i].x) * (ranX - startPosArr[i].x)) + startPosArr[i].y, 0);
-            //    }
-            //}
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    bubbleObjectArray[i].transform.position = Vector3.Lerp(originPosArr[i], endPosArr[i], timer);
-            //}
             if (Input.GetMouseButtonDown(0))
             {
                 GameObject touchedObject;               //터치한 오브젝트
