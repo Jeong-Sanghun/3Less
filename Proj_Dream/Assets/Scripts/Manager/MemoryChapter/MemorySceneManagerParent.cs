@@ -47,6 +47,10 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected bool isStopActionable;
     bool isRouteButtonAble;
     Dialog routeDialog;
+    bool isMultiRouting;
+    int nowMultiRouteCount;
+    List<int> choosedMultiRouteList;
+    List<int> multiRouteEndedDialogIndex;
     ActionKeyword nowChoosedRoute;
 
     bool textFrameTransparent;
@@ -82,6 +86,9 @@ public class MemorySceneManagerParent : MonoBehaviour
         isStarted = false;
         isRouteButtonAble = false;
         routeDialog = null;
+        isMultiRouting = false;
+        nowMultiRouteCount = 0;
+        multiRouteEndedDialogIndex = new List<int>();
         saveData = gameManager.saveData;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 0.5f));
 
@@ -115,7 +122,6 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
         else if (isStopActionable == true)
         {
-            Debug.Log("액션이 왜 실행되냐고");
             OnActionKeyword();
         }
     }
@@ -147,11 +153,22 @@ public class MemorySceneManagerParent : MonoBehaviour
                         else if (actionList.Contains(ActionKeyword.End))
                         {
                             nowChoosedRoute = ActionKeyword.Null;
+                            if(isMultiRouting == true)
+                            {
+                                isMultiRouting = false;
+                                nowMultiRouteCount = 0;
+                                choosedMultiRouteList = null;
+                            }
                             break;
                         }
                         else
                         {
-                            for (int k = nowDialogIndex; k < dialogBundle.dialogList.Count; k++)
+                            int traceStartIndex = nowDialogIndex;
+                            if(isMultiRouting == true)
+                            {
+                                traceStartIndex = 0;
+                            }
+                            for (int k = traceStartIndex; k < dialogBundle.dialogList.Count; k++)
                             {
                                 Dialog dialog = dialogBundle.dialogList[k];
                                 List<ActionClass> traceActionList = dialog.actionList;
@@ -162,23 +179,37 @@ public class MemorySceneManagerParent : MonoBehaviour
                                 for (int m = 0; m < traceActionList.Count; m++)
                                 {
                                     ActionClass action = traceActionList[m];
-                                    if (action.actionList.Contains(ActionKeyword.Route) 
-                                        && action.actionList.Contains(ActionKeyword.End))
+                                    if (isMultiRouting == true)
                                     {
-                                        nowChoosedRoute = ActionKeyword.Null;
-                                        nowDialogIndex = k+1;
-                                        if(nowDialogIndex >= dialogBundle.dialogList.Count)
+                                        if (action.actionList.Contains(ActionKeyword.MultiRoute))
                                         {
-                                            nowDialogIndex = dialogBundle.dialogList.Count;
-                                            isStartOfWrapper = true;
-                                            dialogEnd = true;
-                                            StartCoroutine(CheckStopPointTextEnd());
-                                            nowActionList = dialogBundle.dialogList[nowDialogIndex-1].actionList;
+                                            nowChoosedRoute = ActionKeyword.Null;
+                                            nowDialogIndex = k;
+                                            NextDialog();
                                             return;
                                         }
-                                        NextDialog();
-                                        return;
                                     }
+                                    else
+                                    {
+                                        if (action.actionList.Contains(ActionKeyword.Route)
+                                        && action.actionList.Contains(ActionKeyword.End))
+                                        {
+                                            nowChoosedRoute = ActionKeyword.Null;
+                                            nowDialogIndex = k + 1;
+                                            if (nowDialogIndex >= dialogBundle.dialogList.Count)
+                                            {
+                                                nowDialogIndex = dialogBundle.dialogList.Count;
+                                                isStartOfWrapper = true;
+                                                dialogEnd = true;
+                                                StartCoroutine(CheckStopPointTextEnd());
+                                                nowActionList = dialogBundle.dialogList[nowDialogIndex - 1].actionList;
+                                                return;
+                                            }
+                                            NextDialog();
+                                            return;
+                                        }
+                                    }
+                                    
                                 }
                             }
                         }
@@ -226,6 +257,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                     break;
                 case Character.FriendGirl:
                 case Character.Mother:
+                case Character.FriendBoy:
                     TextFrameToggle(true);
                     ballonList[1].SetActive(true);
                     break;
@@ -289,13 +321,29 @@ public class MemorySceneManagerParent : MonoBehaviour
             nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
         }
 
-            if (nowDialog.routeList != null)
+        if (nowDialog.routeList != null)
         {
-            Debug.Log("여긴되냐");
+            
             isStartOfWrapper = true;
             routeDialog = nowDialog;
             StartCoroutine(CheckRoutePointTextEnd());
-            
+            if(isMultiRouting == false && nowDialog.actionKeyword != null
+                && !multiRouteEndedDialogIndex.Contains(nowDialogIndex))
+            {
+               
+                for (int i = 0; i < nowActionList.Count; i++)
+                {
+                    if (nowActionList[i].actionList.Contains(ActionKeyword.MultiRoute))
+                    {
+                        multiRouteEndedDialogIndex.Add(nowDialogIndex);
+                        isMultiRouting = true;
+                        nowMultiRouteCount = (int)nowActionList[i].parameterList[0];
+                        choosedMultiRouteList = new List<int>();
+                        break;
+                    }
+                }
+            }
+           
         }
 
 
@@ -428,7 +476,6 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             yield return null;
         }
-        Debug.Log("너냐");
         isDialogStopping = true;
         isStopActionable = true;
     }
@@ -443,6 +490,8 @@ public class MemorySceneManagerParent : MonoBehaviour
             yield return null;
         }
         yield return null;
+        isDialogStopping = true;
+        isStopActionable = false;
         while (true)
         {
             if (Input.GetMouseButtonDown(0))
@@ -496,12 +545,43 @@ public class MemorySceneManagerParent : MonoBehaviour
     void RouteButtonActive()
     {
         List<string> routeList = routeDialog.routeList;
-        nowRouteButtonParent = routeButtonParentArray[routeList.Count - 2];
-        routeButtonParentArray[routeList.Count - 2].SetActive(true);
-      
+        
+        if (isMultiRouting==true)
+        {
+            routeList = new List<string>();
+            
+            for(int i = 0; i < routeDialog.routeList.Count; i++)
+            {
+                routeList.Add(routeDialog.routeList[i]);
+            }
+            choosedMultiRouteList.Sort(CompareInt);
+            for (int i = 0; i < choosedMultiRouteList.Count; i++)
+            {
+                Debug.Log("컴페어결과" + choosedMultiRouteList[i]);
+                routeList.RemoveAt(choosedMultiRouteList[i]);
+            }
+            nowRouteButtonParent = routeButtonParentArray[routeList.Count - 2 ];
+            routeButtonParentArray[routeList.Count - 2].SetActive(true);
+
+        }
+        else
+        {
+            nowRouteButtonParent = routeButtonParentArray[routeList.Count - 2];
+            routeButtonParentArray[routeList.Count - 2].SetActive(true);
+
+        }
+
         List<Text> routeTextList = new List<Text>();
         isRouteButtonAble = false;
-        SaveUserData();
+        if(isMultiRouting == false)
+        {
+            SaveUserData();
+        }
+        else if(choosedMultiRouteList.Count == 0)
+        {
+            SaveUserData();
+        }
+        
         StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
         for(int i = 0; i < routeList.Count; i++)
         {
@@ -518,6 +598,23 @@ public class MemorySceneManagerParent : MonoBehaviour
         StartCoroutine(InvokerCoroutine(1,RouteButtonAbleTrue));
 
 
+    }
+
+    int CompareInt(int x, int y)
+    {
+        if (x < y)
+        {
+            return 1;
+        }
+        if (x == y)
+        {
+            return 0;
+        }
+        if (x > y)
+        {
+            return -1;
+        }
+        return 1;
     }
 
 
@@ -566,6 +663,35 @@ public class MemorySceneManagerParent : MonoBehaviour
         childArray[index].localScale = originSize;
         yield return new WaitForSeconds(0.1f);
 
+
+        if (isMultiRouting)
+        {
+            List<int> indexList = new List<int>();
+            for(int i = 0; i < routeDialog.routeList.Count; i++)
+            {
+                indexList.Add(i);
+            }
+            
+            for (int i = 0; i < choosedMultiRouteList.Count; i++)
+            {
+                indexList.Remove(choosedMultiRouteList[i]);
+            }
+            index = indexList[index];
+            nowMultiRouteCount--;
+
+            if (nowMultiRouteCount == 0)
+            {
+                Debug.Log("이게 언제발동?");
+                isMultiRouting = false;
+                choosedMultiRouteList = null;
+            }
+            else
+            {
+                choosedMultiRouteList.Add(index);
+            }
+        }
+
+        
 
 
         isDialogStopping = false;
@@ -619,7 +745,6 @@ public class MemorySceneManagerParent : MonoBehaviour
             }
 
         }
-
         NextDialog();
     }
 

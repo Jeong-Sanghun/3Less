@@ -9,11 +9,18 @@ public class GaugeManager : MonoBehaviour
     public int nowHealthGauge;
     public int nowMoneyGauge;
     [SerializeField]
-    Image moneyImage;
+    Image moneyEffectImage;
     [SerializeField]
+    Image healthEffectImage;
+    
+    Image moneyImage;
+    
     Image healthImage;
 
+    Sprite[] effectSpriteArray;
+    [SerializeField]
     Sprite[] moneySpriteArray;
+    [SerializeField]
     Sprite[] healthSpriteArray;
     public bool isGameOver = false;
     
@@ -25,7 +32,11 @@ public class GaugeManager : MonoBehaviour
     {
         moneySpriteArray = Resources.LoadAll<Sprite>("Image/Money");
         healthSpriteArray = Resources.LoadAll<Sprite>("Image/Health");
-
+        effectSpriteArray = Resources.LoadAll<Sprite>("Image/GaugeEffect");
+        moneyImage = moneyEffectImage.transform.GetChild(0).GetComponent<Image>();
+        healthImage = healthEffectImage.transform.GetChild(0).GetComponent<Image>();
+        moneyEffectImage.sprite = effectSpriteArray[0];
+        healthEffectImage.sprite = effectSpriteArray[0];
     }
 
     public void SetGauge(int money, int health)
@@ -49,6 +60,7 @@ public class GaugeManager : MonoBehaviour
     IEnumerator GaugeImageChangeCoroutine(bool isMoney,int number)
     {
         Image nowImage;
+        Image nowEffectImage;
         Sprite[] nowSpriteArray;
         int lastGaugeNumber;
         int afterGaugeNumber;
@@ -56,6 +68,7 @@ public class GaugeManager : MonoBehaviour
         if (isMoney)
         {
             nowImage = moneyImage;
+            nowEffectImage = moneyEffectImage;
             lastGaugeNumber = nowMoneyGauge;
             afterGaugeNumber = nowMoneyGauge + number;
             nowSpriteArray = moneySpriteArray;
@@ -73,6 +86,7 @@ public class GaugeManager : MonoBehaviour
         else
         {
             nowImage = healthImage;
+            nowEffectImage = healthEffectImage;
             lastGaugeNumber = nowHealthGauge;
             afterGaugeNumber = nowHealthGauge + number;
             nowSpriteArray = healthSpriteArray;
@@ -88,6 +102,14 @@ public class GaugeManager : MonoBehaviour
 
         }
 
+        float timer = 0;
+        int effectIndex = 0;
+        for(int i = 0; i < effectSpriteArray.Length / 2; i++)
+        {
+            nowEffectImage.sprite = effectSpriteArray[effectIndex];
+            effectIndex++;
+            yield return new WaitForSeconds(0.07f);
+        }
 
 
         if(changingNumber != 0)
@@ -104,10 +126,21 @@ public class GaugeManager : MonoBehaviour
                 nowImage.sprite = nowSpriteArray[lastGaugeNumber];
             }
         }
-        
-        if(afterGaugeNumber < 0)
+        for (int i = effectIndex; i < effectSpriteArray.Length; i++)
+        {
+            nowEffectImage.sprite = effectSpriteArray[effectIndex];
+            effectIndex++;
+            yield return new WaitForSeconds(0.07f);
+        }
+
+        moneyEffectImage.sprite = effectSpriteArray[0];
+        healthEffectImage.sprite = effectSpriteArray[0];
+
+
+        if (afterGaugeNumber < 0)
         {
             isGameOver = true;
+            Debug.Log("게이지다까짐");
             GameManager.singleTon.GameOver();
         }
 

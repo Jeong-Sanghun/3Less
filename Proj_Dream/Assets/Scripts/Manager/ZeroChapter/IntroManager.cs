@@ -10,6 +10,8 @@ public class IntroManager : MonoBehaviour
     GameManager gameManager;
 
     [SerializeField]
+    GameObject cutSceneParent;
+    [SerializeField]
     Image[] cutSceneArray;
     [SerializeField]
     Image fadeInImage;
@@ -17,6 +19,15 @@ public class IntroManager : MonoBehaviour
     Text dialogText;
     [SerializeField]
     Image textFrameImage;
+
+    [SerializeField]
+    Image startLogo;
+    [SerializeField]
+    Image explainingImage;
+    [SerializeField]
+    Image threeImage;
+    [SerializeField]
+    GameObject startLogoTarget;
     
     
 
@@ -38,17 +49,15 @@ public class IntroManager : MonoBehaviour
 
     int dialogIndex;
     bool isChanging = false;
-    int nowCutSceneIndex;
-
+    int nowCutSceneIndex;    
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameManager.singleTon;
         dialogIndex = 0;
         nowCutSceneIndex = 0;
-        StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
-        StartCoroutine(moduleManager.FadeModule_Image(textFrameImage, 0, 1, 1));
-        Invoke("NextDialog", 1);
+        isChanging = true;
+        StartCoroutine(StartingCoroutine());
     }
 
     // Update is called once per frame
@@ -65,9 +74,44 @@ public class IntroManager : MonoBehaviour
         }
     }
 
+    IEnumerator StartingCoroutine()
+    {
+        startLogo.color = new Color(1, 1, 1, 0);
+        threeImage.color = new Color(1, 1, 1, 0);
+        explainingImage.color = new Color(1, 1, 1, 0);
+
+        StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
+        StartCoroutine(moduleManager.FadeModule_Image(threeImage, 0, 1, 1));
+        StartCoroutine(moduleManager.FadeModule_Image(startLogo, 0, 1, 1));
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(moduleManager.MoveModule_Linear(startLogo.gameObject, startLogoTarget.transform.position, 1));
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(moduleManager.FadeModule_Image(threeImage, 1, 0, 1));
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(moduleManager.FadeModule_Image(explainingImage, 0, 1, 1));
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 0, 1, 1));
+        yield return new WaitForSeconds(1.5f);
+        startLogo.gameObject.SetActive(false);
+        explainingImage.gameObject.SetActive(false);
+        threeImage.gameObject.SetActive(false);
+
+        cutSceneParent.SetActive(true);
+        StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
+        StartCoroutine(moduleManager.FadeModule_Image(textFrameImage, 0, 1, 1));
+        yield return new WaitForSeconds(1f);
+       
+        isChanging = false;
+        NextDialog();
+    }
+
     void NextDialog()
     {
 
+        if (dialogIndex == 12)
+        {
+            return;
+        }
         switch (dialogIndex)
         {
 
@@ -88,6 +132,8 @@ public class IntroManager : MonoBehaviour
                 StartCoroutine(moduleManager.FadeModule_Image(textFrameImage, 0, 1, 1));
                 dialogText.text = "";
                 StartCoroutine(moduleManager.FadeModule_Text(dialogText, 0, 1, 1));
+                isChanging = true;
+                Invoke("SetChangeFalse", 0.5f);
                 break;
             default:
                 break;
@@ -95,16 +141,12 @@ public class IntroManager : MonoBehaviour
         }
 
         StartCoroutine(moduleManager.LoadTextOneByOne(dialogs[dialogIndex], dialogText));
-        if(dialogIndex != 11)
+        dialogIndex++;
+        if (dialogIndex == 12)
         {
-            dialogIndex++;
-        }
-        else
-        {
-            isChanging = true;
             Invoke("SceneEnd", 1);
         }
-        
+
     }
 
     void SetChangeFalse()

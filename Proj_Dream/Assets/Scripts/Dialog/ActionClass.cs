@@ -11,6 +11,7 @@ public enum ActionKeyword
     Bubble, Scissors,Medal,
     ImmediateDialog, Route,
     HealthGauge,MoneyGauge,
+    MultiRoute,
     Touch, Drag,
     Scene
 }

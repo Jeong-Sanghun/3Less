@@ -13,6 +13,7 @@ public enum Character
     Father,
     Brother,
     FriendGirl,
+    FriendBoy,
     NotAllocated
 }
 
@@ -91,6 +92,10 @@ public class Dialog
         else if (character.Contains("悼积"))
         {
             characterEnum = Character.Brother;
+        }
+        else if (character.Contains("模备"))
+        {
+            characterEnum = Character.FriendBoy;
         }
         else if (character.Contains("B") || character.Contains("切积"))
         {
@@ -192,6 +197,14 @@ public class Dialog
                 bufferKeyword = bufferKeyword.Remove(0, "moneyGauge".Length);
                 act.parameterList.Add(float.Parse(bufferKeyword));
             }
+            if (keywordArray[i].Contains("multiRoute") || keywordArray[i].Contains("MultiRoute"))
+            {
+                act.actionList.Add(ActionKeyword.MultiRoute);
+                string bufferKeyword = keywordArray[i];
+                bufferKeyword = bufferKeyword.Remove(0, "multiRoute".Length);
+                act.parameterList.Add(float.Parse(bufferKeyword));
+            }
+
 
             if (keywordArray[i].Contains("scene") || keywordArray[i].Contains("Scene"))
             {
@@ -296,6 +309,12 @@ public class Dialog
             if (keywordArray[i].Contains("fourth") || keywordArray[i].Contains("Fourth"))
             {
                 act.actionList.Add(ActionKeyword.Fourth);
+                act.parameterList.Add(-1);
+            }
+
+            if (keywordArray[i].Contains("fifth") || keywordArray[i].Contains("Fifth"))
+            {
+                act.actionList.Add(ActionKeyword.Fifth);
                 act.parameterList.Add(-1);
             }
         }
