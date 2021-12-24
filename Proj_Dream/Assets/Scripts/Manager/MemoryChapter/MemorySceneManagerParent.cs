@@ -365,18 +365,24 @@ public class MemorySceneManagerParent : MonoBehaviour
         Debug.Log("스탑포인트");
         List<ActionClass> actionClassList = nowActionList;
         bool immediateStart = false;
+        bool playerMove = false;
         for (int i = 0; i < actionClassList.Count; i++)
         {
             ActionClass nowAction = actionClassList[i];
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
+            Debug.Log("액션리스트 카운트" + actionClassList.Count);
             if (keywordList.Contains(ActionKeyword.ImmediateDialog) || (keywordList.Contains(ActionKeyword.Route)&& !keywordList.Contains(ActionKeyword.End)))
             {
                 immediateStart = true;
             }
+            if (keywordList.Contains(ActionKeyword.PlayerMove))
+            {
+                playerMove = true;
+            }
             OverrideAction(keywordList, parameterList);
         }
-        if (immediateStart)
+        if (immediateStart && playerMove==false)
         {
             isDialogStopping = false;
             NextDialog();

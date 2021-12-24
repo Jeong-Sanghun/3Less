@@ -8,7 +8,8 @@ public enum SceneName
 {
     MainMenu,Intro,Bright,Dark,MemoryHome1,MemoryRestaurant,
     MemoryStreet1,MemoryRooftop1,MemorySchool1,MemoryHome2,
-    MemoryHallway1, MemoryStreet2
+    MemoryHallway1, MemoryStreet2,MemoryHome3,MemoryMyRoom,
+    MemorySchool2,MemoryHome4
 }
 
 public class GameManager : MonoBehaviour

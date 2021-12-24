@@ -7,6 +7,8 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
 {
     [SerializeField]
     Image eighthFadeImage;
+    [SerializeField]
+    Text lessonEndText;
 
 
     protected override void Start()
@@ -21,13 +23,26 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
         playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
 
         nowScene = SceneName.MemoryStreet2;
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
-        StartCoroutine(InvokerCoroutine(1f, NextDialog));
 
+        if(saveData.eighthMemoryLeftTime == 2)
+        {
+            StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
+            StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+            StartCoroutine(InvokerCoroutine(1f, NextDialog));
+        }
+        else
+        {
+            nowDialogIndex = 1;
+            eighthFadeImage.gameObject.SetActive(true);
+            eighthFadeImage.color = new Color(0, 0, 0, 1);
+            StartCoroutine(moduleManager.FadeModule_Text(lessonEndText, 0, 1, 1));
+            StartCoroutine(moduleManager.AfterRunCoroutine(2,moduleManager.FadeModule_Image(eighthFadeImage, 1, 0, 1)));
+            StartCoroutine(moduleManager.AfterRunCoroutine(1,moduleManager.FadeModule_Text(lessonEndText, 1, 0, 1)));
 
-
-
+            StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f)));
+            StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f)));
+            StartCoroutine(InvokerCoroutine(4f, NextDialog));
+        }
     }
 
 
@@ -59,7 +74,16 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet2));
+            if (saveData.eighthMemoryLeftTime == 0)
+            {
+                StartCoroutine(SceneEndCoroutine(SceneName.MemoryHome3));
+            }
+            else
+            {
+                saveData.eighthMemoryLeftTime--;
+                StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet2));
+            }
+            
         }
     }
 

@@ -9,6 +9,7 @@ public class SaveDataClass
     public int dialogIndex;
     public int healthGauge;
     public int moneyGauge;
+    public int eighthMemoryLeftTime;
 
     public SaveDataClass()
     {
@@ -16,6 +17,7 @@ public class SaveDataClass
         dialogIndex = 0;
         healthGauge = 9;
         moneyGauge = 0;
+        eighthMemoryLeftTime = 2;
     }
 
 }
