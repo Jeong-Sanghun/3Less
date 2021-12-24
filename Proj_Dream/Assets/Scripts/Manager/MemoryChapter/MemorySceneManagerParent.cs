@@ -655,14 +655,14 @@ public class MemorySceneManagerParent : MonoBehaviour
         float timer = 0;
         while (timer < 1)
         {
-            timer += Time.deltaTime*3;
+            timer += Time.deltaTime*6;
             childArray[index].localScale = Vector3.Lerp(originSize, targetSize, timer);
             yield return null;
         }
         timer = 0;
         while (timer < 1)
         {
-            timer += Time.deltaTime*3;
+            timer += Time.deltaTime*6;
             childArray[index].localScale = Vector3.Lerp( targetSize, originSize, timer);
             yield return null;
         }
