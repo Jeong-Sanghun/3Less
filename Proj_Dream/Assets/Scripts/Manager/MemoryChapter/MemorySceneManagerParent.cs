@@ -48,6 +48,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     bool isRouteButtonAble;
     Dialog routeDialog;
     bool isMultiRouting;
+    bool isRouting;
     int nowMultiRouteCount;
     List<int> choosedMultiRouteList;
     List<int> multiRouteEndedDialogIndex;
@@ -87,6 +88,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         isRouteButtonAble = false;
         routeDialog = null;
         isMultiRouting = false;
+        isRouting = false;
         nowMultiRouteCount = 0;
         multiRouteEndedDialogIndex = new List<int>();
         saveData = gameManager.saveData;
@@ -112,7 +114,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     public void ScreenTouchEvent()
     {
-        if (isStarted == false || moduleManager.nowTexting)
+        if (isStarted == false || moduleManager.nowTexting || isRouting == true)
         {
             return;
         }
@@ -323,7 +325,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
         if (nowDialog.routeList != null)
         {
-            
+            isRouting = true;
             isStartOfWrapper = true;
             routeDialog = nowDialog;
             StartCoroutine(CheckRoutePointTextEnd());
@@ -650,7 +652,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             }
         }
 
-        Vector3 targetSize = new Vector3(1.1f, 1.1f, 1);
+        Vector3 targetSize = new Vector3(1.05f, 1.05f, 1);
         Vector3 originSize = Vector3.one;
         float timer = 0;
         while (timer < 1)
@@ -751,6 +753,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             }
 
         }
+        isRouting = false;
         NextDialog();
     }
 

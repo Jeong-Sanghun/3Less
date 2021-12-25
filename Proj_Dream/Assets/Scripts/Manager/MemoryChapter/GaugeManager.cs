@@ -101,6 +101,10 @@ public class GaugeManager : MonoBehaviour
             nowHealthGauge += changingNumber;
 
         }
+        if (afterGaugeNumber < 0)
+        {
+            isGameOver = true;
+        }
 
         float timer = 0;
         int effectIndex = 0;

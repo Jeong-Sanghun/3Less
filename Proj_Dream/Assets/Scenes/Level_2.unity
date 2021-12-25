@@ -219,10 +219,10 @@ RectTransform:
   - {fileID: 1730993030}
   - {fileID: 1006794254}
   - {fileID: 183843320}
+  - {fileID: 600192096}
   - {fileID: 1524798655}
   - {fileID: 963230667}
   - {fileID: 643289715}
-  - {fileID: 600192096}
   - {fileID: 9168739848121217099}
   - {fileID: 9168739847424242640}
   - {fileID: 2018347710}
@@ -395,12 +395,12 @@ GameObject:
   - component: {fileID: 183843322}
   - component: {fileID: 183843321}
   m_Layer: 5
-  m_Name: "btn\uAC00\uC704"
+  m_Name: ScissorBg
   m_TagString: cutter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &183843320
 RectTransform:
   m_ObjectHideFlags: 0
@@ -914,16 +914,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527019907}
-  m_LocalRotation: {x: -0, y: -0, z: -0.009224162, w: 0.99995744}
+  m_LocalRotation: {x: -0, y: -0, z: -0.009224163, w: 0.9999575}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24232465, y: 0.24232465, z: 0.24232465}
+  m_LocalScale: {x: 0.19385977, y: 0.19385977, z: 0.19385976}
   m_Children: []
   m_Father: {fileID: 30164618}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.057}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -839.4456, y: 484.42383}
+  m_AnchoredPosition: {x: -839.4457, y: 477.3}
   m_SizeDelta: {x: 494, y: 567}
   m_Pivot: {x: 0.6388889, y: 0.9052335}
 --- !u!114 &527019909
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527019907}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1619,14 +1619,14 @@ RectTransform:
   m_GameObject: {fileID: 600192095}
   m_LocalRotation: {x: -0, y: -0, z: -0.009224163, w: 0.9999575}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.24232471, y: 0.24232471, z: 0.24232465}
+  m_LocalScale: {x: 0.19385977, y: 0.19385977, z: 0.19385976}
   m_Children: []
   m_Father: {fileID: 30164618}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.057}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -839.4457, y: 484.42383}
+  m_AnchoredPosition: {x: -839.4457, y: 477.3}
   m_SizeDelta: {x: 494, y: 567}
   m_Pivot: {x: 0.6388889, y: 0.9052335}
 --- !u!114 &600192097
@@ -1743,7 +1743,7 @@ RectTransform:
   m_LocalScale: {x: 0.58485776, y: 0.58485776, z: 0.58485776}
   m_Children: []
   m_Father: {fileID: 30164618}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2125,6 +2125,7 @@ MonoBehaviour:
   bgmSource: {fileID: 560090243}
   medalObject: {fileID: 565157036}
   scissorItemObject: {fileID: 600192095}
+  scissorBackGroundObject: {fileID: 183843319}
   flowerCutAnimator: {fileID: 780698554}
 --- !u!1 &892265435
 GameObject:
@@ -3366,6 +3367,7 @@ MonoBehaviour:
     dialogIndex: 0
     healthGauge: 9
     moneyGauge: 0
+    eighthMemoryLeftTime: 2
   isNewGame: 0
 --- !u!4 &1630022267
 Transform:
@@ -4033,7 +4035,7 @@ PrefabInstance:
     - target: {fileID: 465609144828929551, guid: 7cfb0f8bf8cacfa40890cb01f131b32a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 465609144828929551, guid: 7cfb0f8bf8cacfa40890cb01f131b32a,
         type: 3}
@@ -4271,7 +4273,7 @@ PrefabInstance:
     - target: {fileID: 1267828005431410297, guid: 276d045289bf3504f8cdb04d04997d72,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1267828005431410297, guid: 276d045289bf3504f8cdb04d04997d72,
         type: 3}

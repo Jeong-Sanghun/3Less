@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
 
 public class SecondSceneManager : SceneManagerParent
@@ -40,6 +41,8 @@ public class SecondSceneManager : SceneManagerParent
 
     [SerializeField]
     GameObject scissorItemObject;
+    [SerializeField]
+    GameObject scissorBackGroundObject;
     
     Vector3 scissorItemOriginPos;
     [SerializeField]
@@ -196,7 +199,7 @@ public class SecondSceneManager : SceneManagerParent
             return;
         }
         Debug.Log(Vector3.SqrMagnitude(bubbleObjectParent.transform.position - player.transform.position));
-        if (Vector3.SqrMagnitude(bubbleObjectParent.transform.position - player.transform.position) > 250)
+        if (Vector3.SqrMagnitude(bubbleObjectParent.transform.position - player.transform.position) > 40)
         {
             return;
         }
@@ -321,6 +324,9 @@ public class SecondSceneManager : SceneManagerParent
             originRot.z += 360;
         }
         StartCoroutine(moduleManager.VolumeModule(blurVolume, false, 1));
+        scissorBackGroundObject.SetActive(true);
+        scissorBackGroundObject.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        StartCoroutine(moduleManager.FadeModule_Image(scissorBackGroundObject.GetComponent<Image>(), 0, 1, 1));
         while (timer < 1)
         {
             timer += Time.deltaTime;
@@ -495,20 +501,22 @@ public class SecondSceneManager : SceneManagerParent
         bool dragAndDrop = false;
         while (!dragAndDrop)
         {
-            
             if (Input.GetMouseButtonUp(0)&&isDraggingScissor && 
                 Vector3.Distance(flowerCutAnimator.transform.position,player.transform.position) < 10)
             {
                 GameObject touchedObject;               //터치한 오브젝트
                 RaycastHit2D hit;                         //터치를 위한 raycastHit
                 Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+                
                 if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
                 {
+ 
                     touchedObject = hit.collider.gameObject;
                     Debug.Log(touchedObject.name);
                     //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
                     if (touchedObject.name.Contains("Flower"))
                     {
+                        scissorBackGroundObject.SetActive(false);
                         dragAndDrop = true;
                         scissorItemObject.SetActive(false);
                         flowerCutAnimator.SetBool("IsCut", true);
@@ -551,12 +559,14 @@ public class SecondSceneManager : SceneManagerParent
     {
         isDraggingScissor = true;
         scissorItemObject.transform.position = Input.mousePosition;
+        scissorBackGroundObject.SetActive(false);
     }
 
     public void ScissorPointerUp()
     {
         StartCoroutine(InvokerCoroutine(0.05f, DraggingScissorFalse));
         scissorItemObject.transform.position = scissorItemOriginPos;
+        scissorBackGroundObject.SetActive(true);
     }
 
     void DraggingScissorFalse()

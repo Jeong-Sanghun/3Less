@@ -35,11 +35,21 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         brotherObject.SetActive(true);
         brotherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         nowScene = SceneName.MemoryHome4;
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+
+        if(nowDialogIndex == 0)
+        {
+
+            StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
+            StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
 
 
-        StartCoroutine(InvokerCoroutine(1f, NextDialog));
+            StartCoroutine(InvokerCoroutine(1f, NextDialog));
+        }
+        else
+        {
+            isPlayerAfterPos = true;
+            StartCoroutine(OnReEntryGame());
+        }
     }
 
     protected override void OverrideAction(List<ActionKeyword> keywordList, List<float> parameterList)
@@ -164,6 +174,28 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         }
 
         TextFrameToggle(false);
+    }
+
+    IEnumerator OnReEntryGame()
+    {
+        isDialogStopping = true;
+        isStopActionable = false;
+        playerObject.transform.position = playerTarget.transform.position;
+        Vector3 camTarget = new Vector3(playerTarget.transform.position.x + 5, 0, -10);
+        cam.gameObject.transform.position = camTarget;
+        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2, 1));
+        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1));
+        StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.left / 2, 1));
+        StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
+        StartCoroutine(moduleManager.MoveModule_Linear(fatherObject, fatherObject.transform.position + Vector3.left / 2, 1));
+        StartCoroutine(moduleManager.FadeModule_Sprite(fatherObject, 0, 1, 1));
+        if (nowDialogIndex > 40)
+        {
+            StartCoroutine(moduleManager.MoveModule_Linear(brotherObject, brotherObject.transform.position + Vector3.left / 2, 1));
+            StartCoroutine(moduleManager.FadeModule_Sprite(brotherObject, 0, 1, 1));
+        }
+        yield return new WaitForSeconds(1f);
+        NextDialog();
     }
 
 }
