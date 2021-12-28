@@ -625,9 +625,12 @@ namespace Spine.Unity.Editor {
 				warnings.Add("Missing Skeleton JSON");
 			} else {
 				var fieldValue = (TextAsset)skeletonJSON.objectReferenceValue;
-
-				if (!AssetUtility.IsSpineData(fieldValue, out compatibilityProblemInfo)) {
-					warnings.Add("Skeleton data file is not a valid Spine JSON or binary file.");
+				string problemDescription = null;
+				if (!AssetUtility.IsSpineData(fieldValue, out compatibilityProblemInfo, ref problemDescription)) {
+					if (problemDescription != null)
+						warnings.Add(problemDescription);
+					else
+						warnings.Add("Skeleton data file is not a valid Spine JSON or binary file.");
 				} else {
 					#if SPINE_TK2D
 					bool searchForSpineAtlasAssets = true;
@@ -644,11 +647,12 @@ namespace Spine.Unity.Editor {
 						var actualAtlasAssets = targetSkeletonDataAsset.atlasAssets;
 
 						for (int i = 0; i < actualAtlasAssets.Length; i++) {
-							if (targetSkeletonDataAsset.atlasAssets[i] == null) {
+							if (actualAtlasAssets[i] == null) {
 								detectedNullAtlasEntry = true;
 								break;
 							} else {
-								atlasList.Add(actualAtlasAssets[i].GetAtlas());
+								if (actualAtlasAssets[i].MaterialCount > 0)
+									atlasList.Add(actualAtlasAssets[i].GetAtlas());
 							}
 						}
 
@@ -658,8 +662,9 @@ namespace Spine.Unity.Editor {
 							List<string> missingPaths = null;
 							if (atlasAssets.arraySize > 0) {
 								missingPaths = AssetUtility.GetRequiredAtlasRegions(AssetDatabase.GetAssetPath(skeletonJSON.objectReferenceValue));
-
 								foreach (var atlas in atlasList) {
+									if (atlas == null)
+										continue;
 									for (int i = 0; i < missingPaths.Count; i++) {
 										if (atlas.FindRegion(missingPaths[i]) != null) {
 											missingPaths.RemoveAt(i);
@@ -1153,7 +1158,7 @@ namespace Spine.Unity.Editor {
 			float lineRectWidth = lineRect.width;
 			TrackEntry t = skeletonAnimation.AnimationState.GetCurrent(0);
 
-			if (t != null) {
+			if (t != null && Icons.userEvent != null) { // when changing to play mode, Icons.userEvent  will not be reset
 				int loopCount = (int)(t.TrackTime / t.TrackEnd);
 				float currentTime = t.TrackTime - (t.TrackEnd * loopCount);
 				float normalizedTime = currentTime / t.Animation.Duration;
@@ -1171,14 +1176,15 @@ namespace Spine.Unity.Editor {
 				for (int i = 0; i < currentAnimationEvents.Count; i++) {
 					float eventTime = currentAnimationEventTimes[i];
 					var userEventIcon = Icons.userEvent;
+					float iconX = Mathf.Max(((eventTime / t.Animation.Duration) * lineRectWidth) - (userEventIcon.width / 2), barRect.x);
+					float iconY = barRect.y + userEventIcon.height;
 					var evRect = new Rect(barRect) {
-						x = Mathf.Max(((eventTime / t.Animation.Duration) * lineRectWidth) - (userEventIcon.width / 2), barRect.x),
-						y = barRect.y + userEventIcon.height,
+						x = iconX,
+						y = iconY,
 						width = userEventIcon.width,
 						height = userEventIcon.height
 					};
 					GUI.DrawTexture(evRect, userEventIcon);
-
 					Event ev = Event.current;
 					if (ev.type == EventType.Repaint) {
 						if (evRect.Contains(ev.mousePosition)) {

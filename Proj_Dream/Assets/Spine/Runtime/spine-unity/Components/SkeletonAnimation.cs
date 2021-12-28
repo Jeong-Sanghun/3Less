@@ -52,7 +52,12 @@ namespace Spine.Unity {
 		/// <summary>
 		/// This is the Spine.AnimationState object of this SkeletonAnimation. You can control animations through it.
 		/// Note that this object, like .skeleton, is not guaranteed to exist in Awake. Do all accesses and caching to it in Start</summary>
-		public Spine.AnimationState AnimationState { get { return this.state; } }
+		public Spine.AnimationState AnimationState {
+			get {
+				Initialize(false);
+				return this.state;
+			}
+		}
 		private bool wasUpdatedAfterInit = true;
 		#endregion
 
@@ -105,6 +110,7 @@ namespace Spine.Unity {
 				}
 			}
 			set {
+				Initialize(false);
 				if (_animationName == value) {
 					TrackEntry entry = state.GetCurrent(0);
 					if (entry != null && entry.loop == loop)
@@ -134,14 +140,16 @@ namespace Spine.Unity {
 		#region Runtime Instantiation
 		/// <summary>Adds and prepares a SkeletonAnimation component to a GameObject at runtime.</summary>
 		/// <returns>The newly instantiated SkeletonAnimation</returns>
-		public static SkeletonAnimation AddToGameObject (GameObject gameObject, SkeletonDataAsset skeletonDataAsset) {
-			return SkeletonRenderer.AddSpineComponent<SkeletonAnimation>(gameObject, skeletonDataAsset);
+		public static SkeletonAnimation AddToGameObject (GameObject gameObject, SkeletonDataAsset skeletonDataAsset,
+			bool quiet = false) {
+			return SkeletonRenderer.AddSpineComponent<SkeletonAnimation>(gameObject, skeletonDataAsset, quiet);
 		}
 
 		/// <summary>Instantiates a new UnityEngine.GameObject and adds a prepared SkeletonAnimation component to it.</summary>
 		/// <returns>The newly instantiated SkeletonAnimation component.</returns>
-		public static SkeletonAnimation NewSkeletonAnimationGameObject (SkeletonDataAsset skeletonDataAsset) {
-			return SkeletonRenderer.NewSpineGameObject<SkeletonAnimation>(skeletonDataAsset);
+		public static SkeletonAnimation NewSkeletonAnimationGameObject (SkeletonDataAsset skeletonDataAsset,
+			bool quiet = false) {
+			return SkeletonRenderer.NewSpineGameObject<SkeletonAnimation>(skeletonDataAsset, quiet);
 		}
 		#endregion
 
@@ -155,10 +163,10 @@ namespace Spine.Unity {
 		/// <summary>
 		/// Initialize this component. Attempts to load the SkeletonData and creates the internal Spine objects and buffers.</summary>
 		/// <param name="overwrite">If set to <c>true</c>, force overwrite an already initialized object.</param>
-		public override void Initialize (bool overwrite) {
+		public override void Initialize (bool overwrite, bool quiet = false) {
 			if (valid && !overwrite)
 				return;
-			base.Initialize(overwrite);
+			base.Initialize(overwrite, quiet);
 
 			if (!valid)
 				return;

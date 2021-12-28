@@ -1,0 +1,41 @@
+
+role_03.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 358, 412
+  size: 191, 469
+  orig: 191, 469
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: false
+  xy: 183, 336
+  size: 173, 545
+  orig: 173, 545
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 551, 571
+  size: 227, 310
+  orig: 227, 310
+  offset: 0, 0
+  index: -1
+tui2
+  rotate: false
+  xy: 2, 2
+  size: 179, 879
+  orig: 179, 879
+  offset: 0, 0
+  index: -1
+xiezi
+  rotate: true
+  xy: 183, 119
+  size: 215, 115
+  orig: 215, 115
+  offset: 0, 0
+  index: -1
