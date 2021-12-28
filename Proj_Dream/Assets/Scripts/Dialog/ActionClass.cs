@@ -13,6 +13,7 @@ public enum ActionKeyword
     HealthGauge,MoneyGauge,
     MultiRoute,
     Touch, Drag,
+    PhoneOn,PhoneOff,
     Scene
 }
 

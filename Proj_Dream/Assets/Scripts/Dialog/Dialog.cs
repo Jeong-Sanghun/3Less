@@ -65,9 +65,13 @@ public class Dialog
         {
             characterEnum = Character.Player;
         }
-        else if (character.Contains("SYS")|| character.Contains("MES"))
+        else if (character.Contains("SYS"))
         {
             characterEnum = Character.System;
+        }
+        else if (character.Contains("MES"))
+        {
+            characterEnum = Character.Message;
         }
         else if (character.Contains("NAR"))
         {
@@ -158,6 +162,17 @@ public class Dialog
                 act.actionList.Add(ActionKeyword.PlayerMove);
                 act.parameterList.Add(-1);
             }
+            if (keywordArray[i].Contains("phoneOn") || keywordArray[i].Contains("PhoneOn"))
+            {
+                act.actionList.Add(ActionKeyword.PhoneOn);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("phoneOff") || keywordArray[i].Contains("PhoneOff"))
+            {
+                act.actionList.Add(ActionKeyword.PhoneOff);
+                act.parameterList.Add(-1);
+            }
+
 
             if (keywordArray[i].Contains("stop") || keywordArray[i].Contains("Stop"))
             {

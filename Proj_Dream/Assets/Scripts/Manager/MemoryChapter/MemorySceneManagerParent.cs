@@ -24,10 +24,14 @@ public class MemorySceneManagerParent : MonoBehaviour
     [SerializeField]
     protected Text systemText;
     [SerializeField]
+    GameObject messageParent;
+    [SerializeField]
+    Text messageText;
+    [SerializeField]
     GameObject[] routeButtonParentArray;
     GameObject nowRouteButtonParent;
     [SerializeField]
-    PostProcessVolume blurVolume;
+    protected PostProcessVolume blurVolume;
 
     [SerializeField]
     protected GameObject playerObject;
@@ -43,7 +47,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected int nowDialogIndex;
     protected bool isDialogStopping;
     bool isTalkingSystem;
-    bool isStartOfWrapper;
+    protected bool isStartOfWrapper;
     protected bool isStopActionable;
     bool isRouteButtonAble;
     Dialog routeDialog;
@@ -56,8 +60,9 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     bool textFrameTransparent;
     bool isStarted;
-    bool dialogEnd;
-    Character nowCharacter;
+    protected bool dialogEnd;
+    protected bool isPhoneOn;
+    protected Character nowCharacter;
     protected List<ActionClass> nowActionList;
 
     protected string triggerName;
@@ -128,7 +133,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
     }
 
-    protected void NextDialog()
+    protected virtual void NextDialog()
     {
         if (dialogEnd == true)
         {
@@ -239,66 +244,86 @@ public class MemorySceneManagerParent : MonoBehaviour
             nowCharacter = nowDialog.characterEnum;
             isNewCharacter = true;
         }
-        else if(nowCharacter == Character.System)
+        else if(nowCharacter == Character.System || nowCharacter == Character.Message)
         {
             isNewCharacter = true;
         }
         isDialogStopping = false;
-
-        if (isNewCharacter)
+        if(nowDialog.dialog != null)
         {
-            for (int i = 0; i < ballonList.Count; i++)
+            if (isNewCharacter)
             {
-                ballonList[i].SetActive(false);
-            }
-            switch (nowCharacter)
-            {
-                case Character.Player:
-                    TextFrameToggle(true);
-                    ballonList[0].SetActive(true);
-                    break;
-                case Character.FriendGirl:
-                case Character.Mother:
-                case Character.FriendBoy:
-                    TextFrameToggle(true);
-                    ballonList[1].SetActive(true);
-                    break;
-                case Character.Father:
-                    TextFrameToggle(true);
-                    ballonList[2].SetActive(true);
-                    break;
-                case Character.Brother:
-                    TextFrameToggle(true);
-                    ballonList[3].SetActive(true);
-                    break;
-                case Character.Narator:
-                    TextFrameToggle(true);
-                    break;
-                case Character.System:
-                    TextFrameToggle(false);
-                    systemText.gameObject.SetActive(true);
-                    systemText.text = nowDialog.dialog;
-                    systemText.color = new Color(systemText.color.r, systemText.color.g, systemText.color.b, 0);
-                    StartCoroutine(moduleManager.FadeModule_Text(systemText, 0, 1, 1));
-                    StartCoroutine(moduleManager.AfterRunCoroutine(2, moduleManager.FadeModule_Text(systemText, 1, 0, 1)));
-                    isTalkingSystem = true;
-                    StartCoroutine(InvokerCoroutine(3, SetTalkingSystemFalse));
-                    if (nowDialog.actionKeyword != null)
-                    {
-                        isStartOfWrapper = true;
-                        isDialogStopping = true;
-                        StartCoroutine(InvokerCoroutine(3f, SetStopActionableTrue));
-                        nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
-                    }
-                    break;
-                case Character.NotAllocated:
-                    //이거도 위랑 연속적인거여서 아무것도 안해도됨.
-                    break;
-                default:
-                    //일단 암것도 하지말아봐.
-                    break;
+                for (int i = 0; i < ballonList.Count; i++)
+                {
+                    ballonList[i].SetActive(false);
+                }
+                switch (nowCharacter)
+                {
+                    case Character.Player:
+                        TextFrameToggle(true);
+                        ballonList[0].SetActive(true);
+                        break;
+                    case Character.FriendGirl:
+                    case Character.Mother:
+                    case Character.FriendBoy:
+                        TextFrameToggle(true);
+                        ballonList[1].SetActive(true);
+                        break;
+                    case Character.Father:
+                        TextFrameToggle(true);
+                        ballonList[2].SetActive(true);
+                        break;
+                    case Character.Brother:
+                        TextFrameToggle(true);
+                        ballonList[3].SetActive(true);
+                        break;
+                    case Character.Narator:
+                        TextFrameToggle(true);
+                        break;
+                    case Character.System:
+                        TextFrameToggle(false);
+                        systemText.gameObject.SetActive(true);
+                        systemText.text = nowDialog.dialog;
+                        systemText.color = new Color(systemText.color.r, systemText.color.g, systemText.color.b, 0);
+                        StartCoroutine(moduleManager.FadeModule_Text(systemText, 0, 1, 1));
+                        StartCoroutine(moduleManager.AfterRunCoroutine(2, moduleManager.FadeModule_Text(systemText, 1, 0, 1)));
+                        isTalkingSystem = true;
+                        StartCoroutine(InvokerCoroutine(3, SetTalkingSystemFalse));
+                        if (nowDialog.actionKeyword != null)
+                        {
+                            isStartOfWrapper = true;
+                            isDialogStopping = true;
+                            StartCoroutine(InvokerCoroutine(3f, SetStopActionableTrue));
+                            nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
+                        }
+                        break;
+                    case Character.Message:
+                        TextFrameToggle(false);
+                        messageParent.SetActive(true);
+                        messageText.gameObject.SetActive(true);
+                        messageText.text = nowDialog.dialog;
+                        StartCoroutine(moduleManager.MoveModuleRect_Linear(messageParent, new Vector3(0, -140, 0), 1));
+                        StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.MoveModuleRect_Linear(messageParent, new Vector3(0, 0, 0), 1)));
+                        isTalkingSystem = true;
+                        StartCoroutine(InvokerCoroutine(4, SetTalkingSystemFalse));
+                        if (nowDialog.actionKeyword != null)
+                        {
+                            isStartOfWrapper = true;
+                            isDialogStopping = true;
+                            StartCoroutine(InvokerCoroutine(4, SetStopActionableTrue));
+                            nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
+                        }
+                        break;
+                    case Character.NotAllocated:
+                        //이거도 위랑 연속적인거여서 아무것도 안해도됨.
+                        break;
+                    default:
+                        //일단 암것도 하지말아봐.
+                        break;
+                }
             }
         }
+
 
         if (nowDialog.dialog != null && textFrameTransparent == false)
         {
@@ -316,7 +341,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             }
         }
 
-        if (nowDialog.actionKeyword != null && nowCharacter != Character.System)
+        if (nowDialog.actionKeyword != null && nowCharacter != Character.System && nowCharacter != Character.Message)
         {
             isStartOfWrapper = true;
             StartCoroutine(CheckStopPointTextEnd());
@@ -374,7 +399,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
             Debug.Log("액션리스트 카운트" + actionClassList.Count);
-            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || (keywordList.Contains(ActionKeyword.Route)&& !keywordList.Contains(ActionKeyword.End)))
+            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || (keywordList.Contains(ActionKeyword.Route) ))//&& !keywordList.Contains(ActionKeyword.End)))
             {
                 immediateStart = true;
             }

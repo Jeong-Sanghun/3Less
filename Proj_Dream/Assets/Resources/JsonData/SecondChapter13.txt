@@ -1,0 +1,137 @@
+{
+    "dialogList": [
+        {
+            "character": "NAR.",
+            "dialog": "정신없이 나와서 갖고 나온 게 아무것도 없다. 핸드폰이랑 지갑 정도."
+        },
+        {
+            "dialog": "아무리 생각해도 집에 들어가는 건 불가능하다. 분명 사달이 날 것이다."
+        },
+        {
+            "dialog": "띠링, 메시지가 왔다."
+        },
+        {
+            "dialog": "확인해볼까?",
+            "routeFirst": "확인한다.",
+            "routeSecond": "무시한다."
+        },
+        {
+            "character": "NAR.",
+            "actionKeyword": "routeFirst",
+            "dialog": "휴대폰을 들어 확인해 본다"
+        },
+        {
+            "actionKeyword": "phoneOn"
+        },
+		{
+            "character": "동생",
+            "dialog": "야, 너 미쳤어? 당장 들어와!"
+        },
+        {
+            "character": "주인공(A)",
+            "dialog": "나 못 가. 절대 못 가. 나 죽어."
+        },
+        {
+            "character": "동생",
+            "dialog": "죽든 살든 일단 집에 들어와서 해결해"
+        },
+        {
+            "dialog": "너 그렇게 나가서 뭐 어떡할 건데"
+        },
+        {
+            "dialog": "언젠가는 들어와야 되잖아"
+        },
+        {
+            "character": "주인공(A)",
+            "dialog": "몰라"
+        },
+        {
+            "dialog": "나 그 집에서 더 이상은 못 살아."
+        },
+        {
+            "dialog": "내가 하루이틀 참고 산 줄 알아?"
+        },
+        {
+            "character": "동생",
+            "dialog": "너만 참고 살아?"
+        },
+        {
+            "dialog": "그냥 한 귀로 듣고 한 귀로 흘리면서 살아!"
+        },
+        {
+            "dialog": "나중에 능력 생기면 연을 끊든 너 알아서 하고."
+        },
+        {
+            "character": "주인공(A)",
+            "dialog": "넌 엄마 아빠 맘에 들 능력도 되고"
+        },
+        {
+            "dialog": "관심 많이 받으니까 내 맘 몰라."
+        },
+        {
+            "character": "동생",
+            "dialog": "그거 꽁으로 하는 줄 알아?"
+        },
+        {
+            "dialog": "나도 다 살아남으려고 발악하는 거야."
+        },
+        {
+            "dialog": "눈 꾹 감고 빌어"
+        },
+        {
+            "dialog": "너 그러다 타이밍 놓치면 진짜 끝이야"
+        },
+        {
+            "character": "주인공(A)",
+            "dialog": "ㅋㅋ야, 너 나 걱정하냐?"
+        },
+        {
+            "dialog": "되게 웃긴다?"
+        },
+        {
+            "dialog": "먼저 진상 부려서 나한테 화살 쏟아지게 하고 이게 뭐냐?"
+        },
+        {
+            "character": "동생",
+            "dialog": "너 같으면 화 안 나겠냐?"
+        },
+        {
+            "dialog": "내가 화낸 건 유감인데 내 탓만은 아님"
+        },
+        {
+            "dialog": "난 경고했다. 너 그러고 막 나가면"
+        },
+        {
+            "dialog": "너고 나고 우리 집이고 뭐고 그냥 다 박살나는 거야"
+        },
+        {
+            "dialog": "너 때문에."
+        },
+        {
+            "character": "주인공(A)",
+            "dialog": "나 때문? ㅋㅋ"
+        },
+        {
+            "dialog": "야, 그냥 내가 태어난 게 잘못이라고 해라."
+        },
+        {
+            "dialog": "차단함."
+        },
+        {
+            "character": "동생",
+            "actionKeyword": "phoneOff",
+            "dialog": "난 걱정해서"
+        },
+        {
+            "character": "NAR.",
+            "dialog": "차단했다. 속이 끓는다."
+        },
+        {
+            "actionKeyword": "routeSecond",
+            "dialog": "확인해봐야 짜증만 더 난다."
+        },
+        {
+            "dialog": "알림을 지웠다."
+        }
+    ]
+}

@@ -189,10 +189,12 @@ public class ModuleManager : MonoBehaviour
         Vector2 newVector = new Vector2(0f, 0f);
         float newX = 0f, newY = 0f;
         RectTransform rect = i_Object.GetComponent<RectTransform>();
+        float oldX = rect.anchoredPosition.x;
+        float oldY = rect.anchoredPosition.y;
         while (miniTimer < i_Time)
         {
-            newX = Mathf.Lerp(rect.anchoredPosition.x, i_Vector.x, miniTimer / i_Time);
-            newY = Mathf.Lerp(rect.anchoredPosition.y, i_Vector.y, miniTimer / i_Time);
+            newX = Mathf.Lerp(oldX, i_Vector.x, miniTimer / i_Time);
+            newY = Mathf.Lerp(oldY, i_Vector.y, miniTimer / i_Time);
             //newZ = Mathf.Lerp(rect.anchoredPosition.z, i_Vector.z, miniTimer / i_Time);
             newVector = new Vector2(newX, newY);
             rect.anchoredPosition = newVector;
