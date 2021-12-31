@@ -1,9 +1,10 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PhoneManager : MemorySceneManagerParent
+public class PhoneDialogManager : MemorySceneManagerParent
 {
 
     [SerializeField]
@@ -11,15 +12,12 @@ public class PhoneManager : MemorySceneManagerParent
     [SerializeField]
     RectTransform wholeChatParentRect;
     [SerializeField]
-    RectTransform playerChatParentRect;
-    [SerializeField]
-    RectTransform otherChatParentRect;
-    [SerializeField]
     GameObject otherChatPrefab;
     [SerializeField]
     GameObject playerChatPrefab;
     Vector2 nowPlayerSpawnPos;
     Vector2 nowOtherSpawnPos;
+    string nowChattingCharacter;
 
     protected override void Start()
     {
@@ -48,6 +46,7 @@ public class PhoneManager : MemorySceneManagerParent
         if (keywordList.Contains(ActionKeyword.PhoneOn))
         {
             isPhoneOn = true;
+            CharacterEnumToString();
             StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
             StartCoroutine(moduleManager.MoveModuleRect_Linear(phoneParentRect.gameObject, Vector3.zero, 0.5f));
             isStopActionable = false;
@@ -62,6 +61,18 @@ public class PhoneManager : MemorySceneManagerParent
             isStopActionable = false;
             StartCoroutine(InvokerCoroutine(1,SetDialogStopFalse));
 
+        }
+    }
+
+    void CharacterEnumToString()
+    {
+        Debug.Log(nowCharacter);
+        nowChattingCharacter = "동생";
+        switch (nowCharacter)
+        {
+            case Character.Brother:
+                nowChattingCharacter = "동생";
+                break;
         }
     }
 
@@ -112,41 +123,37 @@ public class PhoneManager : MemorySceneManagerParent
     IEnumerator SpawnPlayerChat()
     {
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
-        GameObject chatInst = Instantiate(playerChatPrefab, playerChatParentRect);
+        GameObject chatInst = Instantiate(playerChatPrefab, wholeChatParentRect);
         RectTransform chatRect = chatInst.GetComponent<RectTransform>();
-        chatRect.anchoredPosition = new Vector3(10000, 10000);
-        Text chatText = chatInst.transform.GetChild(0).GetComponent<Text>();
+       // chatRect.anchoredPosition = new Vector3(10000, 10000);
+        Text chatText = chatInst.transform.GetChild(1).GetChild(0).GetComponent<Text>();
         chatText.text = nowDialog.dialog;
-        yield return new WaitForSeconds(0.1f);
-        float height = chatRect.sizeDelta.y;
-       
-        nowPlayerSpawnPos.y -= height + 40;
-        nowOtherSpawnPos.y -= height + 40;
-        chatRect.anchoredPosition = nowPlayerSpawnPos;
-        Vector2 wholePos = wholeChatParentRect.anchoredPosition;
-        wholePos.y += height + 40;
-        wholeChatParentRect.anchoredPosition = wholePos;
-
+        LayoutRebuilder.ForceRebuildLayoutImmediate(wholeChatParentRect);
+        yield return null;
+        LayoutRebuilder.ForceRebuildLayoutImmediate(wholeChatParentRect);
     }
 
     IEnumerator SpawnOtherChat()
     {
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
-        GameObject chatInst = Instantiate(otherChatPrefab, otherChatParentRect);
+        GameObject chatInst = Instantiate(otherChatPrefab, wholeChatParentRect);
         RectTransform chatRect = chatInst.GetComponent<RectTransform>();
-        chatRect.anchoredPosition = new Vector3(10000, 10000);
-        Text chatText = chatInst.transform.GetChild(0).GetComponent<Text>();
+      //  chatRect.anchoredPosition = new Vector3(10000, 10000);
+        Text chatText = chatInst.transform.GetChild(1).GetChild(0).GetChild(1).GetChild(0).GetComponent<Text>(); 
         chatText.text = nowDialog.dialog;
-        yield return new WaitForSeconds(0.1f);
-        float height = chatRect.sizeDelta.y;
-        
-        nowPlayerSpawnPos.y -= height + 40;
-        nowOtherSpawnPos.y -= height + 40;
-        chatRect.anchoredPosition = nowOtherSpawnPos;
-        Vector2 wholePos = wholeChatParentRect.anchoredPosition;
-        wholePos.y += height + 40;
-        wholeChatParentRect.anchoredPosition = wholePos;
+        Text profileText = chatInst.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Text>();
+        profileText.text = nowChattingCharacter;
+        RectTransform layoutRect = chatInst.transform.GetChild(1).GetChild(0).GetChild(1).GetComponent<RectTransform>();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(layoutRect);
+        layoutRect = chatInst.transform.GetChild(1).GetChild(0).GetComponent<RectTransform>();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(layoutRect);
+       layoutRect = chatInst.transform.GetChild(1).GetComponent<RectTransform>();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(layoutRect);
 
+        
+        LayoutRebuilder.ForceRebuildLayoutImmediate(wholeChatParentRect);
+        yield return null;
+        LayoutRebuilder.ForceRebuildLayoutImmediate(wholeChatParentRect);
     }
 
 

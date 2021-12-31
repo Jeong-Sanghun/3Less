@@ -11,6 +11,8 @@ public class SaveDataClass
     public int moneyGauge;
     public int eighthMemoryLeftTime;
 
+    public MessageBundle messageBundle;
+
     public SaveDataClass()
     {
         savedScene = SceneName.Bright;
@@ -18,6 +20,7 @@ public class SaveDataClass
         healthGauge = 9;
         moneyGauge = 0;
         eighthMemoryLeftTime = 2;
+        messageBundle = null;
     }
 
 }
