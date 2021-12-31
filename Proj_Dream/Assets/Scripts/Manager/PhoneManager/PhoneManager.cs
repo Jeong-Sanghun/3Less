@@ -6,7 +6,7 @@ public class PhoneManager : MonoBehaviour
 {
 
     public static PhoneManager singleTon;
-
+    public PhoneMessageManager phoneMessageManager;
 
     [SerializeField]
     GameObject phoneOpenButton;
@@ -43,11 +43,13 @@ public class PhoneManager : MonoBehaviour
     public void PhoneMainActiveButton(bool active)
     {
         phoneCanvas.SetActive(active);
+        phoneOpenButton.SetActive(!active);
     }
 
     public void MessageActiveButton(bool active)
     {
         messageCanvas.SetActive(active);
+        phoneCanvas.SetActive(!active);
     }
     public void TwitterActiveButton(bool active)
     {
@@ -61,4 +63,6 @@ public class PhoneManager : MonoBehaviour
     {
         archiveCanvas.SetActive(active);
     }
+
+    
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PhoneDialogManager : MemorySceneManagerParent
 {
-
+    PhoneMessageManager phoneMessageManager;
     [SerializeField]
     RectTransform phoneParentRect;
     [SerializeField]
@@ -24,6 +24,7 @@ public class PhoneDialogManager : MemorySceneManagerParent
         base.Start();
         nowPlayerSpawnPos = Vector2.zero;
         nowOtherSpawnPos = Vector2.zero;
+        phoneMessageManager = PhoneManager.singleTon.phoneMessageManager;
     }
 
     protected override void NextDialog()
@@ -46,7 +47,9 @@ public class PhoneDialogManager : MemorySceneManagerParent
         if (keywordList.Contains(ActionKeyword.PhoneOn))
         {
             isPhoneOn = true;
-            CharacterEnumToString();
+            Debug.Log(nowCharacter);
+            nowChattingCharacter = CharacterEnumToString.Changer(nowCharacter);
+            phoneMessageManager.SetCharacter(nowCharacter);
             StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
             StartCoroutine(moduleManager.MoveModuleRect_Linear(phoneParentRect.gameObject, Vector3.zero, 0.5f));
             isStopActionable = false;
@@ -64,18 +67,6 @@ public class PhoneDialogManager : MemorySceneManagerParent
         }
     }
 
-    void CharacterEnumToString()
-    {
-        Debug.Log(nowCharacter);
-        nowChattingCharacter = "동생";
-        switch (nowCharacter)
-        {
-            case Character.Brother:
-                nowChattingCharacter = "동생";
-                break;
-        }
-    }
-
     void ChatDialog()
     {
 
@@ -88,6 +79,7 @@ public class PhoneDialogManager : MemorySceneManagerParent
             nowCharacter = nowDialog.characterEnum;
         }
         isDialogStopping = true;
+        phoneMessageManager.AddMessage(nowDialog, nowCharacter);
         switch (nowCharacter)
         {
             case Character.Player:
@@ -123,6 +115,7 @@ public class PhoneDialogManager : MemorySceneManagerParent
     IEnumerator SpawnPlayerChat()
     {
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
+        
         GameObject chatInst = Instantiate(playerChatPrefab, wholeChatParentRect);
         RectTransform chatRect = chatInst.GetComponent<RectTransform>();
        // chatRect.anchoredPosition = new Vector3(10000, 10000);
