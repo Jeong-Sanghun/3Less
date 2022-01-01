@@ -17,9 +17,5 @@ public class OneArchive
         dialog = null;
     }
 
-    public void SetObject(GameObject obj)
-    {
-        archiveParent = obj;
-    }
 
 }

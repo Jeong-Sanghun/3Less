@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BackLogType
+{
+    Route,Talk,HealthGauge,MoneyGauge
+}
 [System.Serializable]
 public class OneBackLog
 {
     public Character character;
-    public bool isRoute;
+    public BackLogType backLogType;
     public int dialogIndex;
     public int choosedRouteIndex;
 
@@ -18,7 +22,7 @@ public class OneBackLog
     public OneBackLog()
     {
         character = Character.Player;
-        isRoute = false;
+        backLogType = BackLogType.Talk;
         dialogIndex = 0;
         choosedRouteIndex = -1;
     }
@@ -28,29 +32,31 @@ public class OneBackLog
         backLogBallonObject = obj;
     }
 
-    public void SetBackLog(Character character, int index, string _dialog)
-    {
-        dialogIndex = index;
-        dialog = _dialog;
-        isRoute = false;
-    }
-
     public void SetBackLog(Character character, int index)
     {
         dialogIndex = index;
-        isRoute = false;
+        this.character = character;
+        backLogType = BackLogType.Talk;
     }
 
-    public void SetDialog(string dialogFileName)
-    {
 
-    }
-
-    public void SetRouteBackLog(int routeIndex,string _dialog)
+    public void SetRouteBackLog(int _dialogIndex, int routeIndex)
     {
-        isRoute = true;
+        backLogType = BackLogType.Route;
         choosedRouteIndex = routeIndex;
-        dialog = _dialog;
+        dialogIndex = _dialogIndex;
+    }
+
+    public void SetMoneyGaugeLog(int change)
+    {
+        backLogType = BackLogType.MoneyGauge;
+        dialog = "µ· " + change.ToString();
+    }
+
+    public void SetHealthGaugeLog(int change)
+    {
+        backLogType = BackLogType.HealthGauge;
+        dialog = "Á¤¼­ " + change.ToString();
     }
 
 }

@@ -80,16 +80,21 @@ public class PhoneDialogManager : MemorySceneManagerParent
         }
         isDialogStopping = true;
         phoneMessageManager.AddMessage(nowDialog, nowCharacter);
-        switch (nowCharacter)
+        if(nowDialog.dialog != null)
         {
-            case Character.Player:
-                StartCoroutine(SpawnPlayerChat());
-                break;
-            default:
-                StartCoroutine(SpawnOtherChat());
-                //일단 암것도 하지말아봐.
-                break;
+            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.Talk, nowCharacter, nowDialogIndex);
+            switch (nowCharacter)
+            {
+                case Character.Player:
+                    StartCoroutine(SpawnPlayerChat());
+                    break;
+                default:
+                    StartCoroutine(SpawnOtherChat());
+                    //일단 암것도 하지말아봐.
+                    break;
+            }
         }
+       
         if (nowDialog.actionKeyword != null)
         {
             nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;

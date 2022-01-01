@@ -7,10 +7,12 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class MemorySceneManagerParent : MonoBehaviour
 {
+    
     protected GameManager gameManager;
     protected JsonManager jsonManager;
     protected DialogBundle dialogBundle;
     protected SaveDataClass saveData;
+    protected PhoneArchiveManager phoneArchiveManager;
     [SerializeField]
     protected GaugeManager gaugeManager;
     [SerializeField]
@@ -73,6 +75,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected virtual void Start()
     {
         gameManager = GameManager.singleTon;
+        phoneArchiveManager = PhoneManager.singleTon.phoneArchiveManager;
         jsonManager = new JsonManager();
         isStartOfWrapper = true;
         fadeInImage.gameObject.SetActive(true);
@@ -135,11 +138,12 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected virtual void NextDialog()
     {
-        if (dialogEnd == true)
+        if (dialogEnd == true || isRouting == true)
         {
             return;
         }
- 
+
+        Debug.Log("어디서실행되는지 보자");
 
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
 
@@ -235,7 +239,8 @@ public class MemorySceneManagerParent : MonoBehaviour
         bool lastTextFrameTransparent = textFrameTransparent;
         if (isStartOfWrapper)
         {
-            nowCharacter = nowDialog.characterEnum;
+            if(nowDialog.characterEnum != Character.NotAllocated)
+                nowCharacter = nowDialog.characterEnum;
             isNewCharacter = true;
             isStartOfWrapper = false;
         }
@@ -323,7 +328,10 @@ public class MemorySceneManagerParent : MonoBehaviour
                 }
             }
         }
-
+        if (nowDialog.dialog != null)
+        {
+            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.Talk, nowCharacter,nowDialogIndex);
+        }
 
         if (nowDialog.dialog != null && textFrameTransparent == false)
         {
@@ -350,6 +358,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
         if (nowDialog.routeList != null)
         {
+            nowChoosedRoute = ActionKeyword.Null;
             isRouting = true;
             isStartOfWrapper = true;
             routeDialog = nowDialog;
@@ -433,11 +442,13 @@ public class MemorySceneManagerParent : MonoBehaviour
         if (keywordList.Contains(ActionKeyword.HealthGauge))
         {
             gaugeManager.ChangeHealthGauge((int)parameterList[0]);
+            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.HealthGauge, nowCharacter, (int)parameterList[0]);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
         if (keywordList.Contains(ActionKeyword.MoneyGauge))
         {
             gaugeManager.ChangeMoneyGauge((int)parameterList[0]);
+            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.MoneyGauge, nowCharacter, (int)parameterList[0]);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
 
@@ -724,8 +735,8 @@ public class MemorySceneManagerParent : MonoBehaviour
             }
         }
 
-        
 
+        phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.Route, Character.NotAllocated,nowDialogIndex -1,-1,index);
 
         isDialogStopping = false;
         nowRouteButtonParent.SetActive(false);
@@ -779,7 +790,9 @@ public class MemorySceneManagerParent : MonoBehaviour
 
         }
         isRouting = false;
+        
         NextDialog();
+
     }
 
     void RouteButtonAbleTrue()

@@ -40,6 +40,11 @@ public class PhoneMessageManager : MonoBehaviour
             FlushMessage();
         }
         messageBundle = saveData.messageBundle;
+        if(messageBundle == null)
+        {
+            saveData.messageBundle = new MessageBundle();
+            messageBundle = saveData.messageBundle;
+        }
         for (int i = 0; i < messageBundle.messageWrapperList.Count; i++)
         {
             MessageWrapper wrapper = messageBundle.messageWrapperList[i];

@@ -23,6 +23,7 @@ public class SaveDataClass
         moneyGauge = 0;
         eighthMemoryLeftTime = 2;
         messageBundle = null;
+        backLogBundle = null;
     }
 
 }

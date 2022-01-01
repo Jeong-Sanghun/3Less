@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public SaveDataClass saveData;
 
     JsonManager jsonManager;
+
+    [HideInInspector]
+    public int wholeSceneNumber;
     
     SceneName nowScene;
     [HideInInspector]
@@ -46,6 +49,7 @@ public class GameManager : MonoBehaviour
         nowScene = SceneName.MainMenu;
         jsonManager = new JsonManager();
         isNewGame = true;
+        wholeSceneNumber = SceneManager.sceneCountInBuildSettings;
         LoadSaveData();
 
     }
@@ -81,6 +85,7 @@ public class GameManager : MonoBehaviour
     public void StartLoadedGame()
     {
         isNewGame = false;
+        jsonManager.LoadSaveData();
         LoadScene(saveData.savedScene);
     }
 

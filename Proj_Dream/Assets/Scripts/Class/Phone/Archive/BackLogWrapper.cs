@@ -9,19 +9,26 @@ public class BackLogWrapper
     public List<OneBackLog> backLogList;
 
     [System.NonSerialized]
-    public List<BackLogDialogPair> backLogDialogPairList;
+    public BackLogDialogPair backLogDialogPair;
+    [System.NonSerialized]
+    public Transform ballonParent;
+    [System.NonSerialized]
+    public GameObject archiveButtonObject;
+    [System.NonSerialized]
+    public GameObject backLogCanvas;
+
 
     public BackLogWrapper()
     {
-        backLogDialogPairList = new List<BackLogDialogPair>();
+        sceneName = SceneName.Intro;
+        backLogList = new List<OneBackLog>();
     }
 
-    public void SetBackLogPair(SceneName scene, string fileName)
+    public void SetBackLogPair(SceneName scene)
     {
+        sceneName = scene;
         JsonManager json = new JsonManager();
-        DialogBundle bundle = json.ResourceDataLoad<DialogBundle>(fileName);
-        BackLogDialogPair pair = new BackLogDialogPair(scene,bundle);
-        backLogDialogPairList.Add(pair);
-
+        backLogDialogPair = json.GetDialogPair(scene);
+        
     }
 }

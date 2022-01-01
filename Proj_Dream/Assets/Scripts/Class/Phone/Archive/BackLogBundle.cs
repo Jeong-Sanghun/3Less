@@ -5,5 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public class BackLogBundle
 {
-    public List<BackLogWrapper> backLogWrapperLIst;
+    public List<BackLogWrapper> backLogWrapperList;
+
+    public BackLogBundle()
+    {
+        backLogWrapperList = new List<BackLogWrapper>();
+    }
 }

@@ -94,13 +94,14 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryHome4));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet3));
         }
     }
 
     void PlayerMoveSecond()
     {
-
+        isDialogStopping = true;
+        TextFrameToggle(false);
         StartCoroutine(moduleManager.MoveModule_Linear(brotherObject, brotherObject.transform.position + Vector3.left / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(brotherObject, 0, 1, 1));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));

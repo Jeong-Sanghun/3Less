@@ -7,6 +7,7 @@ public class PhoneManager : MonoBehaviour
 
     public static PhoneManager singleTon;
     public PhoneMessageManager phoneMessageManager;
+    public PhoneArchiveManager phoneArchiveManager;
 
     [SerializeField]
     GameObject phoneOpenButton;

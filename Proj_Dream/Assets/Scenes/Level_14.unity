@@ -513,6 +513,11 @@ MonoBehaviour:
     healthGauge: 9
     moneyGauge: 9
     eighthMemoryLeftTime: 2
+    messageBundle:
+      messageWrapperList: []
+    backLogBundle:
+      backLogWrapperList: []
+  wholeSceneNumber: 0
   isNewGame: 0
 --- !u!4 &548459193
 Transform:
@@ -748,6 +753,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1045188666}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1114222510
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610109, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 672787387468610111, guid: 178dd37319298fa4fbc7867e08f462ad,
+        type: 3}
+      propertyPath: m_Name
+      value: PhoneParent
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 178dd37319298fa4fbc7867e08f462ad, type: 3}
 --- !u!1001 &1179608659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2924,6 +2998,8 @@ MonoBehaviour:
   textFrameImage: {fileID: 1913281668}
   dialogText: {fileID: 1913281667}
   systemText: {fileID: 1397858241}
+  messageParent: {fileID: 0}
+  messageText: {fileID: 0}
   routeButtonParentArray:
   - {fileID: 1700986405}
   - {fileID: 1700986404}
