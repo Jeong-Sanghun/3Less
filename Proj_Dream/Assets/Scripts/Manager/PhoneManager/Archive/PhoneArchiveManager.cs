@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PhoneArchiveManager : MonoBehaviour
 {
+
     ArchiveDataWrapper archiveDataWrapper;
     SaveDataClass saveData;
     BackLogBundle backLogBundle;
-    
+    PhoneManager phoneManager;
     [SerializeField]
     GameObject wholeArchiveCanvas;
 
@@ -31,13 +33,40 @@ public class PhoneArchiveManager : MonoBehaviour
     [SerializeField]
     GameObject backLogHealthGaugePrefab;
 
+    [SerializeField]
+    RectTransform wholeCanavsBackGroundRect;
+    [SerializeField]
+    EventTrigger handle;
+
+    GameObject nowOpenedCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
         JsonManager json = new JsonManager();
+        phoneManager = PhoneManager.singleTon;
         archiveDataWrapper = json.ResourceDataLoad<ArchiveDataWrapper>("ArchiveData");
         saveData = GameManager.singleTon.saveData;
         backLogBundle = null;
+
+        EventTrigger.Entry entry1 = new EventTrigger.Entry();
+        entry1.eventID = EventTriggerType.PointerUp;
+        entry1.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
+        handle.triggers.Add(entry1);
+
+        //버튼 이벤트
+        EventTrigger.Entry entry2 = new EventTrigger.Entry();
+        entry2.eventID = EventTriggerType.Drag;
+        entry2.callback.AddListener((data) => { phoneManager.Swipe((PointerEventData)data, wholeCanavsBackGroundRect); });
+        handle.triggers.Add(entry2);
+
+        //EventTrigger.Entry entry3 = new EventTrigger.Entry();
+        //entry3.eventID = EventTriggerType.PointerExit;
+        //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
+        //handle.triggers.Add(entry3);
+
+
+
         SetArchive();
     }
 
@@ -104,12 +133,31 @@ public class PhoneArchiveManager : MonoBehaviour
         Button backLogOpenButton = archiveInst.transform.GetChild(0).GetComponent<Button>();
         backLogOpenButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, true));
 
-
-        Button backLogGetOutButton = backLogCanvasInst.transform.GetChild(1).GetComponent<Button>();
+        Button backLogGetOutButton = backLogCanvasInst.transform.GetChild(0).GetChild(1).GetComponent<Button>();
         backLogGetOutButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, false));
 
+        RectTransform backGround = backLogCanvasInst.transform.GetChild(0).GetComponent<RectTransform>();
+
+        EventTrigger swipeEvent = backLogCanvasInst.transform.GetChild(0).GetChild(0).GetComponent<EventTrigger>();
+
+        EventTrigger.Entry entry1 = new EventTrigger.Entry();
+        entry1.eventID = EventTriggerType.PointerUp;
+        entry1.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, backGround); });
+        swipeEvent.triggers.Add(entry1);
+
+        //버튼 이벤트
+        EventTrigger.Entry entry2 = new EventTrigger.Entry();
+        entry2.eventID = EventTriggerType.Drag;
+        entry2.callback.AddListener((data) => { phoneManager.Swipe((PointerEventData)data, backGround); });
+        swipeEvent.triggers.Add(entry2);
+
+        //EventTrigger.Entry entry3 = new EventTrigger.Entry();
+        //entry3.eventID = EventTriggerType.PointerExit;
+        //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, backGround); });
+        //swipeEvent.triggers.Add(entry3);
+
         RectTransform backLogParentRect = backLogCanvasInst.transform
-            .GetChild(2).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+            .GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         wrapper.ballonParent = backLogParentRect;
         for (int j = 0; j < wrapper.backLogList.Count; j++)
         {
@@ -121,7 +169,9 @@ public class PhoneArchiveManager : MonoBehaviour
 
     void BackLogCanvasActive(GameObject backLogCanvas, bool active)
     {
+        wholeArchiveCanvas.SetActive(!active);
         backLogCanvas.SetActive(active);
+        nowOpenedCanvas = backLogCanvas;
     }
 
 
@@ -220,6 +270,14 @@ public class PhoneArchiveManager : MonoBehaviour
         SpawnBackLog(backLog, wrapper.ballonParent.GetComponent<RectTransform>(), wrapper);
 
 
+    }
+
+    public void ShutDown()
+    {
+        if(nowOpenedCanvas != null)
+        nowOpenedCanvas.SetActive(false);
+
+        wholeArchiveCanvas.SetActive(false);
     }
 
 }

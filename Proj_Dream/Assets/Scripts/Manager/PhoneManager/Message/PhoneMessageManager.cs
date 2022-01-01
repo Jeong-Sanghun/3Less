@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System;
 
@@ -10,6 +11,8 @@ public class PhoneMessageManager : MonoBehaviour
     GameManager gameManager;
     SaveDataClass saveData;
     MessageBundle messageBundle;
+    [SerializeField]
+    GameObject wholeMessageCanvas;
     [SerializeField]
     GameObject messageCanvasPrefab;
     [SerializeField]
@@ -22,7 +25,13 @@ public class PhoneMessageManager : MonoBehaviour
     GameObject messageListButtonPrefab;
     [SerializeField]
     Transform messageListButtonParent;
+    [SerializeField]
+    RectTransform wholeCanavsBackGroundRect;
+    [SerializeField]
+    EventTrigger handle;
     Character nowCharacter;
+
+    GameObject nowOpenedCanvas;
 
 
     private void Start()
@@ -30,6 +39,24 @@ public class PhoneMessageManager : MonoBehaviour
         phoneManager = PhoneManager.singleTon;
         gameManager = GameManager.singleTon;
         saveData = gameManager.saveData;
+
+
+        EventTrigger.Entry entry1 = new EventTrigger.Entry();
+        entry1.eventID = EventTriggerType.PointerUp;
+        entry1.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
+        handle.triggers.Add(entry1);
+
+        //버튼 이벤트
+        EventTrigger.Entry entry2 = new EventTrigger.Entry();
+        entry2.eventID = EventTriggerType.Drag;
+        entry2.callback.AddListener((data) => { phoneManager.Swipe((PointerEventData)data,wholeCanavsBackGroundRect); });
+        handle.triggers.Add(entry2);
+
+        //EventTrigger.Entry entry3 = new EventTrigger.Entry();
+        //entry3.eventID = EventTriggerType.PointerExit;
+        //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
+        //handle.triggers.Add(entry3);
+
         SetMessage();
     }
 
@@ -66,17 +93,40 @@ public class PhoneMessageManager : MonoBehaviour
 
             wrapper.messageCanvas = Instantiate(messageCanvasPrefab, messageCanvasParent);
             wrapper.messageCanvas.SetActive(false);
-            Button getOutButton = wrapper.messageCanvas.transform.GetChild(3).GetComponent<Button>();
+            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(0).GetChild(4).GetComponent<Button>();
             int dele = i;
-            getOutButton.onClick.AddListener(()=>CloseMessageCanvas(dele));
+            getOutButton1.onClick.AddListener(() => CloseMessageCanvas(dele));
 
-            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(4).GetComponent<Image>();
+            Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
+            getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
+
+            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(0).GetChild(3).GetComponent<Image>();
             canvasProfile.sprite = CharacterEnumToSprite.Changer(wrapper.character);
 
-            Text name = wrapper.messageCanvas.transform.GetChild(2).GetChild(0).GetComponent<Text>();
+            Text name = wrapper.messageCanvas.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>();
             name.text = CharacterEnumToString.Changer(wrapper.character);
 
-            RectTransform messageParent = wrapper.messageCanvas.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+            RectTransform backGround = wrapper.messageCanvas.transform.GetChild(0).GetComponent<RectTransform>();
+
+            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetComponent<EventTrigger>();
+
+            EventTrigger.Entry entry1 = new EventTrigger.Entry();
+            entry1.eventID = EventTriggerType.PointerUp;
+            entry1.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, backGround); });
+            swipeEvent.triggers.Add(entry1);
+
+            //버튼 이벤트
+            EventTrigger.Entry entry2 = new EventTrigger.Entry();
+            entry2.eventID = EventTriggerType.Drag;
+            entry2.callback.AddListener((data) => { phoneManager.Swipe((PointerEventData)data, backGround); });
+            swipeEvent.triggers.Add(entry2);
+
+            //EventTrigger.Entry entry3 = new EventTrigger.Entry();
+            //entry3.eventID = EventTriggerType.PointerExit;
+            //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, backGround); });
+            //swipeEvent.triggers.Add(entry3);
+
+            RectTransform messageParent = wrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
             for (int  j = 0; j < wrapper.messageList.Count; j++)
             {
                 OneMessage message = wrapper.messageList[j];
@@ -134,20 +184,43 @@ public class PhoneMessageManager : MonoBehaviour
 
             wrapper.messageCanvas = Instantiate(messageCanvasPrefab, messageCanvasParent);
             wrapper.messageCanvas.SetActive(false);
-            Button getOutButton = wrapper.messageCanvas.transform.GetChild(3).GetComponent<Button>();
+            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(0).GetChild(4).GetComponent<Button>();
             int dele = wrapperIndex;
-            Debug.Log(dele);
-            getOutButton.onClick.AddListener(()=>CloseMessageCanvas(dele));
+            getOutButton1.onClick.AddListener(()=>CloseMessageCanvas(dele));
 
-            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(4).GetComponent<Image>();
+            Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
+            getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
+
+            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(0).GetChild(3).GetComponent<Image>();
             canvasProfile.sprite = CharacterEnumToSprite.Changer(nowCharacter);
 
-            Text name = wrapper.messageCanvas.transform.GetChild(2).GetChild(0).GetComponent<Text>();
+            Text name = wrapper.messageCanvas.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>();
             name.text = CharacterEnumToString.Changer(nowCharacter);
+
+            RectTransform backGround = wrapper.messageCanvas.transform.GetChild(0).GetComponent<RectTransform>();
+
+            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetComponent<EventTrigger>();
+
+
+            EventTrigger.Entry entry1 = new EventTrigger.Entry();
+            entry1.eventID = EventTriggerType.PointerUp;
+            entry1.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, backGround); });
+            swipeEvent.triggers.Add(entry1);
+
+            //버튼 이벤트
+            EventTrigger.Entry entry2 = new EventTrigger.Entry();
+            entry2.eventID = EventTriggerType.Drag;
+            entry2.callback.AddListener((data) => { phoneManager.Swipe((PointerEventData)data, backGround); });
+            swipeEvent.triggers.Add(entry2);
+
+            //EventTrigger.Entry entry3 = new EventTrigger.Entry();
+            //entry3.eventID = EventTriggerType.PointerExit;
+            //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, backGround); });
+            //swipeEvent.triggers.Add(entry3);
         }
 
         MessageWrapper nowWrapper = messageBundle.messageWrapperList[wrapperIndex];
-        RectTransform messageParent = nowWrapper.messageCanvas.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        RectTransform messageParent = nowWrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         OneMessage message;
 
         Text preview = nowWrapper.canvasOpenButton.transform.GetChild(1).GetChild(1).GetComponent<Text>();
@@ -216,8 +289,8 @@ public class PhoneMessageManager : MonoBehaviour
     {
         MessageWrapper nowWrapper = messageBundle.messageWrapperList[wrapperIndex];
         nowWrapper.CanvasOpen();
-
-        for(int i = 0; i < nowWrapper.messageList.Count; i++)
+        nowOpenedCanvas = nowWrapper.messageCanvas;
+        for (int i = 0; i < nowWrapper.messageList.Count; i++)
         {
             OneMessage message = nowWrapper.messageList[i];
             if(message.isPlayer == true)
@@ -240,15 +313,28 @@ public class PhoneMessageManager : MonoBehaviour
             GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         LayoutRebuilder.ForceRebuildLayoutImmediate(messageParent);
 
-        messageListButtonParent.gameObject.SetActive(false);
+        wholeMessageCanvas.SetActive(false);
     }
 
     void CloseMessageCanvas(int wrapperIndex)
     {
         Debug.Log("실행잉안돼용");
+        nowOpenedCanvas = null;
         MessageWrapper nowWrapper = messageBundle.messageWrapperList[wrapperIndex];
         nowWrapper.CanvasClose();
-        messageListButtonParent.gameObject.SetActive(true);
+        wholeMessageCanvas.SetActive(false);
+    }
+
+
+    public void ShutDown()
+    {
+        if (nowOpenedCanvas != null)
+        {
+            nowOpenedCanvas.SetActive(false);
+        }
+            
+
+        wholeMessageCanvas.SetActive(false);
     }
 
 }

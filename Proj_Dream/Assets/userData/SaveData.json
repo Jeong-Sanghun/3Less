@@ -1,0 +1,91 @@
+{
+    "savedScene": 15,
+    "dialogIndex": 1,
+    "healthGauge": 9,
+    "moneyGauge": 0,
+    "eighthMemoryLeftTime": 2,
+    "messageBundle": {
+        "messageWrapperList": []
+    },
+    "backLogBundle": {
+        "backLogWrapperList": [
+            {
+                "sceneName": 15,
+                "backLogList": [
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1
+                    }
+                ]
+            }
+        ]
+    }
+}
