@@ -3,5 +3,8 @@
     "dialogIndex": 3,
     "healthGauge": 9,
     "moneyGauge": 9,
-    "eighthMemoryLeftTime": 0
+    "eighthMemoryLeftTime": 0,
+    "messageBundle": {
+        "messageWrapperList": []
+    }
 }

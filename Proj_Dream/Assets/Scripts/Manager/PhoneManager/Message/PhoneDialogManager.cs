@@ -136,6 +136,10 @@ public class PhoneDialogManager : MemorySceneManagerParent
         chatText.text = nowDialog.dialog;
         Text profileText = chatInst.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Text>();
         profileText.text = nowChattingCharacter;
+
+        Image profileImage = chatInst.transform.GetChild(0).GetComponent<Image>();
+        profileImage.sprite = CharacterEnumToSprite.Changer(nowCharacter);
+
         RectTransform layoutRect = chatInst.transform.GetChild(1).GetChild(0).GetChild(1).GetComponent<RectTransform>();
         LayoutRebuilder.ForceRebuildLayoutImmediate(layoutRect);
         layoutRect = chatInst.transform.GetChild(1).GetChild(0).GetComponent<RectTransform>();

@@ -13,6 +13,8 @@ public class SaveDataClass
 
     public MessageBundle messageBundle;
 
+    public BackLogBundle backLogBundle;
+
     public SaveDataClass()
     {
         savedScene = SceneName.Bright;

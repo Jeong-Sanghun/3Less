@@ -1,0 +1,72 @@
+{
+    "archiveDataList": [
+        {
+            "sceneNameEnum": "0",
+            "dialog": "에베베"
+        },
+        {
+            "sceneNameEnum": "1",
+            "dialog": "애ㅔ베베"
+        },
+        {
+            "sceneNameEnum": "2",
+            "dialog": "으비베베"
+        },
+        {
+            "sceneNameEnum": "3",
+            "dialog": "으뷔비비"
+        },
+        {
+            "sceneNameEnum": "4",
+            "dialog": "얼레벌레"
+        },
+        {
+            "sceneNameEnum": "5",
+            "dialog": "고기"
+        },
+        {
+            "sceneNameEnum": "6",
+            "dialog": "거리를 거닐다"
+        },
+        {
+            "sceneNameEnum": "7",
+            "dialog": "옥상을 가다"
+        },
+        {
+            "sceneNameEnum": "8",
+            "dialog": "학교를 가요"
+        },
+        {
+            "sceneNameEnum": "9",
+            "dialog": "집이 최고야"
+        },
+        {
+            "sceneNameEnum": "10",
+            "dialog": "복도는 달려"
+        },
+        {
+            "sceneNameEnum": "11",
+            "dialog": "거리 또왔어"
+        },
+        {
+            "sceneNameEnum": "12",
+            "dialog": "침대에 누워요"
+        },
+        {
+            "sceneNameEnum": "13",
+            "dialog": "방방이"
+        },
+        {
+            "sceneNameEnum": "14",
+            "dialog": "졸업언제해"
+        },
+        {
+            "sceneNameEnum": "15",
+            "dialog": "집에또가"
+        },
+        {
+            "sceneNameEnum": "16",
+            "dialog": "거리야"
+        }
+    ]
+}

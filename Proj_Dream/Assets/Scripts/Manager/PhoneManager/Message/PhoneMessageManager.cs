@@ -44,20 +44,32 @@ public class PhoneMessageManager : MonoBehaviour
         {
             MessageWrapper wrapper = messageBundle.messageWrapperList[i];
             wrapper.canvasOpenButton = Instantiate(messageListButtonPrefab, messageListButtonParent);
-            wrapper.canvasOpenButton.transform.GetChild(0).GetComponent<Text>().text
-                 = CharacterEnumToString.Changer(wrapper.character);
-            Button listButton = wrapper.canvasOpenButton.GetComponent<Button>();
+            Button listButton = wrapper.canvasOpenButton.transform.GetChild(1).GetComponent<Button>();
             int deleIndex = i;
             listButton.onClick.AddListener(()=>OpenMessageCanvas(deleIndex));
 
-            Text listText = wrapper.canvasOpenButton.transform.GetChild(0).GetComponent<Text>();
+            Text listText = listButton.transform.GetChild(0).GetComponent<Text>();
             listText.text = CharacterEnumToString.Changer(wrapper.character);
+
+            Text previewText = listButton.transform.GetChild(1).GetComponent<Text>();
+            int lastIndex = messageBundle.messageWrapperList[i].messageList.Count - 1;
+            if(lastIndex>0)
+                previewText.text = messageBundle.messageWrapperList[i].messageList[lastIndex].dialog;
+
+            Image profile = wrapper.canvasOpenButton.transform.GetChild(0).GetComponent<Image>();
+            profile.sprite = CharacterEnumToSprite.Changer(wrapper.character);
 
             wrapper.messageCanvas = Instantiate(messageCanvasPrefab, messageCanvasParent);
             wrapper.messageCanvas.SetActive(false);
             Button getOutButton = wrapper.messageCanvas.transform.GetChild(3).GetComponent<Button>();
             int dele = i;
             getOutButton.onClick.AddListener(()=>CloseMessageCanvas(dele));
+
+            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(4).GetComponent<Image>();
+            canvasProfile.sprite = CharacterEnumToSprite.Changer(wrapper.character);
+
+            Text name = wrapper.messageCanvas.transform.GetChild(2).GetChild(0).GetComponent<Text>();
+            name.text = CharacterEnumToString.Changer(wrapper.character);
 
             RectTransform messageParent = wrapper.messageCanvas.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
             for (int  j = 0; j < wrapper.messageList.Count; j++)
@@ -103,14 +115,17 @@ public class PhoneMessageManager : MonoBehaviour
             MessageWrapper wrapper = new MessageWrapper();
             messageBundle.messageWrapperList.Add(wrapper);
             wrapperIndex = messageBundle.messageWrapperList.Count - 1;
-            wrapper.character = character;
+            wrapper.character = nowCharacter;
             wrapper.canvasOpenButton = Instantiate(messageListButtonPrefab, messageListButtonParent);
-            Button listButton = wrapper.canvasOpenButton.GetComponent<Button>();
+            Button listButton = wrapper.canvasOpenButton.transform.GetChild(1).GetComponent<Button>();
             int deleIndex = wrapperIndex;
             listButton.onClick.AddListener(()=>OpenMessageCanvas(deleIndex));
 
-            Text listText = wrapper.canvasOpenButton.transform.GetChild(0).GetComponent<Text>();
-            listText.text = CharacterEnumToString.Changer(character);
+            Text listText = listButton.transform.GetChild(0).GetComponent<Text>();
+            listText.text = CharacterEnumToString.Changer(nowCharacter);
+
+            Image profile = wrapper.canvasOpenButton.transform.GetChild(0).GetComponent<Image>();
+            profile.sprite = CharacterEnumToSprite.Changer(nowCharacter);
 
             wrapper.messageCanvas = Instantiate(messageCanvasPrefab, messageCanvasParent);
             wrapper.messageCanvas.SetActive(false);
@@ -119,12 +134,20 @@ public class PhoneMessageManager : MonoBehaviour
             Debug.Log(dele);
             getOutButton.onClick.AddListener(()=>CloseMessageCanvas(dele));
 
+            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(4).GetComponent<Image>();
+            canvasProfile.sprite = CharacterEnumToSprite.Changer(nowCharacter);
+
+            Text name = wrapper.messageCanvas.transform.GetChild(2).GetChild(0).GetComponent<Text>();
+            name.text = CharacterEnumToString.Changer(nowCharacter);
         }
 
         MessageWrapper nowWrapper = messageBundle.messageWrapperList[wrapperIndex];
         RectTransform messageParent = nowWrapper.messageCanvas.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         OneMessage message;
-        
+
+        Text preview = nowWrapper.canvasOpenButton.transform.GetChild(1).GetChild(1).GetComponent<Text>();
+        preview.text = dialog.dialog;
+
         if (character == Character.Player)
         {
             message = new OneMessage(true,dialog.dialog,DateTime.Now.ToString("hh : mm"));
@@ -179,6 +202,8 @@ public class PhoneMessageManager : MonoBehaviour
         chatText.text = message.dialog;
         Text profileText = chatInst.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Text>();
         profileText.text = CharacterEnumToString.Changer(wrapper.character);
+        Image profileImage = chatInst.transform.GetChild(0).GetComponent<Image>();
+        profileImage.sprite = CharacterEnumToSprite.Changer(wrapper.character);
         return chatInst.gameObject;
     }
 
