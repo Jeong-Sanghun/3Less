@@ -13,6 +13,8 @@ public class OneBackLog
     public BackLogType backLogType;
     public int dialogIndex;
     public int choosedRouteIndex;
+    public bool isRouteTalk;
+    public int change;
 
     [System.NonSerialized]
     public GameObject backLogBallonObject;
@@ -32,11 +34,12 @@ public class OneBackLog
         backLogBallonObject = obj;
     }
 
-    public void SetBackLog(Character character, int index)
+    public void SetBackLog(Character character, int index,bool isRouteTalk)
     {
         dialogIndex = index;
         this.character = character;
         backLogType = BackLogType.Talk;
+        this.isRouteTalk = isRouteTalk;
     }
 
 
@@ -50,12 +53,14 @@ public class OneBackLog
     public void SetMoneyGaugeLog(int change)
     {
         backLogType = BackLogType.MoneyGauge;
+        this.change = change;
         dialog = "µ· " + change.ToString();
     }
 
     public void SetHealthGaugeLog(int change)
     {
         backLogType = BackLogType.HealthGauge;
+        this.change = change;
         dialog = "Á¤¼­ " + change.ToString();
     }
 

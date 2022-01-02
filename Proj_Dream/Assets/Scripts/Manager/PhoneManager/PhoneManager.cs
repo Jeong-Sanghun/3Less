@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PhoneManager : MonoBehaviour
 {
@@ -29,6 +30,8 @@ public class PhoneManager : MonoBehaviour
     GameObject archiveCanvas;
     [SerializeField]
     GameObject phoneCanvas;
+    [SerializeField]
+    PostProcessVolume blurVolume;
 
     bool isOpened;
     bool phoneMoving;
@@ -122,6 +125,8 @@ public class PhoneManager : MonoBehaviour
         }
         rect.anchoredPosition = new Vector2(0, yPos + positionDelta);
         isTouching = true;
+
+        blurVolume.weight = (phoneUpPos.y - yPos) / (phoneUpPos.y - phoneDownPos.y);
     }
 
     public void PointerUp(PointerEventData data, RectTransform rect)
@@ -163,10 +168,13 @@ public class PhoneManager : MonoBehaviour
                 {
                     backGround.anchoredPosition =
                         new Vector2(0, backGround.anchoredPosition.y - Time.deltaTime * speed);
+
+                    blurVolume.weight = (phoneUpPos.y -backGround.anchoredPosition.y) / (phoneUpPos.y - phoneDownPos.y);
                     yield return null;
                 }
                 if (isTouching == false)
                 {
+                    blurVolume.weight = 1;
                     phoneOpenButton.SetActive(false);
                     isOpened = true;
                 }
@@ -179,13 +187,15 @@ public class PhoneManager : MonoBehaviour
                 {
                     backGround.anchoredPosition =
                         new Vector2(0, backGround.anchoredPosition.y + Time.deltaTime * speed);
+                    blurVolume.weight = (phoneUpPos.y - backGround.anchoredPosition.y) / (phoneUpPos.y - phoneDownPos.y);
                     yield return null;
                 }
                 phoneMoving = false;
 
                 if (isTouching == false)
                 {
-                    isOpened = false;
+                    blurVolume.weight = 0;
+                   isOpened = false;
                     phoneCanvas.SetActive(true);
                     backGround.anchoredPosition = phoneDownPos;
                     wholeCanvasBackGroundRect.anchoredPosition = phoneUpPos;

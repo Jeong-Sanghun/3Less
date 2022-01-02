@@ -112,7 +112,7 @@ public class PhoneMessageManager : MonoBehaviour
 
             RectTransform backGround = wrapper.messageCanvas.transform.GetChild(0).GetComponent<RectTransform>();
 
-            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetComponent<EventTrigger>();
+            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(0).GetComponent<EventTrigger>();
 
             EventTrigger.Entry entry1 = new EventTrigger.Entry();
             entry1.eventID = EventTriggerType.PointerUp;
@@ -203,7 +203,7 @@ public class PhoneMessageManager : MonoBehaviour
 
             RectTransform backGround = wrapper.messageCanvas.transform.GetChild(0).GetComponent<RectTransform>();
 
-            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetComponent<EventTrigger>();
+            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(0).GetComponent<EventTrigger>();
 
 
             EventTrigger.Entry entry1 = new EventTrigger.Entry();
@@ -314,7 +314,7 @@ public class PhoneMessageManager : MonoBehaviour
 
         }
         RectTransform messageParent = nowWrapper.messageCanvas.transform.
-            GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+            GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         LayoutRebuilder.ForceRebuildLayoutImmediate(messageParent);
 
         wholeMessageCanvas.SetActive(false);

@@ -71,6 +71,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected bool isTrigger;
     protected bool cameraFollowing;
     protected float cameraRightBound;
+    bool loadedToRoute;
 
     protected virtual void Start()
     {
@@ -101,11 +102,13 @@ public class MemorySceneManagerParent : MonoBehaviour
         multiRouteEndedDialogIndex = new List<int>();
         saveData = gameManager.saveData;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 0.5f));
+        loadedToRoute = false;
 
         if(gameManager.isNewGame == false)
         {
             nowDialogIndex = saveData.dialogIndex;
             gameManager.isNewGame = true;
+            loadedToRoute = true;
         }
         gaugeManager.SetGauge(saveData.moneyGauge, saveData.healthGauge);
 
@@ -146,7 +149,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
 
-        if (nowChoosedRoute != ActionKeyword.Null)
+        if (nowChoosedRoute != ActionKeyword.Null && nowChoosedRoute != ActionKeyword.Route)
         {
             if (nowDialog.actionKeyword != null)
             {
@@ -162,7 +165,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                         }
                         else if (actionList.Contains(ActionKeyword.End))
                         {
-                            nowChoosedRoute = ActionKeyword.Null;
+                            nowChoosedRoute = ActionKeyword.Route;
                             if(isMultiRouting == true)
                             {
                                 isMultiRouting = false;
@@ -327,10 +330,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                 }
             }
         }
-        if (nowDialog.dialog != null)
-        {
-            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.Talk, nowCharacter,nowDialogIndex);
-        }
+
 
         if (nowDialog.dialog != null && textFrameTransparent == false)
         {
@@ -346,6 +346,31 @@ public class MemorySceneManagerParent : MonoBehaviour
                 StartCoroutine(moduleManager.LoadTextOneByOne(nowDialog.dialog, dialogText));
 
             }
+        }
+
+        if (nowDialog.dialog != null)
+        {
+            if(loadedToRoute == false)
+            {
+                if(nowChoosedRoute != ActionKeyword.Null)
+                {
+                    if(nowChoosedRoute == ActionKeyword.Route)
+                    {
+                        nowChoosedRoute = ActionKeyword.Null;
+                    }
+                    phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.Talk, nowCharacter, nowDialogIndex,-1,-1,true);
+                }
+                else
+                {
+                    phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.Talk, nowCharacter, nowDialogIndex);
+                }
+                
+            }
+            else if(nowDialog.routeList != null)
+            {
+                loadedToRoute = false;
+            }
+            
         }
 
         if (nowDialog.actionKeyword != null && nowCharacter != Character.System && nowCharacter != Character.Message)

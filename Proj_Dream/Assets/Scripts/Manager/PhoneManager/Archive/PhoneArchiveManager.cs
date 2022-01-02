@@ -187,8 +187,11 @@ public class PhoneArchiveManager : MonoBehaviour
     {
         DialogBundle dialogBundle = wrapper.backLogDialogPair.dialogBundle;
         GameObject backLogInst = null;
+        Image backLogImage = null;
+        Image backLogNameImage = null;
         Text dialogText = null;
         Text nameText = null;
+        Color routeColor = new Color(1, 1, 0.8f);
         switch (backLog.backLogType)
         {
             case BackLogType.Talk:
@@ -197,12 +200,35 @@ public class PhoneArchiveManager : MonoBehaviour
                 {
                     backLogInst = Instantiate(backLogPlayerPrefab, parentRect);
                     dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+                    backLogImage = backLogInst.transform.GetChild(0).GetComponent<Image>();
+                    if(backLog.isRouteTalk == true)
+                    {
+                        backLogImage.color = routeColor;
+                    }
+                    else
+                    {
+                        backLogImage.color = Color.blue;
+                    }
+                    
                 }
                 else if(backLog.character == Character.System
                     || backLog.character == Character.Narator)
                 {
                     backLogInst = Instantiate(backLogPlayerPrefab, parentRect);
                     dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+
+                    backLogImage = backLogInst.transform.GetChild(0).GetComponent<Image>();
+
+                    if (backLog.isRouteTalk == true)
+                    {
+                        dialogText.color = Color.black;
+                        backLogImage.color = routeColor;
+                    }
+                    else
+                    {
+                        dialogText.color = Color.white;
+                        backLogImage.color = Color.black;
+                    }
                 }
                 else
                 {
@@ -210,6 +236,23 @@ public class PhoneArchiveManager : MonoBehaviour
                     dialogText = backLogInst.transform.GetChild(1).GetChild(0).GetComponent<Text>();
                     nameText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
                     nameText.text = CharacterEnumToString.Changer(backLog.character);
+                    Color col = CharacterEnumToColor.Changer(backLog.character);
+                    backLogImage = backLogInst.transform.GetChild(1).GetComponent<Image>();
+                    backLogImage.color =col;
+                    backLogNameImage = backLogInst.transform.GetChild(0).GetComponent<Image>();
+                    backLogNameImage.color =col;
+
+                    if (backLog.isRouteTalk == true)
+                    {
+                        backLogNameImage.color = routeColor;
+                        backLogImage.color = routeColor;
+                    }
+                    else
+                    {
+                        backLogNameImage.color = col;
+                        backLogImage.color = col;
+                    }
+
                 }
                 dialogText.text = backLog.dialog;
                 break;
@@ -223,11 +266,19 @@ public class PhoneArchiveManager : MonoBehaviour
             case BackLogType.HealthGauge:
                 backLogInst = Instantiate(backLogHealthGaugePrefab, parentRect);
                 dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+                if(backLog.dialog == null)
+                {
+                    backLog.SetHealthGaugeLog(backLog.change);
+                }
                 dialogText.text = backLog.dialog;
                 break;
             case BackLogType.MoneyGauge:
                 backLogInst = Instantiate(backLogMoneyGaugePrefab, parentRect);
                 dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+                if (backLog.dialog == null)
+                {
+                    backLog.SetMoneyGaugeLog(backLog.change);
+                }
                 dialogText.text = backLog.dialog;
                 break;
         }
@@ -235,7 +286,7 @@ public class PhoneArchiveManager : MonoBehaviour
         return backLogInst;
     }
 
-    public void AddTalkBackLog(SceneName scene, BackLogType backLogType, Character character, int dialogIndex,int change = -1,int routeIndex = -1)
+    public void AddTalkBackLog(SceneName scene, BackLogType backLogType, Character character, int dialogIndex,int change = -1,int routeIndex = -1,bool isRouteTalk = false)
     {
         BackLogWrapper wrapper = null;
         for (int i = 0; i < backLogBundle.backLogWrapperList.Count; i++)
@@ -261,7 +312,7 @@ public class PhoneArchiveManager : MonoBehaviour
         switch (backLog.backLogType)
         {
             case BackLogType.Talk:
-                backLog.SetBackLog(character, dialogIndex);
+                backLog.SetBackLog(character, dialogIndex,isRouteTalk);
                 break;
             case BackLogType.Route:
                 backLog.SetRouteBackLog(dialogIndex, routeIndex);
