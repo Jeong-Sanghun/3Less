@@ -8,6 +8,8 @@ public class GaugeManager : MonoBehaviour
 
     public int nowHealthGauge;
     public int nowMoneyGauge;
+    GameManager gameManager;
+    SaveDataClass saveData;
     [SerializeField]
     Image moneyEffectImage;
     [SerializeField]
@@ -37,6 +39,8 @@ public class GaugeManager : MonoBehaviour
         healthImage = healthEffectImage.transform.GetChild(0).GetComponent<Image>();
         moneyEffectImage.sprite = effectSpriteArray[0];
         healthEffectImage.sprite = effectSpriteArray[0];
+        gameManager = GameManager.singleTon;
+        saveData = gameManager.saveData;
     }
 
     public void SetGauge(int money, int health)
@@ -49,6 +53,7 @@ public class GaugeManager : MonoBehaviour
 
     public void ChangeMoneyGauge(int number)
     {
+
         StartCoroutine(GaugeImageChangeCoroutine(true, number));
     }
 
@@ -99,7 +104,6 @@ public class GaugeManager : MonoBehaviour
                 changingNumber = nowSpriteArray.Length - 1 - lastGaugeNumber;
             }
             nowHealthGauge += changingNumber;
-
         }
         if (afterGaugeNumber < 0)
         {
@@ -123,7 +127,7 @@ public class GaugeManager : MonoBehaviour
 
             for (int i = 0; i < absNumber; i++)
             {
-                Debug.Log(1.0f / (float)absNumber);
+
                 yield return new WaitForSeconds(1.0f / (float)absNumber);
                 
                 lastGaugeNumber += one;

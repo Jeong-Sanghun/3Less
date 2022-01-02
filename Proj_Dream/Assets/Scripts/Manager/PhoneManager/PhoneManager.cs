@@ -44,8 +44,15 @@ public class PhoneManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("디스트로이");
             Destroy(gameObject);
         }
+    }
+
+    public void Flush()
+    {
+        phoneMessageManager.SetMessage();
+        phoneArchiveManager.SetArchive();
     }
 
     private void Start()

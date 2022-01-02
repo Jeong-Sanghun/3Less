@@ -143,7 +143,6 @@ public class MemorySceneManagerParent : MonoBehaviour
             return;
         }
 
-        Debug.Log("어디서실행되는지 보자");
 
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
 
@@ -442,13 +441,13 @@ public class MemorySceneManagerParent : MonoBehaviour
         if (keywordList.Contains(ActionKeyword.HealthGauge))
         {
             gaugeManager.ChangeHealthGauge((int)parameterList[0]);
-            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.HealthGauge, nowCharacter, (int)parameterList[0]);
+            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.HealthGauge, nowCharacter,-1,(int)parameterList[0]);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
         if (keywordList.Contains(ActionKeyword.MoneyGauge))
         {
             gaugeManager.ChangeMoneyGauge((int)parameterList[0]);
-            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.MoneyGauge, nowCharacter, (int)parameterList[0]);
+            phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.MoneyGauge, nowCharacter, -1,(int)parameterList[0]);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
 

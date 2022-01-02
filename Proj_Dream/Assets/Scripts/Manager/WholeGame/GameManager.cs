@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager singleTon;
-    [HideInInspector]
     public SaveDataClass saveData;
 
     JsonManager jsonManager;
@@ -85,7 +84,7 @@ public class GameManager : MonoBehaviour
     public void StartLoadedGame()
     {
         isNewGame = false;
-        jsonManager.LoadSaveData();
+        LoadSaveData();
         LoadScene(saveData.savedScene);
     }
 
@@ -93,7 +92,7 @@ public class GameManager : MonoBehaviour
     {
 
         StartLoadedGame();
-
+        PhoneManager.singleTon.Flush();
     }
 
 }

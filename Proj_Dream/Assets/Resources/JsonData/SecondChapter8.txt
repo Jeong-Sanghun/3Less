@@ -5,14 +5,15 @@
             "dialog": "식사를 마치고 친구와 헤어졌다."
         },
         {
+		            "character": "NAR.",
             "dialog": "이제 집에 가야 하는데 가고 싶지 않아서 거리를 돌아다녔다."
         },
         {
             "dialog": "그러다 보니 시간이 지나 저녁 시간이 다 되었다."
         },
         {
-        "character": "NAR.",
-            "actionKeyword": "multiRoute3,fadeOut",
+            "character": "NAR.",
+            "actionKeyword": "multiRoute3",
             "dialog": "어디로 갈까?",
             "routeFirst": "카페",
             "routeSecond": "패스트푸드점",
@@ -97,6 +98,20 @@
         {
             "actionKeyword": "moneyGauge5,healthGauge-2,routeEnd,fadeOut",
             "dialog": "어디라도 나가야겠다. "
+        },
+        {
+            "actionKeyword": "conditionalJump3"
+        },
+        {
+		            "character": "NAR.",
+            "dialog": "..."
+        },
+        {
+            "dialog": "어영부영 시간을 보내다 보니 아침이 밝았다. 연휴가 끝나지 않았으니 오늘도 가족 없이 난 혼자다."
+        },
+        {
+            "actionKeyword": "conditionalSceneEnd",
+            "dialog": "오늘도 레슨이 끝나고 어디론가 가볼까?"
         },
         {
             "character": "NAR.",

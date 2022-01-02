@@ -1,6 +1,6 @@
 {
-    "savedScene": 15,
-    "dialogIndex": 1,
+    "savedScene": 11,
+    "dialogIndex": 3,
     "healthGauge": 9,
     "moneyGauge": 0,
     "eighthMemoryLeftTime": 2,
@@ -10,7 +10,7 @@
     "backLogBundle": {
         "backLogWrapperList": [
             {
-                "sceneName": 15,
+                "sceneName": 11,
                 "backLogList": [
                     {
                         "character": 1,
@@ -27,61 +27,25 @@
                     {
                         "character": 1,
                         "backLogType": 1,
-                        "dialogIndex": 0,
+                        "dialogIndex": 2,
                         "choosedRouteIndex": -1
                     },
                     {
                         "character": 1,
                         "backLogType": 1,
-                        "dialogIndex": 1,
+                        "dialogIndex": 3,
                         "choosedRouteIndex": -1
                     },
                     {
                         "character": 1,
                         "backLogType": 1,
-                        "dialogIndex": 0,
+                        "dialogIndex": 3,
                         "choosedRouteIndex": -1
                     },
                     {
                         "character": 1,
                         "backLogType": 1,
-                        "dialogIndex": 1,
-                        "choosedRouteIndex": -1
-                    },
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 0,
-                        "choosedRouteIndex": -1
-                    },
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 1,
-                        "choosedRouteIndex": -1
-                    },
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 0,
-                        "choosedRouteIndex": -1
-                    },
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 1,
-                        "choosedRouteIndex": -1
-                    },
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 0,
-                        "choosedRouteIndex": -1
-                    },
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 1,
+                        "dialogIndex": 3,
                         "choosedRouteIndex": -1
                     }
                 ]

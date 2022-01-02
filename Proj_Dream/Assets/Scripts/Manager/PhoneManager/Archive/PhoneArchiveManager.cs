@@ -39,10 +39,15 @@ public class PhoneArchiveManager : MonoBehaviour
     EventTrigger handle;
 
     GameObject nowOpenedCanvas;
-
+    static bool started = false;
     // Start is called before the first frame update
     void Start()
     {
+        if (started == true)
+        {
+            return;
+        }
+        started = true;
         JsonManager json = new JsonManager();
         phoneManager = PhoneManager.singleTon;
         archiveDataWrapper = json.ResourceDataLoad<ArchiveDataWrapper>("ArchiveData");
@@ -66,7 +71,6 @@ public class PhoneArchiveManager : MonoBehaviour
         //handle.triggers.Add(entry3);
 
 
-
         SetArchive();
     }
 
@@ -74,6 +78,7 @@ public class PhoneArchiveManager : MonoBehaviour
     {
         for(int i = 0; i < backLogBundle.backLogWrapperList.Count; i++)
         {
+            Debug.LogError("¾Ù·¼·¹");
             BackLogWrapper wrapper = backLogBundle.backLogWrapperList[i];
             Destroy(wrapper.backLogCanvas);
             Destroy(wrapper.archiveButtonObject);
@@ -81,13 +86,14 @@ public class PhoneArchiveManager : MonoBehaviour
     }
 
 
-    void SetArchive()
+    public void SetArchive()
     {
         if(backLogBundle != null)
         {
+
             FlushArchive();
         }
-        backLogBundle = saveData.backLogBundle;
+        backLogBundle = GameManager.singleTon.saveData.backLogBundle;
         if (backLogBundle == null)
         {
             saveData.backLogBundle = new BackLogBundle();
@@ -267,6 +273,7 @@ public class PhoneArchiveManager : MonoBehaviour
                 backLog.SetMoneyGaugeLog(change);
                 break;
         }
+
         SpawnBackLog(backLog, wrapper.ballonParent.GetComponent<RectTransform>(), wrapper);
 
 

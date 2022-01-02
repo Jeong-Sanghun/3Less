@@ -197,6 +197,24 @@ public class Dialog
                 }
             }
 
+            if (keywordArray[i].Contains("conditionalJump") || keywordArray[i].Contains("ConditionalJump"))
+            {
+                act.actionList.Add(ActionKeyword.ConditionalJump);
+                string bufferKeyword = keywordArray[i];
+                bufferKeyword = bufferKeyword.Remove(0, "conditionalJump".Length);
+                act.parameterList.Add(float.Parse(bufferKeyword));
+            }
+
+            //if (keywordArray[i].Contains("conditionalSceneEnd") || keywordArray[i].Contains("ConditionalSceneEnd"))
+            //{
+            //    act.actionList.Add(ActionKeyword.ConditionalSceneEnd);
+            //    string bufferKeyword = keywordArray[i];
+            //    bufferKeyword = bufferKeyword.Remove(0, "conditionalSceneEnd".Length);
+            //    act.parameterList.Add(float.Parse(bufferKeyword));
+            //    continue;
+            //}
+
+
             if (keywordArray[i].Contains("healthGauge") || keywordArray[i].Contains("HealthGauge"))
             {
                 act.actionList.Add(ActionKeyword.HealthGauge);

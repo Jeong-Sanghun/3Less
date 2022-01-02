@@ -12,6 +12,8 @@ public enum ActionKeyword
     ImmediateDialog, Route,
     HealthGauge,MoneyGauge,
     MultiRoute,
+    ConditionalJump,
+    ConditionalSceneEnd,
     Touch, Drag,
     PhoneOn,PhoneOff,
     Scene

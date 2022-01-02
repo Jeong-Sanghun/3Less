@@ -70,8 +70,17 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
                 eighthFadeImage.color = new Color(0, 0, 0, 1);
                 StartCoroutine(moduleManager.FadeModule_Image(eighthFadeImage, 1, 0, 1));
             }
-
         }
+        if (keywordList.Contains(ActionKeyword.ConditionalJump))
+        {
+            if(saveData.eighthMemoryLeftTime == 0)
+            {
+                nowDialogIndex += (int)parameterList[0];
+            }
+        }
+
+
+
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
             if (saveData.eighthMemoryLeftTime == 0)
