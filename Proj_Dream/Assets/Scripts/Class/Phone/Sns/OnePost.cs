@@ -2,17 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnePost : MonoBehaviour
+[System.Serializable]
+public class OnePost
 {
-    // Start is called before the first frame update
-    void Start()
+    public string fileName;
+    public SceneName appearingScene;
+    public string profileName;
+    public string accountName;
+    public string timeText;
+
+    public string dialog;
+    public bool hasSprite;
+
+    [System.NonSerialized]
+    public Sprite loadedSprite;
+
+    [System.NonSerialized]
+    public GameObject snsObject;
+
+    public OnePost()
     {
-        
+        profileName = null;
+        accountName = null;
+        timeText = null;
+        dialog = null;
+        hasSprite = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Sprite GetSprite()
     {
-        
+        if(loadedSprite == null)
+        {
+            loadedSprite = Resources.Load<Sprite>("Image/Twitter/" + fileName);
+        }
+        return loadedSprite;
     }
 }

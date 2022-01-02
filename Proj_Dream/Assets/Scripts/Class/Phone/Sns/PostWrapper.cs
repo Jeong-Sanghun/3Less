@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PostWrapper : MonoBehaviour
+public class PostWrapper
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<OnePost> postList;
 
-    // Update is called once per frame
-    void Update()
+    public PostWrapper()
     {
-        
+        postList = new List<OnePost>();
     }
 }

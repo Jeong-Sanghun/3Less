@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PostDataBundle : MonoBehaviour
+[System.Serializable]
+public class PostDataBundle
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<OnePost> postList;
 
-    // Update is called once per frame
-    void Update()
+    public PostDataBundle()
     {
-        
+        postList = new List<OnePost>();
     }
 }
