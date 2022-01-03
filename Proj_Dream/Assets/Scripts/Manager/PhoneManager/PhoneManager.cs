@@ -10,7 +10,9 @@ public class PhoneManager : MonoBehaviour
     public static PhoneManager singleTon;
     public PhoneMessageManager phoneMessageManager;
     public PhoneArchiveManager phoneArchiveManager;
-   
+    public PhoneSnsManager phoneTwitterManager;
+    public PhoneSnsManager phoneInstagramManager;
+
     public Vector2 phoneDownPos;
     public Vector2 phoneUpPos;
 
@@ -56,6 +58,7 @@ public class PhoneManager : MonoBehaviour
     {
         phoneMessageManager.SetMessage();
         phoneArchiveManager.SetArchive();
+        phoneTwitterManager.SetPost();
     }
 
     private void Start()
@@ -105,6 +108,7 @@ public class PhoneManager : MonoBehaviour
     public void TwitterActiveButton(bool active)
     {
         twitterCanvas.SetActive(active);
+        phoneCanvas.SetActive(!active);
     }
     public void InstagramActiveButton(bool active)
     {
@@ -202,6 +206,7 @@ public class PhoneManager : MonoBehaviour
                     phoneOpenButton.SetActive(true);
                     phoneMessageManager.ShutDown();
                     phoneArchiveManager.ShutDown();
+                    phoneTwitterManager.ShutDown();
                 }
             }
         }

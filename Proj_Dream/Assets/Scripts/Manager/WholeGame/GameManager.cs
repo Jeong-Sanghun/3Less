@@ -23,7 +23,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int wholeSceneNumber;
     
-    SceneName nowScene;
+    //SNS매니저에서 씀
+    public SceneName nowScene;
     [HideInInspector]
     public bool isNewGame;
     // Start is called before the first frame update

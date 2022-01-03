@@ -5,14 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class OnePost
 {
-    public string fileName;
     public SceneName appearingScene;
+    public string fileName;
     public string profileName;
     public string accountName;
     public string timeText;
 
     public string dialog;
-    public bool hasSprite;
 
     [System.NonSerialized]
     public Sprite loadedSprite;
@@ -22,15 +21,20 @@ public class OnePost
 
     public OnePost()
     {
+        fileName = null;
+        appearingScene = SceneName.Intro;
         profileName = null;
         accountName = null;
         timeText = null;
         dialog = null;
-        hasSprite = false;
     }
 
     public Sprite GetSprite()
     {
+        if (fileName == null)
+        {
+            return null;
+        }
         if(loadedSprite == null)
         {
             loadedSprite = Resources.Load<Sprite>("Image/Twitter/" + fileName);

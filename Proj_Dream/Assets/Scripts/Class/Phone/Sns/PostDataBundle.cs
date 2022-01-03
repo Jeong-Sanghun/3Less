@@ -11,4 +11,5 @@ public class PostDataBundle
     {
         postList = new List<OnePost>();
     }
+
 }
