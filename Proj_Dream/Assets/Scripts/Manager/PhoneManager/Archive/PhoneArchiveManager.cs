@@ -78,7 +78,6 @@ public class PhoneArchiveManager : MonoBehaviour
     {
         for(int i = 0; i < backLogBundle.backLogWrapperList.Count; i++)
         {
-            Debug.LogError("¾Ù·¼·¹");
             BackLogWrapper wrapper = backLogBundle.backLogWrapperList[i];
             Destroy(wrapper.backLogCanvas);
             Destroy(wrapper.archiveButtonObject);

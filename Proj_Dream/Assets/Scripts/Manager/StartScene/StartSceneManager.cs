@@ -32,6 +32,7 @@ public class StartSceneManager : MonoBehaviour
         }
         gameManager.saveData = new SaveDataClass();
         gameManager.SaveSaveData();
+        PhoneManager.singleTon.Flush();
         gameManager.LoadScene(SceneName.Intro);
 
     }

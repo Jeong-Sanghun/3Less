@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Text;
 using UnityEngine.EventSystems;
 
 public class PhoneSnsManager : MonoBehaviour
@@ -92,34 +93,68 @@ public class PhoneSnsManager : MonoBehaviour
         GameObject postInst = Instantiate(onePostPrefab, onePostParent);
         post.snsObject = postInst;
 
-        Image profileImage = postInst.transform.GetChild(0).GetComponent<Image>();
-        profileImage.sprite = CharacterEnumToSprite.Changer(Character.Player);
 
-        Transform nameGroup = postInst.transform.GetChild(1).GetChild(0);
-
-        Text profileName = nameGroup.GetChild(0).GetComponent<Text>();
-        profileName.text = post.profileName;
-
-        Text accountName = nameGroup.GetChild(1).GetComponent<Text>();
-        accountName.text = post.accountName;
-
-        Text time = nameGroup.GetChild(2).GetComponent<Text>();
-        time.text = post.timeText;
-
-        Text dialog = postInst.transform.GetChild(1).GetChild(1).GetComponent<Text>();
-        dialog.text = post.dialog;
-
-        Image contentImage = postInst.transform.GetChild(1).GetChild(2).GetComponent<Image>();
-        Sprite postSprite = post.GetSprite();
-        if(postSprite == null)
+        if (isTwitter)
         {
-            contentImage.gameObject.SetActive(false);
+            Image profileImage = postInst.transform.GetChild(0).GetComponent<Image>();
+            profileImage.sprite = CharacterEnumToSprite.Changer(Character.Player);
+
+            Transform nameGroup = postInst.transform.GetChild(1).GetChild(0);
+
+            Text profileName = nameGroup.GetChild(0).GetComponent<Text>();
+            profileName.text = post.profileName;
+
+            Text accountName = nameGroup.GetChild(1).GetComponent<Text>();
+            accountName.text = post.accountName;
+
+            Text time = nameGroup.GetChild(2).GetComponent<Text>();
+            time.text = post.timeText;
+
+            Text dialog = postInst.transform.GetChild(1).GetChild(1).GetComponent<Text>();
+            dialog.text = post.dialog;
+
+            Image contentImage = postInst.transform.GetChild(1).GetChild(2).GetComponent<Image>();
+            Sprite postSprite = post.GetSprite();
+            if (postSprite == null)
+            {
+                contentImage.gameObject.SetActive(false);
+            }
+            else
+            {
+                contentImage.sprite = postSprite;
+            }
+
         }
         else
         {
-            contentImage.sprite = postSprite;
+            Image profileImage = postInst.transform.GetChild(0).GetChild(0).GetComponent<Image>();
+            profileImage.sprite = CharacterEnumToSprite.Changer(Character.Player);
+
+            Text profileName = postInst.transform.GetChild(0).GetChild(1).GetComponent<Text>();
+            profileName.text = post.accountName;
+
+            Text time = postInst.transform.GetChild(4).GetComponent<Text>();
+            time.text = post.timeText;
+            StringBuilder builder = new StringBuilder("<b>");
+            builder.Append(post.accountName);
+            builder.Append("</b>");
+            builder.Append(" ");
+            builder.Append(post.dialog);
+            Text dialog = postInst.transform.GetChild(3).GetComponent<Text>();
+            dialog.text = builder.ToString();
+
+            Image contentImage = postInst.transform.GetChild(1).GetComponent<Image>();
+            Sprite postSprite = post.GetSprite();
+            if (postSprite == null)
+            {
+                contentImage.gameObject.SetActive(false);
+            }
+            else
+            {
+                contentImage.sprite = postSprite;
+            }
         }
-        
+
         
 
     }

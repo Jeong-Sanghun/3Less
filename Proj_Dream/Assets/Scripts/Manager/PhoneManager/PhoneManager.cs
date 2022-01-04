@@ -23,6 +23,8 @@ public class PhoneManager : MonoBehaviour
     [SerializeField]
     EventTrigger handle;
     [SerializeField]
+    GameObject mainCanvas;
+    [SerializeField]
     GameObject messageCanvas;
     [SerializeField]
     GameObject twitterCanvas;
@@ -59,6 +61,7 @@ public class PhoneManager : MonoBehaviour
         phoneMessageManager.SetMessage();
         phoneArchiveManager.SetArchive();
         phoneTwitterManager.SetPost();
+        phoneInstagramManager.SetPost();
     }
 
     private void Start()
@@ -80,6 +83,13 @@ public class PhoneManager : MonoBehaviour
         entry2.callback.AddListener((data) => { Swipe((PointerEventData)data, wholeCanvasBackGroundRect); });
         handle.triggers.Add(entry2);
 
+        PhoneMainCanvasActive(false);
+
+    }
+
+    public void PhoneMainCanvasActive(bool active)
+    {
+        mainCanvas.SetActive(active);
     }
 
     public void PhoneOpenButtonActive(bool active)
@@ -157,6 +167,17 @@ public class PhoneManager : MonoBehaviour
 
     }
 
+    public void PhoneFlush()
+    {
+        phoneCanvas.SetActive(true);
+        wholeCanvasBackGroundRect.anchoredPosition = phoneUpPos;
+        phoneOpenButton.SetActive(true);
+        phoneMessageManager.ShutDown();
+        phoneArchiveManager.ShutDown();
+        phoneTwitterManager.ShutDown();
+        phoneInstagramManager.ShutDown();
+    }
+
     IEnumerator PhoneMove(bool isOpening,RectTransform backGround)
     {
 
@@ -199,14 +220,9 @@ public class PhoneManager : MonoBehaviour
                 if (isTouching == false)
                 {
                     blurVolume.weight = 0;
-                   isOpened = false;
-                    phoneCanvas.SetActive(true);
+                    isOpened = false;
                     backGround.anchoredPosition = phoneDownPos;
-                    wholeCanvasBackGroundRect.anchoredPosition = phoneUpPos;
-                    phoneOpenButton.SetActive(true);
-                    phoneMessageManager.ShutDown();
-                    phoneArchiveManager.ShutDown();
-                    phoneTwitterManager.ShutDown();
+                    PhoneFlush();
                 }
             }
         }

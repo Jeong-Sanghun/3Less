@@ -58,6 +58,18 @@ public class GameManager : MonoBehaviour
     {
         //StartCoroutine(SceneLoadCoroutine(scene));
         SceneManager.LoadScene((int)scene);
+        PhoneManager.singleTon.phoneInstagramManager.AddPost(scene);
+        PhoneManager.singleTon.phoneTwitterManager.AddPost(scene);
+        if ((int)scene >= 4)
+        {
+            PhoneManager.singleTon.PhoneMainCanvasActive(true);
+
+        }
+        else
+        {
+            PhoneManager.singleTon.PhoneMainCanvasActive(false);
+        }
+        
     }
 
     IEnumerator SceneLoadCoroutine(SceneName scene)
@@ -94,6 +106,11 @@ public class GameManager : MonoBehaviour
 
         StartLoadedGame();
         PhoneManager.singleTon.Flush();
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 
 }

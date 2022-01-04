@@ -459,10 +459,10 @@ public class SecondSceneManager : SceneManagerParent
         {
             bubbleObjectParent.SetActive(false);
         }
-        if(seq == 1)
-        {
-            medalObject.SetActive(false);
-        }
+        //if(seq == 1)
+        //{
+        //    medalObject.SetActive(false);
+        //}
 
         NextDialog();
     }
