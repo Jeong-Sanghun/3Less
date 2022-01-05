@@ -15,11 +15,11 @@ C:/Users/CafeAlle/Documents/GitHub/3Less/Proj_Dream
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-6533
+14688
 Successfully changed project path to: C:/Users/CafeAlle/Documents/GitHub/3Less/Proj_Dream
 C:/Users/CafeAlle/Documents/GitHub/3Less/Proj_Dream
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 63.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 63.47 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -35,213 +35,502 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001688 seconds.
+Registered in 0.000828 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 58.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 53.04 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.838 seconds
+- Completed reload, in  0.775 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001804 seconds.
+Registered in 0.001855 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
+- Completed reload, in  0.779 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2068 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.3 MB.
-System memory in use after: 100.1 MB.
+System memory in use before: 101.0 MB.
+System memory in use after: 99.7 MB.
 
-Unloading 91 unused Assets to reduce memory usage. Loaded Objects now: 2444.
-Total: 2.813700 ms (FindLiveObjects: 0.188700 ms CreateObjectMapping: 0.087400 ms MarkObjects: 1.618600 ms  DeleteObjects: 0.917900 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Sprite/어두운세계/어두운세계_배경.png
-  artifactKey: Guid(7a93cc35521622047ba9814d55697497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계/어두운세계_배경.png using Guid(7a93cc35521622047ba9814d55697497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b1b36e5f2f4566ad359d5aa24085bc') in 0.078745 seconds
-  Import took 0.081749 seconds .
+Unloading 92 unused Assets to reduce memory usage. Loaded Objects now: 2441.
+Total: 3.517500 ms (FindLiveObjects: 0.262100 ms CreateObjectMapping: 0.120200 ms MarkObjects: 2.079900 ms  DeleteObjects: 1.053200 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000151 seconds.
-  path: Assets/Sprite/배경
-  artifactKey: Guid(212672efc9eabca42a0c6f84ee8add16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/배경 using Guid(212672efc9eabca42a0c6f84ee8add16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb3a517e97736fa29d523c9a0f4d84e') in 0.000973 seconds
-  Import took 0.003897 seconds .
+  path: Assets/ResLevel/Res1/Characters/spine_mom/mom_Material.mat
+  artifactKey: Guid(c3d31da7455525e42a123ff43afdb03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_mom/mom_Material.mat using Guid(c3d31da7455525e42a123ff43afdb03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '692fe919879c1d7acb9601d8519d4b40') in 0.086329 seconds
+  Import took 0.089792 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/Sprite/어두운세계/모션png시퀀스
-  artifactKey: Guid(2edb80d4494e7b94d9ae2bd02c0d198e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계/모션png시퀀스 using Guid(2edb80d4494e7b94d9ae2bd02c0d198e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c41ca766c8bc82ac375e2ddeb79e031a') in 0.000967 seconds
-  Import took 0.003874 seconds .
+  Time since last request: 0.000188 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_mom/mom_SkeletonData.asset
+  artifactKey: Guid(9046571627f7446428ae5736d0eb7984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_mom/mom_SkeletonData.asset using Guid(9046571627f7446428ae5736d0eb7984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfae103f4dc40d44db5843ebd315be70') in 0.152514 seconds
+  Import took 0.159056 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000236 seconds.
-  path: Assets/Sprite/어두운세계
-  artifactKey: Guid(cdcf355d0946d474bbac5fefde31cb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계 using Guid(cdcf355d0946d474bbac5fefde31cb9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0f24a3fa0985c325ad672b6141a5394') in 0.000932 seconds
-  Import took 0.003827 seconds .
+  Time since last request: 0.000199 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_mom/mom.png
+  artifactKey: Guid(4a12ab432347fab4f8d2c8cec2810372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_mom/mom.png using Guid(4a12ab432347fab4f8d2c8cec2810372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8a3202117c6382cae854f9a5d07964d') in 0.015127 seconds
+  Import took 0.017978 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.003304 seconds.
-  path: Assets/Sprite/어두운세계/꽃메달_1.png
-  artifactKey: Guid(9bf3d8dee0cc4bb4a82cb287f52a564a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계/꽃메달_1.png using Guid(9bf3d8dee0cc4bb4a82cb287f52a564a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1671fef8b05dee61ee036c74b5e80664') in 0.014100 seconds
-  Import took 0.017381 seconds .
+  Time since last request: 0.000188 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_mom/mom_Atlas.asset
+  artifactKey: Guid(d2609bb4dc83bcb4db766cb1509611f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_mom/mom_Atlas.asset using Guid(d2609bb4dc83bcb4db766cb1509611f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd43c15fffe302f9fbbc0810d2d24837') in 0.001527 seconds
+  Import took 0.004215 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/Sprite/어두운세계/꽃메달_2.png
-  artifactKey: Guid(a4a26d0c868ba9c449746212c7b64f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계/꽃메달_2.png using Guid(a4a26d0c868ba9c449746212c7b64f00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40198fb721cd9167f004982b8dc47f5d') in 0.007074 seconds
-  Import took 0.010022 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.461422 seconds.
-  path: Assets/Sprite/배경/2048 배경
-  artifactKey: Guid(11f1f2f2f1c97654a97818335659efc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/배경/2048 배경 using Guid(11f1f2f2f1c97654a97818335659efc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0193d534adba1addeab7815d2e065620') in 0.000923 seconds
-  Import took 0.003890 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.890169 seconds.
-  path: Assets/Sprite/어두운세계/어두운세계_배경 1.png
-  artifactKey: Guid(a76651fc9d1595a47ab7ca1b0115ea5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계/어두운세계_배경 1.png using Guid(a76651fc9d1595a47ab7ca1b0115ea5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02a6c063284f848e8c55875ffd4314e1') in 0.008242 seconds
-  Import took 0.011291 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004134 seconds.
-  path: Assets/Sprite/어두운세계/어두운세계_배경 1.png
-  artifactKey: Guid(a76651fc9d1595a47ab7ca1b0115ea5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계/어두운세계_배경 1.png using Guid(a76651fc9d1595a47ab7ca1b0115ea5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02a6c063284f848e8c55875ffd4314e1') in 0.004679 seconds
-  Import took 0.007655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.698628 seconds.
-  path: Assets/Sprite/어두운세계/어두운세계_배경 1.png
-  artifactKey: Guid(a76651fc9d1595a47ab7ca1b0115ea5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/어두운세계/어두운세계_배경 1.png using Guid(a76651fc9d1595a47ab7ca1b0115ea5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '838957e55ba67d0ebdc52112e53d3c43') in 0.005903 seconds
-  Import took 0.009012 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002146 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.744 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1996 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.0 MB.
-System memory in use after: 97.8 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2456.
-Total: 2.729000 ms (FindLiveObjects: 0.172200 ms CreateObjectMapping: 0.066700 ms MarkObjects: 1.545200 ms  DeleteObjects: 0.943800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 183.102234 seconds.
-  path: Assets/Scenes/0_Title.unity
-  artifactKey: Guid(5603a8cd4749f01458b7667ff3d77c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/0_Title.unity using Guid(5603a8cd4749f01458b7667ff3d77c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2fd2a444333d20b8ea5196f3f35188') in 0.017997 seconds
-  Import took 0.022267 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.490004 seconds.
-  path: Assets/Scenes/IntroScene.unity
-  artifactKey: Guid(63d191397601b48489453e1f0535b550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/IntroScene.unity using Guid(63d191397601b48489453e1f0535b550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540fbcc7cd847db1fa4fd74d46f9f36c') in 0.003233 seconds
-  Import took 0.006403 seconds .
+  Time since last request: 5.881259 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_dad/dad.png
+  artifactKey: Guid(719ff84436590fb4caa14157d7368e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_dad/dad.png using Guid(719ff84436590fb4caa14157d7368e10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73a1a90f2f75ff6e2ce04d07301bfc80') in 0.005283 seconds
+  Import took 0.008356 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000488 seconds.
-  path: Assets/Scenes/IntroScene.unity
-  artifactKey: Guid(63d191397601b48489453e1f0535b550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/IntroScene.unity using Guid(63d191397601b48489453e1f0535b550) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540fbcc7cd847db1fa4fd74d46f9f36c') in 0.001414 seconds
-  Import took 0.004403 seconds .
+  path: Assets/ResLevel/Res1/Characters/spine_dad/dad_Material.mat
+  artifactKey: Guid(e11c4d11fd5fa464e98c2afb95a609f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_dad/dad_Material.mat using Guid(e11c4d11fd5fa464e98c2afb95a609f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2751e1ece54f0a0fbb11cd0b00f8e7a0') in 0.006270 seconds
+  Import took 0.009458 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.575016 seconds.
-  path: Assets/Scenes/Level_1.unity
-  artifactKey: Guid(4c8fc085788b9c144aa24f739db8848b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level_1.unity using Guid(4c8fc085788b9c144aa24f739db8848b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc8057b4d0f6bbd7fbd3d7dbe476b89') in 0.002436 seconds
-  Import took 0.005346 seconds .
+  Time since last request: 0.000287 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_dad/dad_SkeletonData.asset
+  artifactKey: Guid(5a21dc071cf65ce42adc83c3ba48d51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_dad/dad_SkeletonData.asset using Guid(5a21dc071cf65ce42adc83c3ba48d51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cd20637ebbd8193c12af50cd9753483') in 0.008965 seconds
+  Import took 0.012923 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000609 seconds.
-  path: Assets/Scenes/Level_1.unity
-  artifactKey: Guid(4c8fc085788b9c144aa24f739db8848b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level_1.unity using Guid(4c8fc085788b9c144aa24f739db8848b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc8057b4d0f6bbd7fbd3d7dbe476b89') in 0.001111 seconds
-  Import took 0.003912 seconds .
+  Time since last request: 0.000230 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_dad/dad_Atlas.asset
+  artifactKey: Guid(457beda50f2cc664ab642d5865d95b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_dad/dad_Atlas.asset using Guid(457beda50f2cc664ab642d5865d95b74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6342dd1dc775c86d505c9a0806579a31') in 0.001669 seconds
+  Import took 0.004778 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.678344 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_player
+  artifactKey: Guid(fdb3ffcb832ef40418ef3356a1148dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_player using Guid(fdb3ffcb832ef40418ef3356a1148dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a836e98afbd71db900dd35a2f983ec12') in 0.001035 seconds
+  Import took 0.004162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.204029 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_player/shanguang.png
+  artifactKey: Guid(7f64bdf963e6f59429b71e35c66ef544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_player/shanguang.png using Guid(7f64bdf963e6f59429b71e35c66ef544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a67f860050ed4499d19e15652fbd021') in 0.005277 seconds
+  Import took 0.008267 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_player/shanguang_Atlas.asset
+  artifactKey: Guid(bc61faeb74ecd4f4d9845a2e36adfd23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_player/shanguang_Atlas.asset using Guid(bc61faeb74ecd4f4d9845a2e36adfd23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '754c08d7bbfaf2d1b4c1456bfffe70d9') in 0.001512 seconds
+  Import took 0.003884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_player/shanguang_SkeletonData.asset
+  artifactKey: Guid(5f412415697a44148afa3ff0e19a1e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_player/shanguang_SkeletonData.asset using Guid(5f412415697a44148afa3ff0e19a1e65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '863aa9e5c24aa101c9492611d9f95cfc') in 0.006729 seconds
+  Import took 0.009567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/ResLevel/Res1/Characters/spine_player/shanguang_Material.mat
+  artifactKey: Guid(68441275a7e565648883afbbb125cbad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ResLevel/Res1/Characters/spine_player/shanguang_Material.mat using Guid(68441275a7e565648883afbbb125cbad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd53c94626a61d6cada87b2a1bb1c34d') in 0.007559 seconds
+  Import took 0.010559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.926351 seconds.
+  path: Assets/SpineAnimation/role_03.gif
+  artifactKey: Guid(65c4f5956b5ecc24089f1bf06697dfc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_03.gif using Guid(65c4f5956b5ecc24089f1bf06697dfc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e528867ef1d5b2aff2cbafb36123e79c') in 0.006233 seconds
+  Import took 0.009188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/SpineAnimation/role_05.png
+  artifactKey: Guid(1dc3b136ac94c51408a5d6bebfd0ce6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_05.png using Guid(1dc3b136ac94c51408a5d6bebfd0ce6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbf45363584ca649512106cb1e0c4a11') in 0.011116 seconds
+  Import took 0.013839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/SpineAnimation/role_04.gif
+  artifactKey: Guid(a6235a58573100348877c4065815dd82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_04.gif using Guid(a6235a58573100348877c4065815dd82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb4fd79c03c9337341758e25901d4ff9') in 0.005898 seconds
+  Import took 0.009161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/SpineAnimation/role_05_SkeletonData.asset
+  artifactKey: Guid(869fc58d16d7f2f41ad17005eabb7ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_05_SkeletonData.asset using Guid(869fc58d16d7f2f41ad17005eabb7ced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed7e8b8b605b7f07df25efd9726eefad') in 0.003296 seconds
+  Import took 0.006223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/SpineAnimation/role_03_SkeletonData.asset
+  artifactKey: Guid(fa6dfe27f497a84419a4fb14a4a207c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_03_SkeletonData.asset using Guid(fa6dfe27f497a84419a4fb14a4a207c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2510e71f3df87726978417add5dae32e') in 0.002457 seconds
+  Import took 0.005839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/SpineAnimation/role_04_Atlas.asset
+  artifactKey: Guid(9296e8973f5d75a41a7f1b573622c9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_04_Atlas.asset using Guid(9296e8973f5d75a41a7f1b573622c9cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98e06c24509996fbb956895e9557f3d5') in 0.001685 seconds
+  Import took 0.004566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/SpineAnimation/role_03_Material.mat
+  artifactKey: Guid(a129b084fc179c64b9e1edb6ff82401b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_03_Material.mat using Guid(a129b084fc179c64b9e1edb6ff82401b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca492452baded919132d40c1f0798cb2') in 0.008639 seconds
+  Import took 0.011508 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/SpineAnimation/role_05_Atlas.asset
+  artifactKey: Guid(804de961f8dd928458a4bc104fb88419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_05_Atlas.asset using Guid(804de961f8dd928458a4bc104fb88419) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '290e530eba6620c123e5d55ce742b846') in 0.001694 seconds
+  Import took 0.004775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/SpineAnimation/role_04.png
+  artifactKey: Guid(2955ed3ec476a394385044d835eb0d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_04.png using Guid(2955ed3ec476a394385044d835eb0d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5edb20de126f404d14d49b5083f073') in 0.006961 seconds
+  Import took 0.010252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/SpineAnimation/role_05_Material.mat
+  artifactKey: Guid(aaafa23c99c848043a767b1d4a675c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_05_Material.mat using Guid(aaafa23c99c848043a767b1d4a675c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a668406e635c3115e37eb41156a9921') in 0.009684 seconds
+  Import took 0.012929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/SpineAnimation/role_05.gif
+  artifactKey: Guid(aca00c39625407b44b1d2de53e49246a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_05.gif using Guid(aca00c39625407b44b1d2de53e49246a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00a63f3dc153e2ecc62a01a1b13bcadf') in 0.004613 seconds
+  Import took 0.007699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/SpineAnimation/role_04_SkeletonData.asset
+  artifactKey: Guid(8ffa1c946cbfdf9418a60584f7464e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_04_SkeletonData.asset using Guid(8ffa1c946cbfdf9418a60584f7464e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a563cea79e69bbf3d629c2c7988714') in 0.002515 seconds
+  Import took 0.005367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/SpineAnimation/role_03_Atlas.asset
+  artifactKey: Guid(00e52ce3104c1f54880d90cc05e5571a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_03_Atlas.asset using Guid(00e52ce3104c1f54880d90cc05e5571a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e43360ea88616e958112bc8d8c228a63') in 0.001625 seconds
+  Import took 0.004841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/SpineAnimation/xiaonvhai_SkeletonData.asset
+  artifactKey: Guid(a733121fcd3ee9342a1e1a8baae449d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/xiaonvhai_SkeletonData.asset using Guid(a733121fcd3ee9342a1e1a8baae449d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e917bbfb1941a4cb0b69ba25a06b12') in 0.002299 seconds
+  Import took 0.005319 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/SpineAnimation/role_03.png
+  artifactKey: Guid(94f2e54c7ee7835478927d1c1f16c9ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_03.png using Guid(94f2e54c7ee7835478927d1c1f16c9ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30658cf6237df43ae0e996b4df6ade93') in 0.007171 seconds
+  Import took 0.010781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/SpineAnimation/role_04_Material.mat
+  artifactKey: Guid(d65be6f6957c469458e9c8b84b50dae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_04_Material.mat using Guid(d65be6f6957c469458e9c8b84b50dae1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ed9623378a54e8036356604ba75e703') in 0.007582 seconds
+  Import took 0.010918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.983645 seconds.
+  path: Assets/Spine Examples/spine-unity-examples.asmdef
+  artifactKey: Guid(8f5163e4753269348a069fd2fedcba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Spine Examples/spine-unity-examples.asmdef using Guid(8f5163e4753269348a069fd2fedcba29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0afdc479a359de288b2a7a30654ee10f') in 0.002584 seconds
+  Import took 0.005929 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001916 seconds.
+Registered in 0.001896 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.761 seconds
+- Completed reload, in  0.697 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1996 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.1 MB.
-System memory in use after: 97.9 MB.
+Unloading 1923 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.2 MB.
+System memory in use after: 97.0 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2459.
-Total: 2.801900 ms (FindLiveObjects: 0.177600 ms CreateObjectMapping: 0.067700 ms MarkObjects: 1.531400 ms  DeleteObjects: 1.024100 ms)
+Unloading 154 unused Assets to reduce memory usage. Loaded Objects now: 2420.
+Total: 2.586100 ms (FindLiveObjects: 0.182800 ms CreateObjectMapping: 0.070600 ms MarkObjects: 1.394500 ms  DeleteObjects: 0.937300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.312025 seconds.
+  path: Assets/SpineAnimation/role_03.atlas.txt
+  artifactKey: Guid(6999d3a5d40c0d2449925c66f86ca5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_03.atlas.txt using Guid(6999d3a5d40c0d2449925c66f86ca5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef26bf98e32e175392626abbc668425') in 0.018818 seconds
+  Import took 0.021716 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004827 seconds.
+  path: Assets/SpineAnimation/role_03.atlas.txt
+  artifactKey: Guid(6999d3a5d40c0d2449925c66f86ca5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/role_03.atlas.txt using Guid(6999d3a5d40c0d2449925c66f86ca5cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef26bf98e32e175392626abbc668425') in 0.001333 seconds
+  Import took 0.004546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.952796 seconds.
+  path: Assets/SpineAnimation/3.8
+  artifactKey: Guid(b2a2f7423cb615444aafa5bd21e66435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8 using Guid(b2a2f7423cb615444aafa5bd21e66435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb73fa0b75a70c73005399b48c234515') in 0.000937 seconds
+  Import took 0.003934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.526033 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔
+  artifactKey: Guid(7ddab308132cd9e4d9f95b689d4b54ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔 using Guid(7ddab308132cd9e4d9f95b689d4b54ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9431c50226b76b99f342b201be1523fb') in 0.004136 seconds
+  Import took 0.006972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047090 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_03.gif
+  artifactKey: Guid(8c5684756f35056408b617b044de2e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_03.gif using Guid(8c5684756f35056408b617b044de2e04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40872f03b5078b527c455d0071f32dbe') in 0.016199 seconds
+  Import took 0.019102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000291 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_04.gif
+  artifactKey: Guid(9070caa53ffdf704eaa1b9435dcdc126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_04.gif using Guid(9070caa53ffdf704eaa1b9435dcdc126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bffa6352db80c137d4414ee6d2c78c65') in 0.003456 seconds
+  Import took 0.006211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_03_Material.mat
+  artifactKey: Guid(c301e66ae44538c41ac2b565de7f4678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_03_Material.mat using Guid(c301e66ae44538c41ac2b565de7f4678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff3314936550f411d6278a6105797f31') in 0.030605 seconds
+  Import took 0.033577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_05_Material.mat
+  artifactKey: Guid(1a7b708d43018154dbaeac7b207ab65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_05_Material.mat using Guid(1a7b708d43018154dbaeac7b207ab65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f41de07577fdf6abf4060b058f076b') in 0.006504 seconds
+  Import took 0.009397 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_04.png
+  artifactKey: Guid(e5d042d3b6c0c8f4db19396d69389928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_04.png using Guid(e5d042d3b6c0c8f4db19396d69389928) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ec66aabca6e7b6c9ffb5e8c2f46408e') in 0.005465 seconds
+  Import took 0.008369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_05_Atlas.asset
+  artifactKey: Guid(a2dfde241ba8a65468189f538c6dae7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_05_Atlas.asset using Guid(a2dfde241ba8a65468189f538c6dae7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0ca49be53de3dd63e977aaff8d8821') in 0.001929 seconds
+  Import took 0.004754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_04_SkeletonData.asset
+  artifactKey: Guid(04b5b3794aafe754bb56490011696488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_04_SkeletonData.asset using Guid(04b5b3794aafe754bb56490011696488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08c06f1c0400be2eeb3c99b3e00508d') in 0.137777 seconds
+  Import took 0.142232 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_03_Atlas.asset
+  artifactKey: Guid(c1a89b73d2583334d9bbcfdf580d4513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_03_Atlas.asset using Guid(c1a89b73d2583334d9bbcfdf580d4513) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7bb02522015b4078e99b82f4121ab99') in 0.001637 seconds
+  Import took 0.004875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_03.png
+  artifactKey: Guid(d7bcd9386563ace47938063291f2199e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_03.png using Guid(d7bcd9386563ace47938063291f2199e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82bb9d1786311635519296dbfa8716e8') in 0.005962 seconds
+  Import took 0.009203 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_05.png
+  artifactKey: Guid(36b70af32684de84f9d2c2b2667cf42b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_05.png using Guid(36b70af32684de84f9d2c2b2667cf42b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71eeec79ecaed59b286e8d6832898461') in 0.006147 seconds
+  Import took 0.009355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_05.gif
+  artifactKey: Guid(ed3b7590718dd344f89c720e33e0295d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_05.gif using Guid(ed3b7590718dd344f89c720e33e0295d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d7c72d519d4671a3bb7e06b48d2da77') in 0.003977 seconds
+  Import took 0.007213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_05_SkeletonData.asset
+  artifactKey: Guid(163f5473410fad74b83e50459a684bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_05_SkeletonData.asset using Guid(163f5473410fad74b83e50459a684bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1453d4bda52f83ea1472f8f8b7deda91') in 0.016227 seconds
+  Import took 0.019499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_04_Material.mat
+  artifactKey: Guid(e1276d17c4fee2344be9e6ff2533c1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_04_Material.mat using Guid(e1276d17c4fee2344be9e6ff2533c1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f018e2b7b7e21f72f31edf0d249a4f33') in 0.007068 seconds
+  Import took 0.010231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_03_SkeletonData.asset
+  artifactKey: Guid(97b1fd338bb58714fbca827a7f00169a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_03_SkeletonData.asset using Guid(97b1fd338bb58714fbca827a7f00169a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'befc9d6abf860f1a915752d245a8f6b6') in 0.015366 seconds
+  Import took 0.018653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_04_Atlas.asset
+  artifactKey: Guid(3a575e3d4036f534588ea2ff050748ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_04_Atlas.asset using Guid(3a575e3d4036f534588ea2ff050748ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1f4bcd31027985f4b53ce4a951451d0') in 0.001544 seconds
+  Import took 0.004429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.669243 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_03.json
+  artifactKey: Guid(412bb392150d5d649adbf1cceed76db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_03.json using Guid(412bb392150d5d649adbf1cceed76db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321114564bdc708cd5b17a83f853e397') in 0.002100 seconds
+  Import took 0.004887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005093 seconds.
+  path: Assets/SpineAnimation/3.8/3.8돔놔/role_03.json
+  artifactKey: Guid(412bb392150d5d649adbf1cceed76db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/3.8돔놔/role_03.json using Guid(412bb392150d5d649adbf1cceed76db3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321114564bdc708cd5b17a83f853e397') in 0.001227 seconds
+  Import took 0.004051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.771167 seconds.
+  path: Assets/Scenes/Level_2.unity
+  artifactKey: Guid(b8f6e8a3860efb94fb3a25663dcce793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level_2.unity using Guid(b8f6e8a3860efb94fb3a25663dcce793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9180d4b25f4c2c073f0c505091e0e3e') in 0.001726 seconds
+  Import took 0.004879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.510921 seconds.
+  path: Assets/Scenes/Level_3.unity
+  artifactKey: Guid(f0834aaf9eb4fd94e92368e769e370d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level_3.unity using Guid(f0834aaf9eb4fd94e92368e769e370d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a8bfa70afb16b38cdb1fa9f344f7fb') in 0.001329 seconds
+  Import took 0.004297 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.841086 seconds.
+  path: Assets/Scenes/Level_3.unity
+  artifactKey: Guid(f0834aaf9eb4fd94e92368e769e370d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level_3.unity using Guid(f0834aaf9eb4fd94e92368e769e370d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a8bfa70afb16b38cdb1fa9f344f7fb') in 0.001192 seconds
+  Import took 0.004503 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001776 seconds.
+Registered in 0.002509 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
@@ -250,15 +539,156 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.752 seconds
+- Completed reload, in  0.806 seconds
 Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1923 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.0 MB.
+System memory in use after: 96.7 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2424.
+Total: 3.023300 ms (FindLiveObjects: 0.192800 ms CreateObjectMapping: 0.075400 ms MarkObjects: 1.597700 ms  DeleteObjects: 1.156200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.351458 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭
+  artifactKey: Guid(9a368a08caeb0a8469cc3e1801463894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭 using Guid(9a368a08caeb0a8469cc3e1801463894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b38d04908cda1bbd3c72a6dfd016afd7') in 0.003687 seconds
+  Import took 0.007045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.592957 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04
+  artifactKey: Guid(d7fd542a52e87fa47ba54b174dc0a193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04 using Guid(d7fd542a52e87fa47ba54b174dc0a193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c75c4439d22b221b50652f7d404df08a') in 0.000887 seconds
+  Import took 0.003711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.052631 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04/bag.png
+  artifactKey: Guid(ac6dd73828acafd4e9802521f1cbb07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04/bag.png using Guid(ac6dd73828acafd4e9802521f1cbb07f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1102fe7bae4f535ecdd071e91cd182a3') in 0.026581 seconds
+  Import took 0.029441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04/tou.png
+  artifactKey: Guid(22dd22602704c484f9a1b2e57af484db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04/tou.png using Guid(22dd22602704c484f9a1b2e57af484db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda11f340b9cde84ac049a3b6215e087') in 0.004159 seconds
+  Import took 0.006844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04/xiezi.png
+  artifactKey: Guid(ce2fa9b535935d04d9b86cc5b2693b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04/xiezi.png using Guid(ce2fa9b535935d04d9b86cc5b2693b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59778236d48b96f73540abc26c150c9') in 0.003777 seconds
+  Import took 0.006713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04/tui2.png
+  artifactKey: Guid(dba60ac1a85fce046af527ddda4dbfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04/tui2.png using Guid(dba60ac1a85fce046af527ddda4dbfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '634afb78dd9247db24e9a1e60347fd45') in 0.003989 seconds
+  Import took 0.006919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04/body.png
+  artifactKey: Guid(a000bce588c072148b5237b0f530a2cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04/body.png using Guid(a000bce588c072148b5237b0f530a2cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9085008832d14b4ab7bf96578ad3031') in 0.003445 seconds
+  Import took 0.006416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04/shou1.png
+  artifactKey: Guid(92e9468d0a7239c458f5b80f33104290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04/shou1.png using Guid(92e9468d0a7239c458f5b80f33104290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fa57cc22922b4846cc2bf9128fb9e2d') in 0.003114 seconds
+  Import took 0.006203 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.617111 seconds.
+  path: Assets/SpineAnimation/3.8/都匡숭/role_04/role_04.spine
+  artifactKey: Guid(7d7e3c0a84c660d469751f89022e68a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpineAnimation/3.8/都匡숭/role_04/role_04.spine using Guid(7d7e3c0a84c660d469751f89022e68a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cabd76bc9bc31bf5a6f745df9132d46') in 0.002489 seconds
+  Import took 0.005490 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001826 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.727 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1923 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.1 MB.
+System memory in use after: 96.9 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2428.
+Total: 2.815600 ms (FindLiveObjects: 0.179700 ms CreateObjectMapping: 0.068400 ms MarkObjects: 1.534500 ms  DeleteObjects: 1.032400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001846 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1996 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 99.1 MB.
-System memory in use after: 97.9 MB.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.733 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1923 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.1 MB.
+System memory in use after: 96.9 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2462.
-Total: 3.110700 ms (FindLiveObjects: 0.190000 ms CreateObjectMapping: 0.074500 ms MarkObjects: 1.651200 ms  DeleteObjects: 1.193900 ms)
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2431.
+Total: 2.914400 ms (FindLiveObjects: 0.205800 ms CreateObjectMapping: 0.073300 ms MarkObjects: 1.509400 ms  DeleteObjects: 1.125100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002001 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.719 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1923 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 98.1 MB.
+System memory in use after: 96.9 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2434.
+Total: 3.177400 ms (FindLiveObjects: 0.204500 ms CreateObjectMapping: 0.087900 ms MarkObjects: 1.783600 ms  DeleteObjects: 1.100500 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

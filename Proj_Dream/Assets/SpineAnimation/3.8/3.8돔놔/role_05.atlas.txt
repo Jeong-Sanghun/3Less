@@ -1,0 +1,48 @@
+
+role_05.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bag
+  rotate: true
+  xy: 0, 354
+  size: 237, 395
+  orig: 237, 395
+  offset: 0, 0
+  index: -1
+body
+  rotate: true
+  xy: 397, 187
+  size: 285, 538
+  orig: 285, 538
+  offset: 0, 0
+  index: -1
+shou1
+  rotate: true
+  xy: 217, 593
+  size: 190, 546
+  orig: 191, 546
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 765, 474
+  size: 227, 309
+  orig: 227, 310
+  offset: 0, 1
+  index: -1
+tui2
+  rotate: true
+  xy: 0, 0
+  size: 185, 855
+  orig: 276, 855
+  offset: 91, 0
+  index: -1
+xiezi
+  rotate: false
+  xy: 0, 677
+  size: 215, 106
+  orig: 215, 106
+  offset: 0, 0
+  index: -1
