@@ -67,6 +67,7 @@ public class FirstSceneManager : SceneManagerParent
         }
         if (keywordList.Contains(ActionKeyword.PlayerMove))
         {
+            Debug.Log("이게실행되니?");
             player.isPlayPossible = true;
         }
         if (keywordList.Contains(ActionKeyword.StopSeconds))
@@ -157,8 +158,17 @@ public class FirstSceneManager : SceneManagerParent
             }
             else if(triggerName.Contains("Trigger6") && keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
             {
+                isStopActionable = false;
                 StartCoroutine(SceneEndCoroutine());
             }
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(SceneEndCoroutine());
         }
     }
 
@@ -183,6 +193,7 @@ public class FirstSceneManager : SceneManagerParent
             blackBoxSprite.color = col;
             yield return null;
         }
+        player.isPlayPossible = false;
         spriteMask.gameObject.SetActive(true);
         int spriteIndex = 0;
         while (spriteIndex < maskSpriteArray.Length)
@@ -191,15 +202,28 @@ public class FirstSceneManager : SceneManagerParent
             spriteIndex++;
             yield return new WaitForFixedUpdate();
         }
+        player.isPlayPossible = false;
         while (true)
         {
             yield return null;
             if (Input.GetMouseButtonDown(0))
             {
-                break;
-                
+                GameObject touchedObject;               //터치한 오브젝트
+                RaycastHit2D hit;                         //터치를 위한 raycastHit
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition); //마우스 좌클릭으로 마우스의 위치에서 Ray를 쏘아 오브젝트를 감지
+                if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
+                {
+                    touchedObject = hit.collider.gameObject;
+
+                    //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
+                    if (touchedObject.name.Contains("curtain"))
+                    {
+                        break;
+                    }
+                }
             }
         }
+        player.isPlayPossible = false;
         timer = 0;
         float startOrtho = cam.orthographicSize;
         float endOrtho = 0.1f;

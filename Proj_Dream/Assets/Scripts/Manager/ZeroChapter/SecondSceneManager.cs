@@ -72,6 +72,15 @@ public class SecondSceneManager : SceneManagerParent
         scissorItemOriginPos = scissorItemObject.transform.position;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(SceneEndCoroutine());
+        }
+    }
+
+
     protected override void OverrideAction(List<ActionKeyword> keywordList, List<float> parameterList)
     {
         base.OverrideAction(keywordList, parameterList);
@@ -439,6 +448,8 @@ public class SecondSceneManager : SceneManagerParent
         nowSprite = flashBackSpriteArray[seq];
         nowSprite.gameObject.SetActive(true);
         nowSprite.color = new Color(1, 1, 1, 0);
+        scissorItemObject.SetActive(false);
+        scissorBackGroundObject.SetActive(false);
         Color col = new Color(1, 1, 1, 0);
         while (postProcessTimer<1)
         {
@@ -480,6 +491,9 @@ public class SecondSceneManager : SceneManagerParent
             nowSprite.color = col;
             yield return null;
         }
+
+        scissorItemObject.SetActive(true);
+        scissorBackGroundObject.SetActive(true);
         nowSprite.gameObject.SetActive(true);
         NextDialog();
     }

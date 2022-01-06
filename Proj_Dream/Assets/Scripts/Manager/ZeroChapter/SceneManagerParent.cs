@@ -89,6 +89,8 @@ public class SceneManagerParent : MonoBehaviour
         }
     }
 
+
+
     protected void NextDialog()
     {
         if(dialogEnd == true)

@@ -145,6 +145,10 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             return;
         }
+        if(nowDialogIndex >= dialogBundle.dialogList.Count)
+        {
+            return;
+        }
 
 
         Dialog nowDialog = dialogBundle.dialogList[nowDialogIndex];
@@ -604,7 +608,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected IEnumerator SceneEndCoroutine(SceneName scene)
     {
         fadeInImage.gameObject.SetActive(true);
-        SaveUserData();
+        //SaveUserData();
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 0, 1, 1));
         yield return new WaitForSeconds(1f);
         gameManager.LoadScene(scene);
@@ -831,6 +835,5 @@ public class MemorySceneManagerParent : MonoBehaviour
         saveData.healthGauge = gaugeManager.nowHealthGauge;
         saveData.moneyGauge = gaugeManager.nowMoneyGauge;
         gameManager.SaveSaveData();
-
     }
 }
