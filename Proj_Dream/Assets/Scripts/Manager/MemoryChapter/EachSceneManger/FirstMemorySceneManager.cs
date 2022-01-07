@@ -5,8 +5,6 @@ using UnityEngine;
 public class FirstMemorySceneManager : MemorySceneManagerParent
 {
     [SerializeField]
-    GameObject playerTarget;
-    [SerializeField]
     GameObject motherObject;
 
 
@@ -17,13 +15,15 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         dialogBundle.SetCharacterEnum();
 
         motherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-        playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-        playerObject.SetActive(true);
+        playerSpriteObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.ToggleToSprite();
         motherObject.SetActive(true);
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position+Vector3.right/2f, 1f));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+        StartCoroutine(moduleManager.FadeModule_Sprite(playerSpriteObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
         nowScene = SceneName.MemoryHome1;
+        cameraLeftBound = -7.7f;
+        cameraRightBound = 7.7f;
 
     }
 
@@ -35,39 +35,38 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         {
             Debug.Log(keywordList[j]);
         }
-        if (keywordList.Contains(ActionKeyword.PlayerMove))
-        {
-            if (keywordList.Contains(ActionKeyword.First))
-            {
-                StartCoroutine(PlayerMoveCoroutine());
-            }
-        }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
             StartCoroutine(SceneEndCoroutine(SceneName.MemoryRestaurant));
         }
     }
 
+    public override void TriggerEnter(string triggerName)
+    {
+        for (int i = 0; i < nowActionList.Count; i++)
+        {
+            List<ActionKeyword> keywordList = nowActionList[i].actionList;
+            if (triggerName.Contains("Target1") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.First))
+            {
+
+                StartCoroutine(PlayerMoveCoroutine());
+
+            }
+        }
+    }
+
     IEnumerator PlayerMoveCoroutine()
     {
+        memoryPlayer.ToggleToSprite();
+        memoryPlayer.isPlayPossible = false;
         isDialogStopping = true;
-        TextFrameToggle(false);
         isStopActionable = false;
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right/2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 1, 0, 1));
-        yield return new WaitForSeconds(1.05f);
-        playerObject.transform.position = playerTarget.transform.position;
-        Vector3 camTarget = new Vector3(playerTarget.transform.position.x +5,0,-10);
-        
-        StartCoroutine(moduleManager.MoveModule_Linear(cam.gameObject, camTarget, 1));
-        yield return new WaitForSeconds(1.05f);
-
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right/2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1));
-        StartCoroutine(moduleManager.MoveModule_Linear(motherObject,motherObject.transform.position + Vector3.left/2, 1));
+        StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.left / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
+        yield return new WaitForSeconds(1.05f);
         NextDialog();
-
     }
-    
+
+
+
 }

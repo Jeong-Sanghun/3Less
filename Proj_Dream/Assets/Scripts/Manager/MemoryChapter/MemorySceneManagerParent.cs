@@ -37,6 +37,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     [SerializeField]
     protected GameObject playerObject;
+    protected MemoryPlayer memoryPlayer;
 
     [SerializeField]
     protected Camera cam;
@@ -71,6 +72,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected bool isTrigger;
     protected bool cameraFollowing;
     protected float cameraRightBound;
+    protected float cameraLeftBound;
     bool loadedToRoute;
 
     protected virtual void Start()
@@ -103,6 +105,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         saveData = gameManager.saveData;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 0.5f));
         loadedToRoute = false;
+        memoryPlayer = playerObject.GetComponent<MemoryPlayer>();
 
         if(gameManager.isNewGame == false)
         {
@@ -111,7 +114,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             loadedToRoute = true;
         }
         gaugeManager.SetGauge(saveData.moneyGauge, saveData.healthGauge);
-
+        
 
 
     }
@@ -429,7 +432,6 @@ public class MemorySceneManagerParent : MonoBehaviour
         Debug.Log("스탑포인트");
         List<ActionClass> actionClassList = nowActionList;
         bool immediateStart = false;
-        bool playerMove = false;
         for (int i = 0; i < actionClassList.Count; i++)
         {
             ActionClass nowAction = actionClassList[i];
@@ -440,13 +442,9 @@ public class MemorySceneManagerParent : MonoBehaviour
             {
                 immediateStart = true;
             }
-            if (keywordList.Contains(ActionKeyword.PlayerMove))
-            {
-                playerMove = true;
-            }
             OverrideAction(keywordList, parameterList);
         }
-        if (immediateStart && playerMove==false)
+        if (immediateStart)
         {
             isDialogStopping = false;
             NextDialog();
@@ -478,6 +476,13 @@ public class MemorySceneManagerParent : MonoBehaviour
             gaugeManager.ChangeMoneyGauge((int)parameterList[0]);
             phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.MoneyGauge, nowCharacter, -1,(int)parameterList[0]);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
+        }
+        if (keywordList.Contains(ActionKeyword.PlayerMove))
+        {
+            StartCoroutine(CameraFollowCoroutine());
+            memoryPlayer.isPlayPossible = true;
+            isDialogStopping = true;
+            isStopActionable = false;
         }
 
 
@@ -582,22 +587,25 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected IEnumerator CameraFollowCoroutine()
     {
-        Transform playerTransform = playerObject
-            .transform;
-        Vector3 delta = cam.transform.position - playerTransform.position;
-        float originY = cam.transform.position.y;
-        cameraFollowing = true;
-        while (cameraFollowing == true)
+        if(cameraFollowing == false)
         {
-            yield return new WaitForFixedUpdate();
-            Vector3 pos = new Vector3((playerTransform.position + delta).x, originY, -10);
-            if (pos.x >= 0.71 && pos.x <= cameraRightBound)
+            Transform playerTransform = playerObject.transform;
+            Vector3 delta = cam.transform.position - playerTransform.position;
+            float originY = cam.transform.position.y;
+            cameraFollowing = true;
+            while (cameraFollowing == true)
             {
-                cam.transform.position = pos;
+                yield return new WaitForFixedUpdate();
+                Vector3 pos = new Vector3((playerTransform.position + delta).x, originY, -10);
+                if (pos.x >= cameraLeftBound && pos.x <= cameraRightBound)
+                {
+                    cam.transform.position = pos;
+                }
+
+
             }
-
-
         }
+ 
     }
 
     public virtual void TriggerEnter(string triggerName)
@@ -836,4 +844,5 @@ public class MemorySceneManagerParent : MonoBehaviour
         saveData.moneyGauge = gaugeManager.nowMoneyGauge;
         gameManager.SaveSaveData();
     }
+
 }
