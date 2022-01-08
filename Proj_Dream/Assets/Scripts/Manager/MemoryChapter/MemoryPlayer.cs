@@ -15,8 +15,10 @@ public class MemoryPlayer : MonoBehaviour
 
     [SerializeField]
     SkeletonAnimation skeletonAnimation;
+
+    //종종 씬매니저에서 쓸 때가 있음
     [SerializeField]
-    GameObject spritePlayerObject;
+    public GameObject spritePlayerObject;
 
     public float minPosX;
     public float maxPosX;
@@ -113,6 +115,7 @@ public class MemoryPlayer : MonoBehaviour
         skeletonAnimation.gameObject.SetActive(false);
         spritePlayerObject.SetActive(true);
     }
+
 
     public void SetCamYWorldPos(float y)
     {

@@ -15,11 +15,11 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         dialogBundle.SetCharacterEnum();
 
         motherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-        playerSpriteObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         memoryPlayer.ToggleToSprite();
         motherObject.SetActive(true);
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position+Vector3.right/2f, 1f));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerSpriteObject, 0, 1, 1f));
+        StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
         nowScene = SceneName.MemoryHome1;
         cameraLeftBound = -7.7f;
