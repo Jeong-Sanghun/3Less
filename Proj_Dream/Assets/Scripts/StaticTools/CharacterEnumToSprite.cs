@@ -9,9 +9,8 @@ public class CharacterEnumToSprite
     {
         if(spriteArray == null)
         {
-            spriteArray = new Sprite[10];
+            spriteArray = new Sprite[14];
         }
-        
         if(spriteArray[(int)character] == null)
         {
             spriteArray[(int)character] = Resources.Load<Sprite>("Image/Profile/" + character);

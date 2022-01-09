@@ -28,6 +28,10 @@ public class CharacterEnumToString
                 return "주인공";
             case Character.System:
                 return "시스템";
+            case Character.Police:
+                return "경찰";
+            case Character.Teacher:
+                return "선생님";
             default:
                 return "";
 

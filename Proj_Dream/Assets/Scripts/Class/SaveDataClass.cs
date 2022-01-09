@@ -17,7 +17,7 @@ public class SaveDataClass
 
     public SaveDataClass()
     {
-        savedScene = SceneName.Bright;
+        savedScene = SceneName.Intro;
         dialogIndex = 0;
         healthGauge = 9;
         moneyGauge = 0;

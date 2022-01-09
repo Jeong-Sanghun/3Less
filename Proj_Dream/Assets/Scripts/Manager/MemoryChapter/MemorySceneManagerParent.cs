@@ -288,6 +288,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                     case Character.FriendGirl:
                     case Character.Mother:
                     case Character.FriendBoy:
+                    case Character.Police:
                         TextFrameToggle(true);
                         ballonList[1].SetActive(true);
                         break;

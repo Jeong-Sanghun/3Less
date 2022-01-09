@@ -47,7 +47,12 @@ public class PhoneDialogManager : MemorySceneManagerParent
         if (keywordList.Contains(ActionKeyword.PhoneOn))
         {
             isPhoneOn = true;
+            for(int i = 0; i < wholeChatParentRect.childCount; i++)
+            {
+                Destroy(wholeChatParentRect.GetChild(0).gameObject);
+            }
             Debug.Log(nowCharacter);
+            TextFrameToggle(false);
             nowChattingCharacter = CharacterEnumToString.Changer(nowCharacter);
             phoneMessageManager.SetCharacter(nowCharacter);
             StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
