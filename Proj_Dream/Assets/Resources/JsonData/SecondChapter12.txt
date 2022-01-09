@@ -24,11 +24,12 @@
             "dialog": "방금까지 좋았던 기분이 서서히 가라앉았다. "
         },
         {
+		            "actionKeyword": "playerMoveFirst,fadeOut",
             "dialog": "누군가 방문을 두드린다."
         },
         {
             "character": "어머니",
-            "actionKeyword": "fadeOut",
+
             "dialog": "잠깐 이야기 좀 하자."
         },
         {
@@ -85,7 +86,6 @@
         },
         {
             "character": "어머니",
-            "actionKeyword": "playerMoveFirst",
             "dialog": "너 요새 밖에서 뭐하고 다니니."
         },
         {
@@ -157,7 +157,7 @@
         },
         {
             "character": "동생",
-            "actionKeyword": "playerMoveSecond",
+            "actionKeyword": "otherMoveFirst",
             "dialog": "왜, 왜, 왜! 왜 이렇게 시끄러운데!"
         },
         {

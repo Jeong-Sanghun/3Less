@@ -105,7 +105,15 @@ public class MemorySceneManagerParent : MonoBehaviour
         saveData = gameManager.saveData;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 0.5f));
         loadedToRoute = false;
-        memoryPlayer = playerObject.GetComponent<MemoryPlayer>();
+        if (playerObject != null)
+        {
+            memoryPlayer = playerObject.GetComponent<MemoryPlayer>();
+        }
+        else
+        {
+            memoryPlayer = null;
+        }
+        
 
         if(gameManager.isNewGame == false)
         {

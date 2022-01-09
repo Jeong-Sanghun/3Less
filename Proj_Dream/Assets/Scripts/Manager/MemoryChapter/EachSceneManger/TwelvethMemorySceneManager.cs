@@ -27,7 +27,8 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
 
         isPlayerAfterPos = false;
         playerObject.SetActive(true);
-        playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.ToggleToSprite();
+        memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         motherObject.SetActive(true);
         motherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         fatherObject.SetActive(true);
@@ -35,14 +36,14 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         brotherObject.SetActive(true);
         brotherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         nowScene = SceneName.MemoryHome4;
-
-        if(nowDialogIndex == 0)
+        cameraLeftBound = -7.7f;
+        cameraRightBound = 7.7f;
+        Debug.Log(nowDialogIndex);
+        if (nowDialogIndex <=1)
         {
 
             StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-            StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
-
-
+            StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
             StartCoroutine(InvokerCoroutine(1f, NextDialog));
         }
         else
@@ -67,20 +68,22 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         {
             if (keywordList.Contains(ActionKeyword.First))
             {
-                if(isPlayerAfterPos == false)
+                if (isPlayerAfterPos == false)
                 {
                     isPlayerAfterPos = true;
-                    StartCoroutine(PlayerMoveCoroutine());
                 }
                 else
                 {
                     NextDialog();
                 }
-                    
+
             }
-            else if (keywordList.Contains(ActionKeyword.Second))
+        }
+        if (keywordList.Contains(ActionKeyword.OtherMove))
+        {
+            if (keywordList.Contains(ActionKeyword.First))
             {
-                PlayerMoveSecond();
+                OtherMoveSecond();
             }
         }
         if (keywordList.Contains(ActionKeyword.FadeIn))
@@ -90,7 +93,6 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         if (keywordList.Contains(ActionKeyword.FadeOut))
         {
             StartCoroutine(moduleManager.FadeModule_Image(twelvethFadeImage, 1, 0, 1));
-            StartCoroutine(InvokerCoroutine(1f, NextDialog));
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
@@ -98,7 +100,7 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         }
     }
 
-    void PlayerMoveSecond()
+    void OtherMoveSecond()
     {
         isDialogStopping = true;
         TextFrameToggle(false);
@@ -107,22 +109,28 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
     }
 
-    IEnumerator PlayerMoveCoroutine()
+    public override void TriggerEnter(string triggerName)
     {
-        isDialogStopping = true;
-        TextFrameToggle(false);
-        isStopActionable = false;
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 1, 0, 1));
-        yield return new WaitForSeconds(1.05f);
-        playerObject.transform.position = playerTarget.transform.position;
-        Vector3 camTarget = new Vector3(playerTarget.transform.position.x + 5, 0, -10);
+        if(nowActionList == null)
+        {
+            return;
+        }
+        for (int i = 0; i < nowActionList.Count; i++)
+        {
+            List<ActionKeyword> keywordList = nowActionList[i].actionList;
+            if (triggerName.Contains("Target1") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.First))
+            {
 
-        StartCoroutine(moduleManager.MoveModule_Linear(cam.gameObject, camTarget, 1));
-        yield return new WaitForSeconds(1.05f);
+                PlayerMove();
 
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1));
+            }
+        }
+    }
+
+    void PlayerMove()
+    {
+        memoryPlayer.isPlayPossible = false;
+        memoryPlayer.ToggleToSprite();
         StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.left / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
         StartCoroutine(moduleManager.MoveModule_Linear(fatherObject, fatherObject.transform.position + Vector3.left / 2, 1));
@@ -185,7 +193,7 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         Vector3 camTarget = new Vector3(playerTarget.transform.position.x + 5, 0, -10);
         cam.gameObject.transform.position = camTarget;
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1));
+        StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1));
         StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.left / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
         StartCoroutine(moduleManager.MoveModule_Linear(fatherObject, fatherObject.transform.position + Vector3.left / 2, 1));

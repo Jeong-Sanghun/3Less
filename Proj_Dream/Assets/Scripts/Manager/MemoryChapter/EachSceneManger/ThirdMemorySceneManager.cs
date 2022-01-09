@@ -23,7 +23,8 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         
         
         playerObject.SetActive(true);
-        playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.ToggleToSprite();
+        memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         motherObject.SetActive(true);
         motherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         fatherObject.SetActive(true);
@@ -38,12 +39,13 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         else
         {
             StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-            StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+            StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
             StartCoroutine(InvokerCoroutine(1f, NextDialog));
         }
+        cameraLeftBound = -20.4f;
+        cameraRightBound = 2.2f;
 
 
-        
 
     }
 
@@ -55,10 +57,6 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         {
             Debug.Log(keywordList[j]);
         }
-        if (keywordList.Contains(ActionKeyword.PlayerMove))
-        {
-            StartCoroutine(PlayerMoveCoroutine());
-        }
         if (gaugeManager.isGameOver == true)
         {
             return;
@@ -69,22 +67,24 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         }
     }
 
+    public override void TriggerEnter(string triggerName)
+    {
+        for (int i = 0; i < nowActionList.Count; i++)
+        {
+            List<ActionKeyword> keywordList = nowActionList[i].actionList;
+            if (triggerName.Contains("Target1") && keywordList.Contains(ActionKeyword.PlayerMove))
+            {
+
+                StartCoroutine(PlayerMoveCoroutine());
+
+            }
+        }
+    }
     IEnumerator PlayerMoveCoroutine()
     {
-        isDialogStopping = true;
-        TextFrameToggle(false);
-        isStopActionable = false;
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 1, 0, 1));
-        yield return new WaitForSeconds(1.05f);
-        playerObject.transform.position = playerTarget.transform.position;
-        Vector3 camTarget = new Vector3(playerTarget.transform.position.x + 5, 0, -10);
-
-        StartCoroutine(moduleManager.MoveModule_Linear(cam.gameObject, camTarget, 1));
-        yield return new WaitForSeconds(1.05f);
-
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1));
+        
+        memoryPlayer.isPlayPossible = false;
+        memoryPlayer.ToggleToSprite();
         StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.right / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
         StartCoroutine(moduleManager.MoveModule_Linear(fatherObject, fatherObject.transform.position + Vector3.left / 2, 1));
@@ -102,8 +102,8 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         playerObject.transform.position = playerTarget.transform.position;
         Vector3 camTarget = new Vector3(playerTarget.transform.position.x + 5, 0, -10);
         cam.gameObject.transform.position = camTarget;
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2, 1));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1));
+        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
+        StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
         StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.right / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
         StartCoroutine(moduleManager.MoveModule_Linear(fatherObject, fatherObject.transform.position + Vector3.left / 2, 1));

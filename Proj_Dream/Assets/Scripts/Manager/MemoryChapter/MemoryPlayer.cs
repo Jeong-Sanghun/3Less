@@ -29,6 +29,7 @@ public class MemoryPlayer : MonoBehaviour
 
     [SerializeField]
     MemorySceneManagerParent sceneManager;
+    Vector3 originScale;
 
 
     public enum MoveType
@@ -62,6 +63,7 @@ public class MemoryPlayer : MonoBehaviour
     {
         camYWorldPos = -1;
         skeletonAnimation.AnimationName = moveAnimation;
+        originScale = transform.localScale;
     }
 
     public void ButtonDownLeft()
@@ -132,13 +134,13 @@ public class MemoryPlayer : MonoBehaviour
             {
                 case MoveType.Left:
                     skeletonAnimation.AnimationName = moveAnimation;
-                    transform.localScale = new Vector3(-1, 1, 1);
+                    transform.localScale = new Vector3(-originScale.x, originScale.y, originScale.z);
                     transform.Translate(-moveSpeed * Time.deltaTime, 0, 0);
                     break;
 
                 case MoveType.Right:
                     skeletonAnimation.AnimationName = moveAnimation;
-                    transform.localScale = new Vector3(1, 1, 1);
+                    transform.localScale = originScale;
                     transform.Translate(moveSpeed * Time.deltaTime, 0, 0);
                     break;
             }

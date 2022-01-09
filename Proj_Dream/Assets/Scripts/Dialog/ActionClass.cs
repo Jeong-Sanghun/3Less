@@ -8,6 +8,7 @@ public enum ActionKeyword
 {
     Null,First, Second, Third,Fourth,Fifth,End,
     StopSeconds, FishMove, PlayerMove,FadeOut,FadeIn, ZoomOut, ImgFlashback,ImgFalse,
+    OtherMove,
     Bubble, Scissors,Medal,
     ImmediateDialog, Route,
     HealthGauge,MoneyGauge,

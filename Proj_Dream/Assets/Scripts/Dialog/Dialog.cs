@@ -162,6 +162,11 @@ public class Dialog
                 act.actionList.Add(ActionKeyword.PlayerMove);
                 act.parameterList.Add(-1);
             }
+            if (keywordArray[i].Contains("otherMove") || keywordArray[i].Contains("OtherMove"))
+            {
+                act.actionList.Add(ActionKeyword.OtherMove);
+                act.parameterList.Add(-1);
+            }
             if (keywordArray[i].Contains("phoneOn") || keywordArray[i].Contains("PhoneOn"))
             {
                 act.actionList.Add(ActionKeyword.PhoneOn);
