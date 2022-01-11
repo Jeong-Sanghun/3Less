@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour
         jsonManager = new JsonManager();
         isNewGame = true;
         wholeSceneNumber = SceneManager.sceneCountInBuildSettings;
-        LoadSaveData();
 
     }
 
@@ -105,7 +104,7 @@ public class GameManager : MonoBehaviour
     {
 
         StartLoadedGame();
-        PhoneManager.singleTon.Flush();
+        PhoneManager.singleTon.PhoneSetup();
     }
 
     public void Quit()

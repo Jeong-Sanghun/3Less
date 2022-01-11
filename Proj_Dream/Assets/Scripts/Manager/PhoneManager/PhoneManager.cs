@@ -56,7 +56,7 @@ public class PhoneManager : MonoBehaviour
         }
     }
 
-    public void Flush()
+    public void PhoneSetup()
     {
         phoneMessageManager.SetMessage();
         phoneArchiveManager.SetArchive();

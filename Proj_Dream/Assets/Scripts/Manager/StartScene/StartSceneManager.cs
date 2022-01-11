@@ -32,7 +32,7 @@ public class StartSceneManager : MonoBehaviour
         }
         gameManager.saveData = new SaveDataClass();
         gameManager.SaveSaveData();
-        PhoneManager.singleTon.Flush();
+        PhoneManager.singleTon.PhoneSetup();
         gameManager.LoadScene(SceneName.Intro);
 
     }
@@ -44,6 +44,7 @@ public class StartSceneManager : MonoBehaviour
             return;
         }
         gameManager.StartLoadedGame();
+        PhoneManager.singleTon.PhoneSetup();
     }
     // Update is called once per frame
     void Update()
