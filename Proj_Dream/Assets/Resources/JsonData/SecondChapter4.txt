@@ -166,6 +166,7 @@
         },
         {
             "character": "NAR.",
+            "actionKeyword": "playerMove",
             "dialog": "핸드폰을 확인해보았지만 집에서 별다른 연락이 온 건 없었다."
         },
         {

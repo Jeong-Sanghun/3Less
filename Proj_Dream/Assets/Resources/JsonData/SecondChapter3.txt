@@ -62,6 +62,7 @@
             "dialog": "내 말이 들렸는지 안 들렸는지 모르겠다. 핸드폰도 내 주머니에 잘 있다."
         },
         {
+        "actionKeyword": "healthGauge-1,sceneEnd,playerMove",
             "dialog": "하지만 상관없어. 어디론가 가야겠다. 여기 말고."
         },
         {
@@ -81,7 +82,7 @@
             "dialog": "대답은 들려오지 않는다. 못 들었나 보다."
         },
         {
-            "actionKeyword": "healthGauge-1,sceneEnd,routeEnd",
+            "actionKeyword": "healthGauge-1,sceneEnd,playerMove,routeEnd",
             "dialog": "뭐 어때. 나는 분명히 말했다. 나중에 없으면 전화하든지 하겠지."
         }
     ]

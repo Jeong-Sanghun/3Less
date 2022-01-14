@@ -57,7 +57,7 @@
         },
         {
             "character": "어머니",
-            "actionKeyword": "sceneEnd",
+            "actionKeyword": "playerMove,sceneEnd",
             "dialog": "아, 나중에, 나중에!"
         }
     ]

@@ -61,10 +61,6 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         {
             return;
         }
-        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
-        {
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryRooftop1));
-        }
     }
 
     public override void TriggerEnter(string triggerName)
@@ -74,9 +70,16 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
             List<ActionKeyword> keywordList = nowActionList[i].actionList;
             if (triggerName.Contains("Target1") && keywordList.Contains(ActionKeyword.PlayerMove))
             {
-
+                PhoneManager.singleTon.PhoneMainCanvasActive(false);
                 StartCoroutine(PlayerMoveCoroutine());
 
+            }
+            if (triggerName.Contains("Target2") && keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
+            {
+                memoryPlayer.isPlayPossible = false;
+                memoryPlayer.ToggleToSprite();
+                PhoneManager.singleTon.PhoneMainCanvasActive(false);
+                StartCoroutine(SceneEndCoroutine(SceneName.MemoryRooftop1));
             }
         }
     }

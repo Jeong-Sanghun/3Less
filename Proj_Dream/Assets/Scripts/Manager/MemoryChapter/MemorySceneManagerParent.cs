@@ -489,9 +489,11 @@ public class MemorySceneManagerParent : MonoBehaviour
         if (keywordList.Contains(ActionKeyword.PlayerMove))
         {
             StartCoroutine(CameraFollowCoroutine());
+            PhoneManager.singleTon.PhoneMainCanvasActive(true);
             memoryPlayer.isPlayPossible = true;
             isDialogStopping = true;
             isStopActionable = false;
+            TextFrameToggle(false);
         }
 
 
