@@ -30,7 +30,7 @@ public class SecondMemorySceneManager : MemorySceneManagerParent
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
             gameManager.isNewGame = true;
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet1));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryDarkStreet1));
         }
     }
 

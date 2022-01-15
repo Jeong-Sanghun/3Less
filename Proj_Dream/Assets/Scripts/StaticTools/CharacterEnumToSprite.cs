@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CharacterEnumToSprite
 {
@@ -9,7 +10,7 @@ public class CharacterEnumToSprite
     {
         if(spriteArray == null)
         {
-            spriteArray = new Sprite[14];
+            spriteArray = new Sprite[Enum.GetValues(typeof(Character)).Length];
         }
         if(spriteArray[(int)character] == null)
         {

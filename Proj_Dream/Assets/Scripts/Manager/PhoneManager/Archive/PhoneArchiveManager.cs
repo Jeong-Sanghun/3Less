@@ -135,11 +135,18 @@ public class PhoneArchiveManager : MonoBehaviour
         GameObject backLogCanvasInst = Instantiate(backLogCanvasPrefab, backLogCanvasParent);
         wrapper.backLogCanvas = backLogCanvasInst;
 
+        Image backLogButtonImage = archiveInst.transform.GetChild(0).GetComponent<Image>();
+        backLogButtonImage.sprite = SceneNameToFileName.GetButtonImage(archive.sceneNameEnum);
+
         Button backLogOpenButton = archiveInst.transform.GetChild(0).GetComponent<Button>();
         backLogOpenButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, true));
 
         Button backLogGetOutButton = backLogCanvasInst.transform.GetChild(0).GetChild(1).GetComponent<Button>();
         backLogGetOutButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, false));
+
+        Image backLogBackgroundImage = backLogCanvasInst.transform.GetChild(0).GetChild(2).GetComponent<Image>();
+        backLogBackgroundImage.sprite = SceneNameToFileName.GetBackgroundImage(archive.sceneNameEnum);
+
 
         RectTransform backGround = backLogCanvasInst.transform.GetChild(0).GetComponent<RectTransform>();
 
@@ -187,9 +194,8 @@ public class PhoneArchiveManager : MonoBehaviour
         DialogBundle dialogBundle = wrapper.backLogDialogPair.dialogBundle;
         GameObject backLogInst = null;
         Image backLogImage = null;
-        Image backLogNameImage = null;
         Text dialogText = null;
-        Text nameText = null;
+        Image profileImage = null;
         Color routeColor = new Color(1, 1, 0.8f);
         switch (backLog.backLogType)
         {
@@ -232,24 +238,16 @@ public class PhoneArchiveManager : MonoBehaviour
                 else
                 {
                     backLogInst = Instantiate(backLogOtherPrefab, parentRect);
-                    dialogText = backLogInst.transform.GetChild(1).GetChild(0).GetComponent<Text>();
-                    nameText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
-                    nameText.text = CharacterEnumToString.Changer(backLog.character);
+                    dialogText = backLogInst.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Text>();
+                    profileImage = backLogInst.transform.GetChild(0).GetComponent<Image>();
+                    profileImage.sprite = CharacterEnumToSprite.Changer(backLog.character);
                     Color col = CharacterEnumToColor.Changer(backLog.character);
-                    backLogImage = backLogInst.transform.GetChild(1).GetComponent<Image>();
+                    backLogImage = backLogInst.transform.GetChild(1).GetChild(0).GetComponent<Image>();
                     backLogImage.color =col;
-                    backLogNameImage = backLogInst.transform.GetChild(0).GetComponent<Image>();
-                    backLogNameImage.color =col;
 
                     if (backLog.isRouteTalk == true)
                     {
-                        backLogNameImage.color = routeColor;
                         backLogImage.color = routeColor;
-                    }
-                    else
-                    {
-                        backLogNameImage.color = col;
-                        backLogImage.color = col;
                     }
 
                 }

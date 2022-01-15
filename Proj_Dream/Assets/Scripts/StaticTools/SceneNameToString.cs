@@ -32,12 +32,12 @@ public class SceneNameToString
                 return "학교 1";
             case SceneName.MemorySchool2:
                 return "학교 2";
-            case SceneName.MemoryStreet1:
-                return "거리 1";
-            case SceneName.MemoryStreet2:
-                return "거리 2";
-            case SceneName.MemoryStreet3:
-                return "거리 3";
+            case SceneName.MemoryDarkStreet1:
+                return "밤 거리 1";
+            case SceneName.MemoryBrightStreet1:
+                return "저녁 거리 2";
+            case SceneName.MemoryBrightStreet2:
+                return "저녁 거리 3";
             default:
                 return "동생";
 

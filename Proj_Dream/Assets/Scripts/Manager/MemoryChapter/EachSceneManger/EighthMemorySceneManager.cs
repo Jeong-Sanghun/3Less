@@ -22,7 +22,7 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
         playerObject.SetActive(true);
         playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
 
-        nowScene = SceneName.MemoryStreet2;
+        nowScene = SceneName.MemoryBrightStreet1;
 
         if(saveData.eighthMemoryLeftTime == 2)
         {
@@ -90,7 +90,7 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
             else
             {
                 saveData.eighthMemoryLeftTime--;
-                StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet2));
+                StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet1));
             }
             
         }

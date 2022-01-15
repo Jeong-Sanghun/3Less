@@ -48,7 +48,7 @@ public class SeventhMemorySceneManager : MemorySceneManagerParent
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet2));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet1));
         }
     }
 }

@@ -96,7 +96,7 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStreet3));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet2));
         }
     }
 

@@ -6,22 +6,39 @@ public class CharacterEnumToColor
 {
     public static Color Changer(Character character)
     {
+        Color color;
+        /*
+         * 옥친(핑) #F4E4F4
+엄마(초) #CEDDD3
+아빠(보) #C3BDC9
+동생(빨) #E5CACA
+선생님(파) #BCCFD8
+자친(갈) #CCBDB4
+예비용(하) #C1D5D6
+모브(회) #9B9B9B*/
         switch (character)
         {
             case Character.Brother:
-                return new Color(1,0.5f,0);
+                ColorUtility.TryParseHtmlString("#E5CACA", out color);
+                break;
             case Character.Father:
-                return Color.cyan;
+                ColorUtility.TryParseHtmlString("#C3BDC9", out color);
+                break;
             case Character.FriendBoy:
-                return Color.blue;
+                ColorUtility.TryParseHtmlString("#CCBDB4", out color);
+                break;
             case Character.FriendGirl:
-                return Color.magenta;
+                ColorUtility.TryParseHtmlString("#F4E4F4", out color);
+                break;
             case Character.Mother:
-                return Color.red;
+                ColorUtility.TryParseHtmlString("#CEDDD3", out color);
+                break;
             default:
-                return Color.white;
+                color = Color.white;
+                break;
 
 
         }
+        return color;
     }
 }

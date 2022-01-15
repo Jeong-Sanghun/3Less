@@ -31,7 +31,7 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         fatherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         brotherObject.SetActive(true);
         brotherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-        nowScene = SceneName.MemoryStreet1;
+        nowScene = SceneName.MemoryDarkStreet1;
         if(nowDialogIndex != 0)
         {
             StartCoroutine(OnReEntryGame());

@@ -33,11 +33,11 @@ public class SceneNameToNovel : MonoBehaviour
                 return "SecondChapter5";
             case SceneName.MemorySchool2:
                 return "SecondChapter11";
-            case SceneName.MemoryStreet1:
+            case SceneName.MemoryDarkStreet1:
                 return "SecondChapter3";
-            case SceneName.MemoryStreet2:
+            case SceneName.MemoryBrightStreet1:
                 return "SecondChapter8";
-            case SceneName.MemoryStreet3:
+            case SceneName.MemoryBrightStreet2:
                 return "SecondChapter13";
             default:
                 return null;

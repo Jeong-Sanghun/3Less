@@ -66,8 +66,8 @@ public class PhoneManager : MonoBehaviour
 
     private void Start()
     {
-        phoneDownPos = new Vector2(0, -409.6f);
-        phoneUpPos = new Vector2(0, 618f);
+        phoneDownPos = new Vector2(0, -486f);
+        phoneUpPos = new Vector2(0, 555f);
         isTouching = false;
         positionDelta = 100000;
         isOpened = false;
@@ -123,6 +123,7 @@ public class PhoneManager : MonoBehaviour
     public void InstagramActiveButton(bool active)
     {
         instagramCanvas.SetActive(active);
+        phoneCanvas.SetActive(!active);
     }
     public void ArchiveActiveButton(bool active)
     {

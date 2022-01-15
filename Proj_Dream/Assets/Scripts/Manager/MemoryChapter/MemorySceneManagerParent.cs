@@ -285,6 +285,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                         TextFrameToggle(true);
                         ballonList[0].SetActive(true);
                         break;
+                    case Character.RooftopFriend:
                     case Character.FriendGirl:
                     case Character.Mother:
                     case Character.FriendBoy:

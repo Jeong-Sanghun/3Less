@@ -14,6 +14,7 @@ public enum Character
     Brother,
     FriendGirl,
     FriendBoy,
+    RooftopFriend,
     Police,
     Teacher,
     NotAllocated
@@ -103,10 +104,15 @@ public class Dialog
         {
             characterEnum = Character.FriendBoy;
         }
-        else if (character.Contains("B") || character.Contains("학생"))
+        else if (character.Contains("B"))
+        {
+            characterEnum = Character.RooftopFriend;
+        }
+        else if (character.Contains("학생"))
         {
             characterEnum = Character.FriendGirl;
         }
+
         else if (character.Contains("경찰"))
         {
             characterEnum = Character.Police;
