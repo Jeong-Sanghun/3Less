@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 5.4421387, y: 0}
+  m_AnchoredPosition: {x: 33.94214, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3369125993041534046
@@ -190,7 +190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 600.8843, y: 0}
+  m_AnchoredPosition: {x: 641.8843, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &1429692098872000434
@@ -244,10 +244,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 46
-    m_Right: -3
-    m_Top: 12
-    m_Bottom: 14
+    m_Left: 57
+    m_Right: 27
+    m_Top: 25
+    m_Bottom: 25
   m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -306,7 +306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 324.9421, y: 0}
+  m_AnchoredPosition: {x: 335.94214, y: 0}
   m_SizeDelta: {x: 557.8843, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &951329011773310008
@@ -338,7 +338,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 9d510761bc6be64459d05d4821dda40b, type: 3}
+    m_Font: {fileID: 12800000, guid: 46a61c40a6c8ef14589fb4c34e5a4e29, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
@@ -349,18 +349,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'aaaaaaaaaaaaaaaa
-
-    aaaaaaaaaaaaaa
-
-    aaaaaaaaaaaaaaaaaa
-
-    aaaaaaaaaaaaaaa
-
-    aaaaaaaaaaaaaaa
-
-'
+    m_LineSpacing: 1.4
+  m_Text: "\uB354\uBBF8\uD14D\uC2A4\uD2B8"
 --- !u!114 &4458083609222671531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,12 +417,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: -436
+    m_Left: -453
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 2
-  m_Spacing: 0
+  m_Spacing: 25
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
