@@ -15,11 +15,11 @@ C:/Users/CafeAlle/Documents/GitHub/3Less/Proj_Dream
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-13478
+6013
 Successfully changed project path to: C:/Users/CafeAlle/Documents/GitHub/3Less/Proj_Dream
 C:/Users/CafeAlle/Documents/GitHub/3Less/Proj_Dream
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 79.06 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 56.90 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -35,22 +35,22 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56072
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002373 seconds.
+Registered in 0.000773 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 51.54 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 52.56 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.343 seconds
+- Completed reload, in  0.806 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005193 seconds.
+Registered in 0.001935 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
@@ -59,405 +59,550 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.787 seconds
+- Completed reload, in  0.811 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1996 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 99.3 MB.
 System memory in use after: 98.0 MB.
 
 Unloading 92 unused Assets to reduce memory usage. Loaded Objects now: 2371.
-Total: 2.648000 ms (FindLiveObjects: 0.177600 ms CreateObjectMapping: 0.072600 ms MarkObjects: 1.483500 ms  DeleteObjects: 0.913300 ms)
+Total: 2.856200 ms (FindLiveObjects: 0.219900 ms CreateObjectMapping: 0.111400 ms MarkObjects: 1.561800 ms  DeleteObjects: 0.962100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Level_16.unity
-  artifactKey: Guid(6fbb859d17f20334e8cf7b808a41eebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level_16.unity using Guid(6fbb859d17f20334e8cf7b808a41eebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef758e6954c5a64d2b4b55c2d6ddab40') in 0.010521 seconds
-  Import took 0.014327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000256 seconds.
-  path: Assets/Scenes/Level_14.unity
-  artifactKey: Guid(b9346babae6b05549a8f04764f7f6e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level_14.unity using Guid(b9346babae6b05549a8f04764f7f6e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f671050cd6f0a2c7eb8a1bbf79bd44') in 0.001073 seconds
-  Import took 0.004019 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002276 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.855 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.07 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.0 MB.
-System memory in use after: 92.8 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2374.
-Total: 2.977800 ms (FindLiveObjects: 0.233400 ms CreateObjectMapping: 0.093100 ms MarkObjects: 1.432900 ms  DeleteObjects: 1.216900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002051 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.071 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.1 MB.
-System memory in use after: 92.9 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2377.
-Total: 4.742300 ms (FindLiveObjects: 0.364100 ms CreateObjectMapping: 0.172800 ms MarkObjects: 2.721900 ms  DeleteObjects: 1.481200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001778 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.732 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.1 MB.
-System memory in use after: 92.9 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2380.
-Total: 2.805100 ms (FindLiveObjects: 0.172800 ms CreateObjectMapping: 0.071800 ms MarkObjects: 1.500200 ms  DeleteObjects: 1.059400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 135.229824 seconds.
-  path: Assets/Prefab/Phone/Message
-  artifactKey: Guid(e4de551596a1f5c4bb2f96b0821196ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message using Guid(e4de551596a1f5c4bb2f96b0821196ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c026e8838145fc6517c0559a941ee0') in 0.004967 seconds
-  Import took 0.010089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.027736 seconds.
-  path: Assets/Prefab/Phone/Message/MessageListButtonParent.prefab
-  artifactKey: Guid(8d01fee2ffa96b548a034a65aa6a77da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/MessageListButtonParent.prefab using Guid(8d01fee2ffa96b548a034a65aa6a77da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd33633755b09a3a93c9fe83904c98bdc') in 0.057839 seconds
-  Import took 0.060965 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
   path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
   artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e30eb4323d012042a64be127b10e9fa1') in 0.031370 seconds
-  Import took 0.034999 seconds .
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e066f56815d934df4836d5acb775c06') in 0.067019 seconds
+  Import took 0.070445 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c32050603f0cb9751c62a0421e7cd87') in 0.007579 seconds
-  Import took 0.011582 seconds .
+  Time since last request: 0.000211 seconds.
+  path: Assets/Sprite/기억세계/ui_/Like.PNG
+  artifactKey: Guid(6de4f9f4d6c304c498a5a324b1c4dc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/Like.PNG using Guid(6de4f9f4d6c304c498a5a324b1c4dc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886add085fc85a2c7baeadf4b3d19cee') in 0.107211 seconds
+  Import took 0.110039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_문자 뒤로가기 버튼.png
+  artifactKey: Guid(a7f85c5610bfe7c479ad6675184f3849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_문자 뒤로가기 버튼.png using Guid(a7f85c5610bfe7c479ad6675184f3849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a82c6f257d9c768083f313649ed8612d') in 0.009057 seconds
+  Import took 0.011862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Sprite/기억세계/ui_/Like.PNG
+  artifactKey: Guid(6de4f9f4d6c304c498a5a324b1c4dc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/Like.PNG using Guid(6de4f9f4d6c304c498a5a324b1c4dc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '886add085fc85a2c7baeadf4b3d19cee') in 0.004308 seconds
+  Import took 0.007128 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000156 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a2f99a2a9103fe01a9de09140a2c54') in 0.007658 seconds
-  Import took 0.011527 seconds .
+  path: Assets/Sprite/기억세계/ui_/message.PNG
+  artifactKey: Guid(b7dd0ef789ff1684192c0c92514367b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/message.PNG using Guid(b7dd0ef789ff1684192c0c92514367b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '734eacb399d44a591b0bbb34d2d87470') in 0.011923 seconds
+  Import took 0.014687 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '795ea618676947bf8175059c8c076186') in 0.007356 seconds
-  Import took 0.011207 seconds .
+  Time since last request: 0.000130 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_문자말풍선하양.png
+  artifactKey: Guid(e88519694d3cd76469affb7e69d79ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_문자말풍선하양.png using Guid(e88519694d3cd76469affb7e69d79ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85609abc0819b8f6a871001a2f5e4734') in 0.006868 seconds
+  Import took 0.010025 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c3ab4b2185345e5ce1afeb65566b438') in 0.007100 seconds
-  Import took 0.011080 seconds .
+  Time since last request: 0.000183 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_말풍선.png
+  artifactKey: Guid(14a12cdcc5f370640bee8719c2d0bfe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_말풍선.png using Guid(14a12cdcc5f370640bee8719c2d0bfe0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4bba7ffcf2758ee1e0fffe242838cd7') in 0.007788 seconds
+  Import took 0.010858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_문자말풍선파랑.png
+  artifactKey: Guid(89ca0b3e884287445a7c80af3a1c7bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_문자말풍선파랑.png using Guid(89ca0b3e884287445a7c80af3a1c7bed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7fe69a49ee304775113059f168c8917') in 0.005518 seconds
+  Import took 0.008262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_투두리스트템플릿2.png
+  artifactKey: Guid(94a5415a94bf9694db95ee2b18c441d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_투두리스트템플릿2.png using Guid(94a5415a94bf9694db95ee2b18c441d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35921d179c122f33a76317711a9ace34') in 0.006881 seconds
+  Import took 0.009611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_선택지 5.png
+  artifactKey: Guid(8e95a8cc28f31954c8ac69f8e7377786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_선택지 5.png using Guid(8e95a8cc28f31954c8ac69f8e7377786) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab339093e53ebb6b66263858f5f29f8') in 0.007667 seconds
+  Import took 0.010606 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Sprite/기억세계/ui_/대사창.png
+  artifactKey: Guid(dad130c50960f8f4bbff46d15fbb42a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/대사창.png using Guid(dad130c50960f8f4bbff46d15fbb42a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39570b71ea1b7cc163a2404abee11800') in 0.014413 seconds
+  Import took 0.018260 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_설정버튼.png
+  artifactKey: Guid(a94cea02609582240965625b2c865d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_설정버튼.png using Guid(a94cea02609582240965625b2c865d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c71dfe968e793271d7c5fc57fc6d75d9') in 0.007817 seconds
+  Import took 0.011015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_선택지 2-4.png
+  artifactKey: Guid(6031acbbaad185c45b65a87c9b23a403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_선택지 2-4.png using Guid(6031acbbaad185c45b65a87c9b23a403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7600053188fdfbdeecb75c50359c56f') in 0.006151 seconds
+  Import took 0.009032 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_투두리스트템플릿1.png
+  artifactKey: Guid(d71adc2d3ce418644b2ff064890b08b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_투두리스트템플릿1.png using Guid(d71adc2d3ce418644b2ff064890b08b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7e8d096ec5797e837fdf3e9e399e82') in 0.006454 seconds
+  Import took 0.009238 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_투두리스트 아이콘.png
+  artifactKey: Guid(fa40df7a0d7657349b1f9f32e135ff7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_투두리스트 아이콘.png using Guid(fa40df7a0d7657349b1f9f32e135ff7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56f30b089761cda55a8c4b144725d7ad') in 0.007662 seconds
+  Import took 0.010414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/Sprite/기억세계/ui_/subMessage.PNG
+  artifactKey: Guid(9e5629993de033548a8822002eeffa9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/subMessage.PNG using Guid(9e5629993de033548a8822002eeffa9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e066163edaacd2524b8c4eff5f130545') in 0.006621 seconds
+  Import took 0.009500 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_문자 아이콘.png
+  artifactKey: Guid(2abc68b8f63b1074fa1525fdb4976c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_문자 아이콘.png using Guid(2abc68b8f63b1074fa1525fdb4976c3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '118f0c4ee055bc71b04dd21508d0f226') in 0.006794 seconds
+  Import took 0.009905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Sprite/기억세계/ui_/제출용파츠_휴대폰 배경.png
+  artifactKey: Guid(acb55df6abc0b584499c9d0241609a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/기억세계/ui_/제출용파츠_휴대폰 배경.png using Guid(acb55df6abc0b584499c9d0241609a8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14af6197e935797928e830e3ef86c796') in 0.005963 seconds
+  Import took 0.008852 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.688847 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a75e05fbfb03eff313e490450dc565ad') in 0.008011 seconds
+  Import took 0.011506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.221764 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a18d79c2b5c6e0441552a7705d2a35b5') in 0.008554 seconds
+  Import took 0.011873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.166018 seconds.
+  path: Assets/Prefab/Phone/Instagram/OneInstagramParent.prefab
+  artifactKey: Guid(58a8b7fd1f5c0e9448cda0366606f51e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Instagram/OneInstagramParent.prefab using Guid(58a8b7fd1f5c0e9448cda0366606f51e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1d9df006e5c413811f1a3ddd6da8bef') in 0.007802 seconds
+  Import took 0.014088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.373836 seconds.
+  path: Assets/Prefab/Phone/Twitter
+  artifactKey: Guid(daf2a9c3dd263874dbd9455e37ea84c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Twitter using Guid(daf2a9c3dd263874dbd9455e37ea84c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e279e1ad1334fe4579de241f6f3822ae') in 0.002353 seconds
+  Import took 0.005240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.035724 seconds.
+  path: Assets/Prefab/Phone/Twitter/OtherTwitterParent.prefab
+  artifactKey: Guid(c5a2a279a5b10884bbea75c87720942d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Twitter/OtherTwitterParent.prefab using Guid(c5a2a279a5b10884bbea75c87720942d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaf950732df98c352df504fec5d5e08f') in 0.007114 seconds
+  Import took 0.010175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.595091 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7806c1e6ff522ccf77506dfcca6d043b') in 0.008314 seconds
+  Import took 0.012056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.679846 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3136d0b82a31af81dfcd85e504ec6e43') in 0.008273 seconds
+  Import took 0.011720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.061974 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73b619cffe2885740896b1dd5922cdf7') in 0.009047 seconds
+  Import took 0.012727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.614377 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dca0d42e0066b41b3946a40fa17445b') in 0.008212 seconds
+  Import took 0.011759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.416721 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63ca317b672d0dc106a29f548a37258') in 0.009387 seconds
+  Import took 0.012977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.218833 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a00939fdabd1ac6fe7c6b4e75165a1') in 0.009899 seconds
+  Import took 0.013804 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001752 seconds.
+Registered in 0.001790 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.772 seconds
+- Completed reload, in  0.720 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.2 MB.
+System memory in use after: 96.0 MB.
+
+Unloading 86 unused Assets to reduce memory usage. Loaded Objects now: 2408.
+Total: 2.607000 ms (FindLiveObjects: 0.194300 ms CreateObjectMapping: 0.070700 ms MarkObjects: 1.402200 ms  DeleteObjects: 0.938700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002081 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.712 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.2 MB.
+System memory in use after: 96.0 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2411.
+Total: 2.834700 ms (FindLiveObjects: 0.208500 ms CreateObjectMapping: 0.077000 ms MarkObjects: 1.546300 ms  DeleteObjects: 1.002100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001810 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.715 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.2 MB.
+System memory in use after: 96.0 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2414.
+Total: 2.810300 ms (FindLiveObjects: 0.192000 ms CreateObjectMapping: 0.071600 ms MarkObjects: 1.488900 ms  DeleteObjects: 1.056600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001765 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.723 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.2 MB.
+System memory in use after: 96.0 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2417.
+Total: 2.783500 ms (FindLiveObjects: 0.193100 ms CreateObjectMapping: 0.072600 ms MarkObjects: 1.465700 ms  DeleteObjects: 1.051300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001729 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.710 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
-System memory in use after: 93.0 MB.
+System memory in use before: 97.3 MB.
+System memory in use after: 96.1 MB.
 
-Unloading 86 unused Assets to reduce memory usage. Loaded Objects now: 2385.
-Total: 2.854200 ms (FindLiveObjects: 0.201900 ms CreateObjectMapping: 0.080700 ms MarkObjects: 1.478800 ms  DeleteObjects: 1.091600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 48.948332 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ec09fd07127e7d330f1aaeafa50cdd2') in 0.054357 seconds
-  Import took 0.058875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.050880 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea80ef285d4afb9be52e845bcbdc7655') in 0.012625 seconds
-  Import took 0.016730 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 42.475049 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9278910cc0890c4c3a1ff9b2e5effedf') in 0.014448 seconds
-  Import took 0.018639 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.022392 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d24af94dbbac29d9bb132033334973d') in 0.008164 seconds
-  Import took 0.011647 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 73.769587 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a94788595e1b8a7579d50f7477ae69f') in 0.009734 seconds
-  Import took 0.015404 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.641389 seconds.
-  path: Assets/Prefab/Phone/Instagram
-  artifactKey: Guid(dfc330b72f48f6746b07e3dc735efe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Instagram using Guid(dfc330b72f48f6746b07e3dc735efe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e3ba3ebcf4384a0ae35cc1a9a3dc454') in 0.001464 seconds
-  Import took 0.005025 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001456 seconds.
-  path: Assets/Prefab/Phone/Instagram
-  artifactKey: Guid(dfc330b72f48f6746b07e3dc735efe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Instagram using Guid(dfc330b72f48f6746b07e3dc735efe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e3ba3ebcf4384a0ae35cc1a9a3dc454') in 0.001093 seconds
-  Import took 0.003928 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.021776 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ea36916bffb482d3160fb77c9948000') in 0.008004 seconds
-  Import took 0.011553 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.710405 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbf33d444a04953a3aefa947782c323a') in 0.009053 seconds
-  Import took 0.018035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.316540 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbc5d78c9260a26f098a139de7d30fab') in 0.009007 seconds
-  Import took 0.019818 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.697438 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa2d9465327afb1935780262984fcdac') in 0.008997 seconds
-  Import took 0.015413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.728713 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97bf43a45f5d72cf4092719057ffc8a4') in 0.008904 seconds
-  Import took 0.013765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.241174 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6cc3d621b497330a6ba5e1fb58ea772') in 0.009577 seconds
-  Import took 0.014627 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.387854 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '227b81c18feea73676edd466f6c18afe') in 0.008384 seconds
-  Import took 0.012631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.001870 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '434ff327f5cab00330e851792cdee207') in 0.009374 seconds
-  Import took 0.015574 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.901950 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08c4484f7e58f301a62dc12ec48c2dc7') in 0.008206 seconds
-  Import took 0.012483 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2420.
+Total: 3.113000 ms (FindLiveObjects: 0.201300 ms CreateObjectMapping: 0.074400 ms MarkObjects: 1.534000 ms  DeleteObjects: 1.302300 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001780 seconds.
+Registered in 0.001740 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.717 seconds
+- Completed reload, in  0.741 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.2 MB.
-System memory in use after: 93.0 MB.
+System memory in use before: 97.3 MB.
+System memory in use after: 96.1 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2388.
-Total: 2.850200 ms (FindLiveObjects: 0.203700 ms CreateObjectMapping: 0.068700 ms MarkObjects: 1.490100 ms  DeleteObjects: 1.086200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 97.560644 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1bc06250485b44c4b3e436f78192680') in 0.040343 seconds
-  Import took 0.046710 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.312473 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9880f3f2b98e4e52337a59de4451c1c1') in 0.013457 seconds
-  Import took 0.017477 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.225570 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8aedfe27caa5c84d43d81f5652b134') in 0.012699 seconds
-  Import took 0.020401 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.222844 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12ede80fdfe0179fced42ed57f5b0c18') in 0.011789 seconds
-  Import took 0.017183 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.422990 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26b730fbeb27476f797327c67f08fc6d') in 0.011656 seconds
-  Import took 0.015964 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.505711 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88be01957353195efd2fc84025bdba4') in 0.012837 seconds
-  Import took 0.017690 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.008026 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccaad17ef70e07ef440de0b0dde0e6f1') in 0.011980 seconds
-  Import took 0.015534 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.610684 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b4146e9cba510d8aa6da71dcf2119db') in 0.012454 seconds
-  Import took 0.017928 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2423.
+Total: 2.672900 ms (FindLiveObjects: 0.171700 ms CreateObjectMapping: 0.061400 ms MarkObjects: 1.369400 ms  DeleteObjects: 1.068900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001871 seconds.
+Registered in 0.001825 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.708 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.3 MB.
+System memory in use after: 96.1 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2426.
+Total: 3.005200 ms (FindLiveObjects: 0.193600 ms CreateObjectMapping: 0.075700 ms MarkObjects: 1.510800 ms  DeleteObjects: 1.224200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001750 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.702 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 96.1 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2429.
+Total: 2.750100 ms (FindLiveObjects: 0.188900 ms CreateObjectMapping: 0.070900 ms MarkObjects: 1.402700 ms  DeleteObjects: 1.086800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2057.190354 seconds.
+  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
+  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3241ca1abbe316e7f5130d6917c2fd69') in 0.055880 seconds
+  Import took 0.059705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Prefab/Phone/PhoneParent.prefab
+  artifactKey: Guid(178dd37319298fa4fbc7867e08f462ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Phone/PhoneParent.prefab using Guid(178dd37319298fa4fbc7867e08f462ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526ea81b6aee0aab79d8f3ff3c712c23') in 0.041150 seconds
+  Import took 0.046022 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001761 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.719 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
+
+Unloading 86 unused Assets to reduce memory usage. Loaded Objects now: 2432.
+Total: 2.802600 ms (FindLiveObjects: 0.170700 ms CreateObjectMapping: 0.061800 ms MarkObjects: 1.478900 ms  DeleteObjects: 1.090500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001751 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.722 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2435.
+Total: 2.846700 ms (FindLiveObjects: 0.202400 ms CreateObjectMapping: 0.073500 ms MarkObjects: 1.449200 ms  DeleteObjects: 1.120200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001820 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.705 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2438.
+Total: 3.187800 ms (FindLiveObjects: 0.234800 ms CreateObjectMapping: 0.079900 ms MarkObjects: 1.708300 ms  DeleteObjects: 1.163400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002217 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.774 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2441.
+Total: 3.363600 ms (FindLiveObjects: 0.203900 ms CreateObjectMapping: 0.074400 ms MarkObjects: 1.735800 ms  DeleteObjects: 1.348100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001831 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -468,649 +613,171 @@ Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
-System memory in use after: 93.1 MB.
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2391.
-Total: 3.000300 ms (FindLiveObjects: 0.277100 ms CreateObjectMapping: 0.142000 ms MarkObjects: 1.449100 ms  DeleteObjects: 1.130700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 91.120607 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '191a9efbd84e0b114dada3767d74e433') in 0.050721 seconds
-  Import took 0.055109 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.768564 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '296ad62b96dd3103e6412263d148b46b') in 0.012007 seconds
-  Import took 0.016616 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.514674 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd68ce76c2aa0efb8e9176a5ffd00ddb1') in 0.013102 seconds
-  Import took 0.018908 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.072030 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3587afaebf90c115b37e2649e88000') in 0.014781 seconds
-  Import took 0.021261 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.038337 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af05df43afaae88f13082514ef3e96d4') in 0.015765 seconds
-  Import took 0.022859 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.846820 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e50fb5b21537fc7fc1c42e967c5207e') in 0.018332 seconds
-  Import took 0.022087 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2444.
+Total: 2.888800 ms (FindLiveObjects: 0.186100 ms CreateObjectMapping: 0.074200 ms MarkObjects: 1.544500 ms  DeleteObjects: 1.083200 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001738 seconds.
+Registered in 0.001706 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.730 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
-System memory in use after: 93.1 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2394.
-Total: 3.028300 ms (FindLiveObjects: 0.193500 ms CreateObjectMapping: 0.086200 ms MarkObjects: 1.602300 ms  DeleteObjects: 1.145300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 75.134445 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c387a1a6c218b7f66ecd109d71b7603f') in 0.042861 seconds
-  Import took 0.049692 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.547388 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e26ca8284341d331f6452116865ce3') in 0.009154 seconds
-  Import took 0.012862 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.274304 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '631c7a83e2d804d1f465c8bbd9bdf27e') in 0.013230 seconds
-  Import took 0.019028 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.483137 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a0eb2d5e95c39abc9a3c0ef0936878') in 0.011831 seconds
-  Import took 0.023177 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001779 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.733 seconds
+- Completed reload, in  0.713 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
-System memory in use after: 93.1 MB.
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2397.
-Total: 2.826100 ms (FindLiveObjects: 0.200100 ms CreateObjectMapping: 0.079900 ms MarkObjects: 1.456600 ms  DeleteObjects: 1.088300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 71.714435 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87873f3fa368cb1ed6e2fe9a18015531') in 0.037702 seconds
-  Import took 0.044139 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.347932 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a00aa9af64a525ec6e30a098ad14da1') in 0.008297 seconds
-  Import took 0.012726 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.132422 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26999c33dd02700bf7a73541b336f74d') in 0.008382 seconds
-  Import took 0.011983 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.500408 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c73c24c635a225ea72dc4c9fa76e2e0') in 0.008299 seconds
-  Import took 0.011881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.786463 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9dec2dbe84ccc5142ddcdc67f5ccef0') in 0.007180 seconds
-  Import took 0.010559 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.628385 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7cadca38aa38f0aa4a176af57db3634') in 0.007999 seconds
-  Import took 0.012142 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.651680 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00fcf129c305d64189da624a6ee06375') in 0.008310 seconds
-  Import took 0.012694 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.097031 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d39af2d0adc81802d31bcbea62aa4e7') in 0.007480 seconds
-  Import took 0.012258 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000549 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d39af2d0adc81802d31bcbea62aa4e7') in 0.007391 seconds
-  Import took 0.010825 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.826787 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d231b024841796df35445683d1031e9') in 0.009073 seconds
-  Import took 0.014629 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.214887 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8929dc4499a6948decce7046caf3b90e') in 0.009406 seconds
-  Import took 0.016014 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.164295 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f864900706bbfb5105ee33267ea0ba74') in 0.008273 seconds
-  Import took 0.012148 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.816568 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bb0fad4a3c7942191f70cc6cc709067') in 0.008642 seconds
-  Import took 0.014724 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.769308 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b714538af614f365d3a417b94ac93ec1') in 0.008213 seconds
-  Import took 0.012452 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.820053 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '832b827f2b70faafb2c17a7dbb550b04') in 0.008734 seconds
-  Import took 0.012014 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.643141 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '104be604aa9abe05085cc40f1e667494') in 0.007546 seconds
-  Import took 0.011298 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 19.562052 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e471609f504effc309071eff847dec0') in 0.008074 seconds
-  Import took 0.011438 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.788095 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bfa56698d16bafe598ff59705b4a2e1') in 0.007666 seconds
-  Import took 0.011580 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.802323 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6acd1de498ec678b703244667885044a') in 0.009119 seconds
-  Import took 0.013180 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.626070 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '462a26393d5f6d7eebd535bc9311c1e2') in 0.002380 seconds
-  Import took 0.008526 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.188670 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f346839f91b2f54f5f71ec671bd91b6c') in 0.007298 seconds
-  Import took 0.011435 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.217749 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f145e15e4be227aa786e1479665eebbf') in 0.007242 seconds
-  Import took 0.010463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.969753 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f6020470d37aed58048baafabf997c7') in 0.002157 seconds
-  Import took 0.005054 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.012928 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f6020470d37aed58048baafabf997c7') in 0.003008 seconds
-  Import took 0.006229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.167434 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '842fa2d3a474935697a1ff978709b0fe') in 0.012112 seconds
-  Import took 0.015811 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.451203 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05298bb9f66015292aec5667f7c3b082') in 0.013174 seconds
-  Import took 0.017241 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2447.
+Total: 3.057300 ms (FindLiveObjects: 0.327900 ms CreateObjectMapping: 0.078800 ms MarkObjects: 1.505800 ms  DeleteObjects: 1.143800 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001990 seconds.
+Registered in 0.001752 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.796 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
-System memory in use after: 93.1 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2400.
-Total: 3.258400 ms (FindLiveObjects: 0.227000 ms CreateObjectMapping: 0.146800 ms MarkObjects: 1.680000 ms  DeleteObjects: 1.203100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 63.371095 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e98d0f05b76d12b47f89c7d6294db8ba') in 0.043765 seconds
-  Import took 0.047253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.258121 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b42288f482c994675969b84d5adb846') in 0.008128 seconds
-  Import took 0.011396 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001732 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.705 seconds
+- Completed reload, in  0.719 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
-System memory in use after: 93.1 MB.
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2403.
-Total: 3.233400 ms (FindLiveObjects: 0.279000 ms CreateObjectMapping: 0.120900 ms MarkObjects: 1.666300 ms  DeleteObjects: 1.165300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 32.399907 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab
-  artifactKey: Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatDialogParent.prefab using Guid(6c7e0005a46d2c449b323fa3e341f2e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '593151c21070aebe94de59e2961185ff') in 0.038759 seconds
-  Import took 0.042064 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.215915 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87809a48cb3175affd3508f0e86a4a3') in 0.008804 seconds
-  Import took 0.012470 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2450.
+Total: 3.300300 ms (FindLiveObjects: 0.247000 ms CreateObjectMapping: 0.094500 ms MarkObjects: 1.655800 ms  DeleteObjects: 1.301300 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001954 seconds.
+Registered in 0.001845 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.790 seconds
+- Completed reload, in  0.748 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.4 MB.
-System memory in use after: 93.1 MB.
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2406.
-Total: 3.573000 ms (FindLiveObjects: 0.216800 ms CreateObjectMapping: 0.124500 ms MarkObjects: 1.991700 ms  DeleteObjects: 1.238800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 49.728475 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e604c86174daabed9e0102b1ad6b178') in 0.048432 seconds
-  Import took 0.052464 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.044273 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac6a0222d746ae05a2db413c91993afd') in 0.012997 seconds
-  Import took 0.016796 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.015066 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88c930f7b62d75ff76b161c809b1c38') in 0.011112 seconds
-  Import took 0.015550 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.210826 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf21847153b99a0f59a763c32a0ffa08') in 0.014136 seconds
-  Import took 0.017991 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.839743 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba32eebaa7980745bb81c4b63a2c6ceb') in 0.012679 seconds
-  Import took 0.017732 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.807305 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbb9097f9e687ebd562ae1132265d6ca') in 0.012523 seconds
-  Import took 0.017027 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.086147 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba75e4e2113976cbfd35a3a0f32771c7') in 0.011743 seconds
-  Import took 0.015305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.418620 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab
-  artifactKey: Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatDialogParent.prefab using Guid(6d5a6ef57d3021748b1550fdefb753f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdff251457cdcf5312011eca9757bd4d') in 0.011800 seconds
-  Import took 0.018046 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2453.
+Total: 3.149800 ms (FindLiveObjects: 0.201100 ms CreateObjectMapping: 0.078300 ms MarkObjects: 1.600200 ms  DeleteObjects: 1.269000 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002022 seconds.
+Registered in 0.001752 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.714 seconds
+- Completed reload, in  0.718 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2456.
+Total: 2.803900 ms (FindLiveObjects: 0.193100 ms CreateObjectMapping: 0.073700 ms MarkObjects: 1.429800 ms  DeleteObjects: 1.106100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001867 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.701 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 97.5 MB.
+System memory in use after: 96.2 MB.
+
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2459.
+Total: 2.908600 ms (FindLiveObjects: 0.214100 ms CreateObjectMapping: 0.081900 ms MarkObjects: 1.462200 ms  DeleteObjects: 1.149500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001800 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.692 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.4 MB.
-System memory in use after: 93.2 MB.
+System memory in use before: 97.5 MB.
+System memory in use after: 96.2 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2409.
-Total: 3.264500 ms (FindLiveObjects: 0.214100 ms CreateObjectMapping: 0.107700 ms MarkObjects: 1.800600 ms  DeleteObjects: 1.140700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.815160 seconds.
-  path: Assets/Prefab/Phone/Message/PlayerChatParent.prefab
-  artifactKey: Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PlayerChatParent.prefab using Guid(1cac8b5f6f9a9394b80e447fa91d83d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12aa9e98e467ee16741ea1d8f57689e6') in 0.040951 seconds
-  Import took 0.044518 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2462.
+Total: 2.728200 ms (FindLiveObjects: 0.184500 ms CreateObjectMapping: 0.067300 ms MarkObjects: 1.386000 ms  DeleteObjects: 1.089700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002783 seconds.
+Registered in 0.001750 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.89 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.85 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.809 seconds
+- Completed reload, in  0.709 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.4 MB.
-System memory in use after: 93.2 MB.
+System memory in use before: 97.4 MB.
+System memory in use after: 96.2 MB.
 
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2412.
-Total: 3.216800 ms (FindLiveObjects: 0.313900 ms CreateObjectMapping: 0.147500 ms MarkObjects: 1.556300 ms  DeleteObjects: 1.198000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002167 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.723 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.4 MB.
-System memory in use after: 93.2 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2415.
-Total: 3.022300 ms (FindLiveObjects: 0.204700 ms CreateObjectMapping: 0.080300 ms MarkObjects: 1.642500 ms  DeleteObjects: 1.093200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002463 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.807 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.20 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1925 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.4 MB.
-System memory in use after: 93.2 MB.
-
-Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2418.
-Total: 3.524800 ms (FindLiveObjects: 0.264600 ms CreateObjectMapping: 0.138200 ms MarkObjects: 1.741400 ms  DeleteObjects: 1.378600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 585.756749 seconds.
-  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
-  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb1612569e337c094f69ceecbf908efe') in 0.058989 seconds
-  Import took 0.064848 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.149900 seconds.
-  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
-  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e19a4204de75f75043248262e58c2a') in 0.008791 seconds
-  Import took 0.012351 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.401354 seconds.
-  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
-  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2985d58989ddaf717ad1bd06413a35f4') in 0.008394 seconds
-  Import took 0.011598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.457966 seconds.
-  path: Assets/Prefab/Phone/Message/OtherChatParent.prefab
-  artifactKey: Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/OtherChatParent.prefab using Guid(fff755134ec46454c925a026ef87f3e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dba4dd55c0271716bcd94d45837b1d2') in 0.007834 seconds
-  Import took 0.011303 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.082393 seconds.
-  path: Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab
-  artifactKey: Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefab/Phone/Message/PhoneMessageDialogCanvas.prefab using Guid(c650e4b21f2c7b34bbbb4f4ace121eef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e04091b56d1c08e377d969ef38bde6') in 0.008995 seconds
-  Import took 0.013112 seconds .
+Unloading 83 unused Assets to reduce memory usage. Loaded Objects now: 2465.
+Total: 3.230700 ms (FindLiveObjects: 0.241400 ms CreateObjectMapping: 0.098400 ms MarkObjects: 1.711300 ms  DeleteObjects: 1.177900 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

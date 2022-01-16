@@ -36,6 +36,12 @@ public class PhoneManager : MonoBehaviour
     GameObject phoneCanvas;
     [SerializeField]
     PostProcessVolume blurVolume;
+    [SerializeField]
+    RectTransform homeButtonRect;
+    [SerializeField]
+    Transform homeButtonCanvas;
+    Vector2 homeButtonUpPos;
+    Vector2 homeButtonDownPos;
 
     bool isOpened;
     bool phoneMoving;
@@ -68,6 +74,8 @@ public class PhoneManager : MonoBehaviour
     {
         phoneDownPos = new Vector2(0, -486f);
         phoneUpPos = new Vector2(0, 555f);
+        homeButtonUpPos = homeButtonRect.anchoredPosition;
+        homeButtonDownPos = new Vector2(0, -437f);
         isTouching = false;
         positionDelta = 100000;
         isOpened = false;
@@ -142,6 +150,11 @@ public class PhoneManager : MonoBehaviour
         isTouching = true;
 
         blurVolume.weight = (phoneUpPos.y - yPos) / (phoneUpPos.y - phoneDownPos.y);
+
+        if(homeButtonRect.parent != rect)
+        {
+            homeButtonRect.SetParent(rect);
+        }
     }
 
     public void PointerUp(PointerEventData data, RectTransform rect)
@@ -179,11 +192,21 @@ public class PhoneManager : MonoBehaviour
         phoneInstagramManager.ShutDown();
     }
 
+    public void HomeButton()
+    {
+        phoneCanvas.SetActive(true);
+        phoneMessageManager.ShutDown();
+        phoneArchiveManager.ShutDown();
+        phoneTwitterManager.ShutDown();
+        phoneInstagramManager.ShutDown();
+    }
+
     IEnumerator PhoneMove(bool isOpening,RectTransform backGround)
     {
 
         if(phoneMoving == false)
         {
+            
             phoneMoving = true;
             Vector2 targetPos;
             float speed = 1000;
@@ -194,7 +217,6 @@ public class PhoneManager : MonoBehaviour
                 {
                     backGround.anchoredPosition =
                         new Vector2(0, backGround.anchoredPosition.y - Time.deltaTime * speed);
-
                     blurVolume.weight = (phoneUpPos.y -backGround.anchoredPosition.y) / (phoneUpPos.y - phoneDownPos.y);
                     yield return null;
                 }
@@ -202,6 +224,8 @@ public class PhoneManager : MonoBehaviour
                 {
                     blurVolume.weight = 1;
                     phoneOpenButton.SetActive(false);
+                    homeButtonRect.SetParent(homeButtonCanvas);
+                    homeButtonRect.anchoredPosition = homeButtonDownPos;
                     isOpened = true;
                 }
                 phoneMoving = false;
@@ -223,6 +247,8 @@ public class PhoneManager : MonoBehaviour
                     blurVolume.weight = 0;
                     isOpened = false;
                     backGround.anchoredPosition = phoneDownPos;
+                    homeButtonRect.SetParent(homeButtonCanvas);
+                    homeButtonRect.anchoredPosition = homeButtonUpPos;
                     PhoneFlush();
                 }
             }
