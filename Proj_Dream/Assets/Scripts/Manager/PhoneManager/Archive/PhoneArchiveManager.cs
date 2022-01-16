@@ -206,14 +206,14 @@ public class PhoneArchiveManager : MonoBehaviour
                     backLogInst = Instantiate(backLogPlayerPrefab, parentRect);
                     dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
                     backLogImage = backLogInst.transform.GetChild(0).GetComponent<Image>();
-                    if(backLog.isRouteTalk == true)
-                    {
-                        backLogImage.color = routeColor;
-                    }
-                    else
-                    {
-                        backLogImage.color = Color.blue;
-                    }
+                    //if(backLog.isRouteTalk == true)
+                    //{
+                    //    backLogImage.color = routeColor;
+                    //}
+                    //else
+                    //{
+                    //    backLogImage.color = Color.blue;
+                    //}
                     
                 }
                 else if(backLog.character == Character.System
@@ -223,17 +223,17 @@ public class PhoneArchiveManager : MonoBehaviour
                     dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
 
                     backLogImage = backLogInst.transform.GetChild(0).GetComponent<Image>();
-
-                    if (backLog.isRouteTalk == true)
-                    {
-                        dialogText.color = Color.black;
-                        backLogImage.color = routeColor;
-                    }
-                    else
-                    {
-                        dialogText.color = Color.white;
-                        backLogImage.color = Color.black;
-                    }
+                    dialogText.color = Color.grey;
+                    //if (backLog.isRouteTalk == true)
+                    //{
+                    //    dialogText.color = Color.black;
+                    //    backLogImage.color = routeColor;
+                    //}
+                    //else
+                    //{
+                    //    dialogText.color = Color.white;
+                    //    backLogImage.color = Color.black;
+                    //}
                 }
                 else
                 {
@@ -245,10 +245,10 @@ public class PhoneArchiveManager : MonoBehaviour
                     backLogImage = backLogInst.transform.GetChild(1).GetChild(0).GetComponent<Image>();
                     backLogImage.color =col;
 
-                    if (backLog.isRouteTalk == true)
-                    {
-                        backLogImage.color = routeColor;
-                    }
+                    //if (backLog.isRouteTalk == true)
+                    //{
+                    //    backLogImage.color = routeColor;
+                    //}
 
                 }
                 dialogText.text = backLog.dialog;

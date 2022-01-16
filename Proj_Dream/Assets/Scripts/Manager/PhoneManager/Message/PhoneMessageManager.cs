@@ -192,8 +192,8 @@ public class PhoneMessageManager : MonoBehaviour
             int dele = wrapperIndex;
             getOutButton1.onClick.AddListener(()=>CloseMessageCanvas(dele));
 
-            Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
-            getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
+            //Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
+            //getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
 
             Image canvasProfile = wrapper.messageCanvas.transform.GetChild(0).GetChild(3).GetComponent<Image>();
             canvasProfile.sprite = CharacterEnumToSprite.Changer(nowCharacter);
