@@ -66,18 +66,23 @@ public class PhoneMessageManager : MonoBehaviour
 
     public void SetMessage()
     {
+        
         if(messageBundle != null)
         {
             FlushMessage();
         }
+        saveData = gameManager.saveData;
         messageBundle = saveData.messageBundle;
         if(messageBundle == null)
         {
+            Debug.Log("지랄");
             saveData.messageBundle = new MessageBundle();
             messageBundle = saveData.messageBundle;
         }
+        Debug.Log(messageBundle.messageWrapperList.Count);
         for (int i = 0; i < messageBundle.messageWrapperList.Count; i++)
         {
+            Debug.Log("메시지 포문");
             MessageWrapper wrapper = messageBundle.messageWrapperList[i];
             wrapper.canvasOpenButton = Instantiate(messageListButtonPrefab, messageListButtonParent);
             Button listButton = wrapper.canvasOpenButton.transform.GetChild(1).GetComponent<Button>();
@@ -101,8 +106,8 @@ public class PhoneMessageManager : MonoBehaviour
             int dele = i;
             getOutButton1.onClick.AddListener(() => CloseMessageCanvas(dele));
 
-            Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
-            getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
+            //Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
+            //getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
 
             Image canvasProfile = wrapper.messageCanvas.transform.GetChild(0).GetChild(3).GetComponent<Image>();
             canvasProfile.sprite = CharacterEnumToSprite.Changer(wrapper.character);
@@ -134,7 +139,7 @@ public class PhoneMessageManager : MonoBehaviour
             for (int  j = 0; j < wrapper.messageList.Count; j++)
             {
                 OneMessage message = wrapper.messageList[j];
-                if(message.isPlayer == true)
+                if (message.isPlayer == true)
                 {
                     message.SetObject(SpawnPlayerChat(message, messageParent));
                 }
@@ -257,6 +262,7 @@ public class PhoneMessageManager : MonoBehaviour
 
     void FlushMessage()
     {
+        Debug.Log("플러시");
         for(int i = 0; i < messageBundle.messageWrapperList.Count; i++)
         {
             MessageWrapper wrapper = messageBundle.messageWrapperList[i];
@@ -326,7 +332,7 @@ public class PhoneMessageManager : MonoBehaviour
         nowOpenedCanvas = null;
         MessageWrapper nowWrapper = messageBundle.messageWrapperList[wrapperIndex];
         nowWrapper.CanvasClose();
-        wholeMessageCanvas.SetActive(false);
+        wholeMessageCanvas.SetActive(true);
     }
 
 

@@ -475,6 +475,15 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             ballonList[i].SetActive(false);
         }
+        if (keywordList.Contains(ActionKeyword.PlayerMove))
+        {
+            StartCoroutine(CameraFollowCoroutine());
+            PhoneManager.singleTon.PhoneMainCanvasActive(true);
+            memoryPlayer.isPlayPossible = true;
+            isDialogStopping = true;
+            isStopActionable = false;
+            TextFrameToggle(false);
+        }
         if (keywordList.Contains(ActionKeyword.HealthGauge))
         {
             gaugeManager.ChangeHealthGauge((int)parameterList[0]);
@@ -487,15 +496,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.MoneyGauge, nowCharacter, -1,(int)parameterList[0]);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
-        if (keywordList.Contains(ActionKeyword.PlayerMove))
-        {
-            StartCoroutine(CameraFollowCoroutine());
-            PhoneManager.singleTon.PhoneMainCanvasActive(true);
-            memoryPlayer.isPlayPossible = true;
-            isDialogStopping = true;
-            isStopActionable = false;
-            TextFrameToggle(false);
-        }
+
 
 
     }
@@ -549,7 +550,8 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected void SetDialogStopFalse()
     {
-        isDialogStopping = false;
+        if(memoryPlayer != null && memoryPlayer.isPlayPossible == false)
+            isDialogStopping = false;
     }
 
     protected void SetTalkingSystemFalse()

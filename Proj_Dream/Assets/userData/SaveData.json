@@ -1,24 +1,32 @@
 {
-    "savedScene": 16,
-    "dialogIndex": 3,
+    "savedScene": 8,
+    "dialogIndex": 4,
     "healthGauge": 9,
     "moneyGauge": 9,
-    "eighthMemoryLeftTime": 3,
+    "eighthMemoryLeftTime": 2,
     "messageBundle": {
         "messageWrapperList": []
     },
     "backLogBundle": {
         "backLogWrapperList": [
             {
-                "sceneName": 16,
+                "sceneName": 8,
                 "backLogList": [
                     {
-                        "character": 1,
+                        "character": 2,
                         "backLogType": 1,
                         "dialogIndex": 0,
                         "choosedRouteIndex": -1,
                         "isRouteTalk": false,
                         "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 3,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 10
                     },
                     {
                         "character": 1,
@@ -29,7 +37,7 @@
                         "change": 0
                     },
                     {
-                        "character": 1,
+                        "character": 9,
                         "backLogType": 1,
                         "dialogIndex": 2,
                         "choosedRouteIndex": -1,
@@ -37,9 +45,17 @@
                         "change": 0
                     },
                     {
-                        "character": 1,
+                        "character": 0,
                         "backLogType": 1,
                         "dialogIndex": 3,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 9,
+                        "backLogType": 1,
+                        "dialogIndex": 4,
                         "choosedRouteIndex": -1,
                         "isRouteTalk": false,
                         "change": 0

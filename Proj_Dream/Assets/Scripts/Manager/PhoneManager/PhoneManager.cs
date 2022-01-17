@@ -109,10 +109,18 @@ public class PhoneManager : MonoBehaviour
     {
         if(isOpened == true)
         {
+            if (homeButtonRect.parent != wholeCanvasBackGroundRect)
+            {
+                homeButtonRect.SetParent(wholeCanvasBackGroundRect);
+            }
             StartCoroutine(PhoneMove(false, wholeCanvasBackGroundRect));
         }
         else
         {
+            if (homeButtonRect.parent != wholeCanvasBackGroundRect)
+            {
+                homeButtonRect.SetParent(wholeCanvasBackGroundRect);
+            }
             phoneOpenButton.SetActive(false);
             StartCoroutine(PhoneMove(true, wholeCanvasBackGroundRect));
         }

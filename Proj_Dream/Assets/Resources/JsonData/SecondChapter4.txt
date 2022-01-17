@@ -164,9 +164,11 @@
             "actionKeyword": "routeEnd,healthGauge1",
             "dialog": "그래도 나 여기 종종 오니까 우연히 만날 수도 있겠다."
         },
+		{
+		  "actionKeyword": "playerMove"
+		},
         {
             "character": "NAR.",
-            "actionKeyword": "playerMove",
             "dialog": "핸드폰을 확인해보았지만 집에서 별다른 연락이 온 건 없었다."
         },
         {

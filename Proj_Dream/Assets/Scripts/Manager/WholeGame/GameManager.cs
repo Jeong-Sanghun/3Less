@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     {
         //StartCoroutine(SceneLoadCoroutine(scene));
         SceneManager.LoadScene((int)scene);
+        
         PhoneManager.singleTon.phoneInstagramManager.AddPost(scene);
         PhoneManager.singleTon.phoneTwitterManager.AddPost(scene);
         if ((int)scene >= 4)
@@ -86,6 +87,8 @@ public class GameManager : MonoBehaviour
     public void LoadSaveData()
     {
         saveData = jsonManager.LoadSaveData();
+        nowScene = saveData.savedScene;
+        PhoneManager.singleTon.PhoneSetup();
     }
 
     public void SaveSaveData()
@@ -104,7 +107,6 @@ public class GameManager : MonoBehaviour
     {
 
         StartLoadedGame();
-        PhoneManager.singleTon.PhoneSetup();
     }
 
     public void Quit()

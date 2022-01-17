@@ -164,7 +164,6 @@ public class Dialog
 
         for(int i = 0; i < keywordArray.Length; i++)
         {
-            Debug.Log(keywordArray[i]);
             ActionClass act = new ActionClass();
             actionList.Add(act);
             if (keywordArray[i].Contains("fishMove") || keywordArray[i].Contains("FishMove"))

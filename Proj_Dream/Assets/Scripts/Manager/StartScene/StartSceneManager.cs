@@ -44,7 +44,6 @@ public class StartSceneManager : MonoBehaviour
             return;
         }
         gameManager.StartLoadedGame();
-        PhoneManager.singleTon.PhoneSetup();
     }
     // Update is called once per frame
     void Update()

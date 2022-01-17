@@ -146,6 +146,12 @@
             "actionKeyword": "routeEnd",
             "dialog": "휴대폰에 '플래시몹 캠페인' 일정이 추가되었습니다."
         },
+		{
+		    "actionKeyword": "playerMove"
+		},
+		{
+		    "actionKeyword": "fadeIn"
+		},
         {
             "character": "NAR.",
             "dialog": "스트릿 댄스는 정말 재미있었다."
