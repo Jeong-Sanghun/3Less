@@ -1477,8 +1477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.6509, y: 90.914246}
-  m_SizeDelta: {x: 1048, y: 899.1736}
+  m_AnchoredPosition: {x: -2.4978, y: 89.585754}
+  m_SizeDelta: {x: 1044.6091, y: 901.8306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3136794338119301372
 CanvasRenderer:
@@ -2640,8 +2640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.6509, y: 90.914246}
-  m_SizeDelta: {x: 1048, y: 899.1736}
+  m_AnchoredPosition: {x: -2.4978, y: 89.585754}
+  m_SizeDelta: {x: 1044.6091, y: 901.8306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3136794338960802207
 CanvasRenderer:
@@ -4332,7 +4332,6 @@ MonoBehaviour:
   phoneInstagramManager: {fileID: 3136794337750486713}
   phoneDownPos: {x: 0, y: 0}
   phoneUpPos: {x: 0, y: 0}
-  phoneOpenButton: {fileID: 0}
   wholeCanvasBackGroundRect: {fileID: 9135094624803946237}
   handle: {fileID: 8615483639828631759}
   mainCanvas: {fileID: 9135094623801277695}
@@ -5519,7 +5518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
