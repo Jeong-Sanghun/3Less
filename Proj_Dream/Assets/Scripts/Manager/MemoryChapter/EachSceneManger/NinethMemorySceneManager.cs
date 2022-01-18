@@ -21,7 +21,7 @@ public class NinethMemorySceneManager : MemorySceneManagerParent
 
 
         playerObject.SetActive(true);
-        playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         motherObject.SetActive(true);
         motherObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         fatherObject.SetActive(true);
@@ -29,7 +29,7 @@ public class NinethMemorySceneManager : MemorySceneManagerParent
 
         nowScene = SceneName.MemoryHome3;
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+        StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
         StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.left / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
         StartCoroutine(moduleManager.MoveModule_Linear(fatherObject, fatherObject.transform.position + Vector3.left / 2, 1));
@@ -50,8 +50,16 @@ public class NinethMemorySceneManager : MemorySceneManagerParent
         {
             return;
         }
-        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
+    }
+
+
+    public override void TriggerEnter(string triggerName)
+    {
+        if (triggerName.Contains("Target1"))
         {
+            memoryPlayer.isPlayPossible = false;
+            memoryPlayer.ToggleToSprite();
+            PhoneManager.singleTon.PhoneMainCanvasActive(false);
             StartCoroutine(SceneEndCoroutine(SceneName.MemoryMyRoom));
         }
     }

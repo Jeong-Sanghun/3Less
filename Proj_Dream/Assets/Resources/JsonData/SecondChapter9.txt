@@ -37,8 +37,11 @@
             "dialog": "...다행이다."
         },
         {
-            "actionKeyword": "healthGauge-2,sceneEnd",
+            "actionKeyword": "healthGauge-2",
             "dialog": "그런데 마음 한 켠이 헛헛하다."
-        }
+        },
+		{
+		    "actionKeyword": "playerMove"
+		}
     ]
 }

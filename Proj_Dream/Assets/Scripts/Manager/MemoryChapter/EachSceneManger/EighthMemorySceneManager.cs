@@ -20,14 +20,14 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
 
 
         playerObject.SetActive(true);
-        playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
 
         nowScene = SceneName.MemoryBrightStreet1;
 
         if(saveData.eighthMemoryLeftTime == 2)
         {
             StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-            StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+            StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
             StartCoroutine(InvokerCoroutine(1f, NextDialog));
         }
         else
@@ -40,7 +40,7 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
             StartCoroutine(moduleManager.AfterRunCoroutine(1,moduleManager.FadeModule_Text(lessonEndText, 1, 0, 1)));
 
             StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f)));
-            StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f)));
+            StartCoroutine(moduleManager.AfterRunCoroutine(3, moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f)));
             StartCoroutine(InvokerCoroutine(4f, NextDialog));
         }
     }
@@ -78,11 +78,15 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
                 nowDialogIndex += (int)parameterList[0];
             }
         }
+    }
 
-
-
-        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
+    public override void TriggerEnter(string triggerName)
+    {
+        if (triggerName.Contains("Target1"))
         {
+            memoryPlayer.isPlayPossible = false;
+            memoryPlayer.ToggleToSprite();
+            PhoneManager.singleTon.PhoneMainCanvasActive(false);
             if (saveData.eighthMemoryLeftTime == 0)
             {
                 StartCoroutine(SceneEndCoroutine(SceneName.MemoryHome3));
@@ -92,7 +96,6 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
                 saveData.eighthMemoryLeftTime--;
                 StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet1));
             }
-            
         }
     }
 

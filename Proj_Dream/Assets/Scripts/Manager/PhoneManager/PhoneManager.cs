@@ -17,8 +17,6 @@ public class PhoneManager : MonoBehaviour
     public Vector2 phoneUpPos;
 
     [SerializeField]
-    GameObject phoneOpenButton;
-    [SerializeField]
     RectTransform wholeCanvasBackGroundRect;
     [SerializeField]
     EventTrigger handle;
@@ -100,10 +98,6 @@ public class PhoneManager : MonoBehaviour
         mainCanvas.SetActive(active);
     }
 
-    public void PhoneOpenButtonActive(bool active)
-    {
-        phoneOpenButton.SetActive(active);
-    }
 
     public void PhoneMainActiveButton()
     {
@@ -121,7 +115,6 @@ public class PhoneManager : MonoBehaviour
             {
                 homeButtonRect.SetParent(wholeCanvasBackGroundRect);
             }
-            phoneOpenButton.SetActive(false);
             StartCoroutine(PhoneMove(true, wholeCanvasBackGroundRect));
         }
     }
@@ -193,7 +186,6 @@ public class PhoneManager : MonoBehaviour
     {
         phoneCanvas.SetActive(true);
         wholeCanvasBackGroundRect.anchoredPosition = phoneUpPos;
-        phoneOpenButton.SetActive(true);
         phoneMessageManager.ShutDown();
         phoneArchiveManager.ShutDown();
         phoneTwitterManager.ShutDown();
@@ -231,7 +223,6 @@ public class PhoneManager : MonoBehaviour
                 if (isTouching == false)
                 {
                     blurVolume.weight = 1;
-                    phoneOpenButton.SetActive(false);
                     homeButtonRect.SetParent(homeButtonCanvas);
                     homeButtonRect.anchoredPosition = homeButtonDownPos;
                     isOpened = true;

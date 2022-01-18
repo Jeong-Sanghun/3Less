@@ -18,11 +18,11 @@ public class ThirteenthMemorySceneManager : PhoneDialogManager
 
 
         playerObject.SetActive(true);
-        playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         policeObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         nowScene = SceneName.MemoryBrightStreet2;
             StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-            StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+            StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
             StartCoroutine(InvokerCoroutine(1f, NextDialog));
 
     }
@@ -43,10 +43,6 @@ public class ThirteenthMemorySceneManager : PhoneDialogManager
         {
             PoliceMove();
         }
-        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
-        {
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet2));
-        }
         if (keywordList.Contains(ActionKeyword.FadeIn))
         {
             StartCoroutine(moduleManager.FadeModule_Image(thirteenthFadeImage, 0, 1, 1));
@@ -62,5 +58,16 @@ public class ThirteenthMemorySceneManager : PhoneDialogManager
         StartCoroutine(moduleManager.MoveModule_Linear(policeObject, policeObject.transform.position + Vector3.left / 2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(policeObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
+    }
+
+    public override void TriggerEnter(string triggerName)
+    {
+        if (triggerName.Contains("Target1"))
+        {
+            memoryPlayer.isPlayPossible = false;
+            memoryPlayer.ToggleToSprite();
+            PhoneManager.singleTon.PhoneMainCanvasActive(false);
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet2));
+        }
     }
 }

@@ -47,9 +47,10 @@ public class PhoneDialogManager : MemorySceneManagerParent
         if (keywordList.Contains(ActionKeyword.PhoneOn))
         {
             isPhoneOn = true;
-            for(int i = 0; i < wholeChatParentRect.childCount; i++)
+            int childCount = wholeChatParentRect.childCount;
+            for (int i = 0; i < childCount; i++)
             {
-                Destroy(wholeChatParentRect.GetChild(0).gameObject);
+                Destroy(wholeChatParentRect.GetChild(i).gameObject);
             }
             Debug.Log(nowCharacter);
             TextFrameToggle(false);

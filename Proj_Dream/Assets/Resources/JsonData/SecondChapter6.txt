@@ -92,8 +92,11 @@
         },
         {
             "character": "NAR.",
-            "actionKeyword": "healthGauge1,sceneEnd",
+            "actionKeyword": "healthGauge1",
             "dialog": "플래시몹 공연이 성황리에 끝났다."
-        }
+        },
+		{
+		    "actionKeyword": "playerMove"
+		}
     ]
 }

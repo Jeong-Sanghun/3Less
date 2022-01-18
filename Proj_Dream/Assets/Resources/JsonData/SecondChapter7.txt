@@ -179,7 +179,7 @@
         },
         {
             "character": "자취방 친구",
-            "actionKeyword": "sceneEnd",
+            "actionKeyword": "playerMove",
             "dialog": "딱 그거구만. 온실 속의 화초."
         }
     ]

@@ -110,7 +110,7 @@
             "dialog": "어영부영 시간을 보내다 보니 아침이 밝았다. 연휴가 끝나지 않았으니 오늘도 가족 없이 난 혼자다."
         },
         {
-            "actionKeyword": "conditionalSceneEnd",
+            "actionKeyword": "conditionalSceneEnd,playerMove",
             "dialog": "오늘도 레슨이 끝나고 어디론가 가볼까?"
         },
         {
@@ -121,7 +121,7 @@
             "dialog": "처음으로 나 혼자서 집밖에서 밤을 지내봤다."
         },
         {
-            "actionKeyword": "sceneEnd",
+            "actionKeyword": "playerMove",
             "dialog": "24시간 카페나, 패스트푸드점이나, 찜질방 같은 곳에 있어봤는데 불편하긴 했지만 견딜 만 했다."
         }
     ]

@@ -439,7 +439,6 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected virtual void OnActionKeyword()
     {
-        Debug.Log("스탑포인트");
         List<ActionClass> actionClassList = nowActionList;
         bool immediateStart = false;
         for (int i = 0; i < actionClassList.Count; i++)
@@ -447,7 +446,6 @@ public class MemorySceneManagerParent : MonoBehaviour
             ActionClass nowAction = actionClassList[i];
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
-            Debug.Log("액션리스트 카운트" + actionClassList.Count);
             if (keywordList.Contains(ActionKeyword.ImmediateDialog) || (keywordList.Contains(ActionKeyword.Route) ))//&& !keywordList.Contains(ActionKeyword.End)))
             {
                 immediateStart = true;
@@ -550,8 +548,16 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected void SetDialogStopFalse()
     {
-        if(memoryPlayer != null && memoryPlayer.isPlayPossible == false)
+        if (memoryPlayer == null)
+        {
             isDialogStopping = false;
+        }
+        else if(memoryPlayer.isPlayPossible == false)
+        {
+            isDialogStopping = false;
+        }
+        
+            
     }
 
     protected void SetTalkingSystemFalse()

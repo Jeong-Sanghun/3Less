@@ -147,9 +147,11 @@
             "dialog": "휴대폰에 '플래시몹 캠페인' 일정이 추가되었습니다."
         },
 		{
+		            "character": "주인공(A)",
 		    "actionKeyword": "playerMove"
 		},
 		{
+		            "character": "주인공(A)",
 		    "actionKeyword": "fadeIn"
 		},
         {

@@ -206,6 +206,7 @@
             "dialog": "벌써부터 발랑 까져가지고!"
         },
         {
+		"character": "NAR.",
             "actionKeyword": "routeSecond",
             "dialog": "나까지 화를 내기에는 상황이 너무 좋지 않다. 일단 꾹 참자."
         },

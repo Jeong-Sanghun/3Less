@@ -55,6 +55,7 @@ public class FifthMemorySceneManager : MemorySceneManagerParent
         if (keywordList.Contains(ActionKeyword.FadeIn))
         {
             StartCoroutine(moduleManager.FadeModule_Image(fifthFadeImage, 0, 1, 1));
+            StartCoroutine(InvokerCoroutine(1, NextDialog));
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {

@@ -60,16 +60,17 @@ public class GameManager : MonoBehaviour
         
         PhoneManager.singleTon.phoneInstagramManager.AddPost(scene);
         PhoneManager.singleTon.phoneTwitterManager.AddPost(scene);
-        if ((int)scene >= 4)
-        {
-            PhoneManager.singleTon.PhoneMainCanvasActive(true);
+        PhoneManager.singleTon.PhoneMainCanvasActive(false);
+        //if ((int)scene >= 4)
+        //{
+        //    PhoneManager.singleTon.PhoneMainCanvasActive(true);
 
-        }
-        else
-        {
-            PhoneManager.singleTon.PhoneMainCanvasActive(false);
-        }
-        
+        //}
+        //else
+        //{
+        //    PhoneManager.singleTon.PhoneMainCanvasActive(false);
+        //}
+
     }
 
     IEnumerator SceneLoadCoroutine(SceneName scene)

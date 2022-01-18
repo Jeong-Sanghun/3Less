@@ -18,13 +18,13 @@ public class SeventhMemorySceneManager : MemorySceneManagerParent
 
 
         playerObject.SetActive(true);
-        playerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         friendBoyObject.SetActive(true);
         friendBoyObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
 
         nowScene = SceneName.MemoryHallway1;
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
-        StartCoroutine(moduleManager.FadeModule_Sprite(playerObject, 0, 1, 1f));
+        StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
         StartCoroutine(moduleManager.MoveModule_Linear(friendBoyObject, friendBoyObject.transform.position + Vector3.left / 2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(friendBoyObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
@@ -46,8 +46,15 @@ public class SeventhMemorySceneManager : MemorySceneManagerParent
         {
             return;
         }
-        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
+    }
+
+    public override void TriggerEnter(string triggerName)
+    {
+        if (triggerName.Contains("Target1"))
         {
+            memoryPlayer.isPlayPossible = false;
+            memoryPlayer.ToggleToSprite();
+            PhoneManager.singleTon.PhoneMainCanvasActive(false);
             StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet1));
         }
     }
