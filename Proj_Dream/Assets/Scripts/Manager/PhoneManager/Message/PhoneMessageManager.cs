@@ -276,6 +276,8 @@ public class PhoneMessageManager : MonoBehaviour
         GameObject chatInst = Instantiate(playerMessagePrefab, parentRect);
         RectTransform chatRect = chatInst.GetComponent<RectTransform>();
         // chatRect.anchoredPosition = new Vector3(10000, 10000);
+        Text timeText = chatInst.transform.GetChild(0).GetComponent<Text>();
+        timeText.text = message.time;
         Text chatText = chatInst.transform.GetChild(1).GetChild(0).GetComponent<Text>();
         chatText.text = message.dialog;
         return chatInst.gameObject;
@@ -290,6 +292,8 @@ public class PhoneMessageManager : MonoBehaviour
         chatText.text = message.dialog;
         Text profileText = chatInst.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Text>();
         profileText.text = CharacterEnumToString.Changer(wrapper.character);
+        Text timeText = chatInst.transform.GetChild(1).GetChild(1).GetComponent<Text>();
+        timeText.text = message.time;
         Image profileImage = chatInst.transform.GetChild(0).GetComponent<Image>();
         profileImage.sprite = CharacterEnumToSprite.Changer(wrapper.character);
         return chatInst.gameObject;

@@ -4332,7 +4332,6 @@ MonoBehaviour:
   phoneInstagramManager: {fileID: 3136794337750486713}
   phoneDownPos: {x: 0, y: 0}
   phoneUpPos: {x: 0, y: 0}
-  phoneOpenButton: {fileID: 0}
   wholeCanvasBackGroundRect: {fileID: 9135094624803946237}
   handle: {fileID: 8615483639828631759}
   mainCanvas: {fileID: 9135094623801277695}
@@ -5519,7 +5518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

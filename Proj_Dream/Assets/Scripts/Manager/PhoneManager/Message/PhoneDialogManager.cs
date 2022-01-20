@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PhoneDialogManager : MemorySceneManagerParent
 {
@@ -132,6 +133,8 @@ public class PhoneDialogManager : MemorySceneManagerParent
        // chatRect.anchoredPosition = new Vector3(10000, 10000);
         Text chatText = chatInst.transform.GetChild(1).GetChild(0).GetComponent<Text>();
         chatText.text = nowDialog.dialog;
+        Text timeText = chatInst.transform.GetChild(0).GetComponent<Text>(); ;
+        timeText.text = DateTime.Now.ToString("hh : mm");
         LayoutRebuilder.ForceRebuildLayoutImmediate(wholeChatParentRect);
         yield return null;
         LayoutRebuilder.ForceRebuildLayoutImmediate(wholeChatParentRect);
@@ -147,7 +150,8 @@ public class PhoneDialogManager : MemorySceneManagerParent
         chatText.text = nowDialog.dialog;
         Text profileText = chatInst.transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Text>();
         profileText.text = nowChattingCharacter;
-
+        Text timeText = chatInst.transform.GetChild(1).GetChild(1).GetComponent<Text>();
+        timeText.text = DateTime.Now.ToString("hh : mm");
         Image profileImage = chatInst.transform.GetChild(0).GetComponent<Image>();
         profileImage.sprite = CharacterEnumToSprite.Changer(nowCharacter);
 
