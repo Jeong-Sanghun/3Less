@@ -3,41 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
 
-public class PlayController : MonoBehaviour
+public class PlayController : PlayerParent
 {
-    [SpineAnimation("stand")]
-    public string idleAnimation;
-
-    [SpineAnimation("walk")]
-    public string moveAnimation;
-
-    public KeyCode rightKey = KeyCode.D;
-    public KeyCode leftKey = KeyCode.A;
-
-    public float moveSpeed = 3;
-
-    SkeletonAnimation skeletonAnimation;
-
-    public float minPosX;
-    public float maxPosX;
-
-    float camYWorldPos;
-    [SerializeField]
-    Transform camTransform;
-
     [SerializeField]
     SceneManagerParent sceneManager;
 
 
-    public enum MoveType
-    {
-        Left,
-        Right,
-        RightMoveAuto,
-        idle,
-    }
-
-    public MoveType moveType;
 
     //public StageManager1 stageManager1;
 
@@ -48,19 +19,6 @@ public class PlayController : MonoBehaviour
     }
 
     public SceneType sceneType;
-
-    //각 레벨매니저에서 봐줌
-    public bool isPlayPossible;
-
-
-    public enum AnimState
-    {
-        Idle,
-        Walk,
-    }
-
-    public AnimState animState;
-
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +40,7 @@ public class PlayController : MonoBehaviour
         }
     }
 
-    public void SetAnim(AnimState _animState)
+    public override void SetAnim(AnimState _animState)
     {
         switch (_animState)
         {
@@ -96,7 +54,7 @@ public class PlayController : MonoBehaviour
         }
     }
 
-    public void ButtonDownLeft()
+    public override void ButtonDownLeft()
     {
         if (moveType != MoveType.RightMoveAuto)
         {
@@ -104,7 +62,7 @@ public class PlayController : MonoBehaviour
         }
     }
 
-    public void ButtonUpLeft()
+    public override void ButtonUpLeft()
     {
         if (moveType != MoveType.RightMoveAuto)
         {
@@ -113,7 +71,7 @@ public class PlayController : MonoBehaviour
 
     }
 
-    public void ButtonDownRight()
+    public override void ButtonDownRight()
     {
         if (moveType != MoveType.RightMoveAuto)
         {
@@ -122,7 +80,7 @@ public class PlayController : MonoBehaviour
 
     }
 
-    public void ButtonUpRight()
+    public override void ButtonUpRight()
     {
         if (moveType != MoveType.RightMoveAuto)
         {
@@ -131,13 +89,7 @@ public class PlayController : MonoBehaviour
 
     }
 
-    public void SetMoveTypeAuto()
-    {
-        isPlayPossible = true;
-        moveType = MoveType.RightMoveAuto;
-    }
-
-    public void SetCamYWorldPos(float y)
+    public override void SetCamYWorldPos(float y)
     {
         camYWorldPos = y;
     }
@@ -206,7 +158,7 @@ public class PlayController : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D col)
+    protected override void OnTriggerEnter2D(Collider2D col)
     {
         sceneManager.TriggerEnter(col.gameObject.name);
     }

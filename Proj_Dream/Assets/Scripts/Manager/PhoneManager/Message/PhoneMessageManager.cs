@@ -39,7 +39,7 @@ public class PhoneMessageManager : MonoBehaviour
         if(saveData == null)
         {
             phoneManager = PhoneManager.singleTon;
-            gameManager = GameManager.singleTon;
+            gameManager = GameManager.singleton;
             saveData = gameManager.saveData;
 
 

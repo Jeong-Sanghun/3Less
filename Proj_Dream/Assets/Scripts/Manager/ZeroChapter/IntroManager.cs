@@ -53,7 +53,7 @@ public class IntroManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameManager.singleTon;
+        gameManager = GameManager.singleton;
         dialogIndex = 0;
         nowCutSceneIndex = 0;
         isChanging = true;

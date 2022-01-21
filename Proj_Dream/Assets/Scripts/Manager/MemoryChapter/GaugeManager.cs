@@ -39,7 +39,7 @@ public class GaugeManager : MonoBehaviour
         healthImage = healthEffectImage.transform.GetChild(0).GetComponent<Image>();
         moneyEffectImage.sprite = effectSpriteArray[0];
         healthEffectImage.sprite = effectSpriteArray[0];
-        gameManager = GameManager.singleTon;
+        gameManager = GameManager.singleton;
         saveData = gameManager.saveData;
     }
 
@@ -151,7 +151,7 @@ public class GaugeManager : MonoBehaviour
         {
             isGameOver = true;
             Debug.Log("게이지다까짐");
-            GameManager.singleTon.GameOver();
+            GameManager.singleton.GameOver();
         }
 
     }

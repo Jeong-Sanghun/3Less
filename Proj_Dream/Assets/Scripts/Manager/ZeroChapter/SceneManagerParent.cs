@@ -32,14 +32,14 @@ public class SceneManagerParent : MonoBehaviour
     [SerializeField]
     protected List<GameObject> ballonList;
 
-    int nowDialogIndex;
+    protected int nowDialogIndex;
     protected bool isDialogStopping;
-    bool isStartOfWrapper;
+    protected bool isStartOfWrapper;
     protected bool isStopActionable;
 
     bool textFrameTransparent;
     bool isStarted;
-    bool dialogEnd;
+    protected bool dialogEnd;
     Character nowCharacter;
     protected List<ActionClass> nowActionList;
 
@@ -48,9 +48,11 @@ public class SceneManagerParent : MonoBehaviour
     protected bool cameraFollowing;
     protected float cameraRightBound;
 
+    protected SceneName nowScene;
+
     protected virtual void Start()
     {
-        gameManager = GameManager.singleTon;
+        gameManager = GameManager.singleton;
         jsonManager = new JsonManager();
         isStartOfWrapper = true;
         fadeInImage.gameObject.SetActive(true);
@@ -63,7 +65,7 @@ public class SceneManagerParent : MonoBehaviour
         {
             ballonList[i].SetActive(false);
         }
-        
+        nowDialogIndex = 0;
         dialogEnd = false;
         isStopActionable = false;
         isDialogStopping = true;
@@ -91,7 +93,7 @@ public class SceneManagerParent : MonoBehaviour
 
 
 
-    protected void NextDialog()
+    protected virtual void NextDialog()
     {
         if(dialogEnd == true)
         {
@@ -205,7 +207,7 @@ public class SceneManagerParent : MonoBehaviour
             ActionClass nowAction = actionClassList[i];
             List<ActionKeyword> keywordList = nowAction.actionList;
             List<float> parameterList = nowAction.parameterList;
-            if (keywordList.Contains(ActionKeyword.ImmediateDialog))
+            if (keywordList.Contains(ActionKeyword.ImmediateDialog) || keywordList.Contains(ActionKeyword.Route))
             {
                 immediateStart = true;
             }
@@ -286,7 +288,7 @@ public class SceneManagerParent : MonoBehaviour
         isDialogStopping = false;
     }
 
-    IEnumerator CheckStopPointTextEnd()
+    protected IEnumerator CheckStopPointTextEnd()
     {
         while (moduleManager.nowTexting)
         {
@@ -319,5 +321,13 @@ public class SceneManagerParent : MonoBehaviour
     public virtual void TriggerEnter(string triggerName)
     {
 
+    }
+
+
+    protected virtual void SaveUserData()
+    {
+        GameManager.singleton.saveData.savedScene = nowScene;
+        GameManager.singleton.saveData.dialogIndex = 0;
+        gameManager.SaveSaveData();
     }
 }

@@ -37,7 +37,8 @@ public class FirstSceneManager : SceneManagerParent
 
         camStartPos = cam.transform.position;
         camZoomPos = new Vector3(2.43f, -0.02f, -10);
-
+        nowScene = SceneName.Bright;
+        SaveUserData();
         StartCoroutine(InvokerCoroutine(1, NextDialog));
         maskSpriteArray = Resources.LoadAll<Sprite>("curtain/");
         cameraRightBound = 67.8f;

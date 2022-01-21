@@ -77,7 +77,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected virtual void Start()
     {
-        gameManager = GameManager.singleTon;
+        gameManager = GameManager.singleton;
         phoneArchiveManager = PhoneManager.singleTon.phoneArchiveManager;
         jsonManager = new JsonManager();
         isStartOfWrapper = true;

@@ -51,7 +51,7 @@ public class PhoneArchiveManager : MonoBehaviour
         JsonManager json = new JsonManager();
         phoneManager = PhoneManager.singleTon;
         archiveDataWrapper = json.ResourceDataLoad<ArchiveDataWrapper>("ArchiveData");
-        saveData = GameManager.singleTon.saveData;
+        saveData = GameManager.singleton.saveData;
         backLogBundle = null;
 
         EventTrigger.Entry entry1 = new EventTrigger.Entry();
@@ -92,7 +92,7 @@ public class PhoneArchiveManager : MonoBehaviour
 
             FlushArchive();
         }
-        backLogBundle = GameManager.singleTon.saveData.backLogBundle;
+        backLogBundle = GameManager.singleton.saveData.backLogBundle;
         if (backLogBundle == null)
         {
             saveData.backLogBundle = new BackLogBundle();

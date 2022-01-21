@@ -9,13 +9,15 @@ public enum SceneName
     MainMenu,Intro,Bright,Dark,MemoryHome1,MemoryRestaurant,
     MemoryDarkStreet1,MemoryRooftop1,MemorySchool1,MemoryHome2,
     MemoryHallway1, MemoryBrightStreet1,MemoryHome3,MemoryMyRoom,
-    MemorySchool2,MemoryHome4,MemoryBrightStreet2
+    MemorySchool2,MemoryHome4,MemoryBrightStreet2,
+
+    Chapter2Bright
 }
 
 public class GameManager : MonoBehaviour
 {
 
-    public static GameManager singleTon;
+    public static GameManager singleton;
     public SaveDataClass saveData;
 
     JsonManager jsonManager;
@@ -30,9 +32,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if(singleTon == null)
+        if(singleton == null)
         {
-            singleTon = this;
+            singleton = this;
             DontDestroyOnLoad(gameObject);
 
         }

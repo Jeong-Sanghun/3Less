@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneNameToNovel : MonoBehaviour
+public class SceneNameToNovel
 {
   
     public static string Changer(SceneName sceneName)

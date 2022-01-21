@@ -59,6 +59,8 @@ public class SecondSceneManager : SceneManagerParent
     protected override void Start()
     {
         base.Start();
+        nowScene = SceneName.Dark;
+        SaveUserData();
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("FirstChapter2");
         dialogBundle.SetCharacterEnum();
         cameraRightBound = 19.8f;

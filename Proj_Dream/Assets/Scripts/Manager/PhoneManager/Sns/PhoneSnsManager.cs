@@ -65,7 +65,7 @@ public class PhoneSnsManager : MonoBehaviour
         {
             FlushPost();
         }
-        SceneName nowScene = GameManager.singleTon.saveData.savedScene;
+        SceneName nowScene = GameManager.singleton.saveData.savedScene;
         for(int i = 0; i < postDataBundle.postList.Count; i++)
         {
             OnePost post = postDataBundle.postList[i];
