@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
@@ -19,6 +20,16 @@ public class GameManager : MonoBehaviour
 
     public static GameManager singleton;
     public SaveDataClass saveData;
+    [SerializeField]
+    ModuleManager moduleManager;
+    [SerializeField]
+    GameObject gameOverCanvas;
+    [SerializeField]
+    Image gameOverBackGround;
+    [SerializeField]
+    Image gameOverFish;
+    [SerializeField]
+    Text[] gameOverTextArray;
 
     JsonManager jsonManager;
 
@@ -29,6 +40,9 @@ public class GameManager : MonoBehaviour
     public SceneName nowScene;
     [HideInInspector]
     public bool isNewGame;
+    [HideInInspector]
+    public bool isGameOver;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -51,6 +65,7 @@ public class GameManager : MonoBehaviour
         nowScene = SceneName.MainMenu;
         jsonManager = new JsonManager();
         isNewGame = true;
+        isGameOver = false;
         wholeSceneNumber = SceneManager.sceneCountInBuildSettings;
 
     }
@@ -108,8 +123,25 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        isGameOver = true;
+        gameOverCanvas.SetActive(true);
+        for(int i = 0; i < gameOverTextArray.Length; i++)
+        {
+            gameOverTextArray[i].color = new Color(1, 1, 1, 0);
+            StartCoroutine(moduleManager.FadeModule_Text(gameOverTextArray[i], 0, 1, 1));
+        }
+        gameOverBackGround.color = new Color(0, 0, 0, 0);
+        StartCoroutine(moduleManager.FadeModule_Image(gameOverBackGround, 0, 0.93f, 1));
+        gameOverFish.color = new Color(1, 1, 1, 0);
+        StartCoroutine(moduleManager.FadeModule_Image(gameOverFish, 0, 1, 1));
 
+    }
+
+    public void GameOverBackButton()
+    {
+        
         StartLoadedGame();
+        gameOverCanvas.SetActive(false);
     }
 
     public void Quit()

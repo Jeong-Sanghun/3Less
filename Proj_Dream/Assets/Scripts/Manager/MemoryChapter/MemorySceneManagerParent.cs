@@ -152,7 +152,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected virtual void NextDialog()
     {
-        if (dialogEnd == true || isRouting == true)
+        if (dialogEnd == true || isRouting == true ||gaugeManager.isGameOver == true)
         {
             return;
         }
