@@ -72,10 +72,6 @@ public class Dialog
         {
             characterEnum = Character.System;
         }
-        else if (character.Contains("MES"))
-        {
-            characterEnum = Character.Message;
-        }
         else if (character.Contains("NAR"))
         {
             characterEnum = Character.Narator;
@@ -120,6 +116,10 @@ public class Dialog
         else if (character.Contains("¼±»ý´Ô"))
         {
             characterEnum = Character.Teacher;
+        }
+        else if (character.Contains("MES"))
+        {
+            characterEnum = Character.Message;
         }
 
 

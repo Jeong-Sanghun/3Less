@@ -2,7 +2,7 @@
     "savedScene": 5,
     "dialogIndex": 2,
     "healthGauge": 9,
-    "moneyGauge": 0,
+    "moneyGauge":9,
     "eighthMemoryLeftTime": 2,
     "messageBundle": {
         "messageWrapperList": []

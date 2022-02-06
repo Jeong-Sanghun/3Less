@@ -12,7 +12,9 @@ public enum SceneName
     MemoryHallway1, MemoryBrightStreet1,MemoryHome3,MemoryMyRoom,
     MemorySchool2,MemoryHome4,MemoryBrightStreet2,
 
-    Chapter2Bright
+    Chapter2Bright,Chapter2Dark,
+
+    MemoryFriendRoom1
 }
 
 public class GameManager : MonoBehaviour
@@ -68,6 +70,8 @@ public class GameManager : MonoBehaviour
         isGameOver = false;
         wholeSceneNumber = SceneManager.sceneCountInBuildSettings;
 
+        //µð¹ö±×
+        saveData = jsonManager.LoadSaveData();
     }
 
     public void LoadScene(SceneName scene)

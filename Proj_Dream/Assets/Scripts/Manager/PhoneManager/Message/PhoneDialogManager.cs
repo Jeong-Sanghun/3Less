@@ -42,12 +42,12 @@ public class PhoneDialogManager : MemorySceneManagerParent
 
     protected override void OverrideAction(List<ActionKeyword> keywordList, List<float> parameterList)
     {
-
         base.OverrideAction(keywordList, parameterList);
 
         if (keywordList.Contains(ActionKeyword.PhoneOn))
         {
             isPhoneOn = true;
+            
             int childCount = wholeChatParentRect.childCount;
             for (int i = 0; i < childCount; i++)
             {

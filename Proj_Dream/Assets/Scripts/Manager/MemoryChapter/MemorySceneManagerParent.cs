@@ -390,8 +390,10 @@ public class MemorySceneManagerParent : MonoBehaviour
             
         }
 
+        Debug.Log(nowCharacter);
         if (nowDialog.actionKeyword != null && nowCharacter != Character.System && nowCharacter != Character.Message)
         {
+            Debug.Log("무신일이여");
             isStartOfWrapper = true;
             StartCoroutine(CheckStopPointTextEnd());
             nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;

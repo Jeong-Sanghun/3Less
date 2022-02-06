@@ -79,7 +79,6 @@ public class PhoneMessageManager : MonoBehaviour
             saveData.messageBundle = new MessageBundle();
             messageBundle = saveData.messageBundle;
         }
-        Debug.Log(messageBundle.messageWrapperList.Count);
         for (int i = 0; i < messageBundle.messageWrapperList.Count; i++)
         {
             Debug.Log("메시지 포문");

@@ -170,6 +170,7 @@ public class PhoneArchiveManager : MonoBehaviour
 
         RectTransform backLogParentRect = backLogCanvasInst.transform
             .GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        Debug.Log("이거안나?");
         wrapper.ballonParent = backLogParentRect;
         for (int j = 0; j < wrapper.backLogList.Count; j++)
         {
@@ -321,7 +322,6 @@ public class PhoneArchiveManager : MonoBehaviour
                 backLog.SetMoneyGaugeLog(change);
                 break;
         }
-
         SpawnBackLog(backLog, wrapper.ballonParent.GetComponent<RectTransform>(), wrapper);
 
 
