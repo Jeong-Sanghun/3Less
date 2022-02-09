@@ -2215,6 +2215,7 @@ MonoBehaviour:
   moduleManager: {fileID: 1649541890}
   gameOverCanvas: {fileID: 1891737881}
   gameOverBackGround: {fileID: 0}
+  gameOverFish: {fileID: 0}
   gameOverTextArray:
   - {fileID: 912680071}
   - {fileID: 915977298}
@@ -2223,6 +2224,7 @@ MonoBehaviour:
   wholeSceneNumber: 0
   nowScene: 0
   isNewGame: 0
+  isGameOver: 0
 --- !u!4 &1120223867
 Transform:
   m_ObjectHideFlags: 0
@@ -4227,7 +4229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1891737882
 RectTransform:
   m_ObjectHideFlags: 0

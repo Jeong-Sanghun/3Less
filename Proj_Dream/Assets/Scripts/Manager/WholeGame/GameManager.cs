@@ -14,7 +14,7 @@ public enum SceneName
 
     Chapter2Bright,Chapter2Dark,
 
-    MemoryFriendRoom1
+    MemoryFriendRoom1,MemoryBrightStreet3,MemoryFriendRoom2
 }
 
 public class GameManager : MonoBehaviour

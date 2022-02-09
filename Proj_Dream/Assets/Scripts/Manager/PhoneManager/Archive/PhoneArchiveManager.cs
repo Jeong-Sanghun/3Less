@@ -255,6 +255,7 @@ public class PhoneArchiveManager : MonoBehaviour
                 dialogText.text = backLog.dialog;
                 break;
             case BackLogType.Route:
+                Debug.Log(dialogBundle.dialogList[backLog.dialogIndex].dialog);
                 backLog.dialog = dialogBundle.dialogList[backLog.dialogIndex].routeList[backLog.choosedRouteIndex];
                 backLogInst = Instantiate(backLogRoutePrefab, parentRect);
                 dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();

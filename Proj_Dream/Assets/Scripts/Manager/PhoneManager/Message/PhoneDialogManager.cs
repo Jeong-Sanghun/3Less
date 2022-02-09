@@ -58,7 +58,7 @@ public class PhoneDialogManager : MemorySceneManagerParent
             nowChattingCharacter = CharacterEnumToString.Changer(nowCharacter);
             phoneMessageManager.SetCharacter(nowCharacter);
             StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
-            StartCoroutine(moduleManager.MoveModuleRect_Linear(phoneParentRect.gameObject, new Vector3(0,-17,0), 0.5f));
+            StartCoroutine(moduleManager.MoveModuleRect_Linear(phoneParentRect.gameObject, new Vector3(0,0,0), 0.5f));
             isStopActionable = false;
             StartCoroutine(InvokerCoroutine(1,SetDialogStopFalse));
         }

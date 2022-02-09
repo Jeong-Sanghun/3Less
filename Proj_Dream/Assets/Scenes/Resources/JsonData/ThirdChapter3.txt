@@ -124,7 +124,7 @@
         },
         {
             "character": "NAR.",
-            "actionKeyword": "healthGauge+1,moneyGauge-1,sceneEnd,routeEnd",
+            "actionKeyword": "healthGauge+1,moneyGauge-1,routeEnd",
             "dialog": "간섭하는 사람은 없지만 별로 속이 시원하진 않았다."
         },
         {
@@ -136,7 +136,6 @@
             "dialog": "요새 바빠? 동아리에서 자주 못봐서 보고싶어~"
         },
         {
-            "character": "학생(MES)",
             "dialog": "일단 우리 다다음주 실기 중간평가 때까는지 잠깐 쉬고, 그 뒤로 다시 모일거야."
         },
         {
@@ -173,13 +172,9 @@
             "dialog": "몰라, 당분간은 생각하지 말자. 내 마음대로 할거야. "
         },
         {
+            "actionKeyword": "playerMove",
             "dialog": "사이다 하나로 눈칫밥 안먹어도 될 때 아무거나 다 먹어야지."
-        },
-        {
-            "dialog": "평소라면 학교에 갔을시간에 식사를 하러 거리로 나왔다. "
-        },
-        {
-            "dialog": "허기와 해방감이 느껴진다. "
         }
+
     ]
 }
