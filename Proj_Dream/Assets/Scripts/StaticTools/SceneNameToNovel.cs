@@ -43,6 +43,13 @@ public class SceneNameToNovel
                 return "ThirdChapter3";
             case SceneName.MemoryBrightStreet3:
                 return "ThirdChapter4";
+            case SceneName.MemoryFriendRoom2:
+                return "ThirdChapter5";
+            case SceneName.MemoryBrightStreet4:
+                return "ThirdChapter6";
+            case SceneName.MemoryFriendRoom3:
+                return "ThirdChapter7";
+
             default:
                 return "SecondChapter1";
 

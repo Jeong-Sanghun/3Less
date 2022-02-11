@@ -32,6 +32,8 @@ public class CharacterEnumToString
                 return "°æÂû";
             case Character.Teacher:
                 return "¼±»ı´Ô";
+            case Character.StoreBoss:
+                return "ÆíÀÇÁ¡ »çÀå´Ô";
             default:
                 return "";
 

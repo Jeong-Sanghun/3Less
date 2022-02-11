@@ -119,6 +119,7 @@ public class PhoneArchiveManager : MonoBehaviour
         }
         if (archive == null)
         {
+            Debug.Log("พร");
             return;
         }
         GameObject archiveInst = Instantiate(oneArchivePrefab, oneArchiveParent);
@@ -288,17 +289,20 @@ public class PhoneArchiveManager : MonoBehaviour
     public void AddTalkBackLog(SceneName scene, BackLogType backLogType, Character character, int dialogIndex,int change = -1,int routeIndex = -1,bool isRouteTalk = false)
     {
         BackLogWrapper wrapper = null;
+        
         for (int i = 0; i < backLogBundle.backLogWrapperList.Count; i++)
         {
             if(scene == backLogBundle.backLogWrapperList[i].sceneName)
             {
                 wrapper = backLogBundle.backLogWrapperList[i];
+               
                 break;
             }
         }
 
         if (wrapper == null)
         {
+            Debug.Log(scene);
             wrapper = new BackLogWrapper();
             wrapper.sceneName = scene;
             backLogBundle.backLogWrapperList.Add(wrapper);

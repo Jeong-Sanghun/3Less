@@ -11,6 +11,7 @@ public class ThirteenthMemorySceneManager : PhoneDialogManager
     Image thirteenthFadeImage;
     protected override void Start()
     {
+
         base.Start();
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("SecondChapter13");
         dialogBundle.SetCharacterEnum();

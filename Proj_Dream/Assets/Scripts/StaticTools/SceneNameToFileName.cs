@@ -61,7 +61,13 @@ public class SceneNameToFileName
                 return "广芭府";
             case SceneName.MemoryBrightStreet1:
             case SceneName.MemoryBrightStreet2:
+            case SceneName.MemoryBrightStreet3:
+            case SceneName.MemoryBrightStreet4:
                 return "历翅芭府";
+            case SceneName.MemoryFriendRoom1:
+            case SceneName.MemoryFriendRoom2:
+            case SceneName.MemoryFriendRoom3:
+                return "磊秒规";
             default:
                 return "广芭府";
 

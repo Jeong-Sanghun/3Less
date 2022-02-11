@@ -87,6 +87,54 @@
         {
             "sceneNameEnum": "21",
             "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "22",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "23",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "24",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "25",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "26",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "27",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "28",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "29",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "30",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "31",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "32",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "33",
+            "dialog": "거리야"
         }
     ]
 }
