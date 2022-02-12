@@ -42,6 +42,7 @@ public class SceneNameToFileName
             case SceneName.Dark:
                 return "어두운 세계";
             case SceneName.MemoryHallway1:
+            case SceneName.MemoryHallway2:
                 return "복도";
             case SceneName.MemoryHome1:
             case SceneName.MemoryHome2:
@@ -67,7 +68,10 @@ public class SceneNameToFileName
             case SceneName.MemoryFriendRoom1:
             case SceneName.MemoryFriendRoom2:
             case SceneName.MemoryFriendRoom3:
+            case SceneName.MemoryFriendRoom4:
                 return "자취방";
+            case SceneName.MemoryStore1:
+                return "편의점";
             default:
                 return "밤거리";
 

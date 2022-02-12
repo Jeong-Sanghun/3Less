@@ -291,10 +291,12 @@ public class MemorySceneManagerParent : MonoBehaviour
                     case Character.FriendBoy:
                     case Character.Police:
                     case Character.StoreBoss:
+                    case Character.Friend1:
                         TextFrameToggle(true);
                         ballonList[1].SetActive(true);
                         break;
                     case Character.Father:
+                    case Character.Friend2:
                         TextFrameToggle(true);
                         ballonList[2].SetActive(true);
                         break;
@@ -495,6 +497,11 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             gaugeManager.ChangeMoneyGauge((int)parameterList[0]);
             phoneArchiveManager.AddTalkBackLog(nowScene, BackLogType.MoneyGauge, nowCharacter, -1,(int)parameterList[0]);
+            StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
+        }
+        if (keywordList.Contains(ActionKeyword.SoundMessageAlarm))
+        {
+
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
 

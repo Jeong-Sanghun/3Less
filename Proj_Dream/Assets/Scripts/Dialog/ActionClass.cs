@@ -17,6 +17,7 @@ public enum ActionKeyword
     ConditionalSceneEnd,
     Touch, Drag,
     PhoneOn,PhoneOff,
+    SoundMessageAlarm,
     Scene
 }
 

@@ -14,6 +14,8 @@ public enum Character
     Brother,
     FriendGirl,
     FriendBoy,
+    Friend1,
+    Friend2,
     StoreBoss,
     RooftopFriend,
     Police,
@@ -96,6 +98,14 @@ public class Dialog
         else if (character.Contains("悼积"))
         {
             characterEnum = Character.Brother;
+        }
+        else if (character.Contains("模备 1"))
+        {
+            characterEnum = Character.Friend1;
+        }
+        else if (character.Contains("模备 2"))
+        {
+            characterEnum = Character.Friend2;
         }
         else if (character.Contains("模备"))
         {
@@ -197,6 +207,12 @@ public class Dialog
                 act.actionList.Add(ActionKeyword.PhoneOff);
                 act.parameterList.Add(-1);
             }
+            if (keywordArray[i].Contains("soundMessageAlarm") || keywordArray[i].Contains("SoundMessageAlarm"))
+            {
+                act.actionList.Add(ActionKeyword.SoundMessageAlarm);
+                act.parameterList.Add(-1);
+            }
+
 
 
             if (keywordArray[i].Contains("stop") || keywordArray[i].Contains("Stop"))
