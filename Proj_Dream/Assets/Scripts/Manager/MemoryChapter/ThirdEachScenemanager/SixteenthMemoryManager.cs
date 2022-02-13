@@ -31,7 +31,7 @@ public class SixteenthMemoryManager : PhoneDialogManager
             memoryPlayer.isPlayPossible = false;
             memoryPlayer.ToggleToSprite();
             PhoneManager.singleTon.PhoneMainCanvasActive(false);
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryBrightStreet4));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStore1));
         }
     }
 }

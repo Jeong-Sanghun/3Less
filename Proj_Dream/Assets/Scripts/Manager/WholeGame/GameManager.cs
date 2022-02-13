@@ -14,8 +14,9 @@ public enum SceneName
 
     Chapter2Bright,Chapter2Dark,
 
-    MemoryFriendRoom1,MemoryBrightStreet3,MemoryFriendRoom2,MemoryBrightStreet4,MemoryFriendRoom3,
-    MemorySchool3,MemoryHallway2,MemoryStore1,MemoryFriendRoom4
+    MemoryFriendRoom1,MemoryBrightStreet3,MemoryFriendRoom2,MemoryStore1,MemoryFriendRoom3,
+    MemorySchool3,MemoryHallway2,MemoryStore2, MemoryFriendRoom4, MemoryStore3, MemoryFriendRoom5, MemoryFriendRoom6,
+    MemorySchool4        
 
 }
 

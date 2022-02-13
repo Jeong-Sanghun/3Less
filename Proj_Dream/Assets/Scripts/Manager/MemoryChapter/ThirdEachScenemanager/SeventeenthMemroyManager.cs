@@ -19,10 +19,10 @@ public class SeventeenthMemroyManager : PhoneDialogManager
         playerObject.SetActive(true);
         memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         bossObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-        nowScene = SceneName.MemoryBrightStreet4;
-        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
+        nowScene = SceneName.MemoryStore1;
+        StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.left / 2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
-        StartCoroutine(moduleManager.MoveModule_Linear(bossObject, bossObject.transform.position + Vector3.left / 2f, 1f));
+        StartCoroutine(moduleManager.MoveModule_Linear(bossObject, bossObject.transform.position + Vector3.right / 2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(bossObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
 
