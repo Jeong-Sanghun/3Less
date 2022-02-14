@@ -24,7 +24,7 @@ public class CharacterEnumToColor
             case Character.Father:
                 ColorUtility.TryParseHtmlString("#C3BDC9", out color);
                 break;
-            case Character.FriendBoy:
+            case Character.RoomFriend:
                 ColorUtility.TryParseHtmlString("#CCBDB4", out color);
                 break;
             case Character.FriendGirl:

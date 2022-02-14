@@ -288,7 +288,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                     case Character.RooftopFriend:
                     case Character.FriendGirl:
                     case Character.Mother:
-                    case Character.FriendBoy:
+                    case Character.RoomFriend:
                     case Character.Police:
                     case Character.StoreBoss:
                     case Character.Friend1:

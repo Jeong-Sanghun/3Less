@@ -13,13 +13,16 @@ public enum Character
     Father,
     Brother,
     FriendGirl,
-    FriendBoy,
+    RoomFriend,
     Friend1,
     Friend2,
     StoreBoss,
     RooftopFriend,
     Police,
     Teacher,
+    DrunkenPerson1,
+    DrunkenPerson2,
+    YoungMan,
     NotAllocated
 }
 
@@ -109,7 +112,7 @@ public class Dialog
         }
         else if (character.Contains("Ä£±¸"))
         {
-            characterEnum = Character.FriendBoy;
+            characterEnum = Character.RoomFriend;
         }
         else if (character.Contains("B"))
         {

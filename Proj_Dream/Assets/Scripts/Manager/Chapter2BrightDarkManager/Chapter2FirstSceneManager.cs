@@ -89,11 +89,7 @@ public class Chapter2FirstSceneManager : Chapter2SceneManager
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 0, 1, 1));
         yield return new WaitForSeconds(1f);
 
-        gameManager.LoadScene(SceneName.Dark);
-
-
-
-
+        gameManager.LoadScene(SceneName.Chapter2Dark);
     }
 
 }

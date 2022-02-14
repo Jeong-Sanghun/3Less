@@ -14,8 +14,8 @@ public class CharacterEnumToString
                 return "아빠";
             case Character.Fish:
                 return "금붕어";
-            case Character.FriendBoy:
-                return "남사친";
+            case Character.RoomFriend:
+                return "자취방 친구";
             case Character.FriendGirl:
                 return "여사친";
             case Character.Message:

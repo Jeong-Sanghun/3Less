@@ -14,7 +14,7 @@ public class TwentyFirstMemoryManager : MemorySceneManagerParent
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("ThirdChapter10");
         dialogBundle.SetCharacterEnum();
 
-        nowScene = SceneName.MemoryStore1;
+        nowScene = SceneName.MemoryStore2;
         playerObject.SetActive(true);
         memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         bossObject.SetActive(true);
