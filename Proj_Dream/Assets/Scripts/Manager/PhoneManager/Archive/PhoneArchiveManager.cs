@@ -142,16 +142,16 @@ public class PhoneArchiveManager : MonoBehaviour
         Button backLogOpenButton = archiveInst.transform.GetChild(0).GetComponent<Button>();
         backLogOpenButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, true));
 
-        Button backLogGetOutButton = backLogCanvasInst.transform.GetChild(0).GetChild(1).GetComponent<Button>();
+        Button backLogGetOutButton = backLogCanvasInst.transform.GetChild(1).GetChild(1).GetComponent<Button>();
         backLogGetOutButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, false));
 
-        Image backLogBackgroundImage = backLogCanvasInst.transform.GetChild(0).GetChild(2).GetComponent<Image>();
+        Image backLogBackgroundImage = backLogCanvasInst.transform.GetChild(1).GetChild(2).GetComponent<Image>();
         backLogBackgroundImage.sprite = SceneNameToFileName.GetBackgroundImage(archive.sceneNameEnum);
 
 
-        RectTransform backGround = backLogCanvasInst.transform.GetChild(0).GetComponent<RectTransform>();
+        RectTransform backGround = backLogCanvasInst.transform.GetChild(1).GetComponent<RectTransform>();
 
-        EventTrigger swipeEvent = backLogCanvasInst.transform.GetChild(0).GetChild(0).GetComponent<EventTrigger>();
+        EventTrigger swipeEvent = backLogCanvasInst.transform.GetChild(1).GetChild(0).GetComponent<EventTrigger>();
 
         EventTrigger.Entry entry1 = new EventTrigger.Entry();
         entry1.eventID = EventTriggerType.PointerUp;
@@ -170,7 +170,7 @@ public class PhoneArchiveManager : MonoBehaviour
         //swipeEvent.triggers.Add(entry3);
 
         RectTransform backLogParentRect = backLogCanvasInst.transform
-            .GetChild(0).GetChild(2).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+            .GetChild(1).GetChild(2).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         Debug.Log("이거안나?");
         wrapper.ballonParent = backLogParentRect;
         for (int j = 0; j < wrapper.backLogList.Count; j++)

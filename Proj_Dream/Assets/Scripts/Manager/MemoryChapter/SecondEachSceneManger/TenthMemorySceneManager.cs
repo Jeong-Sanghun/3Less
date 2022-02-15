@@ -8,6 +8,8 @@ public class TenthMemorySceneManager : MemorySceneManagerParent
 
     [SerializeField]
     Image fourthFadeImage;
+    [SerializeField]
+    SpriteRenderer fatherRenderer;
 
     protected override void Start()
     {
@@ -16,7 +18,7 @@ public class TenthMemorySceneManager : MemorySceneManagerParent
         dialogBundle.SetCharacterEnum();
 
         nowScene = SceneName.MemoryMyRoom;
-
+        fatherRenderer.color = new Color(1, 1, 1, 0);
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
 
     }
@@ -37,6 +39,12 @@ public class TenthMemorySceneManager : MemorySceneManagerParent
             fourthFadeImage.gameObject.SetActive(true);
             fourthFadeImage.color = new Color(0, 0, 0, 0);
             StartCoroutine(moduleManager.FadeModule_Image(fourthFadeImage, 0, 1, 1));
+        }
+        if (keywordList.Contains(ActionKeyword.FishMove))
+        {
+            StartCoroutine(moduleManager.FadeModule_Sprite(fatherRenderer.gameObject, 0, 1, 1));
+            StartCoroutine(InvokerCoroutine(1f, NextDialog));
+
         }
         if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
         {

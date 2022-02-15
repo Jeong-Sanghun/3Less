@@ -215,6 +215,11 @@ public class Dialog
                 act.actionList.Add(ActionKeyword.SoundMessageAlarm);
                 act.parameterList.Add(-1);
             }
+            if (keywordArray[i].Contains("doorSound") || keywordArray[i].Contains("DoorSound"))
+            {
+                act.actionList.Add(ActionKeyword.DoorSound);
+                act.parameterList.Add(-1);
+            }
 
 
 

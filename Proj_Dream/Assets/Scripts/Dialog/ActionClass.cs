@@ -18,6 +18,7 @@ public enum ActionKeyword
     Touch, Drag,
     PhoneOn,PhoneOff,
     SoundMessageAlarm,
+    DoorSound,
     Scene
 }
 

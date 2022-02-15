@@ -135,6 +135,30 @@
         {
             "sceneNameEnum": "33",
             "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "34",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "35",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "36",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "37",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "38",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "39",
+            "dialog": "거리야"
         }
     ]
 }

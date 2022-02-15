@@ -16,10 +16,12 @@
         },
         {
             "character": "NAR.",
+									"actionKeyword": "fishMove",
             "dialog": "살짝 문을 열고 틈 사이로 보니 아빠가 서 있다. 불콰한 얼굴과 술 냄새. 한 잔 하신 것 같다."
         },
         {
             "character": "아버지",
+
             "dialog": "잘 준비 하고 있었냐? 잠깐 들어가서 얘기 좀 하자."
         },
         {

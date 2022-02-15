@@ -291,15 +291,16 @@ public class MemorySceneManagerParent : MonoBehaviour
                     case Character.RoomFriend:
                     case Character.Police:
                     case Character.StoreBoss:
-                    case Character.Friend1:
+                    case Character.Teacher:
                         TextFrameToggle(true);
                         ballonList[1].SetActive(true);
                         break;
                     case Character.Father:
-                    case Character.Friend2:
+                    case Character.Friend1:
                         TextFrameToggle(true);
                         ballonList[2].SetActive(true);
                         break;
+                    case Character.Friend2:
                     case Character.Brother:
                         TextFrameToggle(true);
                         ballonList[3].SetActive(true);
@@ -500,6 +501,11 @@ public class MemorySceneManagerParent : MonoBehaviour
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
         if (keywordList.Contains(ActionKeyword.SoundMessageAlarm))
+        {
+
+            StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
+        }
+        if (keywordList.Contains(ActionKeyword.DoorSound))
         {
 
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
