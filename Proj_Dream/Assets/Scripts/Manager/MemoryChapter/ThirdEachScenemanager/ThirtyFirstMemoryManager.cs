@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwentyFifthMemoryManager : MemorySceneManagerParent
+public class ThirtyFirstMemoryManager : MemorySceneManagerParent
 {
     [SerializeField]
     GameObject friendBoyObject;
@@ -11,10 +11,10 @@ public class TwentyFifthMemoryManager : MemorySceneManagerParent
     protected override void Start()
     {
         base.Start();
-        dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("ThirdChapter14");
+        dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("ThirdChapter20");
         dialogBundle.SetCharacterEnum();
 
-        nowScene = SceneName.MemoryFriendRoom6;
+        nowScene = SceneName.MemoryFriendRoom7;
         playerObject.SetActive(true);
         memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         friendBoyObject.SetActive(true);
@@ -35,7 +35,7 @@ public class TwentyFifthMemoryManager : MemorySceneManagerParent
             memoryPlayer.isPlayPossible = false;
             memoryPlayer.ToggleToSprite();
             PhoneManager.singleTon.PhoneMainCanvasActive(false);
-            StartCoroutine(SceneEndCoroutine(SceneName.MemorySchool4));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryTeacherRoom2));
         }
     }
 
