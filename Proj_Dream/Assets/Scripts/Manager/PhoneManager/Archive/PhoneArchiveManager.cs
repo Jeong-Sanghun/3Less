@@ -171,7 +171,6 @@ public class PhoneArchiveManager : MonoBehaviour
 
         RectTransform backLogParentRect = backLogCanvasInst.transform
             .GetChild(1).GetChild(2).GetChild(0).GetChild(0).GetComponent<RectTransform>();
-        Debug.Log("이거안나?");
         wrapper.ballonParent = backLogParentRect;
         for (int j = 0; j < wrapper.backLogList.Count; j++)
         {

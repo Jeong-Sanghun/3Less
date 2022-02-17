@@ -30,8 +30,12 @@ public class CharacterEnumToString
                 return "시스템";
             case Character.Police:
                 return "경찰";
-            case Character.Teacher:
-                return "선생님";
+            case Character.CouncilTeacher:
+                return "상담선생님";
+            case Character.HomeRoomTeacher:
+                return "담임선생님";
+            case Character.FriendFather:
+                return "친구 아버지";
             case Character.StoreBoss:
                 return "편의점 사장님";
             default:

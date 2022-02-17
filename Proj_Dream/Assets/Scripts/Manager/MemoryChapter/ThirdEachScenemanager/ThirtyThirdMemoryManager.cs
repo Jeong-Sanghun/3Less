@@ -36,7 +36,7 @@ public class ThirtyThirdMemoryManager : MemorySceneManagerParent
             memoryPlayer.isPlayPossible = false;
             memoryPlayer.ToggleToSprite();
             PhoneManager.singleTon.PhoneMainCanvasActive(false);
-            StartCoroutine(SceneEndCoroutine(SceneName.MemorySchool5));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryTeacherRoom3));
         }
     }
 }

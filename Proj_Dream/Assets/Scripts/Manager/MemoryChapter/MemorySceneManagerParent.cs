@@ -291,17 +291,22 @@ public class MemorySceneManagerParent : MonoBehaviour
                     case Character.RoomFriend:
                     case Character.Police:
                     case Character.StoreBoss:
-                    case Character.Teacher:
+                    case Character.CouncilTeacher:
+                    case Character.DrunkenPerson1:
                         TextFrameToggle(true);
                         ballonList[1].SetActive(true);
                         break;
                     case Character.Father:
+                    case Character.FriendFather:
                     case Character.Friend1:
+                    case Character.HomeRoomTeacher:
+                    case Character.DrunkenPerson2:
                         TextFrameToggle(true);
                         ballonList[2].SetActive(true);
                         break;
                     case Character.Friend2:
                     case Character.Brother:
+                    case Character.YoungMan:
                         TextFrameToggle(true);
                         ballonList[3].SetActive(true);
                         break;

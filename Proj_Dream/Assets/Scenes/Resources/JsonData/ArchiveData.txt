@@ -159,6 +159,34 @@
         {
             "sceneNameEnum": "39",
             "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "40",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "41",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "42",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "43",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "44",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "45",
+            "dialog": "거리야"
+        },
+        {
+            "sceneNameEnum": "46",
+            "dialog": "드디어끄읕"
         }
     ]
 }

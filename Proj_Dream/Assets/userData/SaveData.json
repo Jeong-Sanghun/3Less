@@ -1,6 +1,6 @@
 {
-    "savedScene": 36,
-    "dialogIndex": 20,
+    "savedScene": 45,
+    "dialogIndex": 47,
     "healthGauge": 9,
     "moneyGauge": 9,
     "eighthMemoryLeftTime": 2,
@@ -2228,6 +2228,779 @@
                         "character": 10,
                         "backLogType": 1,
                         "dialogIndex": 20,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    }
+                ]
+            },
+            {
+                "sceneName": 45,
+                "backLogList": [
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 2,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 3,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 4,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 5,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 6,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 7,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 8,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 16,
+                        "backLogType": 1,
+                        "dialogIndex": 9,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 16,
+                        "backLogType": 1,
+                        "dialogIndex": 10,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 16,
+                        "backLogType": 1,
+                        "dialogIndex": 11,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 12,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 13,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 14,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 15,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 16,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 17,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 18,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 19,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 20,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 21,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 22,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 23,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 24,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 25,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 26,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 27,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 28,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 29,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 30,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 31,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 32,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 33,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 34,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 35,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 36,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 37,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 38,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 39,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 40,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 41,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 42,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 43,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 44,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 45,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 46,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 47,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 2,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 3,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 4,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 5,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 6,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 7,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 8,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 16,
+                        "backLogType": 1,
+                        "dialogIndex": 9,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 16,
+                        "backLogType": 1,
+                        "dialogIndex": 10,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 16,
+                        "backLogType": 1,
+                        "dialogIndex": 11,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 12,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 13,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 14,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 15,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 16,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 17,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 18,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 19,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 20,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 21,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 22,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 23,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 24,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 25,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 26,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 27,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 28,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 29,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 30,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 31,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 32,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 33,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 34,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 35,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 36,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 37,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 38,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 39,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 40,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 41,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 42,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 43,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 44,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 45,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 46,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 17,
+                        "backLogType": 1,
+                        "dialogIndex": 47,
                         "choosedRouteIndex": -1,
                         "isRouteTalk": false,
                         "change": 0

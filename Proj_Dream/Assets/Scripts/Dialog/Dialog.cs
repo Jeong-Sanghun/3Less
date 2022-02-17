@@ -11,6 +11,7 @@ public enum Character
     Mushroom,
     Mother,
     Father,
+    FriendFather,
     Brother,
     FriendGirl,
     RoomFriend,
@@ -19,7 +20,8 @@ public enum Character
     StoreBoss,
     RooftopFriend,
     Police,
-    Teacher,
+    CouncilTeacher,
+    HomeRoomTeacher,
     DrunkenPerson1,
     DrunkenPerson2,
     YoungMan,
@@ -82,6 +84,10 @@ public class Dialog
         {
             characterEnum = Character.Narator;
         }
+        else if (character.Contains("친구네 아버지"))
+        {
+            characterEnum = Character.FriendFather;
+        }
         else if (character.Contains("금붕어"))
         {
             characterEnum = Character.Fish;
@@ -131,9 +137,13 @@ public class Dialog
         {
             characterEnum = Character.Police;
         }
-        else if (character.Contains("선생님"))
+        else if (character.Contains("상담"))
         {
-            characterEnum = Character.Teacher;
+            characterEnum = Character.CouncilTeacher;
+        }
+        else if (character.Contains("담임"))
+        {
+            characterEnum = Character.HomeRoomTeacher;
         }
         else if (character.Contains("MES"))
         {
