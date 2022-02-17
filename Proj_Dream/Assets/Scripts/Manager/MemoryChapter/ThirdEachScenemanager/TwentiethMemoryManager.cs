@@ -47,7 +47,7 @@ public class TwentiethMemoryManager : MemorySceneManagerParent
             memoryPlayer.isPlayPossible = false;
             memoryPlayer.ToggleToSprite();
             PhoneManager.singleTon.PhoneMainCanvasActive(false);
-            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStore1));
+            StartCoroutine(SceneEndCoroutine(SceneName.MemoryStore2));
         }
     }
 }
