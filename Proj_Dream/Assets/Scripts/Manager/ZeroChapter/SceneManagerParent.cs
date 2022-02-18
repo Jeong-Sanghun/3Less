@@ -138,6 +138,7 @@ public class SceneManagerParent : MonoBehaviour
                     TextFrameToggle(true);
                     break;
                 case Character.Mushroom:
+                case Character.TreeMonster:
                     TextFrameToggle(true);
                     ballonList[2].SetActive(true);
                     break;

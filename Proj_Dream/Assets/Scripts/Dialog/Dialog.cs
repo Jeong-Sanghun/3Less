@@ -19,6 +19,7 @@ public enum Character
     Friend2,
     StoreBoss,
     RooftopFriend,
+    TreeMonster,
     Police,
     CouncilTeacher,
     HomeRoomTeacher,
@@ -95,6 +96,10 @@ public class Dialog
         else if (character.Contains("¹ö¼¸"))
         {
             characterEnum = Character.Mushroom;
+        }
+        else if (character.Contains("³ª¹«±«¹°"))
+        {
+            characterEnum = Character.TreeMonster;
         }
         else if (character.Contains("¾î¸Ó´Ï"))
         {
@@ -332,6 +337,32 @@ public class Dialog
             if (keywordArray[i].Contains("bubble") || keywordArray[i].Contains("Bubble"))
             {
                 act.actionList.Add(ActionKeyword.Bubble);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("tree") || keywordArray[i].Contains("Tree"))
+            {
+                act.actionList.Add(ActionKeyword.Tree);
+                act.parameterList.Add(-1);
+            }
+
+            if (keywordArray[i].Contains("brokenSound") || keywordArray[i].Contains("BrokenSound"))
+            {
+                act.actionList.Add(ActionKeyword.BrokenSound);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("banchan") || keywordArray[i].Contains("Banchan"))
+            {
+                act.actionList.Add(ActionKeyword.Banchan);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("panza") || keywordArray[i].Contains("Panza"))
+            {
+                act.actionList.Add(ActionKeyword.Panza);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("drop") || keywordArray[i].Contains("Drop"))
+            {
+                act.actionList.Add(ActionKeyword.Drop);
                 act.parameterList.Add(-1);
             }
 

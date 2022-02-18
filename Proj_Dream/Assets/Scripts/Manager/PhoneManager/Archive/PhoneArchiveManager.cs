@@ -320,9 +320,11 @@ public class PhoneArchiveManager : MonoBehaviour
                 backLog.SetRouteBackLog(dialogIndex, routeIndex);
                 break;
             case BackLogType.HealthGauge:
+                return;
                 backLog.SetHealthGaugeLog(change);
                 break;
             case BackLogType.MoneyGauge:
+                return;
                 backLog.SetMoneyGaugeLog(change);
                 break;
         }

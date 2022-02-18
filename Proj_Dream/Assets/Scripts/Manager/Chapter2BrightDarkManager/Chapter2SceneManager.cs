@@ -26,7 +26,7 @@ public class Chapter2SceneManager : SceneManagerParent
 
     protected override void NextDialog()
     {
-        Debug.Log("Áö¶ö");
+  
         if (dialogEnd == true || isRouting == true)
         {
             return;

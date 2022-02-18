@@ -7,6 +7,7 @@ using UnityEngine;
 public enum ActionKeyword
 {
     Null,First, Second, Third,Fourth,Fifth,End,
+    Tree,Banchan,Panza,Drop,
     StopSeconds, FishMove, PlayerMove,FadeOut,FadeIn, ZoomOut, ImgFlashback,ImgFalse,
     OtherMove,
     Bubble, Scissors,Medal,
@@ -16,7 +17,7 @@ public enum ActionKeyword
     ConditionalJump,
     ConditionalSceneEnd,
     Touch, Drag,
-    PhoneOn,PhoneOff,
+    PhoneOn,PhoneOff,BrokenSound,
     SoundMessageAlarm,
     DoorSound,
     Scene
