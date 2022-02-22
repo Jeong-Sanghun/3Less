@@ -440,6 +440,16 @@ public class Dialog
                 act.actionList.Add(ActionKeyword.Fifth);
                 act.parameterList.Add(-1);
             }
+            if (keywordArray[i].Contains("sixth") || keywordArray[i].Contains("Sixth"))
+            {
+                act.actionList.Add(ActionKeyword.Sixth);
+                act.parameterList.Add(-1);
+            }
+            if (keywordArray[i].Contains("seventh") || keywordArray[i].Contains("Seventh"))
+            {
+                act.actionList.Add(ActionKeyword.Seventh);
+                act.parameterList.Add(-1);
+            }
         }
 
 

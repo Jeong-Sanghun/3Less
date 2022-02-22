@@ -9,7 +9,7 @@
         },
         {
             "character": "NAR.",
-            "actionKeyword": "playerMoveFirst,fishMoveFirst",
+            "actionKeyword": "playerMoveFirst, fishMoveFirst",
             "dialog": "바로 고개를 들면 시든 꽃과 가지가 기분나쁜 모습을 이루고 있다. "
         },
         {
@@ -49,7 +49,6 @@
         },
         {
             "character": "주인공 (A)",
-            "actionKeyword": "fishMoveSecond",
             "dialog": "꼭 뭐에 홀린 것 같아. "
         },
         {
@@ -60,7 +59,6 @@
             "dialog": "어, 나무 괴물 손에 들린게 판자야?"
         },
         {
-            "actionKeyword": "panzaTouch",
             "dialog": "저것만 놓으면 꽃나무까지 갈 수 있을 것 같아! 그냥 가져가면 되나?"
         },
         {
@@ -88,6 +86,7 @@
             "dialog": "왜 이렇게 싫어하지? 불안하게…."
         },
         {
+            "actionKeyword": "playerMoveSecond, fishMoveSecond, panzaTouch",
             "dialog": "그래도 여기에 발판으로 삼을만한건 저거 밖에 없으니까. "
         },
         {
@@ -114,16 +113,16 @@
         },
         {
             "character": "주인공 (A)",
-            "actionKeyword": "playerMoveThird,fishMoveThird",
+            "actionKeyword": "playerMoveThird, fishMoveThird,bubbleTouch",
             "dialog": "무서운 소리 하지말고. "
         },
         {
-            "actionKeyword": "bubbleTouch",
+            "character": "주인공 (A)",
+            "actionKeyword": "imgFlashbackFirst",
             "dialog": "여기도 비눗방울이 있네?"
         },
         {
             "character": "NAR.",
-            "actionKeyword": "imgFlashbackFirst",
             "dialog": "\"데려가기는 무슨.\""
         },
         {
@@ -168,7 +167,7 @@
         },
         {
             "character": "주인공 (A)",
-            "actionKeyword": "playerMoveFourth,fishMoveFourth",
+            "actionKeyword": "playerMoveFourth, fishMoveFourth",
             "dialog": "더 단서를 찾아서, 무슨 일이 있었는지 알아봐야 겠어."
         },
         {
@@ -220,20 +219,14 @@
         },
         {
             "character": "금붕어  ",
-            "actionKeyword": "fishMoveFifth",
             "dialog": "텅텅 빈 예쁜 꽃나무! 두드리면 통통 울리는 빈나무. "
         },
         {
-            "character": "주인공 (A)",
-            "dialog": "생각하는 중에 너 먼저 가는게 어딨어! "
-        },
-        {
-            "actionKeyword": "banchanTouch",
+            "actionKeyword": "playerMoveFifth,banchanTouch",
             "dialog": "일단 단서가 될지도 모르는 반찬통을 확인해볼까?"
         },
         {
             "character": "NAR.",
-            "actionKeyword": "imgFlashbackSecond",
             "dialog": "공들여 만든 반찬이 가득 찬 반찬통. "
         },
         {
@@ -288,7 +281,6 @@
         },
         {
             "character": "주인공 (A)",
-            "actionKeyword": "panzaDrag",
             "dialog": "생각이 너무 많을것 같아. "
         },
         {
@@ -296,7 +288,12 @@
             "dialog": "금붕어가 잠시 조용해졌다. "
         },
         {
+            "actionKeyword": "playerMoveSixth,panzaDrag",
             "dialog": "또 기분이 상했나?"
+        },
+        {
+            "character": "NAR.",
+            "dialog": "금붕어가 돌발행동을 하기 전에 판자부터 구멍 위에 내려놓았다. "
         },
         {
             "character": "금붕어 ",
@@ -307,7 +304,7 @@
         },
         {
             "character": "주인공 (A)",
-            "dialog": "겪어본 것 처럼 말하네. "
+            "dialog": "너가 직접 겪어본 것 처럼 말하네. "
         },
         {
             "character": "금붕어 ",
@@ -337,7 +334,7 @@
             "dialog": "괜찮다는게 다 뭐야?"
         },
         {
-            "actionKeyword": "stop3Seconds",
+            "actionKeyword": "playerMoveSeventh",
             "dialog": "전부 다 소용없어. "
         },
         {

@@ -10,6 +10,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     
     protected GameManager gameManager;
     protected JsonManager jsonManager;
+    protected SoundManager soundManager;
     protected DialogBundle dialogBundle;
     protected SaveDataClass saveData;
     protected PhoneArchiveManager phoneArchiveManager;
@@ -79,6 +80,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     {
         gameManager = GameManager.singleton;
         phoneArchiveManager = PhoneManager.singleTon.phoneArchiveManager;
+        soundManager = SoundManager.singleton;
         jsonManager = new JsonManager();
         isStartOfWrapper = true;
         fadeInImage.gameObject.SetActive(true);
@@ -507,12 +509,12 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
         if (keywordList.Contains(ActionKeyword.SoundMessageAlarm))
         {
-
+            soundManager.EffectPlay(SFX.SoundMessageAlarm);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
         if (keywordList.Contains(ActionKeyword.DoorSound))
         {
-
+            soundManager.EffectPlay(SFX.DoorSound);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
 

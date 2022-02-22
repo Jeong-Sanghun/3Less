@@ -6,7 +6,7 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class Chapter2SecondSceneManager : Chapter2SceneManager
 {
-
+    SoundManager soundManager;
     [SerializeField]
     RectTransform panzaRect;
 
@@ -30,13 +30,15 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
 
     [SerializeField]
     SpriteRenderer[] flashBackSpriteArray;
-    [SerializeField]
     AudioSource bgmSource;
 
     [SerializeField]
     GameObject banchanObject;
     [SerializeField]
     GameObject firstBlockCollider;
+    [SerializeField]
+    GameObject secondBlockCollider;
+
 
     [SerializeField]
     GameObject panzaItemObject;
@@ -60,10 +62,13 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
     protected override void Start()
     {
         base.Start();
+        soundManager = SoundManager.singleton;
+        soundManager.BGMPlay(BGM.Dark);
         nowScene = SceneName.Chapter2Dark;
         SaveUserData();
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("ThirdChapter2");
         dialogBundle.SetCharacterEnum();
+        bgmSource = soundManager.bgmSource;
         cameraRightBound = 19.8f;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
         StartCoroutine(VolumeUpCoroutine());
@@ -71,7 +76,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         StartCoroutine(PanzaAnimCoroutine());
         StartCoroutine(BubbleAnimCoroutine());
         StartCoroutine(BanchanAnimCoroutine());
-        fishState.SetStartLookingRight(false);
+        fishState.SetStartLookingRight(true);
         panzaItemOriginPos = panzaItemObject.transform.position;
     }
 
@@ -125,12 +130,11 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         {
             if (keywordList.Contains(ActionKeyword.First))
             {
-                fishState.GotoNextTarget(0, false, false);
+                fishState.GotoNextTarget(0, true, false);
             }
             if (keywordList.Contains(ActionKeyword.Second))
             {
                 fishState.GotoNextTarget(1, true, false);
-                NextDialog();
             }
             if (keywordList.Contains(ActionKeyword.Third))
             {
@@ -139,10 +143,6 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
             if (keywordList.Contains(ActionKeyword.Fourth))
             {
                 fishState.GotoNextTarget(3, true, false);
-            }
-            if (keywordList.Contains(ActionKeyword.Fifth))
-            {
-                fishState.GotoNextTarget(4, true, false);
             }
         }
         if (keywordList.Contains(ActionKeyword.Panza))
@@ -155,12 +155,17 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
             {
                 StartCoroutine(PanzaDropCoroutine());
             }
-
-
         }
-        if (keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
+        if (keywordList.Contains(ActionKeyword.ImgFlashback))
         {
-            StartCoroutine(SceneEndCoroutine());
+            if (keywordList.Contains(ActionKeyword.First))
+            {
+                StartCoroutine(ImageFlashBackCoroutine(0));
+            }
+        }
+        if (keywordList.Contains(ActionKeyword.BrokenSound))
+        {
+            soundManager.EffectPlay(SFX.BrokenSound);
         }
 
     }
@@ -179,17 +184,19 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
                 NextDialog();
                 player.isPlayPossible = false;
             }
-            else if (triggerName.Contains("Trigger2") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.Second))
+            else if (triggerName.Contains("Trigger2") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.Fourth))
             {
                 isDialogStopping = false;
                 player.SetAnim(PlayController.AnimState.Idle);
                 NextDialog();
                 player.isPlayPossible = false;
             }
-            else if (triggerName.Contains("Trigger5") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.Third))
+            else if (triggerName.Contains("Trigger3") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.Seventh))
             {
+                isDialogStopping = false;
+                player.SetAnim(PlayController.AnimState.Idle);
                 NextDialog();
-                isDialogStopping = true;
+                player.isPlayPossible = false;
             }
         }
 
@@ -238,8 +245,8 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
 
                 player.SetAnim(PlayController.AnimState.Idle);
                 player.isPlayPossible = false;
-                //NextDialog();
-                StartCoroutine(ImageFlashBackCoroutine(0));
+                NextDialog();
+                //StartCoroutine(ImageFlashBackCoroutine(0));
                 isBubbleClicked = true;
                 break;
             }
@@ -265,6 +272,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
                 player.SetAnim(PlayController.AnimState.Idle);
                 player.isPlayPossible = false;
                 //NextDialog();
+
                 StartCoroutine(ImageFlashBackCoroutine(1));
                 isBanchanClicked = true;
                 break;
@@ -288,7 +296,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         float timer = 0;
         Vector3 originPos = panzaRect.transform.position;
         Vector3 originScale = panzaRect.transform.localScale;
-        Vector3 originRot = panzaRect.transform.localEulerAngles;
+        Vector3 originRot = panzaRect.transform.localEulerAngles - new Vector3(0, 0, 360);
         while (timer < 1)
         {
             timer += Time.deltaTime;
@@ -303,7 +311,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         timer = 0;
         originPos = panzaRect.transform.position;
         originScale = panzaRect.transform.localScale;
-        originRot = panzaRect.transform.localEulerAngles;
+        originRot = panzaRect.transform.localEulerAngles + new Vector3(0, 0, 360);
         //if (originRot.x < 180)
         //{
         //    originRot.x += 360;
@@ -513,6 +521,9 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
                     //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
                     if (touchedObject.name.Contains("SecondPanza"))
                     {
+                        player.isPlayPossible = false;
+                        player.SetAnim(PlayController.AnimState.Idle);
+                        secondBlockCollider.SetActive(false);
                         panzaBackGroundObject.SetActive(false);
                         dragAndDrop = true;
                         panzaItemObject.SetActive(false);
@@ -537,6 +548,8 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
 
         yield return new WaitForSeconds(1f);
         float timer = 0;
+        player.isPlayPossible = false;
+        player.SetAnim(PlayController.AnimState.Idle);
         StartCoroutine(moduleManager.FadeModule_Sprite(panzaDropSprite.gameObject, 1, 0, 1));
         panzaDropCollider.SetActive(false);
         fishState.GotoNextTarget(4, true, false);

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public enum ActionKeyword
 {
-    Null,First, Second, Third,Fourth,Fifth,End,
+    Null,First, Second, Third,Fourth,Fifth,Sixth,Seventh,End,
     Tree,Banchan,Panza,Drop,
     StopSeconds, FishMove, PlayerMove,FadeOut,FadeIn, ZoomOut, ImgFlashback,ImgFalse,
     OtherMove,

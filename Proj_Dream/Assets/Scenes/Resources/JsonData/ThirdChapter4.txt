@@ -80,6 +80,7 @@
         },
         {
             "character": "MES ",
+                        "actionKeyword": "soundMessageAlarm",
             "dialog": "한국 무용 소품 공동구매 할 사람!"
         },
         {
