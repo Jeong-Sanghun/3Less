@@ -69,6 +69,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("ThirdChapter2");
         dialogBundle.SetCharacterEnum();
         bgmSource = soundManager.bgmSource;
+        SaveUserData();
         cameraRightBound = 19.8f;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
         StartCoroutine(VolumeUpCoroutine());

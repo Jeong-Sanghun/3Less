@@ -15,6 +15,8 @@ public class StartSceneManager : MonoBehaviour
     GameObject logoObject;
     [SerializeField]
     GameObject logoTarget;
+    [SerializeField]
+    GameObject endContentsButton;
 
     bool isButtonAble = false;
     // Start is called before the first frame update
@@ -22,6 +24,16 @@ public class StartSceneManager : MonoBehaviour
     {
         gameManager = GameManager.singleton;
         StartCoroutine(StartingCoroutine());
+        JsonManager jsonManager = new JsonManager();
+        if (jsonManager.CheckEndContents() == true)
+        {
+            endContentsButton.SetActive(true);
+        }
+        else
+        {
+            endContentsButton.SetActive(false);
+        }
+
     }
 
     public void StartNewButton()
@@ -44,6 +56,16 @@ public class StartSceneManager : MonoBehaviour
             return;
         }
         gameManager.StartLoadedGame();
+    }
+
+    public void EndConetntsButton()
+    {
+        if (!isButtonAble)
+        {
+            return;
+        }
+        gameManager.StartEndContents();
+
     }
     // Update is called once per frame
     void Update()

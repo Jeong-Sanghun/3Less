@@ -13,9 +13,11 @@ public class Chapter2FirstSceneManager : Chapter2SceneManager
         base.Start();
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("ThirdChapter1");
         dialogBundle.SetCharacterEnum();
+        
         Debug.Log(dialogBundle.dialogList[0].dialog);
         cameraRightBound = 67.8f;
         nowScene = SceneName.Chapter2Bright;
+        SaveUserData();
         StartCoroutine(CameraFollowCoroutine());
         StartCoroutine(InvokerCoroutine(1, NextDialog));
     }

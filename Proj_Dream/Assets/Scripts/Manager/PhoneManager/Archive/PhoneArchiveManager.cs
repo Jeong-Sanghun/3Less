@@ -26,12 +26,10 @@ public class PhoneArchiveManager : MonoBehaviour
     GameObject backLogOtherPrefab;
     [SerializeField]
     GameObject backLogPlayerPrefab;
-    [SerializeField]
-    GameObject backLogMoneyGaugePrefab;
+
     [SerializeField]
     GameObject backLogRoutePrefab;
-    [SerializeField]
-    GameObject backLogHealthGaugePrefab;
+
 
     [SerializeField]
     RectTransform wholeCanavsBackGroundRect;
@@ -262,24 +260,7 @@ public class PhoneArchiveManager : MonoBehaviour
                 dialogText.text = backLog.dialog;
 
                 break;
-            case BackLogType.HealthGauge:
-                backLogInst = Instantiate(backLogHealthGaugePrefab, parentRect);
-                dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
-                if(backLog.dialog == null)
-                {
-                    backLog.SetHealthGaugeLog(backLog.change);
-                }
-                dialogText.text = backLog.dialog;
-                break;
-            case BackLogType.MoneyGauge:
-                backLogInst = Instantiate(backLogMoneyGaugePrefab, parentRect);
-                dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();
-                if (backLog.dialog == null)
-                {
-                    backLog.SetMoneyGaugeLog(backLog.change);
-                }
-                dialogText.text = backLog.dialog;
-                break;
+
         }
         backLog.backLogBallonObject = backLogInst;
         return backLogInst;
@@ -319,14 +300,7 @@ public class PhoneArchiveManager : MonoBehaviour
             case BackLogType.Route:
                 backLog.SetRouteBackLog(dialogIndex, routeIndex);
                 break;
-            case BackLogType.HealthGauge:
-                return;
-                backLog.SetHealthGaugeLog(change);
-                break;
-            case BackLogType.MoneyGauge:
-                return;
-                backLog.SetMoneyGaugeLog(change);
-                break;
+
         }
         SpawnBackLog(backLog, wrapper.ballonParent.GetComponent<RectTransform>(), wrapper);
 

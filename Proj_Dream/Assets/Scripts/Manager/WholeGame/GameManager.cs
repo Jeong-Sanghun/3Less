@@ -21,7 +21,7 @@ public enum SceneName
     MemoryStore6,MemoryHallway4,MemoryTeacherRoom5,MemoryFriendRoom9,
 
        
-    GameEnd
+    GameEnd, EndContents
 
 }
 
@@ -126,11 +126,24 @@ public class GameManager : MonoBehaviour
         jsonManager.SaveJson(saveData);
     }
 
+    public void SaveEndContents()
+    {
+        jsonManager.SaveEndContents(saveData);
+    }
+
     public void StartLoadedGame()
     {
         isNewGame = false;
         LoadSaveData();
         LoadScene(saveData.savedScene);
+    }
+
+    public void StartEndContents()
+    {
+        saveData = jsonManager.LoadEndContents();
+        nowScene = SceneName.EndContents;
+        PhoneManager.singleTon.PhoneSetup();
+        LoadScene(nowScene);
     }
 
     public void GameOver()

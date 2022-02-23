@@ -61,16 +61,12 @@ public class IntroManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    public void ScreenTouchEvent()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (moduleManager.nowTexting == false && isChanging == false)
         {
-
-            if (moduleManager.nowTexting == false && isChanging == false)
-            {
-                NextDialog();
-            }
-
+            NextDialog();
         }
     }
 
@@ -100,7 +96,7 @@ public class IntroManager : MonoBehaviour
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
         StartCoroutine(moduleManager.FadeModule_Image(textFrameImage, 0, 1, 1));
         yield return new WaitForSeconds(1f);
-       
+        fadeInImage.gameObject.SetActive(false);
         isChanging = false;
         NextDialog();
     }

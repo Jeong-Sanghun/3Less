@@ -48,6 +48,7 @@ public class FortySecondMemoryManager : MemorySceneManagerParent
             memoryPlayer.isPlayPossible = false;
             memoryPlayer.ToggleToSprite();
             PhoneManager.singleTon.PhoneMainCanvasActive(false);
+            gameManager.SaveEndContents();
             StartCoroutine(SceneEndCoroutine(SceneName.GameEnd));
         }
     }
