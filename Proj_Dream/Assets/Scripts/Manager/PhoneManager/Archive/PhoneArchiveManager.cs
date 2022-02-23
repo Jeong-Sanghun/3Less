@@ -93,9 +93,10 @@ public class PhoneArchiveManager : MonoBehaviour
         backLogBundle = GameManager.singleton.saveData.backLogBundle;
         if (backLogBundle == null)
         {
-            saveData.backLogBundle = new BackLogBundle();
-            backLogBundle = saveData.backLogBundle;
+            GameManager.singleton.saveData.backLogBundle = new BackLogBundle();
+            backLogBundle = GameManager.singleton.saveData.backLogBundle;
         }
+        saveData = GameManager.singleton.saveData;
         for (int i = 0; i < backLogBundle.backLogWrapperList.Count; i++)
         {
             NewWrapperAppear(backLogBundle.backLogWrapperList[i]);
@@ -253,7 +254,6 @@ public class PhoneArchiveManager : MonoBehaviour
                 dialogText.text = backLog.dialog;
                 break;
             case BackLogType.Route:
-                Debug.Log(dialogBundle.dialogList[backLog.dialogIndex].dialog);
                 backLog.dialog = dialogBundle.dialogList[backLog.dialogIndex].routeList[backLog.choosedRouteIndex];
                 backLogInst = Instantiate(backLogRoutePrefab, parentRect);
                 dialogText = backLogInst.transform.GetChild(0).GetChild(0).GetComponent<Text>();

@@ -131,6 +131,7 @@ public class TwelvethMemorySceneManager : MemorySceneManagerParent
     {
         memoryPlayer.isPlayPossible = false;
         memoryPlayer.ToggleToSprite();
+        PhoneManager.singleTon.PhoneMainCanvasActive(false);
         StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.left / 2, 1));
         StartCoroutine(moduleManager.FadeModule_Sprite(motherObject, 0, 1, 1));
         StartCoroutine(moduleManager.MoveModule_Linear(fatherObject, fatherObject.transform.position + Vector3.left / 2, 1));

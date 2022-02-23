@@ -76,6 +76,8 @@ public class MemorySceneManagerParent : MonoBehaviour
     protected float cameraLeftBound;
     bool loadedToRoute;
 
+    protected bool isNewGame;
+
     protected virtual void Start()
     {
         gameManager = GameManager.singleton;
@@ -115,7 +117,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             memoryPlayer = null;
         }
-        
+        isNewGame = gameManager.isNewGame;
 
         if(gameManager.isNewGame == false)
         {
@@ -401,10 +403,10 @@ public class MemorySceneManagerParent : MonoBehaviour
             
         }
 
-        Debug.Log(nowCharacter);
+        
         if (nowDialog.actionKeyword != null && nowCharacter != Character.System && nowCharacter != Character.Message)
         {
-            Debug.Log("무신일이여");
+        
             isStartOfWrapper = true;
             StartCoroutine(CheckStopPointTextEnd());
             nowActionList = dialogBundle.dialogList[nowDialogIndex].actionList;
@@ -552,8 +554,6 @@ public class MemorySceneManagerParent : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
 
-        if (time == 3)
-            Debug.Log("시스템 끝");
         isStarted = true;
         method();
     }
@@ -680,7 +680,7 @@ public class MemorySceneManagerParent : MonoBehaviour
             choosedMultiRouteList.Sort(CompareInt);
             for (int i = 0; i < choosedMultiRouteList.Count; i++)
             {
-                Debug.Log("컴페어결과" + choosedMultiRouteList[i]);
+                
                 routeList.RemoveAt(choosedMultiRouteList[i]);
             }
             nowRouteButtonParent = routeButtonParentArray[routeList.Count - 2 ];
@@ -804,7 +804,7 @@ public class MemorySceneManagerParent : MonoBehaviour
 
             if (nowMultiRouteCount == 0)
             {
-                Debug.Log("이게 언제발동?");
+                
                 isMultiRouting = false;
                 choosedMultiRouteList = null;
             }

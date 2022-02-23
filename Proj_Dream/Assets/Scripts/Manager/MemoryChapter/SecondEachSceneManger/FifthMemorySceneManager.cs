@@ -30,7 +30,10 @@ public class FifthMemorySceneManager : MemorySceneManagerParent
         StartCoroutine(moduleManager.MoveModule_Linear(friendGirlObject, friendGirlObject.transform.position + Vector3.left / 2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(friendGirlObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
-
+        if (!isNewGame)
+        {
+            StartCoroutine(moduleManager.FadeModule_Image(fifthFadeImage, 1, 0, 1));
+        }
 
 
 

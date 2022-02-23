@@ -84,6 +84,7 @@ public class PhoneSnsManager : MonoBehaviour
             OnePost post = postWrapper.postList[i];
             Destroy(post.snsObject);
         }
+        postWrapper.postList.Clear();
     }
 
 
@@ -164,8 +165,10 @@ public class PhoneSnsManager : MonoBehaviour
         for (int i = 0; i < postDataBundle.postList.Count; i++)
         {
             OnePost post = postDataBundle.postList[i];
+            
             if (post.appearingScene < scene && !postWrapper.postList.Contains(post))
             {
+            
                 AddPost(post);
             }
         }

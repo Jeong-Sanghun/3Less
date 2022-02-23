@@ -55,7 +55,7 @@ public class PhoneManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("디스트로이");
+            Debug.LogError("디스트로이");
             Destroy(gameObject);
         }
     }
@@ -64,6 +64,13 @@ public class PhoneManager : MonoBehaviour
     {
         phoneMessageManager.SetMessage();
         phoneArchiveManager.SetArchive();
+        phoneTwitterManager.SetPost();
+        phoneInstagramManager.SetPost();
+    }
+
+    public void PhonePostSetup()
+    {
+
         phoneTwitterManager.SetPost();
         phoneInstagramManager.SetPost();
     }
