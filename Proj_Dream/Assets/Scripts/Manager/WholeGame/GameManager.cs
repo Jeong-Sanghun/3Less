@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public enum SceneName
@@ -52,6 +53,8 @@ public class GameManager : MonoBehaviour
     public bool isNewGame;
     [HideInInspector]
     public bool isGameOver;
+    [SerializeField]
+    InputField debugInputField;
 
     // Start is called before the first frame update
     void Awake()
@@ -172,6 +175,20 @@ public class GameManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void DebugSceneLoadButton()
+    {
+        int outing = -1;
+        if(int.TryParse(debugInputField.text,out outing))
+        {
+            int sceneNum = int.Parse(debugInputField.text);
+            if (sceneNum < 0 || sceneNum > Enum.GetValues(typeof(SceneName)).Length)
+            {
+                return;
+            }
+            LoadScene((SceneName)sceneNum);
+        }
     }
 
 }

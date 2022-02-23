@@ -41,6 +41,7 @@ public class GameEndManager : MonoBehaviour
         isLoadingScene = false;
         categoryOriginPos = categoryText.transform.position;
         nameOriginPos = nameText.transform.position;
+        SoundManager.singleton.BGMPlay(BGM.Intro);
     }
 
 

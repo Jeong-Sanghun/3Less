@@ -18,10 +18,13 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         memoryPlayer.spritePlayerObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         memoryPlayer.ToggleToSprite();
         motherObject.SetActive(true);
+
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position+Vector3.right/2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
         nowScene = SceneName.MemoryHome1;
+        SaveUserData();
+        SoundManager.singleton.BGMPlay(BGM.Memory);
         cameraLeftBound = -7.7f;
         cameraRightBound = 7.7f;
 

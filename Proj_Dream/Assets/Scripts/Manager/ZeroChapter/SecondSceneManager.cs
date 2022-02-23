@@ -65,13 +65,13 @@ public class SecondSceneManager : SceneManagerParent
         dialogBundle.SetCharacterEnum();
         cameraRightBound = 19.8f;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 1));
-        StartCoroutine(VolumeUpCoroutine());
         StartCoroutine(InvokerCoroutine(1, NextDialog));
         StartCoroutine(ScissorAnimCoroutine());
         StartCoroutine(BubbleAnimCoroutine());
         StartCoroutine(MedalAnimCoroutine());
         fishState.SetStartLookingRight(false);
         scissorItemOriginPos = scissorItemObject.transform.position;
+        SoundManager.singleton.BGMPlay(BGM.Dark);
     }
 
     private void Update()
@@ -500,17 +500,6 @@ public class SecondSceneManager : SceneManagerParent
         NextDialog();
     }
 
-    IEnumerator VolumeUpCoroutine()
-    {
-        float timer = 0;
-        while (timer < 1)
-        {
-            timer += Time.deltaTime/3f;
-            bgmSource.volume = timer;
-            yield return null;
-        }
-        bgmSource.volume = 1;
-    }
 
     IEnumerator ScissorsDragCoroutine()
     {

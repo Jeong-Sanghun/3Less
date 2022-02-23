@@ -26,6 +26,7 @@ public class FourteenthMemoryManager : PhoneDialogManager
         StartCoroutine(moduleManager.FadeModule_Sprite(friendBoyObject, 0, 1, 1f));
 
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
+        SoundManager.singleton.BGMPlay(BGM.Memory);
     }
 
     public override void TriggerEnter(string triggerName)

@@ -20,6 +20,7 @@ public class Chapter2FirstSceneManager : Chapter2SceneManager
         SaveUserData();
         StartCoroutine(CameraFollowCoroutine());
         StartCoroutine(InvokerCoroutine(1, NextDialog));
+        SoundManager.singleton.BGMPlay(BGM.Bright);
     }
 
 
@@ -76,6 +77,7 @@ public class Chapter2FirstSceneManager : Chapter2SceneManager
             if (triggerName.Contains("Trigger1") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.First))
             {
                 isDialogStopping = false;
+                SoundManager.singleton.BGMPlay(BGM.BrightChange);
                 player.SetAnim(PlayController.AnimState.Idle);
                 NextDialog();
                 player.isPlayPossible = false;

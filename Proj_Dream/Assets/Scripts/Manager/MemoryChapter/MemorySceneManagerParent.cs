@@ -879,10 +879,18 @@ public class MemorySceneManagerParent : MonoBehaviour
         isRouteButtonAble = true;
     }
 
-    void SaveUserData()
+    protected void SaveUserData()
     {
         saveData.savedScene = nowScene;
-        saveData.dialogIndex = nowDialogIndex - 1;
+        if(nowDialogIndex <= 0)
+        {
+            saveData.dialogIndex = 0;
+        }
+        else
+        {
+            saveData.dialogIndex = nowDialogIndex - 1;
+        }
+        
         saveData.healthGauge = gaugeManager.nowHealthGauge;
         saveData.moneyGauge = gaugeManager.nowMoneyGauge;
         gameManager.SaveSaveData();

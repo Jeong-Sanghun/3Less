@@ -33,6 +33,7 @@ public class StartSceneManager : MonoBehaviour
         {
             endContentsButton.SetActive(false);
         }
+        SoundManager.singleton.BGMPlay(BGM.Intro);
 
     }
 

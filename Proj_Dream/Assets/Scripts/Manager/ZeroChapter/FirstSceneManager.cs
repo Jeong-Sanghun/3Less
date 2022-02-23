@@ -42,6 +42,7 @@ public class FirstSceneManager : SceneManagerParent
         StartCoroutine(InvokerCoroutine(1, NextDialog));
         maskSpriteArray = Resources.LoadAll<Sprite>("curtain/");
         cameraRightBound = 67.8f;
+        SoundManager.singleton.BGMPlay(BGM.Bright);
         
     }
 
@@ -154,6 +155,7 @@ public class FirstSceneManager : SceneManagerParent
             }
             else if (triggerName.Contains("Trigger5") && keywordList.Contains(ActionKeyword.PlayerMove) && keywordList.Contains(ActionKeyword.Third))
             {
+                SoundManager.singleton.BGMPlay(BGM.BrightChange);
                 NextDialog();
                 isDialogStopping = true;
             }
@@ -162,14 +164,6 @@ public class FirstSceneManager : SceneManagerParent
                 isStopActionable = false;
                 StartCoroutine(SceneEndCoroutine());
             }
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(SceneEndCoroutine());
         }
     }
 

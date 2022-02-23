@@ -79,6 +79,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         StartCoroutine(BanchanAnimCoroutine());
         fishState.SetStartLookingRight(true);
         panzaItemOriginPos = panzaItemObject.transform.position;
+        SoundManager.singleton.BGMPlay(BGM.Dark);
     }
 
     private void Update()

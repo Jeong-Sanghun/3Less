@@ -15,6 +15,7 @@ public enum Character
     Brother,
     FriendGirl,
     RoomFriend,
+    GrandMother,
     Friend1,
     Friend2,
     StoreBoss,
@@ -104,6 +105,10 @@ public class Dialog
         else if (character.Contains("어머니"))
         {
             characterEnum = Character.Mother;
+        }
+        else if (character.Contains("할머니"))
+        {
+            characterEnum = Character.GrandMother;
         }
         else if (character.Contains("아버지"))
         {
