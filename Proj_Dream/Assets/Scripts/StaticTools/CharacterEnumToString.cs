@@ -66,6 +66,7 @@ public class CharacterEnumToString
                 return "할머니";
             case Character.FriendFather:
                 return "친구 아버지";
+            case Character.JustBoss:
             case Character.StoreBoss:
                 return "편의점 사장님";
             default:

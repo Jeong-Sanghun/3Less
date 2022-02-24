@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EighteenthMemoryManager : MemorySceneManagerParent
+public class EighteenthMemoryManager : PhoneDialogManager
 {
     [SerializeField]
     GameObject friendBoyObject;

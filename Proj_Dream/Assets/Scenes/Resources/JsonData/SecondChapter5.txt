@@ -64,7 +64,7 @@
             "dialog": "그래. 연습 언제부터인데?"
         },
         {
-            "character": "NAR.(MES)",
+            "character": "MES",
             "dialog": "휴대폰에 '스트릿 댄스 연습' 일정이 추가되었습니다."
         },
         {
@@ -139,7 +139,7 @@
             "dialog": "그래. 재미있겠네. 연습 언제부터야?"
         },
         {
-            "character": "NAR.(MES)",
+            "character": "MES",
             "dialog": "휴대폰에 '스트릿 댄스 연습' 일정이 추가되었습니다."
         },
         {

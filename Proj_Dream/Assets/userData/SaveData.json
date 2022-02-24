@@ -10,6 +10,139 @@
     "backLogBundle": {
         "backLogWrapperList": [
             {
+                "sceneName": 4,
+                "backLogList": [
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 0,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 1,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 2,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 3,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 4,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 6,
+                        "backLogType": 1,
+                        "dialogIndex": 5,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 6,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 6,
+                        "backLogType": 1,
+                        "dialogIndex": 7,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 6,
+                        "backLogType": 1,
+                        "dialogIndex": 8,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 1,
+                        "backLogType": 1,
+                        "dialogIndex": 9,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 7,
+                        "backLogType": 1,
+                        "dialogIndex": 10,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 7,
+                        "backLogType": 1,
+                        "dialogIndex": 11,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 7,
+                        "backLogType": 1,
+                        "dialogIndex": 12,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 6,
+                        "backLogType": 1,
+                        "dialogIndex": 13,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 0,
+                        "backLogType": 1,
+                        "dialogIndex": 14,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    },
+                    {
+                        "character": 6,
+                        "backLogType": 1,
+                        "dialogIndex": 15,
+                        "choosedRouteIndex": -1,
+                        "isRouteTalk": false,
+                        "change": 0
+                    }
+                ]
+            },
+            {
                 "sceneName": 5,
                 "backLogList": [
                     {

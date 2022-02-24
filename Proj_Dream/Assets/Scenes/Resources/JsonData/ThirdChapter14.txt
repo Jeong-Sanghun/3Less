@@ -93,7 +93,7 @@
         },
         {
             "actionKeyword": "playerMove",
-            "dialog": "종쳤네, 저녁에 보자!"
+            "dialog": "일단 저녁에 연락할게!"
         }
     ]
 }

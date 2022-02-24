@@ -19,6 +19,7 @@ public enum Character
     Friend1,
     Friend2,
     StoreBoss,
+    JustBoss,
     RooftopFriend,
     TreeMonster,
     Police,
@@ -138,11 +139,14 @@ public class Dialog
         {
             characterEnum = Character.FriendGirl;
         }
-        else if (character.Contains("»çÀå"))
+        else if (character.Contains("ÆíÀÇÁ¡ »çÀå"))
         {
             characterEnum = Character.StoreBoss;
         }
-
+        else if (character.Contains("»çÀå"))
+        {
+            characterEnum = Character.JustBoss;
+        }
         else if (character.Contains("°æÂû"))
         {
             characterEnum = Character.Police;
@@ -158,6 +162,18 @@ public class Dialog
         else if (character.Contains("MES"))
         {
             characterEnum = Character.Message;
+        }
+        else if (character.Contains("Ãë°´ 1"))
+        {
+            characterEnum = Character.DrunkenPerson1;
+        }
+        else if (character.Contains("Ãë°´ 2"))
+        {
+            characterEnum = Character.DrunkenPerson2;
+        }
+        else if (character.Contains("ÀþÀº ³²ÀÚ"))
+        {
+            characterEnum = Character.YoungMan;
         }
 
 

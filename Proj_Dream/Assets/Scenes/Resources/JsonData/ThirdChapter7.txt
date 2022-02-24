@@ -39,10 +39,15 @@
             "dialog": "...에휴, 모르는 사람 너무 믿지 말자. 적당히 둘러대지 뭐."
         },
         {
-            "character": "MES ",
+            "character": "사장",
+            "actionKeyword": "phoneOn"
+        },
+        {
+            "character": "주인공 (A) ",
             "dialog": "사장님, 집에와서 면접 때 말씀해 주신 내용을 계속 생각했는데요,"
         },
         {
+            "actionKeyword": "phoneOff",
             "dialog": "도와주려고 해주셔서 감사합니다. 그렇지만 죄송해서 그렇게는 못할 것 같아요. "
         },
         {

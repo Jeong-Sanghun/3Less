@@ -170,7 +170,11 @@ public class PhoneManager : MonoBehaviour
         float yPos = rect.anchoredPosition.y;
         positionDelta = 100000;
         isTouching = false;
-        if(yPos>(phoneDownPos.y + phoneUpPos.y / 2)+150)
+        if (homeButtonRect.parent != rect)
+        {
+            homeButtonRect.SetParent(rect);
+        }
+        if (yPos>(phoneDownPos.y + phoneUpPos.y / 2)+150)
         {
             StartCoroutine(PhoneMove(false, rect));
         }
