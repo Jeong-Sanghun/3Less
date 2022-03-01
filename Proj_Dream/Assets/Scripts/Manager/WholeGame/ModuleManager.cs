@@ -34,7 +34,7 @@ public class ModuleManager : MonoBehaviour
             yield return null;
             miniTimer += Time.deltaTime;
             currentTargetNumber = miniTimer / eachTime;
-            if (Input.GetMouseButtonDown(0) && canClickSkip)
+            if ((Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.Space)) && canClickSkip)
             {
                 break;
             }

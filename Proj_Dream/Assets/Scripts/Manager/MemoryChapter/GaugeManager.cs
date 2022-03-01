@@ -85,8 +85,7 @@ public class GaugeManager : MonoBehaviour
             {
                 changingNumber = nowSpriteArray.Length - 1 - lastGaugeNumber;
             }
-            nowMoneyGauge += changingNumber;
-            Debug.Log("체인지 넘버" + changingNumber);
+            nowMoneyGauge += changingNumber;            
             saveData.moneyGauge = nowMoneyGauge;
         }
         else

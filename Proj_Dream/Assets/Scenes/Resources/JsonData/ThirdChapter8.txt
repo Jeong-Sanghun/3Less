@@ -62,11 +62,11 @@
             "dialog": "오늘 오후에 면접 오면 됩니다."
         },
         {
+            "actionKeyword": "phoneOff.",
             "dialog": "늦지 마세요."
         },
         {
             "character": "주인공 (A)",
-            "actionKeyword": "phoneOff.",
             "dialog": "이번에는 정말 붙어야 할텐데...."
         },
         {

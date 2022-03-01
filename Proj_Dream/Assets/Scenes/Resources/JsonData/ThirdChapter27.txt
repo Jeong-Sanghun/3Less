@@ -47,6 +47,10 @@
             "dialog": "충동적이라는 들었지만 이미 엎지른 물이었다."
         },
         {
+            "actionKeyword": "moneyGauge+4",
+            "dialog": "대답도 없이 일한 만큼의 금액이 들어왔다."
+        },
+        {
             "character": "주인공 (A)",
             "dialog": "이래도 되나.…"
         },

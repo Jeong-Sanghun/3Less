@@ -100,12 +100,13 @@
         },
         {
             "character": "주인공 (A) ",
-            "dialog": "그게…."
+            "dialog": "그게….",
+            "routeFirst": "통화 안하면 안될까요?",
+            "routeSecond": "부모님이랑 싸워서 안될 것 같아요."
         },
         {
-            "dialog": "통화 안하면 안될까요?"
-        },
-        {
+            "character": "주인공 (A) ",
+            "actionKeyword": "routeFirst",
             "dialog": "제가 집에 좀 일이 있어요."
         },
         {
@@ -172,13 +173,84 @@
         },
         {
             "character": "사장",
+            "actionKeyword": "routeSecond",
+            "dialog": "그게 무슨 말이야?"
+        },
+        {
+            "character": "NAR.",
+            "dialog": "홧김에 지른 말을 수습할 수가 없어서 입을 다물었다."
+        },
+        {
+            "dialog": "얼굴이 화끈거리고 눈물이 날 것 같았다."
+        },
+        {
+            "character": "사장",
+            "dialog": "너 집 나왔니?"
+        },
+        {
+            "dialog": "방금 알려준 번호 부모님 번호가 맞긴 힌거야?"
+        },
+        {
+            "character": "주인공 (A) ",
+            "dialog": "번호가지고 거짓말 한거 아니에요!"
+        },
+        {
+            "character": "사장",
+            "dialog": "그러면 집은?"
+        },
+        {
+            "character": "주인공 (A) ",
+            "dialog": "나오긴 했는대 심각한 건 아니고, 친구 집에서 지내고 있어요."
+        },
+        {
+            "character": "사장",
+            "dialog": "가출 맞네."
+        },
+        {
+            "character": "NAR.",
+            "dialog": "심장이 덜컥거리는 기분이었다."
+        },
+        {
+            "dialog": "아르바이트를 구하려고 한거지 이런 얘기까지 하고 싶었던건 아니었다."
+        },
+        {
+            "character": "사장",
+            "dialog": "혼내려고 그런건 아니야. 너 말고도 집 나왔던 애들 여럿봤어."
+        },
+        {
+            "dialog": "걔네는 내가 편의 봐줘서 휴게실에서 먹고 자고 그러기도 했다."
+        },
+        {
+            "dialog": "이왕 집 나와서 돌아다닐 거면 안전한 곳이라도 있는게 낫지."
+        },
+        {
+            "dialog": "너도 그런거 필요해?"
+        },
+        {
+            "character": "NAR.",
+            "dialog": "목에 메여서 고개만 도리도리 저었다."
+        },
+        {
+            "character": "사장",
+            "dialog": "일도 안필요해?"
+        },
+        {
+            "character": "주인공 (A) ",
+            "dialog": "필요한 건 맞지만 상황이 당황스러워서 쉽게 대답이 나오지 않았다."
+        },
+        {
+            "actionKeyword": "healthGauge-4,routeEnd",
+            "dialog": "처음 보는 어른이 이런식으로 나오니까 덜컥 겁이 났다."
+        },
+        {
+            "character": "사장",
             "dialog": "왜 울어? 어휴, 지금은 정신없어 보이니까 일단 여기까지만 하자. "
         },
         {
             "dialog": "일단 들어가고 생각있으면 연락해. "
         },
         {
-            "character": "주인공 (A) ",
+            "character": "NAR.",
             "dialog": "믿어도 될까?"
         },
         {
@@ -187,11 +259,15 @@
         {
             "dialog": "일단 생각 좀 해보고 들어가자."
         },
-
-	{
+        {
             "character": "자취방 친구(MES)",
             "actionKeyword": "phoneOn"
-        },        {
+        },
+        {
+            "character": "자취방 친구(MES)",
+            "dialog": "면접은 잘 봤어?"
+        },
+        {
             "character": "주인공 (A)(MES)",
             "dialog": "나 면접 본 곳 점장님이 밥 사주신대."
         },
@@ -205,10 +281,11 @@
         },
         {
             "character": "자취방 친구(MES)",
-            "actionKeyword": "phoneOff, playerMove",
+            "actionKeyword": "phoneOff",
             "dialog": "그러게, 되면 좋겠다."
-        } ,       {
-            "actionKeyword": " playerMove"
+        },
+        {
+            "actionKeyword": "playerMove"
         }
     ]
 }

@@ -141,7 +141,7 @@ public class PhoneArchiveManager : MonoBehaviour
         Button backLogOpenButton = archiveInst.transform.GetChild(0).GetComponent<Button>();
         backLogOpenButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, true));
 
-        Button backLogGetOutButton = backLogCanvasInst.transform.GetChild(1).GetChild(1).GetComponent<Button>();
+        Button backLogGetOutButton = backLogCanvasInst.transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Button>();
         backLogGetOutButton.onClick.AddListener(() => BackLogCanvasActive(backLogCanvasInst, false));
 
         Image backLogBackgroundImage = backLogCanvasInst.transform.GetChild(1).GetChild(2).GetComponent<Image>();

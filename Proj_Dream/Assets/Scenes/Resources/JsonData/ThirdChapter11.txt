@@ -17,13 +17,13 @@
         },
         {
             "character": "주인공 (A) ",
-            "dialog": "생각보다 설렁설렁 넘어가더라. "
-        },
-        {
-            "dialog": "시급은 좀 짜긴한데, 월말 되면 생활비는 좀 보탤 수 있을 것 같아. "
+            "dialog": "생각보다 설렁설렁 넘어가더라. ",
+            "routeFirst": "시급은 좀 짜긴한데, 월말 되면 생활비는 좀 보탤 수 있을 것 같아. ",
+            "routeSecond": "그런데 미성년자라 그런지 시급을 마음대로 깎으려고 하더라고."
         },
         {
             "character": "자취방 친구 ",
+            "actionKeyword": "routeFirst",
             "dialog": "월말? 이번달?"
         },
         {
@@ -67,11 +67,72 @@
             "dialog": "아니다, 아니야."
         },
         {
-            "dialog": "갔다올게. "
+            "dialog": "일단 나 레슨 갔다올게. "
+        },
+        {
+            "actionKeyword": "healthGauge-2",
+            "dialog": "돌아서는 뒷모습이 차갑다."
         },
         {
             "character": "NAR.",
             "dialog": "친구의 반응에 막막한 현실이 눈에 보였다. "
+        },
+        {
+            "character": "자취방 친구 ",
+            "actionKeyword": "routeSecond",
+            "dialog": "시급? 그거 함부로 깎으면 안되는거 아니야?"
+        },
+        {
+            "character": "주인공 (A) ",
+            "dialog": "원래는 그런데, 면전에서 대놓고 적게 주겠다고 얘기하더라고."
+        },
+        {
+            "dialog": "미성년자인데도 알바구하는 애들이 간절한거 뻔히 아니까 그러나봐."
+        },
+        {
+            "character": "자취방 친구 ",
+            "dialog": "너무하다. 간절한 걸 알고도 그러는게 더 나빠."
+        },
+        {
+            "character": "주인공 (A) ",
+            "dialog": "마음만 같아서는 확 신고해서 포상금이라도 받고싶었어."
+        },
+        {
+            "character": "자취방 친구 ",
+            "dialog": "그래도 신고는 너무한거 아니야?"
+        },
+        {
+            "character": "주인공 (A) ",
+            "dialog": "아예 돌아다니면서 이런 점포들만 신고하고 그걸로 돈 벌어볼까?"
+        },
+        {
+            "character": "자취방 친구 ",
+            "dialog": "말이 되는 소리를 해. "
+        },
+        {
+            "dialog": "너 안그렇게 봤는데 돈 앞에서는 엄청 용감하다."
+        },
+        {
+            "character": "NAR.",
+            "dialog": "친구가 어이없다는 듯이 웃음을 터트렸다."
+        },
+        {
+            "character": "자취방 친구 ",
+            "dialog": "우리는 돈 보다는 실기가 먼저지."
+        },
+        {
+            "dialog": "너도 너무 힘든 길 가지마."
+        },
+        {
+            "dialog": "나는 레슨 다녀올게."
+        },
+        {
+            "character": "NAR.",
+            "dialog": "친구의 웃음소리가 마치 너무 고생하지 말고 돌아가라는 말처럼 들렸다. "
+        },
+        {
+            "actionKeyword": "healthGauge-1,routeEnd",
+            "dialog": "오늘따라 이 자취방이더 불편하다. "
         },
         {
             "character": "주인공 (A) ",

@@ -101,7 +101,7 @@ public class PhoneMessageManager : MonoBehaviour
 
             wrapper.messageCanvas = Instantiate(messageCanvasPrefab, messageCanvasParent);
             wrapper.messageCanvas.SetActive(false);
-            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(0).GetChild(4).GetComponent<Button>();
+            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(0).GetChild(4).GetChild(0).GetComponent<Button>();
             int dele = i;
             getOutButton1.onClick.AddListener(() => CloseMessageCanvas(dele));
 

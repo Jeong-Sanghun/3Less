@@ -11,9 +11,9 @@ public class SecondSceneManager : SceneManagerParent
     RectTransform scissorRect;
 
     [SerializeField]
-    Transform scissorMiddlePos;
+    RectTransform scissorMiddlePos;
     [SerializeField]
-    Transform scissorEndPos;
+    RectTransform scissorEndPos;
     [SerializeField]
     GameObject roadObject;
     [SerializeField]
@@ -305,21 +305,22 @@ public class SecondSceneManager : SceneManagerParent
         StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
         float timer = 0;
         Vector3 originPos = scissorRect.transform.position;
+        originPos = scissorRect.anchoredPosition;
         Vector3 originScale = scissorRect.transform.localScale;
         Vector3 originRot = scissorRect.transform.localEulerAngles;
         while(timer < 1)
         {
             timer += Time.deltaTime;
-            scissorRect.transform.position = Vector3.Lerp(originPos, scissorMiddlePos.transform.position, timer);
-            scissorRect.transform.localScale = Vector3.Lerp(originScale, scissorMiddlePos.transform.localScale,timer);
-            scissorRect.transform.localEulerAngles = Vector3.Lerp(originRot, scissorMiddlePos.transform.localEulerAngles,timer);
+            scissorRect.anchoredPosition = Vector3.Lerp(originPos, scissorMiddlePos.anchoredPosition, timer);
+            scissorRect.transform.localScale = Vector3.Lerp(originScale, scissorMiddlePos.localScale,timer);
+            scissorRect.transform.localEulerAngles = Vector3.Lerp(originRot, scissorMiddlePos.localEulerAngles,timer);
             player.isPlayPossible = false;
             yield return null;
         }
         yield return new WaitForSeconds(1f);
 
         timer = 0;
-        originPos = scissorRect.transform.position;
+        originPos = scissorRect.anchoredPosition;
         originScale = scissorRect.transform.localScale;
         originRot = scissorRect.transform.localEulerAngles;
         //if (originRot.x < 180)
@@ -341,14 +342,14 @@ public class SecondSceneManager : SceneManagerParent
         while (timer < 1)
         {
             timer += Time.deltaTime;
-            scissorRect.transform.position = Vector3.Lerp(originPos, scissorEndPos.transform.position, timer);
-            scissorRect.transform.localScale = Vector3.Lerp(originScale, scissorEndPos.transform.localScale, timer);
-            scissorRect.transform.localEulerAngles = Vector3.Lerp(originRot, scissorEndPos.transform.localEulerAngles, timer);
+            scissorRect.anchoredPosition = Vector3.Lerp(originPos, scissorEndPos.anchoredPosition, timer);
+            scissorRect.transform.localScale = Vector3.Lerp(originScale, scissorEndPos.localScale, timer);
+            scissorRect.transform.localEulerAngles = Vector3.Lerp(originRot, scissorEndPos.localEulerAngles, timer);
             yield return null;
         }
 
         
-        scissorRect.transform.position = scissorEndPos.transform.position;
+        scissorRect.anchoredPosition = scissorEndPos.anchoredPosition;
         scissorRect.transform.localScale = scissorEndPos.transform.localScale;
         scissorRect.transform.localEulerAngles = scissorEndPos.transform.localEulerAngles;
         scissorRect.gameObject.SetActive(false);

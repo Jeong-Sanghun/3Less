@@ -100,7 +100,7 @@
             "dialog": "어디라도 나가야겠다. "
         },
         {
-            "actionKeyword": "conditionalJump3"
+            "actionKeyword": "conditionalJump3,immediateDialog"
         },
         {
 		            "character": "NAR.",

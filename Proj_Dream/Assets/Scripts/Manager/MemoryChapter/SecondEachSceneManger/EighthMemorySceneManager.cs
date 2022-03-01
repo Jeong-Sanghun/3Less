@@ -55,27 +55,32 @@ public class EighthMemorySceneManager : MemorySceneManagerParent
         }
         if (gaugeManager.isGameOver == true)
         {
+            Debug.Log("¿Ö¾ÈµÅ");
             return;
         }
         if (keywordList.Contains(ActionKeyword.FadeIn))
-        {
+        { 
             eighthFadeImage.gameObject.SetActive(true);
             eighthFadeImage.color = new Color(0, 0, 0, 0);
             StartCoroutine(moduleManager.FadeModule_Image(eighthFadeImage, 0, 1, 1));
         }
         if (keywordList.Contains(ActionKeyword.FadeOut))
         {
-            if (eighthFadeImage.gameObject.activeSelf == true)
-            {
-                eighthFadeImage.color = new Color(0, 0, 0, 1);
-                StartCoroutine(moduleManager.FadeModule_Image(eighthFadeImage, 1, 0, 1));
-            }
+            //if (eighthFadeImage.gameObject.activeSelf == true)
+            //{
+            //    eighthFadeImage.color = new Color(0, 0, 0, 1);
+            //    StartCoroutine(moduleManager.FadeModule_Image(eighthFadeImage, 1, 0, 1));
+            //}
+            eighthFadeImage.gameObject.SetActive(true);
+            eighthFadeImage.color = new Color(0, 0, 0, 1);
+            StartCoroutine(moduleManager.FadeModule_Image(eighthFadeImage, 1, 0, 1));
         }
         if (keywordList.Contains(ActionKeyword.ConditionalJump))
         {
             if(saveData.eighthMemoryLeftTime == 0)
             {
                 nowDialogIndex += (int)parameterList[0];
+                Debug.Log("ÀÏ¾î³µÀ½"+ (int)parameterList[0]);
             }
         }
     }

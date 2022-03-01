@@ -10,10 +10,10 @@
         {
             "dialog": "어디로 갈까?",
             "routeFirst": "샐러드바 ",
-            "routeSecond": "샐러드 전문점 샐러드.",
+            "routeSecond": "샐러드 전문점 샐러드",
             "routeThird": "근처 마트 푸드코트",
-            "routeFourth": "편의점 샐러드.",
-			"routeFifth": "편의점 인스턴트 푸드."
+            "routeFourth": "편의점 샐러드",
+            "routeFifth": "편의점 인스턴트 푸드"
         },
         {
             "character": "NAR.",
@@ -63,7 +63,7 @@
             "dialog": "물기 많은 야채가 축축 늘어져서 맛이 없었다."
         },
         {
-            "actionKeyword": "healthGauge+0,moneyGauge-1",
+            "actionKeyword": "moneyGauge-1",
             "dialog": "익숙한 음식이라 속은 편했다."
         },
         {
@@ -79,8 +79,8 @@
             "dialog": "강한 조미료 맛과 간 때문에 중독성이 느껴진다."
         },
         {
-            "character": "MES ",
-                        "actionKeyword": "soundMessageAlarm",
+            "character": "MES",
+            "actionKeyword": "soundMessageAlarm",
             "dialog": "한국 무용 소품 공동구매 할 사람!"
         },
         {
@@ -132,14 +132,17 @@
         },
         {
             "character": "주인공 (A)",
-            "dialog": "앞으로 어떻게 지내야 하지? "
+            "dialog": "앞으로 어떻게 지내야 하지? ",
+            "routeFirst": "인터넷 검색창에 가출 후 생활이라고 검색했다.",
+            "routeSecond": "인터넷 검색창에 미성년자 아르바이트라고 쳤다."
         },
         {
             "character": "NAR.",
-            "dialog": "인터넷 검색창에 가출 후 생활이라고 검색했다."
+            "actionKeyword": "routeFirst",
+            "dialog": "'버티기 어려웠다…', '귀가지도 난항…' 등등 부정적인 제목의 게시물이 상단에 뜬다."
         },
         {
-            "dialog": "'버티기 어려웠다…', '귀가지도 난항…' 등등 부정적인 제목의 게시물이 상단에 뜬다."
+            "dialog": "간간이 가출팸이라는 단어가 보였다."
         },
         {
             "character": "주인공 (A)",
@@ -147,18 +150,50 @@
         },
         {
             "character": "NAR.",
+            "dialog": "처음 보는 단어를 검색하자 온갖 사건사고를 다루는 뉴스가 나왔다."
+        },
+        {
             "dialog": "부정적인 시선으로 꽉꽉 찬 인터넷 게시물이다."
         },
         {
+            "dialog": "더 찾아보니 가출한 청소년들 끼리 뭉쳐 만든 집단이라는 것을 알게되었다."
+        },
+        {
+            "dialog": "아르바이트나 거처 문제에 관한 교류도 내부에도 활발하게 이루어진다고 한다."
+        },
+        {
             "character": "주인공 (A)",
+            "dialog": "그러면 저런 정보가 필요해서 들어갈 수도 있는거잖아. 친구가 필요할 수도 있고."
+        },
+        {
+            "dialog": "가서 나쁜 짓만 안하면 되는거 아니야?"
+        },
+        {
             "dialog": "무슨 범죄 조직처럼 글을 써놨네."
         },
         {
-            "character": "NAR.",
-            "dialog": "겨우 쓸모있어 게시물 몇개는 아르바이트에 관한 조언이 나와있었다. "
+            "dialog": "가출한 애들은 이렇게 보이는구나...."
         },
         {
-            "dialog": "글을 따라서 일단 아르바이트 앱을 서너개 깔았다. 시간대가 괜찮아 보이는 아르바이트는 대게 만 20세 이상 채용이다."
+            "dialog": "아니면 정말 이렇게 되기 쉬운건가?"
+        },
+        {
+            "actionKeyword": "healthGauge-3",
+            "dialog": "막연한 속상함이 차올랐다."
+        },
+        {
+            "character": "NAR.",
+            "actionKeyword": "routeSecond",
+            "dialog": "미성년자 아르바이트에 관한 게시물을 여러개 읽었다."
+        },
+        {
+            "dialog": "만 15세 이상, 만 18세 미만 미성년자는 원칙적으로 가족관계증명서, 법정후견인 동의서를 제출해야 아르바이트가 가능하다."
+        },
+        {
+            "dialog": "그렇지만 부모님 몰래 아르바이트에 성공했다는 사람의 성공 후기도 찾을 수 있었다."
+        },
+        {
+            "dialog": "성공 후기를 따라서 일단 아르바이트 앱을 서너개 깔았다. 시간대가 괜찮아 보이는 아르바이트는 대게 만 20세 이상 채용이다."
         },
         {
             "character": "주인공 (A)",
@@ -175,15 +210,29 @@
             "dialog": "그나마 10대도 가능한 곳을 찾아 지원했다."
         },
         {
-            "character": "주인공 (A)",
-            "dialog": "용돈 받는게 좋았구나."
+            "dialog": "용돈 받는 안전한 생활이 좋긴 좋았구나."
         },
         {
             "dialog": "집에서 나와 살면서 용돈만 받을 수 있으면 좋겠다."
         },
         {
+            "actionKeyword": "healthGauge-1, routeEnd",
+            "dialog": "하긴 그걸 허락해주실 부모님이면 집에서 나오지도 않았겠지...."
+        },
+        {
+            "character": "NAR.",
+            "dialog": "한숨이 저절로 나왔다. "
+        },
+        {
+            "dialog": "휴대폰을 끄고 멍하게 거리를 바라봤다."
+        },
+        {
+            "character": "주인공 (A)",
+            "dialog": "아무리 그래도 지금 돌아가면 이도저도 못해보고 계속 가족들한테 끌려다닐거야."
+        },
+        {
             "actionKeyword": "playerMove",
-            "dialog": "하긴 그걸 허락해주실 부모님이면 집에서 나오지도 않았겠지…"
+            "dialog": "아직은 못 돌아가."
         }
     ]
 }

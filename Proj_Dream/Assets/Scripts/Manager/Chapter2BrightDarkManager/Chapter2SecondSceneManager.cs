@@ -13,9 +13,9 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
     [SerializeField]
     Image panzaUIImage;
     [SerializeField]
-    Transform panzaMiddlePos;
+    RectTransform panzaMiddlePos;
     [SerializeField]
-    Transform panzaEndPos;
+    RectTransform panzaEndPos;
     [SerializeField]
     GameObject firstPanzaObject;
 
@@ -296,24 +296,24 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         player.SetAnim(PlayController.AnimState.Idle);
         StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
         float timer = 0;
-        Vector3 originPos = panzaRect.transform.position;
-        Vector3 originScale = panzaRect.transform.localScale;
-        Vector3 originRot = panzaRect.transform.localEulerAngles - new Vector3(0, 0, 360);
+        Vector3 originPos = panzaRect.anchoredPosition;
+        Vector3 originScale = panzaRect.localScale;
+        Vector3 originRot = panzaRect.localEulerAngles - new Vector3(0, 0, 360);
         while (timer < 1)
         {
             timer += Time.deltaTime;
-            panzaRect.transform.position = Vector3.Lerp(originPos, panzaMiddlePos.transform.position, timer);
-            panzaRect.transform.localScale = Vector3.Lerp(originScale, panzaMiddlePos.transform.localScale, timer);
-            panzaRect.transform.localEulerAngles = Vector3.Lerp(originRot, panzaMiddlePos.transform.localEulerAngles, timer);
+            panzaRect.anchoredPosition = Vector3.Lerp(originPos, panzaMiddlePos.anchoredPosition, timer);
+            panzaRect.localScale = Vector3.Lerp(originScale, panzaMiddlePos.localScale, timer);
+            panzaRect.localEulerAngles = Vector3.Lerp(originRot, panzaMiddlePos.localEulerAngles, timer);
             player.isPlayPossible = false;
             yield return null;
         }
         yield return new WaitForSeconds(1f);
 
         timer = 0;
-        originPos = panzaRect.transform.position;
-        originScale = panzaRect.transform.localScale;
-        originRot = panzaRect.transform.localEulerAngles + new Vector3(0, 0, 360);
+        originPos = panzaRect.anchoredPosition;
+        originScale = panzaRect.localScale;
+        originRot = panzaRect.localEulerAngles + new Vector3(0, 0, 360);
         //if (originRot.x < 180)
         //{
         //    originRot.x += 360;
@@ -333,16 +333,16 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         while (timer < 1)
         {
             timer += Time.deltaTime;
-            panzaRect.transform.position = Vector3.Lerp(originPos, panzaEndPos.transform.position, timer);
-            panzaRect.transform.localScale = Vector3.Lerp(originScale, panzaEndPos.transform.localScale, timer);
-            panzaRect.transform.localEulerAngles = Vector3.Lerp(originRot, panzaEndPos.transform.localEulerAngles, timer);
+            panzaRect.anchoredPosition = Vector3.Lerp(originPos, panzaEndPos.anchoredPosition, timer);
+            panzaRect.localScale = Vector3.Lerp(originScale, panzaEndPos.localScale, timer);
+            panzaRect.localEulerAngles = Vector3.Lerp(originRot, panzaEndPos.localEulerAngles, timer);
             yield return null;
         }
 
 
-        panzaRect.transform.position = panzaEndPos.transform.position;
-        panzaRect.transform.localScale = panzaEndPos.transform.localScale;
-        panzaRect.transform.localEulerAngles = panzaEndPos.transform.localEulerAngles;
+        panzaRect.anchoredPosition = panzaEndPos.anchoredPosition;
+        panzaRect.localScale = panzaEndPos.localScale;
+        panzaRect.localEulerAngles = panzaEndPos.localEulerAngles;
         panzaRect.gameObject.SetActive(false);
         panzaItemObject.SetActive(true);
         yield return new WaitForSeconds(1f);

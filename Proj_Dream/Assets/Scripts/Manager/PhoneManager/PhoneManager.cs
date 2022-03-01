@@ -231,6 +231,7 @@ public class PhoneManager : MonoBehaviour
                     blurVolume.weight = (phoneUpPos.y -backGround.anchoredPosition.y) / (phoneUpPos.y - phoneDownPos.y);
                     yield return null;
                 }
+                backGround.anchoredPosition = targetPos;
                 if (isTouching == false)
                 {
                     blurVolume.weight = 1;
@@ -250,6 +251,7 @@ public class PhoneManager : MonoBehaviour
                     blurVolume.weight = (phoneUpPos.y - backGround.anchoredPosition.y) / (phoneUpPos.y - phoneDownPos.y);
                     yield return null;
                 }
+                backGround.anchoredPosition = targetPos;
                 phoneMoving = false;
 
                 if (isTouching == false)

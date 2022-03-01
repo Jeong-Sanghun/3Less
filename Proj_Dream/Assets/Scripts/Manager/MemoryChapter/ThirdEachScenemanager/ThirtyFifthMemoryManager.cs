@@ -6,6 +6,8 @@ public class ThirtyFifthMemoryManager : MemorySceneManagerParent
 {
     [SerializeField]
     GameObject friendObject;
+    [SerializeField]
+    GameObject friend1Object;
 
     protected override void Start()
     {
@@ -24,6 +26,8 @@ public class ThirtyFifthMemoryManager : MemorySceneManagerParent
         StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
         StartCoroutine(moduleManager.MoveModule_Linear(friendObject, friendObject.transform.position + Vector3.left / 2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(friendObject, 0, 1, 1f));
+        StartCoroutine(moduleManager.MoveModule_Linear(friend1Object, friend1Object.transform.position + Vector3.left / 2f, 1f));
+        StartCoroutine(moduleManager.FadeModule_Sprite(friend1Object, 0, 1, 1f));
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
 
 

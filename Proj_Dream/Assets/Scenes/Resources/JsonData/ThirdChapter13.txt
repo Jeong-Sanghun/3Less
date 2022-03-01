@@ -28,31 +28,31 @@
         },
         {
             "character": "NAR.",
-            "dialog": "문제의 원인을 찾아 집 이곳저곳을 달칵거리던 친구가 비명을 지른다."
+            "dialog": "문제의 원인을 찾아 집 이곳저곳을 달칵거리던 친구가 비명을 지른다.",
+            "routeFirst": "싱크대가 왜?",
+            "routeSecond": "욕실이 왜?"
         },
         {
             "character": "주인공 (A)",
-            "dialog": "왜그래? 괜찮아?"
-        },
-        {
-            "character": "자취방 친구 ",
+            "actionKeyword": "routeFirst",
             "dialog": "너 싱크대 배수망 안버렸던 거였어?"
         },
         {
-            "dialog": "나는 설거지는 너가 한다길래 당연히 배수망도 비우는 줄 알았지…"
+            "character": "자취방 친구 ",
+            "dialog": "나는 설거지는 너가 한다길래 당연히 배수망도 비우는 줄 알았지...."
         },
         {
             "dialog": "여기는 방이 좁아서 배수망도 이틀 넘게 내버려두면 안돼."
         },
         {
-            "character": "주인공 (A)",
             "dialog": "미안해, 지금치울게."
         },
         {
-            "character": "NAR.",
+            "character": "주인공 (A)",
             "dialog": "배수망은 이미 구더기 천지였다."
         },
         {
+            "character": "NAR.",
             "dialog": "비닐 장갑을 끼고 거름망을 빼낼 때 구더기 한마리가 손목에 묻었다. "
         },
         {
@@ -62,18 +62,78 @@
             "dialog": "비위가 상했다."
         },
         {
-            "character": "자취방 친구 ",
             "dialog": "맞아 이거랑, 샤워하고나서 욕실 환기도 제대로 해줘."
         },
         {
+            "character": "자취방 친구 ",
             "dialog": "곰팡이도 잘 슬거든."
         },
         {
             "dialog": "조금만 신경써줘."
         },
         {
+            "character": "주인공 (A)",
+            "dialog": "응, 확인할게."
+        },
+        {
             "character": "NAR.",
-            "dialog": "진이 빠져서 고개를 끄덕이는 것 외에 대답을 하기 어려웠다."
+            "dialog": "배수망을 갈려고 보니 이미 다 바닥이 났다."
+        },
+        {
+            "actionKeyword": "healthGauge-1,moneyGauge-2",
+            "dialog": "조용히 내 돈으로 배수망을 사왔다."
+        },
+        {
+            "character": "자취방 친구 ",
+            "actionKeyword": "routeSecond",
+            "dialog": "여기 물 고이는거 안빼줬어?"
+        },
+        {
+            "dialog": "이 집 환기가 잘 안되서 샤워하고 물 안빼주면 여기에 벌레 생겨!"
+        },
+        {
+            "dialog": "저기 보이는게 다 알이야."
+        },
+        {
+            "character": "NAR.",
+            "dialog": "고인 물에 뭔가 애벌레 같은게 보였다."
+        },
+        {
+            "dialog": "하천에서나 보던 것이라 징그러웠다."
+        },
+        {
+            "character": "자취방 친구 ",
+            "dialog": "이거 청소해야할 것 같은데...."
+        },
+        {
+            "dialog": "내가 할게. "
+        },
+        {
+            "character": "주인공 (A)",
+            "dialog": "솔로 하면 되지?"
+        },
+        {
+            "dialog": "욕실 솔 지금 망가졌는데."
+        },
+        {
+            "dialog": "바로 사올게!"
+        },
+        {
+            "character": "자취방 친구 ",
+            "dialog": "부탁할게."
+        },
+        {
+            "dialog": "다음 부터는 나도 조심할게."
+        },
+        {
+            "dialog": "솔을 산다는 핑계로 집밖으로 뛰쳐나왔다."
+        },
+        {
+            "dialog": "미안하고 민망했다."
+        },
+        {
+            "actionKeyword": "moneyGauge-3,routeEnd",
+            "dialog": "괜히 솔과 함께 과자를 같이 샀다."
         },
         {
             "actionKeyword": "soundMessageAlarm",
@@ -165,7 +225,7 @@
             "dialog": "가슴이 답답하다."
         },
         {
-            "actionKeyword": "healthGauge-1",
+            "actionKeyword": "healthGauge-4",
             "dialog": "얘 아니면 정말 얘기할 곳도 없는데. "
         },
         {

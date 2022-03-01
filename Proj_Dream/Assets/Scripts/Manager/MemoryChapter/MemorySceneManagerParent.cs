@@ -133,7 +133,10 @@ public class MemorySceneManagerParent : MonoBehaviour
 
     protected virtual void Update()
     {
-
+        if (Input.GetKey(KeyCode.Space))
+        {
+            ScreenTouchEvent();
+        }
     }
 
 
@@ -253,7 +256,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             return;
         }
-
+        Debug.Log(nowDialogIndex);
 
         bool isNewCharacter = false;
         Text nowText = dialogText;
@@ -534,6 +537,11 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             return;
         }
+        if(mainActive == false)
+        {
+            Debug.Log("어디서일어남?");
+        }
+        
         textFrameTransparent = !mainActive;
         if (textFrameTransparent)
         {
@@ -897,4 +905,5 @@ public class MemorySceneManagerParent : MonoBehaviour
         gameManager.SaveSaveData();
     }
 
+    
 }

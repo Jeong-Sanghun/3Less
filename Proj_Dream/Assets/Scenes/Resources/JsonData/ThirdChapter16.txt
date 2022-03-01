@@ -117,8 +117,11 @@
         },
         {
             "character": "NAR.",
-            "actionKeyword": "routeEnd",
             "dialog": "선생님은 잠시 생각하는 표정을 지으셨다."
+        },
+        {
+            "actionKeyword": "healthGauge-1,routeEnd",
+            "dialog": "선생님도 내가 이상한 놈이라고 생각하시는 걸까?"
         },
         {
             "character": "담임선생님 ",
