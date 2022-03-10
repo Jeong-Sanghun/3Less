@@ -12,4 +12,11 @@ public class PostDataBundle
         postList = new List<OnePost>();
     }
 
+    public void Parse()
+    {
+        for(int i = 0; i < postList.Count; i++)
+        {
+            postList[i].Parse();
+        }
+    }
 }

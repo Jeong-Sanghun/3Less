@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class OnePost
 {
-    public SceneName appearingScene;
+    public string appearingScene;
+    public SceneName appearingSceneEnum;
     public string fileName;
     public string profileName;
     public string accountName;
@@ -21,13 +22,20 @@ public class OnePost
 
     public OnePost()
     {
+        appearingScene = null;
         fileName = null;
-        appearingScene = SceneName.Intro;
+        appearingSceneEnum = SceneName.Intro;
         profileName = null;
         accountName = null;
         timeText = null;
         dialog = null;
     }
+
+    public void Parse()
+    {
+        appearingSceneEnum = (SceneName)int.Parse(appearingScene);
+    }
+
 
     public Sprite GetSprite()
     {

@@ -40,6 +40,7 @@ public class PhoneSnsManager : MonoBehaviour
             postDataBundle = json.ResourceDataLoad<PostDataBundle>("InstagramDataBundle");
         }
         phoneManager = PhoneManager.singleTon;
+        postDataBundle.Parse();
 
         EventTrigger.Entry entry1 = new EventTrigger.Entry();
         entry1.eventID = EventTriggerType.PointerUp;
@@ -69,7 +70,7 @@ public class PhoneSnsManager : MonoBehaviour
         for(int i = 0; i < postDataBundle.postList.Count; i++)
         {
             OnePost post = postDataBundle.postList[i];
-            if(post.appearingScene < nowScene)
+            if(post.appearingSceneEnum < nowScene)
             {
                 AddPost(post);
 
@@ -98,7 +99,15 @@ public class PhoneSnsManager : MonoBehaviour
         if (isTwitter)
         {
             Image profileImage = postInst.transform.GetChild(0).GetComponent<Image>();
-            profileImage.sprite = CharacterEnumToSprite.Changer(Character.Player);
+            if (post.profileName.Contains("none"))
+            {
+                profileImage.sprite = CharacterEnumToSprite.Changer(Character.Player);
+            }
+            else
+            {
+                profileImage.sprite = CharacterEnumToSprite.Changer(Character.Message);
+            }
+            
 
             Transform nameGroup = postInst.transform.GetChild(1).GetChild(0);
 
@@ -109,7 +118,7 @@ public class PhoneSnsManager : MonoBehaviour
             accountName.text = post.accountName;
 
             Text time = nameGroup.GetChild(2).GetComponent<Text>();
-            time.text = post.timeText;
+            //time.text = post.timeText;
 
             Text dialog = postInst.transform.GetChild(1).GetChild(1).GetComponent<Text>();
             dialog.text = post.dialog;
@@ -166,7 +175,7 @@ public class PhoneSnsManager : MonoBehaviour
         {
             OnePost post = postDataBundle.postList[i];
             
-            if (post.appearingScene < scene && !postWrapper.postList.Contains(post))
+            if (post.appearingSceneEnum < scene && !postWrapper.postList.Contains(post))
             {
             
                 AddPost(post);
