@@ -13,6 +13,8 @@ public class EndContentsManager : MonoBehaviour
     GameObject cam;
     [SerializeField]
     Image fadeImage;
+    [SerializeField]
+    Text systemText;
     
     bool cameraFollowing;
     float cameraRightBound;
@@ -24,12 +26,18 @@ public class EndContentsManager : MonoBehaviour
         PhoneManager.singleTon.PhoneMainCanvasActive(true);
         StartCoroutine(moduleManager.FadeModule_Image(fadeImage, 1, 0, 1));
         StartCoroutine(CameraFollowCoroutine());
+        for(int i = 1; i < 4; i += 2)
+        {
+            StartCoroutine(moduleManager.AfterRunCoroutine(i, moduleManager.FadeModule_Text(systemText, 0, 1, 1)));
+            StartCoroutine(moduleManager.AfterRunCoroutine(i+1, moduleManager.FadeModule_Text(systemText, 1, 0, 1)));
+        }
+        Invoke("PhoneOpen", 5);
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    void PhoneOpen()
     {
-        
+        PhoneManager.singleTon.PhoneMainOpen();
     }
 
     protected IEnumerator CameraFollowCoroutine()

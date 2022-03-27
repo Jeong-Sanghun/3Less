@@ -126,6 +126,18 @@ public class PhoneManager : MonoBehaviour
         }
     }
 
+    public void PhoneMainOpen()
+    {
+        if (isOpened == false)
+        {
+            if (homeButtonRect.parent != wholeCanvasBackGroundRect)
+            {
+                homeButtonRect.SetParent(wholeCanvasBackGroundRect);
+            }
+            StartCoroutine(PhoneMove(true, wholeCanvasBackGroundRect));
+        }
+    }
+
     public void MessageActiveButton(bool active)
     {
         messageCanvas.SetActive(active);
