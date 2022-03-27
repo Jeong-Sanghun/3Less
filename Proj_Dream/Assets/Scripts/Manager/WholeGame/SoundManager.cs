@@ -8,7 +8,7 @@ public enum BGM {
 
 public enum SFX
 {
-    SoundMessageAlarm, DoorSound, BrokenSound,Siren,Koong
+    SoundMessageAlarm, DoorSound, BrokenSound,Siren,Koong,Gauge
 }
 
 

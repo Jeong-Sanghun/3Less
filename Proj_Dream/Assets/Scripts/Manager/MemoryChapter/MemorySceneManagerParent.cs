@@ -258,7 +258,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         {
             return;
         }
-        Debug.Log(nowDialogIndex);
+        
 
         bool isNewCharacter = false;
         Text nowText = dialogText;

@@ -150,7 +150,7 @@ public class IntroManager : MonoBehaviour
         dialogIndex++;
         if (dialogIndex == 12)
         {
-            Invoke("SceneEnd", 1);
+            Invoke("SceneEnd", 4);
         }
 
     }

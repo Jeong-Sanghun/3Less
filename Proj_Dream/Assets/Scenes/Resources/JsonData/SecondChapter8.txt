@@ -118,11 +118,8 @@
             "dialog": "며칠 간 집에 거의 들어오지 않았다. "
         },
         {
+                    "actionKeyword": "playerMove",
             "dialog": "처음으로 나 혼자서 집밖에서 밤을 지내봤다."
-        },
-        {
-            "actionKeyword": "playerMove",
-            "dialog": "24시간 카페나, 패스트푸드점이나, 찜질방 같은 곳에 있어봤는데 불편하긴 했지만 견딜 만 했다."
         }
     ]
 }

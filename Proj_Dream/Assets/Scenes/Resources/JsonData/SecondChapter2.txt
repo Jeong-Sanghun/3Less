@@ -37,7 +37,7 @@
         },
         {
             "character": "아버지",
-            "actionKeyword": "healthGauge-10",
+            "actionKeyword": "healthGauge-2",
             "dialog": "또, 또 말대꾸!"
         },
         {

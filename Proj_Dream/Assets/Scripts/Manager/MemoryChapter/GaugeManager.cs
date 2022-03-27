@@ -53,12 +53,13 @@ public class GaugeManager : MonoBehaviour
 
     public void ChangeMoneyGauge(int number)
     {
-
+        SoundManager.singleton.EffectPlay(SFX.Gauge);
         StartCoroutine(GaugeImageChangeCoroutine(true, number));
     }
 
     public void ChangeHealthGauge(int number)
     {
+        SoundManager.singleton.EffectPlay(SFX.Gauge);
         StartCoroutine(GaugeImageChangeCoroutine(false, number));
     }
 
