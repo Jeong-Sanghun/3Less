@@ -24,7 +24,6 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
         nowScene = SceneName.MemoryHome1;
         SaveUserData();
-        SoundManager.singleton.BGMPlay(BGM.Memory);
         cameraLeftBound = -7.7f;
         cameraRightBound = 7.7f;
 

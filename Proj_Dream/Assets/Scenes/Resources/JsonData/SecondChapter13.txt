@@ -368,14 +368,6 @@
             "dialog": "그리고 아무것도 묻지 않고 밤을 지낼 수 있도록 이부자리를 깔아주었다."
         },
         {
-            "character": "금붕어",
-            "dialog": "소풍은 즐거웠어?"
-        },
-        {
-            "actionKeyword": "routeEnd",
-            "dialog": "아직도 가 볼 곳이 너무너무 많아~"
-        },
-        {
             "actionKeyword": "playerMove"
         }
     ]

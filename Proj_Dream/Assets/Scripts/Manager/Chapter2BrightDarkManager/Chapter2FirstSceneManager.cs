@@ -20,7 +20,6 @@ public class Chapter2FirstSceneManager : Chapter2SceneManager
         SaveUserData();
         StartCoroutine(CameraFollowCoroutine());
         StartCoroutine(InvokerCoroutine(1, NextDialog));
-        SoundManager.singleton.BGMPlay(BGM.Bright);
     }
 
 

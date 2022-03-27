@@ -71,7 +71,6 @@ public class SecondSceneManager : SceneManagerParent
         StartCoroutine(MedalAnimCoroutine());
         fishState.SetStartLookingRight(false);
         scissorItemOriginPos = scissorItemObject.transform.position;
-        SoundManager.singleton.BGMPlay(BGM.Dark);
     }
 
     private void Update()

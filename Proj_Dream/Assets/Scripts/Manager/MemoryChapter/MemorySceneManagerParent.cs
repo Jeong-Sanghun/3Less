@@ -126,10 +126,12 @@ public class MemorySceneManagerParent : MonoBehaviour
             loadedToRoute = true;
         }
         gaugeManager.SetGauge(saveData.moneyGauge, saveData.healthGauge);
-        
-
-
     }
+
+   
+
+
+
 
     protected virtual void Update()
     {
@@ -520,7 +522,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
         if (keywordList.Contains(ActionKeyword.DoorSound))
         {
-            soundManager.EffectPlay(SFX.DoorSound);
+            //soundManager.EffectPlay(SFX.DoorSound);
             StartCoroutine(InvokerCoroutine(1, SetDialogStopFalse));
         }
 

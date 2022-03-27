@@ -108,6 +108,14 @@ public class IntroManager : MonoBehaviour
         {
             return;
         }
+        if(dialogIndex == 10)
+        {
+            SoundManager.singleton.EffectPlay(SFX.Koong);
+        }
+        if(dialogIndex == 11)
+        {
+            SoundManager.singleton.EffectPlay(SFX.Siren);
+        }
         switch (dialogIndex)
         {
 
@@ -120,6 +128,7 @@ public class IntroManager : MonoBehaviour
                 StartCoroutine(moduleManager.FadeModule_Text(dialogText, 1, 0, 1));
                 isChanging = true;
                 Invoke("SetChangeFalse", 1);
+
                 dialogIndex++;
                 return;
             case 5:
@@ -129,6 +138,7 @@ public class IntroManager : MonoBehaviour
                 dialogText.text = "";
                 StartCoroutine(moduleManager.FadeModule_Text(dialogText, 0, 1, 1));
                 isChanging = true;
+                
                 Invoke("SetChangeFalse", 0.5f);
                 break;
             default:

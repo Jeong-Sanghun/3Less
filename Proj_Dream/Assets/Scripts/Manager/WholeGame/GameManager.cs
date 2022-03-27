@@ -8,7 +8,9 @@ using System;
 
 public enum SceneName
 {
-    MainMenu,Intro,Bright,Dark,MemoryHome1,MemoryRestaurant,
+    MainMenu,Intro,Bright,Dark,
+
+    MemoryHome1,MemoryRestaurant,
     MemoryDarkStreet1,MemoryRooftop1,MemorySchool1,MemoryHome2,
     MemoryHallway1, MemoryBrightStreet1,MemoryHome3,MemoryMyRoom,
     MemorySchool2,MemoryHome4,MemoryBrightStreet2,
@@ -80,7 +82,7 @@ public class GameManager : MonoBehaviour
         isNewGame = true;
         isGameOver = false;
         wholeSceneNumber = SceneManager.sceneCountInBuildSettings;
-
+        SoundManager.singleton.SetBGMOnSceneStart(SceneName.MainMenu);
         //µð¹ö±×
         saveData = jsonManager.LoadSaveData();
     }
@@ -89,7 +91,8 @@ public class GameManager : MonoBehaviour
     {
         //StartCoroutine(SceneLoadCoroutine(scene));
         SceneManager.LoadScene((int)scene);
-        
+        SoundManager.singleton.EffectStop();
+        SoundManager.singleton.SetBGMOnSceneStart(scene);
         PhoneManager.singleTon.phoneInstagramManager.AddPost(scene);
         PhoneManager.singleTon.phoneTwitterManager.AddPost(scene);
         PhoneManager.singleTon.PhoneMainCanvasActive(false);
@@ -114,6 +117,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         asyncLoad.allowSceneActivation = true;
+
 
     }
 

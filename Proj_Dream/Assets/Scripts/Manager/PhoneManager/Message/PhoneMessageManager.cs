@@ -75,13 +75,13 @@ public class PhoneMessageManager : MonoBehaviour
         messageBundle = saveData.messageBundle;
         if(messageBundle == null)
         {
-            Debug.Log("Áö¶ö");
+            
             saveData.messageBundle = new MessageBundle();
             messageBundle = saveData.messageBundle;
         }
         for (int i = 0; i < messageBundle.messageWrapperList.Count; i++)
         {
-            Debug.Log("¸Þ½ÃÁö Æ÷¹®");
+            
             MessageWrapper wrapper = messageBundle.messageWrapperList[i];
             wrapper.canvasOpenButton = Instantiate(messageListButtonPrefab, messageListButtonParent);
             Button listButton = wrapper.canvasOpenButton.transform.GetChild(1).GetComponent<Button>();
@@ -101,22 +101,22 @@ public class PhoneMessageManager : MonoBehaviour
 
             wrapper.messageCanvas = Instantiate(messageCanvasPrefab, messageCanvasParent);
             wrapper.messageCanvas.SetActive(false);
-            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(0).GetChild(4).GetChild(0).GetComponent<Button>();
+            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(1).GetChild(4).GetChild(0).GetComponent<Button>();
             int dele = i;
             getOutButton1.onClick.AddListener(() => CloseMessageCanvas(dele));
 
             //Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
             //getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
 
-            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(0).GetChild(3).GetComponent<Image>();
+            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(1).GetChild(3).GetComponent<Image>();
             canvasProfile.sprite = CharacterEnumToSprite.Changer(wrapper.character);
 
-            Text name = wrapper.messageCanvas.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>();
+            Text name = wrapper.messageCanvas.transform.GetChild(1).GetChild(2).GetChild(0).GetComponent<Text>();
             name.text = CharacterEnumToString.Changer(wrapper.character);
 
-            RectTransform backGround = wrapper.messageCanvas.transform.GetChild(0).GetComponent<RectTransform>();
+            RectTransform backGround = wrapper.messageCanvas.transform.GetChild(1).GetComponent<RectTransform>();
 
-            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(0).GetComponent<EventTrigger>();
+            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(1).GetChild(0).GetComponent<EventTrigger>();
 
             EventTrigger.Entry entry1 = new EventTrigger.Entry();
             entry1.eventID = EventTriggerType.PointerUp;
@@ -134,7 +134,7 @@ public class PhoneMessageManager : MonoBehaviour
             //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, backGround); });
             //swipeEvent.triggers.Add(entry3);
 
-            RectTransform messageParent = wrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+            RectTransform messageParent = wrapper.messageCanvas.transform.GetChild(1).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
             for (int  j = 0; j < wrapper.messageList.Count; j++)
             {
                 OneMessage message = wrapper.messageList[j];
@@ -192,22 +192,22 @@ public class PhoneMessageManager : MonoBehaviour
 
             wrapper.messageCanvas = Instantiate(messageCanvasPrefab, messageCanvasParent);
             wrapper.messageCanvas.SetActive(false);
-            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(0).GetChild(4).GetComponent<Button>();
+            Button getOutButton1 = wrapper.messageCanvas.transform.GetChild(1).GetChild(4).GetChild(0).GetComponent<Button>();
             int dele = wrapperIndex;
             getOutButton1.onClick.AddListener(()=>CloseMessageCanvas(dele));
 
             //Button getOutButton2 = wrapper.messageCanvas.transform.GetChild(0).GetChild(5).GetComponent<Button>();
             //getOutButton2.onClick.AddListener(() => CloseMessageCanvas(dele));
 
-            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(0).GetChild(3).GetComponent<Image>();
+            Image canvasProfile = wrapper.messageCanvas.transform.GetChild(1).GetChild(3).GetComponent<Image>();
             canvasProfile.sprite = CharacterEnumToSprite.Changer(nowCharacter);
 
-            Text name = wrapper.messageCanvas.transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Text>();
+            Text name = wrapper.messageCanvas.transform.GetChild(1).GetChild(2).GetChild(0).GetComponent<Text>();
             name.text = CharacterEnumToString.Changer(nowCharacter);
 
-            RectTransform backGround = wrapper.messageCanvas.transform.GetChild(0).GetComponent<RectTransform>();
+            RectTransform backGround = wrapper.messageCanvas.transform.GetChild(1).GetComponent<RectTransform>();
 
-            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(0).GetChild(0).GetComponent<EventTrigger>();
+            EventTrigger swipeEvent = wrapper.messageCanvas.transform.GetChild(1).GetChild(0).GetComponent<EventTrigger>();
 
 
             EventTrigger.Entry entry1 = new EventTrigger.Entry();
@@ -228,7 +228,7 @@ public class PhoneMessageManager : MonoBehaviour
         }
 
         MessageWrapper nowWrapper = messageBundle.messageWrapperList[wrapperIndex];
-        RectTransform messageParent = nowWrapper.messageCanvas.transform.GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+        RectTransform messageParent = nowWrapper.messageCanvas.transform.GetChild(1).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         OneMessage message;
 
         Text preview = nowWrapper.canvasOpenButton.transform.GetChild(1).GetChild(1).GetComponent<Text>();
@@ -261,7 +261,6 @@ public class PhoneMessageManager : MonoBehaviour
 
     void FlushMessage()
     {
-        Debug.Log("ÇÃ·¯½Ã");
         for(int i = 0; i < messageBundle.messageWrapperList.Count; i++)
         {
             MessageWrapper wrapper = messageBundle.messageWrapperList[i];
@@ -323,7 +322,7 @@ public class PhoneMessageManager : MonoBehaviour
 
         }
         RectTransform messageParent = nowWrapper.messageCanvas.transform.
-            GetChild(0).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
+            GetChild(1).GetChild(1).GetChild(0).GetChild(0).GetComponent<RectTransform>();
         LayoutRebuilder.ForceRebuildLayoutImmediate(messageParent);
 
         wholeMessageCanvas.SetActive(false);
@@ -331,7 +330,7 @@ public class PhoneMessageManager : MonoBehaviour
 
     void CloseMessageCanvas(int wrapperIndex)
     {
-        Debug.Log("½ÇÇàÀ×¾ÈµÅ¿ë");
+        
         nowOpenedCanvas = null;
         MessageWrapper nowWrapper = messageBundle.messageWrapperList[wrapperIndex];
         nowWrapper.CanvasClose();

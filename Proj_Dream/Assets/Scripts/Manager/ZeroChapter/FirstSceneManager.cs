@@ -42,7 +42,6 @@ public class FirstSceneManager : SceneManagerParent
         StartCoroutine(InvokerCoroutine(1, NextDialog));
         maskSpriteArray = Resources.LoadAll<Sprite>("curtain/");
         cameraRightBound = 67.8f;
-        SoundManager.singleton.BGMPlay(BGM.Bright);
         
     }
 

@@ -78,7 +78,7 @@ public class PhoneManager : MonoBehaviour
     private void Start()
     {
         phoneDownPos = new Vector2(0, -486f);
-        phoneUpPos = new Vector2(0, 555f);
+        phoneUpPos = new Vector2(0, 520f);
         homeButtonUpPos = homeButtonRect.anchoredPosition;
         homeButtonDownPos = new Vector2(0, -437f);
         isTouching = false;

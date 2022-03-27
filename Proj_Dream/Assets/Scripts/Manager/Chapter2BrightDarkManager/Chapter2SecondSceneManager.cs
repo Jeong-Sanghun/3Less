@@ -79,7 +79,6 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         StartCoroutine(BanchanAnimCoroutine());
         fishState.SetStartLookingRight(true);
         panzaItemOriginPos = panzaItemObject.transform.position;
-        SoundManager.singleton.BGMPlay(BGM.Dark);
     }
 
     private void Update()
@@ -167,7 +166,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         }
         if (keywordList.Contains(ActionKeyword.BrokenSound))
         {
-            soundManager.EffectPlay(SFX.BrokenSound);
+            //soundManager.EffectPlay(SFX.BrokenSound);
         }
 
     }

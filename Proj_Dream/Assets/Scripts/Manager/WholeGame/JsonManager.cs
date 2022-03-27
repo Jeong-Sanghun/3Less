@@ -80,7 +80,7 @@ public class JsonManager    //SH
 #if UNITY_ANDROID
             //이거나중에 살려야됨
             savePath = Application.persistentDataPath;
-        Debug.Log(savePath);
+        
 #endif
         StringBuilder builder = new StringBuilder(savePath);
         builder.Append(appender);
@@ -143,7 +143,7 @@ public class JsonManager    //SH
 
 #if UNITY_ANDROID
             loadPath = Application.persistentDataPath;
-        Debug.Log(loadPath);
+        
 
 #endif
         StringBuilder builder = new StringBuilder(loadPath);
@@ -254,7 +254,7 @@ public class JsonManager    //SH
 
 #if UNITY_ANDROID
             loadPath = Application.persistentDataPath;
-        Debug.Log(loadPath);
+        
 
 #endif
         StringBuilder builder = new StringBuilder(loadPath);
