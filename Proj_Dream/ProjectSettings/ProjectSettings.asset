@@ -247,7 +247,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/3Less/Keystore/user.keystore
+  AndroidKeystoreName: C:/GithubDesktop/3Less/3Less/Keystore/user.keystore
   AndroidKeyaliasName: 3less
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
