@@ -77,6 +77,7 @@ public class MemorySceneManagerParent : MonoBehaviour
     bool loadedToRoute;
 
     protected bool isNewGame;
+    bool isDeadPoint;
 
     protected virtual void Start()
     {
@@ -421,6 +422,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         if (nowDialog.routeList != null)
         {
             nowChoosedRoute = ActionKeyword.Null;
+
             isRouting = true;
             isStartOfWrapper = true;
             routeDialog = nowDialog;
@@ -441,7 +443,8 @@ public class MemorySceneManagerParent : MonoBehaviour
                     }
                 }
             }
-           
+            IsDeadPoint();
+
         }
 
 
@@ -707,14 +710,19 @@ public class MemorySceneManagerParent : MonoBehaviour
 
         List<Text> routeTextList = new List<Text>();
         isRouteButtonAble = false;
-        if(isMultiRouting == false)
+        if(isDeadPoint == false)
         {
-            SaveUserData();
+            if (isMultiRouting == false)
+            {
+                SaveUserData();
+            }
+            else if (choosedMultiRouteList.Count == 0)
+            {
+                SaveUserData();
+            }
         }
-        else if(choosedMultiRouteList.Count == 0)
-        {
-            SaveUserData();
-        }
+        isDeadPoint = false;
+        
         
         StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
         for(int i = 0; i < routeList.Count; i++)
@@ -730,6 +738,103 @@ public class MemorySceneManagerParent : MonoBehaviour
             StartCoroutine(moduleManager.FadeModule_Text(txt, 0, 1, 1));
         }
         StartCoroutine(InvokerCoroutine(1,RouteButtonAbleTrue));
+
+
+    }
+
+
+    void IsDeadPoint()
+    {
+        if(isMultiRouting == true)
+        {
+            return;
+        }
+        isDeadPoint = false;
+        //true on Dead
+        int nowTracingIndex = nowDialogIndex;
+        int nowHealthGauge = gaugeManager.nowHealthGauge;
+        int nowMoneyGauge = gaugeManager.nowMoneyGauge;
+        List<float> healthGaugeList = new List<float>();
+        List<float> moneyGaugeList = new List<float>();
+        while (true)
+        {
+            bool breaking = false;
+            if(dialogBundle.dialogList[nowTracingIndex].actionList == null)
+            {
+                nowTracingIndex++;
+                continue;
+            }
+            List<ActionClass> actionClassList = dialogBundle.dialogList[nowTracingIndex].actionList;
+            for(int i = 0; i < actionClassList.Count; i++)
+            {
+                if(actionClassList[i].actionList.Contains(ActionKeyword.Route) && actionClassList[i].actionList.Contains(ActionKeyword.End))
+                {
+                    breaking = true;
+                    break;
+                }
+
+                if (actionClassList[i].actionList.Contains(ActionKeyword.HealthGauge))
+                {
+                    List<ActionKeyword> actionKeywordList = actionClassList[i].actionList;
+                    for (int j = 0; j < actionKeywordList.Count; j++)
+                    {
+                        if (actionKeywordList[j] == ActionKeyword.HealthGauge)
+                        {
+                            healthGaugeList.Add(actionClassList[i].parameterList[j]);
+                            break;
+                        }
+                    }
+
+                }
+                if (actionClassList[i].actionList.Contains(ActionKeyword.MoneyGauge))
+                {
+                    List<ActionKeyword> actionKeywordList = actionClassList[i].actionList;
+                    for (int j = 0; j < actionKeywordList.Count; j++)
+                    {
+                        if (actionKeywordList[j] == ActionKeyword.MoneyGauge)
+                        {
+                            moneyGaugeList.Add(actionClassList[i].parameterList[j]);
+                            break;
+                        }
+                    }
+
+                }
+
+            }
+            if (breaking)
+            {
+                break;
+            }
+            nowTracingIndex++;
+        }
+        bool isHealthDead = true;
+        if (healthGaugeList.Count == 0)
+        {
+            isHealthDead = false;
+        }
+        for (int i = 0; i < healthGaugeList.Count; i++)
+        {
+            if (nowHealthGauge + healthGaugeList[i] >= 0)
+            {
+                isHealthDead = false;
+                break;
+            }
+        }
+        bool isMoneyDead = true;
+        if (moneyGaugeList.Count == 0)
+        {
+            isMoneyDead = false;
+        }
+        for (int i = 0; i < moneyGaugeList.Count; i++)
+        {
+            if (nowMoneyGauge + moneyGaugeList[i] >= 0)
+            {
+                isMoneyDead = false;
+                break;
+            }
+        }
+        Debug.Log(isDeadPoint + " 데드데드");
+        isDeadPoint =  isHealthDead || isMoneyDead;
 
 
     }
