@@ -109,6 +109,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         multiRouteEndedDialogIndex = new List<int>();
         saveData = gameManager.saveData;
         StartCoroutine(moduleManager.FadeModule_Image(fadeInImage, 1, 0, 0.5f));
+        textFrameImage.GetComponent<Image>().raycastTarget = false;
         loadedToRoute = false;
         if (playerObject != null)
         {
@@ -754,16 +755,28 @@ public class MemorySceneManagerParent : MonoBehaviour
         int nowTracingIndex = nowDialogIndex;
         int nowHealthGauge = gaugeManager.nowHealthGauge;
         int nowMoneyGauge = gaugeManager.nowMoneyGauge;
-        List<float> healthGaugeList = new List<float>();
-        List<float> moneyGaugeList = new List<float>();
+        float[] healthGaugeArray = new float[5] ;
+        float[] moneyGaugeArray = new float[5];
+        int nowIndex = 0;
+        for(int i = 0; i < 5; i++)
+        {
+            healthGaugeArray[i] = 0;
+            moneyGaugeArray[i] = 0;
+        }
         while (true)
         {
             bool breaking = false;
+            if(nowTracingIndex >= dialogBundle.dialogList.Count)
+            {
+
+                break;
+            }
             if(dialogBundle.dialogList[nowTracingIndex].actionList == null)
             {
                 nowTracingIndex++;
                 continue;
             }
+            
             List<ActionClass> actionClassList = dialogBundle.dialogList[nowTracingIndex].actionList;
             for(int i = 0; i < actionClassList.Count; i++)
             {
@@ -771,6 +784,29 @@ public class MemorySceneManagerParent : MonoBehaviour
                 {
                     breaking = true;
                     break;
+                }
+                if (actionClassList[i].actionList.Contains(ActionKeyword.Route))
+                {
+                    if (actionClassList[i].actionList.Contains(ActionKeyword.First))
+                    {
+                        nowIndex = 0;
+                    }
+                    if (actionClassList[i].actionList.Contains(ActionKeyword.Second))
+                    {
+                        nowIndex = 1;
+                    }
+                    if (actionClassList[i].actionList.Contains(ActionKeyword.Third))
+                    {
+                        nowIndex = 2;
+                    }
+                    if (actionClassList[i].actionList.Contains(ActionKeyword.Fifth))
+                    {
+                        nowIndex = 3;
+                    }
+                    if (actionClassList[i].actionList.Contains(ActionKeyword.Fourth))
+                    {
+                        nowIndex = 4;
+                    }
                 }
 
                 if (actionClassList[i].actionList.Contains(ActionKeyword.HealthGauge))
@@ -780,7 +816,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                     {
                         if (actionKeywordList[j] == ActionKeyword.HealthGauge)
                         {
-                            healthGaugeList.Add(actionClassList[i].parameterList[j]);
+                            healthGaugeArray[nowIndex] +=(actionClassList[i].parameterList[j]);
                             break;
                         }
                     }
@@ -793,7 +829,7 @@ public class MemorySceneManagerParent : MonoBehaviour
                     {
                         if (actionKeywordList[j] == ActionKeyword.MoneyGauge)
                         {
-                            moneyGaugeList.Add(actionClassList[i].parameterList[j]);
+                            moneyGaugeArray[nowIndex] +=(actionClassList[i].parameterList[j]);
                             break;
                         }
                     }
@@ -808,32 +844,31 @@ public class MemorySceneManagerParent : MonoBehaviour
             nowTracingIndex++;
         }
         bool isHealthDead = true;
-        if (healthGaugeList.Count == 0)
+        if (healthGaugeArray.Length == 0)
         {
             isHealthDead = false;
         }
-        for (int i = 0; i < healthGaugeList.Count; i++)
+        for (int i = 0; i < healthGaugeArray.Length; i++)
         {
-            if (nowHealthGauge + healthGaugeList[i] >= 0)
+            if (nowHealthGauge + healthGaugeArray[i] >= 0)
             {
                 isHealthDead = false;
                 break;
             }
         }
         bool isMoneyDead = true;
-        if (moneyGaugeList.Count == 0)
+        if (moneyGaugeArray.Length == 0)
         {
             isMoneyDead = false;
         }
-        for (int i = 0; i < moneyGaugeList.Count; i++)
+        for (int i = 0; i < moneyGaugeArray.Length; i++)
         {
-            if (nowMoneyGauge + moneyGaugeList[i] >= 0)
+            if (nowMoneyGauge + moneyGaugeArray[i] >= 0)
             {
                 isMoneyDead = false;
                 break;
             }
         }
-        Debug.Log(isDeadPoint + " 데드데드");
         isDeadPoint =  isHealthDead || isMoneyDead;
 
 

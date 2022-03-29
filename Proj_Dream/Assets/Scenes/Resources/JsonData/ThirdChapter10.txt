@@ -93,7 +93,7 @@
             "dialog": "내 힘으로 깎일 뻔한 시급을 살려냈다. "
         },
         {
-            "actionKeyword": "healthGauge+1,routeEnd",
+            "actionKeyword": "healthGauge+2",
             "dialog": "뭔가를 이뤄낸거 같아 뿌듯하다."
         },
         {

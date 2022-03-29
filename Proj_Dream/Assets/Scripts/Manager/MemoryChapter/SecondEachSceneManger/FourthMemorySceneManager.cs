@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FourthMemorySceneManager : MemorySceneManagerParent
+public class FourthMemorySceneManager : PhoneDialogManager
 {
     [SerializeField]
     GameObject friendGirlObject;

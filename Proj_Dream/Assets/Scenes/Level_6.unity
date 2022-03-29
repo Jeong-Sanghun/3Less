@@ -166,6 +166,7 @@ RectTransform:
   - {fileID: 1825591494}
   - {fileID: 1474943784}
   - {fileID: 2893078653292766370}
+  - {fileID: 558296821}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -679,6 +680,12 @@ MonoBehaviour:
   ballonList:
   - {fileID: 2121283982}
   - {fileID: 1784653710}
+  phoneParentRect: {fileID: 558296821}
+  wholeChatParentRect: {fileID: 558296820}
+  otherChatPrefab: {fileID: 3182840957235168200, guid: 6c7e0005a46d2c449b323fa3e341f2e2,
+    type: 3}
+  playerChatPrefab: {fileID: 7996808282913862916, guid: 6d5a6ef57d3021748b1550fdefb753f3,
+    type: 3}
   friendGirlObject: {fileID: 562391125}
   fourthFadeImage: {fileID: 1290195085}
 --- !u!4 &490037254
@@ -696,6 +703,142 @@ Transform:
   m_Father: {fileID: 1242029613}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &558296819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 71333658}
+    m_Modifications:
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1070
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429842440391005, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_Name
+      value: PhoneMessageDialogParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038429843588490123, guid: a211c2c180dc8534f890aedfe39eb487,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a211c2c180dc8534f890aedfe39eb487, type: 3}
+--- !u!224 &558296820 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1038429843588490123, guid: a211c2c180dc8534f890aedfe39eb487,
+    type: 3}
+  m_PrefabInstance: {fileID: 558296819}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &558296821 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1038429842440391004, guid: a211c2c180dc8534f890aedfe39eb487,
+    type: 3}
+  m_PrefabInstance: {fileID: 558296819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &562391125
 GameObject:
   m_ObjectHideFlags: 0

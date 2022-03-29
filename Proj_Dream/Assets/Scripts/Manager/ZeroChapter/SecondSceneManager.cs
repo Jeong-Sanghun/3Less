@@ -60,6 +60,7 @@ public class SecondSceneManager : SceneManagerParent
     {
         base.Start();
         nowScene = SceneName.Dark;
+        textFrameImage.GetComponent<Image>().raycastTarget = false;
         SaveUserData();
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("FirstChapter2");
         dialogBundle.SetCharacterEnum();

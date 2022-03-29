@@ -61,6 +61,7 @@ public class SceneManagerParent : MonoBehaviour
         dialogText.text = "";
         systemText.text = "";
         textFrameTransparent = true;
+        textFrameImage.GetComponent<Image>().raycastTarget = false;
         for (int i = 0; i < ballonList.Count; i++)
         {
             ballonList[i].SetActive(false);

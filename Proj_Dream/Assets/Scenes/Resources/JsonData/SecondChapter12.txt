@@ -202,7 +202,7 @@
             "dialog": "어린 것이 말이야, 부모 얼굴도 모르는 녀석이랑 딱 붙어서 그러고 있으면 남들이 뭐라고 생각하는 줄 알아?"
         },
         {
-            "actionKeyword": "healthGauge-2",
+            "actionKeyword": "healthGauge-1",
             "dialog": "벌써부터 발랑 까져가지고!"
         },
         {

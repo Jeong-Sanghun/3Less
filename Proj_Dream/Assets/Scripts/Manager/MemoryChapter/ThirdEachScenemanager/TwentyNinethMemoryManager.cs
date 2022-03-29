@@ -28,6 +28,10 @@ public class TwentyNinethMemoryManager : MemorySceneManagerParent
         StartCoroutine(moduleManager.MoveModule_Linear(playerObject, playerObject.transform.position + Vector3.right / 2f, 1f));
         StartCoroutine(moduleManager.FadeModule_Sprite(memoryPlayer.spritePlayerObject, 0, 1, 1f));
 
+        if (nowDialogIndex != 0)
+        {
+            BrotherMove();
+        }
         StartCoroutine(InvokerCoroutine(1f, NextDialog));
     }
 

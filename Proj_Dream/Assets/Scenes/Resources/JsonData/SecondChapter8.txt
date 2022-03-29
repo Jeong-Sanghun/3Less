@@ -96,7 +96,7 @@
             "dialog": "밥이라도 사 먹으라고 식탁에 얼마의 용돈이 있긴 했지만 그뿐이다."
         },
         {
-            "actionKeyword": "moneyGauge5,healthGauge-2,routeEnd,fadeOut",
+            "actionKeyword": "moneyGauge5,healthGauge-1,routeEnd,fadeOut",
             "dialog": "어디라도 나가야겠다. "
         },
         {

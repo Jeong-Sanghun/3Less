@@ -42,6 +42,10 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
 
     public override void TriggerEnter(string triggerName)
     {
+        if(nowActionList == null)
+        {
+            return;
+        }
         for (int i = 0; i < nowActionList.Count; i++)
         {
             List<ActionKeyword> keywordList = nowActionList[i].actionList;

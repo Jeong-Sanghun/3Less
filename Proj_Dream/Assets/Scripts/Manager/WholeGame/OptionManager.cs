@@ -41,7 +41,7 @@ public class OptionManager : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("Mute"))
         {
-            PlayerPrefs.SetInt("Mute", 0);
+            PlayerPrefs.SetInt("Mute", 1);
         }
 
         if (PlayerPrefs.GetInt("Mute") == 1)

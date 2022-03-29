@@ -131,9 +131,18 @@
             "character": "NAR.",
             "dialog": "옥상에서 떠나고 얼마 되지 않아, 그 애에게서 문자가 왔다."
         },
+                {
+            "actionKeyword": "phoneOn",
+             "character": "B"
+            },
         {
-            "character": "MES",
+            "character": "B",
+                      "actionKeyword": "phoneOff",
             "dialog": "오늘 이야기 들어서 나도 좋았어. 사실 나도 가족이랑 별로 안 좋아서 공감되더라. 어쩌면 난 곧 집 떠날지도 모르겠다.ㅋㅋ"
+        },
+                {
+            "character": "NAR(SYS)",
+            "dialog": "핸드폰에 도착한 메시지와 SNS에서 더 많은 기억을 살펴볼 수 있습니다. "
         },
         {
             "character": "NAR.",

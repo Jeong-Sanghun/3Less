@@ -12,6 +12,8 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
     GameObject fatherObject;
     [SerializeField]
     GameObject brotherObject;
+    bool firstCollided;
+    bool secondCollided;
 
 
     protected override void Start()
@@ -20,7 +22,8 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
         dialogBundle = jsonManager.ResourceDataLoad<DialogBundle>("SecondChapter3");
         dialogBundle.SetCharacterEnum();
 
-        
+        firstCollided = false;
+        secondCollided = false;
         
         playerObject.SetActive(true);
         memoryPlayer.ToggleToSprite();
@@ -65,17 +68,24 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
 
     public override void TriggerEnter(string triggerName)
     {
+        if(nowActionList == null)
+        {
+            return;
+        }
         for (int i = 0; i < nowActionList.Count; i++)
         {
             List<ActionKeyword> keywordList = nowActionList[i].actionList;
-            if (triggerName.Contains("Target1") && keywordList.Contains(ActionKeyword.PlayerMove))
+            if (triggerName.Contains("Target1")
+                &&firstCollided == false&& keywordList.Contains(ActionKeyword.PlayerMove))
             {
                 PhoneManager.singleTon.PhoneMainCanvasActive(false);
                 StartCoroutine(PlayerMoveCoroutine());
 
             }
-            if (triggerName.Contains("Target2") && keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
+            if (triggerName.Contains("Target2")
+                 && secondCollided == false && keywordList.Contains(ActionKeyword.Scene) && keywordList.Contains(ActionKeyword.End))
             {
+                secondCollided = true;
                 memoryPlayer.isPlayPossible = false;
                 memoryPlayer.ToggleToSprite();
                 PhoneManager.singleTon.PhoneMainCanvasActive(false);
@@ -85,7 +95,7 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
     }
     IEnumerator PlayerMoveCoroutine()
     {
-        
+        firstCollided = true;
         memoryPlayer.isPlayPossible = false;
         memoryPlayer.ToggleToSprite();
         StartCoroutine(moduleManager.MoveModule_Linear(motherObject, motherObject.transform.position + Vector3.right / 2, 1));
@@ -100,6 +110,7 @@ public class ThirdMemorySceneManager : MemorySceneManagerParent
 
     IEnumerator OnReEntryGame()
     {
+        firstCollided = true;
         isDialogStopping = true;
         isStopActionable = false;
         playerObject.transform.position = playerTarget.transform.position;

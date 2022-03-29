@@ -51,7 +51,7 @@
             "dialog": "어제나 오늘이나 생활은 달라진 게 하나도 없는데 갑자기 굉장한 사람이 된 기분이었다."
         },
         {
-            "actionKeyword": "healthGauge2",
+            "actionKeyword": "healthGauge4",
             "dialog": "그사이에 소문이 났는지 데면데면하던 친구들까지 축하를 해줬다."
         },
 		{

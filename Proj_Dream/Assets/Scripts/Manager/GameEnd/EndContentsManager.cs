@@ -15,6 +15,8 @@ public class EndContentsManager : MonoBehaviour
     Image fadeImage;
     [SerializeField]
     Text systemText;
+    [SerializeField]
+    GameObject backButton;
     
     bool cameraFollowing;
     float cameraRightBound;
@@ -33,6 +35,12 @@ public class EndContentsManager : MonoBehaviour
         }
         Invoke("PhoneOpen", 5);
         
+    }
+
+    public void GetBack()
+    {
+        backButton.SetActive(false);
+        GameManager.singleton.LoadScene(SceneName.MainMenu);
     }
 
     void PhoneOpen()

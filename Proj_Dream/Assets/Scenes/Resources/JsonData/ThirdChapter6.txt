@@ -2,7 +2,7 @@
     "dialogList": [
         {
             "character": "주인공 (A) ",
-            "dialog": "안녕하세요, 오늘 면접보기로 한 A 입니다. "
+            "dialog": "안녕하세요, 오늘 면접보기로 한 사람입니다. "
         },
         {
             "character": "사장",

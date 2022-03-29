@@ -68,7 +68,7 @@ public class SoundManager : MonoBehaviour
         {
             BGMPlay(BGM.Scene15);
         }
-        else if (sceneNum >= 16 && sceneNum <= 19)
+        else if (sceneNum == 16)
         {
             BGMPlay(BGM.Scene16to19);
         }
@@ -88,12 +88,6 @@ public class SoundManager : MonoBehaviour
         {
             BGMPlay(BGM.Memory2Base);
         }
-
-
-
-
-
-
     }
 
     public void BGMPlay(BGM bgm)
@@ -149,13 +143,13 @@ public class SoundManager : MonoBehaviour
         bgmSource.volume = 1;
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            clickSource.Play();
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        clickSource.Play();
+    //    }
+    //}
 
 
 }
