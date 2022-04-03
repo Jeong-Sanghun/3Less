@@ -200,10 +200,11 @@
         },
         {
             "character": "NAR.",
-            "actionKeyword": "routeSecond,otherMove",
+            "actionKeyword": "routeSecond",
             "dialog": "예전부터 생각하던 거지만, 아빠가 나한테 하는 건 가정폭력이다. 경찰에 신고하자."
         },
         {
+                    "actionKeyword": "otherMove",
             "dialog": "문자로도 신고가 된다고 했었지?"
         },
         {

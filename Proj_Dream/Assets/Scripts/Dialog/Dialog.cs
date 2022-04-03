@@ -276,7 +276,7 @@ public class Dialog
                         secondsIndex =bufferKeyword.IndexOf("seconds");
                     }
                     bufferKeyword = bufferKeyword.Remove(secondsIndex, 7);
-                    Debug.Log(bufferKeyword);
+                    
                     act.parameterList.Add(float.Parse(bufferKeyword));
 
                 }

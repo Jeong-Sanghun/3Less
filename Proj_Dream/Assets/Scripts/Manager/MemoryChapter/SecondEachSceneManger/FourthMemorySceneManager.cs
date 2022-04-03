@@ -71,6 +71,11 @@ public class FourthMemorySceneManager : PhoneDialogManager
                 memoryPlayer.isPlayPossible = false;
                 memoryPlayer.ToggleToSprite();
                 PhoneManager.singleTon.PhoneMainCanvasActive(false);
+
+                fourthFadeImage.gameObject.SetActive(true);
+                fourthFadeImage.color = new Color(0, 0, 0, 0);
+                StartCoroutine(moduleManager.FadeModule_Image(fourthFadeImage, 0, 1, 1));
+
                 NextDialog();
             }
         }

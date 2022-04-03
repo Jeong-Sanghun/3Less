@@ -153,11 +153,12 @@
         },
         {
             "character": "NAR.",
+                        "actionKeyword": "otherMoveFirst",
             "dialog": "벼락처럼 떨어지는 노호성을 멍하니 듣고 있었더니 문이 쾅하고 열리며 동생이 나왔다."
         },
         {
             "character": "동생",
-            "actionKeyword": "otherMoveFirst",
+
             "dialog": "왜, 왜, 왜! 왜 이렇게 시끄러운데!"
         },
         {

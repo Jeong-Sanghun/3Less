@@ -293,6 +293,7 @@ public class Chapter2SecondSceneManager : Chapter2SceneManager
         panzaUIImage.color = Color.white;
         firstPanzaObject.SetActive(false);
         player.SetAnim(PlayController.AnimState.Idle);
+        player.isPlayPossible = false;
         StartCoroutine(moduleManager.VolumeModule(blurVolume, true, 1));
         float timer = 0;
         Vector3 originPos = panzaRect.anchoredPosition;

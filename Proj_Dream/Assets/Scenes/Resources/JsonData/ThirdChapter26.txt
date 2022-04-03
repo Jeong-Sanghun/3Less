@@ -63,6 +63,7 @@
         },
         {
             "character": "주인공 (A)",
+            "actionKeyword": "routeSecond",
             "dialog": "사고 싶은 물건 때문에 부모님이랑 싸워서 그런거에요."
         },
         {

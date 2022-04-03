@@ -36,32 +36,33 @@ public class PhoneMessageManager : MonoBehaviour
 
     private void Start()
     {
-        if(saveData == null)
+        if(phoneManager != null)
         {
-            phoneManager = PhoneManager.singleTon;
-            gameManager = GameManager.singleton;
-            saveData = gameManager.saveData;
-
-
-            EventTrigger.Entry entry1 = new EventTrigger.Entry();
-            entry1.eventID = EventTriggerType.PointerUp;
-            entry1.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
-            handle.triggers.Add(entry1);
-
-            //버튼 이벤트
-            EventTrigger.Entry entry2 = new EventTrigger.Entry();
-            entry2.eventID = EventTriggerType.Drag;
-            entry2.callback.AddListener((data) => { phoneManager.Swipe((PointerEventData)data, wholeCanavsBackGroundRect); });
-            handle.triggers.Add(entry2);
-
-            //EventTrigger.Entry entry3 = new EventTrigger.Entry();
-            //entry3.eventID = EventTriggerType.PointerExit;
-            //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
-            //handle.triggers.Add(entry3);
-
-            SetMessage();
+            return;
         }
-       
+        phoneManager = PhoneManager.singleTon;
+        gameManager = GameManager.singleton;
+        saveData = gameManager.saveData;
+
+
+        EventTrigger.Entry entry1 = new EventTrigger.Entry();
+        entry1.eventID = EventTriggerType.PointerUp;
+        entry1.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
+        handle.triggers.Add(entry1);
+
+        //버튼 이벤트
+        EventTrigger.Entry entry2 = new EventTrigger.Entry();
+        entry2.eventID = EventTriggerType.Drag;
+        entry2.callback.AddListener((data) => { phoneManager.Swipe((PointerEventData)data, wholeCanavsBackGroundRect); });
+        handle.triggers.Add(entry2);
+
+        //EventTrigger.Entry entry3 = new EventTrigger.Entry();
+        //entry3.eventID = EventTriggerType.PointerExit;
+        //entry3.callback.AddListener((data) => { phoneManager.PointerUp((PointerEventData)data, wholeCanavsBackGroundRect); });
+        //handle.triggers.Add(entry3);
+
+        SetMessage();
+
     }
 
     public void SetMessage()
@@ -93,7 +94,7 @@ public class PhoneMessageManager : MonoBehaviour
 
             Text previewText = listButton.transform.GetChild(1).GetComponent<Text>();
             int lastIndex = messageBundle.messageWrapperList[i].messageList.Count - 1;
-            if(lastIndex>0)
+            if(lastIndex>=0)
                 previewText.text = messageBundle.messageWrapperList[i].messageList[lastIndex].dialog;
 
             Image profile = wrapper.canvasOpenButton.transform.GetChild(0).GetComponent<Image>();
