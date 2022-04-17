@@ -1,6 +1,6 @@
 {
-    "savedScene": 5,
-    "dialogIndex": 1,
+    "savedScene": 1,
+    "dialogIndex": 0,
     "healthGauge": 9,
     "moneyGauge": 0,
     "eighthMemoryLeftTime": 2,
@@ -8,49 +8,6 @@
         "messageWrapperList": []
     },
     "backLogBundle": {
-        "backLogWrapperList": [
-            {
-                "sceneName": 4,
-                "backLogList": [
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 0,
-                        "choosedRouteIndex": -1,
-                        "isRouteTalk": false,
-                        "change": 0
-                    }
-                ]
-            },
-            {
-                "sceneName": 5,
-                "backLogList": [
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 0,
-                        "choosedRouteIndex": -1,
-                        "isRouteTalk": false,
-                        "change": 0
-                    },
-                    {
-                        "character": 7,
-                        "backLogType": 1,
-                        "dialogIndex": 1,
-                        "choosedRouteIndex": -1,
-                        "isRouteTalk": false,
-                        "change": 0
-                    },
-                    {
-                        "character": 1,
-                        "backLogType": 1,
-                        "dialogIndex": 2,
-                        "choosedRouteIndex": -1,
-                        "isRouteTalk": false,
-                        "change": 0
-                    }
-                ]
-            }
-        ]
+        "backLogWrapperList": []
     }
 }
