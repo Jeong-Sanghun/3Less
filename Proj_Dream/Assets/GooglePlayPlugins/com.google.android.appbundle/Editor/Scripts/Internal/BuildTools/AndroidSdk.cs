@@ -30,16 +30,8 @@ namespace Google.Android.AppBundle.Editor.Internal.BuildTools
         public const string AndroidHomeEnvironmentVariableKey = "ANDROID_HOME";
 
         private const string AndroidNdkHomeEnvironmentVariableKey = "ANDROID_NDK_HOME";
-
-        /// <summary>
-        /// The environment variable key we use when overriding existing Unity editor preferences.
-        /// We use UNITY_JAVA_HOME instead of JAVA_HOME because Unity will override JAVA_HOME to match it's editor preferences.
-        /// </summary>
-        private const string JavaHomeEnvironmentVariableKey = "UNITY_JAVA_HOME";
         private const string AndroidSdkRootEditorPrefsKey = "AndroidSdkRoot";
         private const string AndroidNdkRootEditorPrefsKey = "AndroidNdkRoot";
-        private const string JdkPathEditorPrefsKey = "JdkPath";
-        private const string JdkUseEmbeddedEditorPrefsKey = "JdkUseEmbedded";
 
         private string _androidSdkRoot;
 
@@ -89,7 +81,7 @@ namespace Google.Android.AppBundle.Editor.Internal.BuildTools
         }
 
         /// <summary>
-        /// Override the AndroidSdkRoot/AndroidNdkRoot/JdkPath EditorPrefs with corresponding environment variables.
+        /// Override the AndroidSdkRoot/AndroidNdkRoot EditorPrefs with corresponding environment variables.
         /// This is especially helpful for automated builds where the preferences may not be set.
         /// </summary>
         public static void OverrideEditorPreferences()
@@ -103,9 +95,6 @@ namespace Google.Android.AppBundle.Editor.Internal.BuildTools
             OverrideEditorPreference(AndroidNdkHomeEnvironmentVariableKey,
                 () => UnityEditor.Android.AndroidExternalToolsSettings.ndkRootPath,
                 v => { UnityEditor.Android.AndroidExternalToolsSettings.ndkRootPath = v; });
-            OverrideEditorPreference(JavaHomeEnvironmentVariableKey,
-                () => UnityEditor.Android.AndroidExternalToolsSettings.jdkRootPath,
-                v => { UnityEditor.Android.AndroidExternalToolsSettings.jdkRootPath = v; });
 #else
             OverrideEditorPreference(AndroidHomeEnvironmentVariableKey,
                 () => EditorPrefs.GetString(AndroidSdkRootEditorPrefsKey),
@@ -113,18 +102,9 @@ namespace Google.Android.AppBundle.Editor.Internal.BuildTools
             OverrideEditorPreference(AndroidNdkHomeEnvironmentVariableKey,
                 () => EditorPrefs.GetString(AndroidNdkRootEditorPrefsKey),
                 v => { EditorPrefs.SetString(AndroidNdkRootEditorPrefsKey, v); });
-
-            OverrideEditorPreference(JavaHomeEnvironmentVariableKey,
-                () => EditorPrefs.GetString(JdkPathEditorPrefsKey),
-                v => { EditorPrefs.SetString(JdkPathEditorPrefsKey, v); });
-
-            // Older versions of Unity have an additional boolean preference that must be disabled.
-            // Otherwise, Unity will use the JDK installed with the editor instead of the path we set in EditorPrefs.
-            EditorPrefs.SetInt(JdkUseEmbeddedEditorPrefsKey, 0);
 #endif
         }
 
-        // TODO(b/189958664): Move this to a helper class and move the JDK portion of OverrideEditorPreferences into JavaUtils.
         private static void OverrideEditorPreference(
             string environmentVariableKey, Func<string> getPreference, Action<string> setPreference)
         {

@@ -87,7 +87,6 @@ namespace Google.Android.AppBundle.Editor.Internal
 
             return await appBundleBuilder.CreateBundleWithTask(androidBuildOptions);
         }
-
 #endif
 
         /// <summary>
@@ -181,11 +180,7 @@ namespace Google.Android.AppBundle.Editor.Internal
             var aabFilePath = buildSettings.buildPlayerOptions.locationPathName;
             if (IsBatchMode || buildSettings.forceSynchronousBuild)
             {
-                var createBundleOptions = new CreateBundleOptions
-                {
-                    AabFilePath = aabFilePath, AssetPackConfig = buildSettings.assetPackConfig
-                };
-                var errorMessage = appBundleBuilder.CreateBundle(createBundleOptions);
+                var errorMessage = appBundleBuilder.CreateBundle(aabFilePath, buildSettings.assetPackConfig);
                 return errorMessage == null;
             }
 
@@ -212,12 +207,7 @@ namespace Google.Android.AppBundle.Editor.Internal
                 runOnDevice
                     ? (AppBundleBuilder.PostBuildCallback) RunBundle
                     : EditorUtility.RevealInFinder;
-
-            var createBundleOptions = new CreateBundleOptions
-            {
-                AabFilePath = aabFilePath, AssetPackConfig = assetPackConfig
-            };
-            appBundleBuilder.CreateBundleAsync(createBundleOptions, callback);
+            appBundleBuilder.CreateBundleAsync(aabFilePath, assetPackConfig, callback);
         }
 
         private static void RunBundle(string aabFile)

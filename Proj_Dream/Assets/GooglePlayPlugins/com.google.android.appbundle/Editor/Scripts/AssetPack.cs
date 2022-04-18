@@ -45,12 +45,6 @@ namespace Google.Android.AppBundle.Editor
             get { return _assetBundleFilePath; }
             set
             {
-                if (value == null)
-                {
-                    _assetBundleFilePath = null;
-                    return;
-                }
-
                 if (_assetPackDirectoryPath != null)
                 {
                     throw new ArgumentException("AssetPackDirectoryPath is already set.");
@@ -81,12 +75,6 @@ namespace Google.Android.AppBundle.Editor
             get { return _assetPackDirectoryPath; }
             set
             {
-                if (value == null)
-                {
-                    _assetPackDirectoryPath = null;
-                    return;
-                }
-
                 if (_assetBundleFilePath != null)
                 {
                     throw new ArgumentException("AssetBundleFilePath is already set.");
@@ -120,12 +108,6 @@ namespace Google.Android.AppBundle.Editor
             get { return _compressionFormatToAssetBundleFilePath; }
             set
             {
-                if (value == null)
-                {
-                    _compressionFormatToAssetBundleFilePath = null;
-                    return;
-                }
-
                 if (_assetBundleFilePath != null)
                 {
                     throw new ArgumentException("AssetBundleFilePath is already set.");
@@ -159,12 +141,6 @@ namespace Google.Android.AppBundle.Editor
             get { return _compressionFormatToAssetPackDirectoryPath; }
             set
             {
-                if (value == null)
-                {
-                    _compressionFormatToAssetPackDirectoryPath = null;
-                    return;
-                }
-
                 if (_assetBundleFilePath != null)
                 {
                     throw new ArgumentException("AssetBundleFilePath is already set.");
