@@ -1,4 +1,4 @@
-# 대학생 개발팀 외주 DeadOrAlive
+# 대학생 개발팀 외주 3Less
 Unity / 2D / Android / 비주얼노벨
 
 # 팀구성 
