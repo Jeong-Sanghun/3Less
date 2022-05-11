@@ -1,5 +1,9 @@
+
 # 대학생 개발팀 외주 3Less
 Unity / 2D / Android / 비주얼노벨
+
+# 플레이 영상
+[플레이 영상](https://youtu.be/UE8IELhH-N4)
 
 # 팀구성 
 **기획** : 김정이
@@ -16,4 +20,3 @@ Unity / 2D / Android / 비주얼노벨
 # 개발툴
 Unity Engine
 C#
-
