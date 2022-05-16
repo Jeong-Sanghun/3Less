@@ -118,7 +118,7 @@ public class PhoneArchiveManager : MonoBehaviour
         }
         if (archive == null)
         {
-            Debug.Log("พร");
+            
             return;
         }
         GameObject archiveInst = Instantiate(oneArchivePrefab, oneArchiveParent);
@@ -282,7 +282,7 @@ public class PhoneArchiveManager : MonoBehaviour
 
         if (wrapper == null)
         {
-            Debug.Log(scene);
+            
             wrapper = new BackLogWrapper();
             wrapper.sceneName = scene;
             backLogBundle.backLogWrapperList.Add(wrapper);

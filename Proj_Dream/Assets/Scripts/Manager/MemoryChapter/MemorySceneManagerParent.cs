@@ -545,7 +545,7 @@ public class MemorySceneManagerParent : MonoBehaviour
         }
         if(mainActive == false)
         {
-            Debug.Log("어디서일어남?");
+            
         }
         
         textFrameTransparent = !mainActive;

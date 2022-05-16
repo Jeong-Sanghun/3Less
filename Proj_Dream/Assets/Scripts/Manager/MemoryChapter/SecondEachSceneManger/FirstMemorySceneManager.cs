@@ -35,7 +35,7 @@ public class FirstMemorySceneManager : MemorySceneManagerParent
         base.OverrideAction(keywordList, parameterList);
         for (int j = 0; j < keywordList.Count; j++)
         {
-            Debug.Log(keywordList[j]);
+            
         }
 
     }

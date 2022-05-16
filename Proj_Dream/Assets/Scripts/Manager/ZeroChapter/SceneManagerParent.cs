@@ -199,7 +199,7 @@ public class SceneManagerParent : MonoBehaviour
 
     protected virtual void OnActionKeyword()
     {
-        Debug.Log("스탑포인트");
+        
         List<ActionClass> actionClassList = nowActionList;
         bool immediateStart = false;
         bool isPlaying = player.isPlayPossible;
@@ -268,7 +268,7 @@ public class SceneManagerParent : MonoBehaviour
 
     protected IEnumerator InvokerCoroutine(float time, Action method)
     {
-        Debug.Log("인보크" + method.Method.Name);
+        
         yield return new WaitForSeconds(time);
         isStarted = true;
         method();

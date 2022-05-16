@@ -88,7 +88,7 @@ public class SecondSceneManager : SceneManagerParent
         base.OverrideAction(keywordList, parameterList);
         for (int j = 0; j < keywordList.Count; j++)
         {
-            Debug.Log(keywordList[j]);
+            
         }
 
         if (keywordList.Contains(ActionKeyword.FadeOut))
@@ -209,7 +209,7 @@ public class SecondSceneManager : SceneManagerParent
         {
             return;
         }
-        Debug.Log(Vector3.SqrMagnitude(bubbleObjectParent.transform.position - player.transform.position));
+        
         if (Vector3.SqrMagnitude(bubbleObjectParent.transform.position - player.transform.position) > 40)
         {
             return;
@@ -235,7 +235,7 @@ public class SecondSceneManager : SceneManagerParent
         {
             return;
         }
-        Debug.Log(Vector3.SqrMagnitude(medalObject.transform.position - player.transform.position));
+        
         if (Vector3.SqrMagnitude(medalObject.transform.position - player.transform.position) > 40)
         {
             return;
@@ -407,7 +407,7 @@ public class SecondSceneManager : SceneManagerParent
                     //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
                     if (touchedObject.name.Contains("bubble"))
                     {
-                        Debug.Log(touchedObject.name);
+                        
                         BubbleTouch();
                     }
                 }
@@ -430,7 +430,7 @@ public class SecondSceneManager : SceneManagerParent
                 if (hit = Physics2D.Raycast(mousePos, Vector2.zero))
                 {
                     touchedObject = hit.collider.gameObject;
-                    Debug.Log(touchedObject.name);
+                    
                     //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
                     if (touchedObject.name.Contains("Medal"))
                     {
@@ -518,7 +518,7 @@ public class SecondSceneManager : SceneManagerParent
                 {
  
                     touchedObject = hit.collider.gameObject;
-                    Debug.Log(touchedObject.name);
+                    
                     //Ray에 맞은 콜라이더를 터치된 오브젝트로 설정
                     if (touchedObject.name.Contains("Flower"))
                     {
